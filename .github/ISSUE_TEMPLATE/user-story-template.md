@@ -9,13 +9,13 @@ assignees: NiclO1337
 
 Part of EPIC **epic** #1
 
-As a **role** I can **capability** so that **recieved benefit**
+As a **role** I want **capability** so that **recieved benefit**
 
 ## Acceptance Criteria
 
-- AC 1:
-- AC 2:
-- AC 3:
+- AC 1: Given that someContext when someActionIsCarriedOut then aSetOfObervableOutcomesShouldOccur
+- AC 2: Given that someContext when someActionIsCarriedOut then aSetOfObervableOutcomesShouldOccur
+- AC 3: Given that someContext when someActionIsCarriedOut then aSetOfObervableOutcomesShouldOccur
 
 ## Tasks
 
