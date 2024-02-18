@@ -248,13 +248,13 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - Python
 
 ### Frameworks
-- **Django 5.** as main framework for web development
+- **Django 5.0.2** as main framework for web development
 - **Bootstrap v5.3** as framefork for styling and positioning
 - **jQuery** for more efficient DOM manipulation
 
 
-### Libraries/Modules/packages used
- - **Os**, enables the option to clear the screen when needed
+### Libraries
+ - **Os**, provides functions for interacting with the operating system
 
 
 ### Tools
