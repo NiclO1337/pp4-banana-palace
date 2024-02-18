@@ -265,7 +265,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Lucidchart** for ERD (entity relationship diagram)
 - **VS Code** as primary IDE during development
 - **w3schools** for general information
-- **Stack* Overflow** for specific issues/errors
+- **Stack Overflow** for specific issues/errors
 - **Looka.com** for the logo and symbol
 - **Favicon.io** for the favicon
 - **color.adobe.com** to extract color pallet from image
