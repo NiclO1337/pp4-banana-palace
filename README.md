@@ -72,6 +72,7 @@ Semantic HTML is used to aid people with dissabilities such as visual impairment
 ### Colours
 
 
+ <p align="left"><img src="./documentation/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
 
 
 ### Typography
@@ -140,22 +141,34 @@ TODO (maybe)
 
 ### Wireframes
 
-Initial wireframes as a guide for development.
+<p align="left"><img src="./documentation/wireframes-all.png" alt="Entity relationship diagram" width="600"/></p>
 
-<details><summary>Screenshot of the initial wireframes</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
+Initial wireframes as a guide for development and design.
 
+Screenshots of individual wireframes for the:
+<details><summary>top part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-top.png" alt="wireframes for the top part of home page" width="600"/></p> </details>
+<details><summary>middle part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-middle.png" alt="wireframes for the middle part of home page" width="600"/></p> </details>
+<details><summary>bottom part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-bottom.png" alt="wireframes for the bottom part of home page" width="600"/></p> </details>
+<details><summary>about page</summary> <p align="left"><img src="./documentation/wireframes-about.png" alt="wireframes for the about page" width="600"/></p> </details>
+<details><summary>users profile page</summary> <p align="left"><img src="./documentation/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
+<details><summary>owners profile page</summary> <p align="left"><img src="./documentation/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
+<details><summary>booking page with date and time</summary> <p align="left"><img src="./documentation/wireframes-booking-date-time.png" alt="wireframes for the booking page with date and time" width="600"/></p> </details>
+<details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
+<details><summary>menu page</summary> <p align="left"><img src="./documentation/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
+<details><summary>feedback section</summary> <p align="left"><img src="./documentation/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
 
 
 
 
 ### Database Schema
 
+
+
+<p align="left"><img src="./documentation/entity-relationship-diagram.png" alt="Entity relationship diagram" width="600"/></p>
+
 TODO
 PostgreSQL
 Relational database
-
-<details><summary>Screenshot of the ERD</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-
 
 
 
@@ -194,8 +207,7 @@ GitHub Milestones [link]
 
 ### MoSCoW prioritization
 
-![MoSCoW prioritization](TODO)
-<p align="left"><img src="TODO" alt="TODO" width="800"/></p>
+<p align="left"><img src="./documentation/moscow-prioritization.png" alt="MoSCoW prioritization labels" width="800"/></p>
 
 Each iteration
 
@@ -204,16 +216,16 @@ Each iteration
 
 GitHub Milestones [link]
 
-<details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the start of iteration 2</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the end of iteration 2</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the start of iteration 3</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the end of iteration 3</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the start of iteration 4</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the end of iteration 4</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the start of iteration 5</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
-<details><summary>Screenshot of the end of iteration 5</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
+<details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="./documentation/iteration-1-start.png" alt="Beginning of iteration 1" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="TODO" alt="TODO" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 2</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 2" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 2</summary> <p align="left"><img src="TODO" alt="TODO" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 3</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 3" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 3</summary> <p align="left"><img src="TODO" alt="TODO" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 4</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 4" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 4</summary> <p align="left"><img src="TODO" alt="TODO" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 5</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 5" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 5</summary> <p align="left"><img src="TODO" alt="TODO" width="800"/></p> </details>
 
 
 ### Kanban board
