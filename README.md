@@ -161,9 +161,17 @@ Relational database
 
 ## Agile software development
 
-TODO
+
+Scrum, using both incremental and iterative development, was chosen as the main Agile methodology to use in this project. Planning workload into iterations, also known as sprints, with a mindset of "continuous improvement". For each iteration, a kanban board was used to visualize the current workload. Between iterations, remaining workload in the product backlog was reviewed and next iteration was planned.
+
+All features that could possibly be implemented were added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+
+
 
 ### Epics
+
+Project was broken down into different epics, large bodies of work, with features that might be included in the project. Each epic in turn is broken into smaller user stories where each user story provides a value to a specified user. User stories were created from both restaurant owner and users of the website.
+
 
 TODO
 <details><summary>Screenshot of</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
@@ -171,13 +179,18 @@ TODO
 
 ### User stories
 
-<p align="left"><img src="TODO" alt="TODO" width="800"/></p>
+All user stories are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub. They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and some tasks to complete.
+
+
+<details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
+
 
 
 ### Product backlog
 
 PBI's
 backlog refinement
+GitHub Milestones [link]
 
 ### MoSCoW prioritization
 
@@ -188,6 +201,8 @@ Each iteration
 
 ### Iterations
 
+
+GitHub Milestones [link]
 
 <details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
 <details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
@@ -202,6 +217,10 @@ Each iteration
 
 
 ### Kanban board
+
+Github projects was used as a kanban board during development. In each iteration, relevant user stories are moved onto the board and development began. Features were developed to fulfil the acceptence critera's of the user stories.
+
+Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) used on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 <p align="left"><img src="TODO" alt="TODO" width="800"/></p>
 
