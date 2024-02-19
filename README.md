@@ -254,7 +254,10 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 
 
 ### Libraries
- - **Os**, provides functions for interacting with the operating system
+- **Os**, provides functions for interacting with the operating system
+- **psycopg2**, PostgreSQL database adapter for the Python programming language
+- **dj-database-url**, enables the ability to represent their database settings via a string
+- **gunicorn**, handles HTML rendering, authentication, administration, and backend logicgit
 
 
 ### Tools
