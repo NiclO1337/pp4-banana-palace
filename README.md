@@ -276,6 +276,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Bootstrap GitHub page** to check properties of classes
 - **Django Docs** to build project and apps
 - **Grammarly** for spellchecking
+- **cdnjs.com** to find relevant CDN fast
 
 
 ## Testing
