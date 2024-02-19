@@ -5,3 +5,9 @@ body {
   h1 {
     margin-top: 110vh;
   }
+
+  .navbar-brand img {
+    width: 8rem;
+  }
+
+
