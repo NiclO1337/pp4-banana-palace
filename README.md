@@ -333,7 +333,8 @@ TODO: install requirements with correct versions
 
 ### Content
 
--
+- Design and content inspiration from: [Getbento](https://www.getbento.com/blog/best-restaurant-websites-design/)
+and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 
 ### Media
@@ -352,6 +353,6 @@ TODO: install requirements with correct versions
 
 - Some of the code from the Codestar blog walkthrough project was used and adapted.
 
--
+- Navbar adjusted when scroll down: [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll)
 
 [Back to top](#table-of-contents)
