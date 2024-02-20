@@ -22,6 +22,8 @@ function scrollFunction() {
         $('#navbarNav')[0].classList.add('justify-content-end');
         $('#navbarNav')[0].classList.remove('mb-auto');
     } else {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
         $('#header-container')[0].style.height = "8rem";
 
         $('main.container')[0].style.marginTop = "6rem";
