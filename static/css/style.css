@@ -46,15 +46,44 @@ main {
   margin-top: 6rem;
 }
 
+
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
 
-#main-logo {
-  width: 90%;
-  max-width: 30rem;
-  display: block;
-  margin: 0 auto;
+#header-container {
+  height: 8rem;
+  transition: all 1s ease-out;
+}
+
+#header-address-nav,
+#header-phone-nav,
+#header-address,
+#header-phone {
+  position: absolute;
+}
+
+#header-address-nav {
+  top: 1rem;
+  right: 6%;
+}
+
+#header-phone-nav {
+  left: 6%;
+}
+
+#header-address,
+#header-phone {
+  left: 10%;
+  display: none;
+}
+
+#header-address {
+  top: 50%;
+}
+
+#header-phone {
+  top: 30%;
 }
 
 .navbar-brand {
@@ -65,9 +94,11 @@ main {
   width: 8rem;
 }
 
-#header-container {
-  height: 8rem;
-  transition: all 1s ease-out;
+#main-logo {
+  width: 90%;
+  max-width: 30rem;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -95,6 +126,53 @@ main {
 -------------------------- */
 
 
+/* Media query for bigger than phone - Bootstrap class sm */
+@media screen and (min-width: 576px) {
+
+}
+
+/* Media query for tablet - Bootstrap class md */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Media query for big tablet - Bootstrap class lg */
+@media screen and (min-width: 992px) {
+  #header-address-nav {
+    right: 10%;
+  }
+
+  #header-phone-nav {
+    left: 10%;
+  }
+}
+
+/* Media query for small laptop - Bootstrap class xl */
+@media screen and (min-width: 1200px) {
+  #header-address-nav {
+    right: 15%;
+  }
+
+  #header-phone-nav {
+    left: 15%;
+  }
+}
+
+/* Media query for laptop - Bootstrap class xxl */
+@media screen and (min-width: 1400px) {
+
+}
+
+/* Media query for desktop */
+@media screen and (min-width: 1920px) {
+  #header-address-nav {
+    right: 20%;
+  }
+
+  #header-phone-nav {
+    left: 20%;
+  }
+}
 
 
 
@@ -107,4 +185,5 @@ main {
 h1 {
   height: 15rem;
   background-color: #50220b;
+  transition: all 0.3s ease-out;
 }

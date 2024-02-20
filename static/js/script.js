@@ -8,6 +8,9 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+    let addressAndPhoneInHeader =
+        $('#header-address-nav, #header-phone-nav, #header-address, #header-phone')[0]
+
     if (
         document.body.scrollTop > 1 || document.documentElement.scrollTop > 1
     ) {
@@ -21,6 +24,12 @@ function scrollFunction() {
         $('#navbarNav')[0].classList.remove('justify-content-center');
         $('#navbarNav')[0].classList.add('justify-content-end');
         $('#navbarNav')[0].classList.remove('mb-auto');
+
+        $('#header-address-nav')[0].classList.remove('d-sm-block')
+        $('#header-phone-nav')[0].classList.remove('d-sm-block')
+        $('#header-address')[0].classList.remove('d-block')
+        $('#header-phone')[0].classList.remove('d-block')
+
     } else {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -34,5 +43,11 @@ function scrollFunction() {
         $('#navbarNav')[0].classList.remove('justify-content-end');
         $('#navbarNav')[0].classList.add('justify-content-center');
         $('#navbarNav')[0].classList.add('mb-auto');
+
+
+        $('#header-address-nav')[0].classList.add('d-sm-block')
+        $('#header-phone-nav')[0].classList.add('d-sm-block')
+        $('#header-address')[0].classList.add('d-block')
+        $('#header-phone')[0].classList.add('d-block')
     }
 }
