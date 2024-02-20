@@ -1,6 +1,6 @@
 body {
   min-height: 150vh;
-  background-color: yellow;
+  background-color: #F8F6D1;
 }
 
 main {
@@ -23,5 +23,6 @@ main {
 }
 
 #header-container {
-  padding: 0 0 5rem;
+    height: 8rem;
+    transition: all 1s ease-out;
 }

@@ -9,10 +9,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
     if (
-      document.body.scrollTop > 10 ||
-      document.documentElement.scrollTop > 10
+        document.body.scrollTop > 1 || document.documentElement.scrollTop > 1
     ) {
-        $('#header-container')[0].style.padding = "0";
+        $('#header-container')[0].style.height = "4rem";
 
         $('main.container')[0].style.marginTop = "15rem";
 
@@ -21,8 +20,9 @@ function scrollFunction() {
 
         $('#navbarNav')[0].classList.remove('justify-content-center');
         $('#navbarNav')[0].classList.add('justify-content-end');
+        $('#navbarNav')[0].classList.remove('mb-auto');
     } else {
-        $('#header-container')[0].style.padding = "0 0 5rem";
+        $('#header-container')[0].style.height = "8rem";
 
         $('main.container')[0].style.marginTop = "6rem";
 
@@ -31,5 +31,6 @@ function scrollFunction() {
 
         $('#navbarNav')[0].classList.remove('justify-content-end');
         $('#navbarNav')[0].classList.add('justify-content-center');
+        $('#navbarNav')[0].classList.add('mb-auto');
     }
 }
