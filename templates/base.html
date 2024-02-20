@@ -35,7 +35,7 @@
   <body>
     <header class="sticky-top">
       <!-- Header sticks to top of screen at all times -->
-      <nav class="navbar navbar-expand-sm bg-body-tertiary">
+      <nav class="navbar navbar-expand-sm">
         <div class="container-fluid" id="header-container">
           <a class="navbar-brand ps-2 ps-lg-4" href="#"
             ><img
@@ -68,22 +68,19 @@
                 <a class="nav-link" href="#">Pricing</a>
               </li>
               <li class="nav-item ms-auto me-3 mx-sm-0">
-                <a class="nav-link" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#">Not Disabled</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div id="main-logo">
-        <img
-          src="{% static './images/banana-palace-main.png' %}"
-          alt="Banana Palace logo" />
-      </div>
+      <img
+        id="main-logo"
+        src="{% static './images/banana-palace-main.png' %}"
+        alt="Banana Palace logo" />
     </header>
 
-    <main class="container">
-        {% block page-content %} {% endblock %}
-    </main>
+    <main class="container">{% block page-content %} {% endblock %}</main>
 
     <!-- Bootstrap JS -->
     <script
