@@ -4,15 +4,29 @@
 
 :root {
   --color-primary-bg: #f8f6d1;
-  --color-secondary-bg: #e1c00c;
+  --color-secondary-bg: #EFC600;
   --color-tertiary-bg: #e1c10c27;
   --color-primary: #073503;
   --color-secondary: #1f7405;
   --color-tertiary: #50220b;
 }
 
+body,
+header,
+li {
+  background-color: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+
 .nav-link {
   color: var(--color-primary);
+}
+
+#navbarNav .navbar-nav li a:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+  transition: all 0.4s ease-out;
 }
 
 .navbar-nav .nav-link.active,
@@ -20,9 +34,6 @@
   color: var(--color-secondary);
 }
 
-/* #navbarNav {
-  background-color: var(--color-tertiary-bg);
-} */
 
 /* --------------------------
 ------- Global styles -------
@@ -30,8 +41,6 @@
 
 body {
   min-height: 150vh;
-  background-color: var(--color-primary-bg);
-  color: var(--color-primary);
 }
 
 main {
@@ -63,7 +72,6 @@ main {
 }
 
 
-
 /* --------------------------
 --------- Typography --------
 -------------------------- */
@@ -86,3 +94,18 @@ main {
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
+
+
+
+
+
+
+/* --------------------------
+-------- TESTING ONLY -------
+-------------------------- */
+
+
+h1 {
+  height: 15rem;
+  background-color: #50220b;
+}
