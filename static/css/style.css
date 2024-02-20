@@ -22,14 +22,14 @@ header{
   text-shadow: 0 0 1rem var(--color-primary-bg);
 }
 
-#navbarNav .navbar-nav li a:hover {
+#override-bootstrap a:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+#override-bootstrap .nav-link.active,
+#override-bootstrap .nav-link.show {
   color: var(--color-secondary);
 }
 
