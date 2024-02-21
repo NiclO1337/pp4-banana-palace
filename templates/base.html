@@ -89,7 +89,24 @@
         alt="Banana Palace logo" />
     </header>
 
-    <main class="container">{% block page-content %} {% endblock %}</main>
+    <main class="container">
+      <img
+        src="{% static './images/banana-palace-symbol.png' %}"
+        alt=""
+        id="symbol-left" />
+      <img
+        src="{% static './images/banana-palace-symbol.png' %}"
+        alt=""
+        id="symbol-right"
+        class="d-none d-md-block" />
+      {% block page-content %} {% endblock %}
+    </main>
+
+    <footer>
+      <div class="container-fluid">
+
+      </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script

@@ -8,7 +8,7 @@
   --color-tertiary-bg: #e1c10c27;
   --color-primary: #073503;
   --color-secondary: #1f7405;
-  --color-tertiary: #50220b;
+  --color-tertiary: #270b03;
 }
 
 body,
@@ -39,7 +39,7 @@ header{
 -------------------------- */
 
 body {
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 main {
@@ -86,6 +86,21 @@ main {
   top: 30%;
 }
 
+
+/* --------------------------
+--------- Typography --------
+-------------------------- */
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link {
+  font-weight: bold;
+}
+
+
+/* --------------------------
+----------- Images ----------
+-------------------------- */
+
 .navbar-brand {
   display: none;
 }
@@ -101,17 +116,24 @@ main {
   margin: 0 auto;
 }
 
-
-/* --------------------------
---------- Typography --------
--------------------------- */
-
-
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link {
-  font-weight: bold;
+#symbol-left,
+#symbol-right {
+  height: 100vh;
+  position: fixed;
+  opacity: 0.04;
+  z-index: 1030;
 }
+
+#symbol-left {
+  top: 11%;
+  right: 30%;
+}
+
+#symbol-right {
+  top: 35%;
+  left: 40%;
+}
+
 
 /* --------------------------
 --------- Animations --------
@@ -133,7 +155,13 @@ main {
 
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
+  #symbol-left {
+    right: 60%;
+  }
 
+  #symbol-right {
+    left: 70%;
+  }
 }
 
 /* Media query for big tablet - Bootstrap class lg */
@@ -144,6 +172,14 @@ main {
 
   #header-phone-nav {
     left: 10%;
+  }
+
+  #symbol-left {
+    right: 70%;
+  }
+
+  #symbol-right {
+    left: 80%;
   }
 }
 
@@ -183,7 +219,12 @@ main {
 
 
 h1 {
-  height: 15rem;
-  background-color: #50220b;
+  height: 30rem;
+  background-color: var(--color-tertiary);
   transition: all 0.3s ease-out;
+}
+
+footer .container-fluid {
+  min-height: 10rem;
+  background-color: var(--color-tertiary);
 }
