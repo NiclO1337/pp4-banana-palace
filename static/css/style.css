@@ -11,10 +11,15 @@
   --color-tertiary: #270b03;
 }
 
-body,
-header{
+header,
+body {
   background-color: var(--color-primary-bg);
   color: var(--color-primary);
+}
+
+footer {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary-bg)
 }
 
 .nav-link {
@@ -22,20 +27,34 @@ header{
   text-shadow: 0 0 1rem var(--color-primary-bg);
 }
 
+#override-bootstrap .nav-link.active,
+#override-bootstrap .nav-link.show {
+  color: var(--color-secondary);
+}
+
+#override-bootstrap footer a {
+  color: var(--color-primary-bg);
+}
+
+
+/* --------------------------
+------- Hover effects -------
+-------------------------- */
+
 #override-bootstrap a:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
 }
 
-#override-bootstrap .nav-link.active,
-#override-bootstrap .nav-link.show {
-  color: var(--color-secondary);
+#override-bootstrap footer a:hover {
+  color: var(--color-secondary-bg);
+  transition: color 0.4s ease-out;
 }
 
 
 /* --------------------------
-------- Global styles -------
+------- Layout styles -------
 -------------------------- */
 
 body {
@@ -45,11 +64,6 @@ body {
 main {
   margin-top: 6rem;
 }
-
-
-/* --------------------------
-------- Layout styles -------
--------------------------- */
 
 #header-container {
   height: 8rem;
@@ -86,6 +100,10 @@ main {
   top: 30%;
 }
 
+footer .row {
+  min-height: 10rem;
+}
+
 
 /* --------------------------
 --------- Typography --------
@@ -94,6 +112,19 @@ main {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link {
   font-weight: bold;
+}
+
+.social-media-symbols,
+.social-media-symbols ~ ul {
+  list-style-type: none;
+}
+
+#override-bootstrap footer a {
+  text-decoration: none;
+}
+
+.social-media-symbols {
+  font-size: 2.3rem;
 }
 
 
@@ -122,6 +153,7 @@ main {
   position: fixed;
   opacity: 0.04;
   z-index: 1030;
+  pointer-events: none;
 }
 
 #symbol-left {
@@ -136,12 +168,10 @@ main {
 
 
 /* --------------------------
---------- Animations --------
--------------------------- */
-
-/* --------------------------
 ---------- Buttons ----------
 -------------------------- */
+
+
 
 /* --------------------------
 ------- Media queries -------
@@ -155,6 +185,7 @@ main {
 
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
+  /* Main */
   #symbol-left {
     right: 60%;
   }
@@ -166,6 +197,7 @@ main {
 
 /* Media query for big tablet - Bootstrap class lg */
 @media screen and (min-width: 992px) {
+  /* Header */
   #header-address-nav {
     right: 10%;
   }
@@ -174,6 +206,7 @@ main {
     left: 10%;
   }
 
+  /* Main */
   #symbol-left {
     right: 70%;
   }
@@ -185,6 +218,7 @@ main {
 
 /* Media query for small laptop - Bootstrap class xl */
 @media screen and (min-width: 1200px) {
+  /* Header */
   #header-address-nav {
     right: 15%;
   }
@@ -201,6 +235,7 @@ main {
 
 /* Media query for desktop */
 @media screen and (min-width: 1920px) {
+  /* Header */
   #header-address-nav {
     right: 20%;
   }
@@ -217,14 +252,9 @@ main {
 -------- TESTING ONLY -------
 -------------------------- */
 
-
 h1 {
   height: 30rem;
   background-color: var(--color-tertiary);
   transition: all 0.3s ease-out;
 }
 
-footer .container-fluid {
-  min-height: 10rem;
-  background-color: var(--color-tertiary);
-}
