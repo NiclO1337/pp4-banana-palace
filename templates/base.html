@@ -32,7 +32,7 @@
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="{% static './css/style.css' %}" />
   </head>
-  <body id="override-bootstrap">
+  <body id="override-bootstrap" class="d-flex flex-column">
     <header class="sticky-top">
       <!-- Header sticks to top of screen at all times -->
       <nav class="navbar navbar-expand-sm">
@@ -89,7 +89,8 @@
         alt="Banana Palace logo" />
     </header>
 
-    <main class="container">
+    <main class="container flex-grow-1">
+      <!-- Watermark images -->
       <img
         src="{% static './images/banana-palace-symbol.png' %}"
         alt=""
@@ -99,12 +100,20 @@
         alt=""
         id="symbol-right"
         class="d-none d-md-block" />
-      {% block page-content %} {% endblock %}
+
+      <!-- Individual page content here -->
+      {% block page-content %}
+
+      {% endblock %}
+
+
     </main>
 
+    <!-- Footer -->
     <footer>
       <div class="container-fluid">
         <div class="row align-items-center">
+          <!-- Address and phonenumber -->
           <div class="d-none px-0 d-md-block col-md-4 offset-md-1 offset-lg-2">
             <p>
               Banana Palace Restaurant<br />
@@ -112,6 +121,7 @@
             </p>
             <p class="mb-0">Phone number</p>
           </div>
+          <!-- Social media icons -->
           <div
             class="py-4 px-0 col-10 offset-1 col-md-4 offset-md-2 col-lg-3 offset-lg-1
             col-xl-2 offset-xl-2">
