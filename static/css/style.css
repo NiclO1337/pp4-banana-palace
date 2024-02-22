@@ -40,6 +40,11 @@ footer {
 
 /* index.html styles */
 
+.card {
+  background-color: #ffffff00;
+  border: none;
+}
+
 
 /* --------------------------
 ------- Hover effects -------
