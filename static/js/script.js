@@ -5,15 +5,15 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    let addressAndPhoneInHeader =
-        $('#header-address-nav, #header-phone-nav, #header-address, #header-phone')[0]
 
     if (
         document.body.scrollTop > 1 || document.documentElement.scrollTop > 1
     ) {
         $('#header-container')[0].style.height = "4rem";
 
-        $('main.flex-grow-1')[0].style.marginTop = "10rem";
+        $('main.flex-grow-1')[0].style.marginTop = "20vh";
+        $('.soft-cushion')[0].style.height = "1vh";
+
 
         $('.navbar-brand')[0].style.display = "block";
         $('#main-logo')[0].style.display = "none";
@@ -32,7 +32,8 @@ function scrollFunction() {
         document.documentElement.scrollTop = 0;
         $('#header-container')[0].style.height = "8rem";
 
-        $('main.flex-grow-1')[0].style.marginTop = "6rem";
+        $('main.flex-grow-1')[0].style.marginTop = "0";
+        $('.soft-cushion')[0].style.height = "8vh";
 
         $('.navbar-brand')[0].style.display = "none";
         $('#main-logo')[0].style.display = "block";

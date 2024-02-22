@@ -86,9 +86,9 @@ body {
   min-height: 150vh;
 }
 
-main {
-  margin-top: 6rem;
-}
+/* main {
+  margin-top: 0;
+} */
 
 #header-container {
   height: 8rem;
@@ -123,6 +123,11 @@ main {
 
 #header-phone {
   top: 30%;
+}
+
+.soft-cushion {
+  height: 8vh;
+  transition: all 1s ease-out;
 }
 
 footer .row {
