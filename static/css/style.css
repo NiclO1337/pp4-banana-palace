@@ -43,8 +43,8 @@ footer {
 .card {
   background-color: #ffffff00;
   border: none;
+  color: var(--color-primary);
 }
-
 
 /* --------------------------
 ------- Hover effects -------
@@ -64,8 +64,18 @@ footer {
 }
 
 /* index.html styles */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  transform: scale(1.3);
+  transition: all 0.4s ease-out;
+}
 
-
+.carousel-control-prev-icon:hover {
+  background-image: url("../images/chevron-left-light.png");
+}
+.carousel-control-next-icon:hover {
+  background-image: url("../images/chevron-right-light.png");
+}
 
 /* --------------------------
 ------- Layout styles -------
@@ -121,8 +131,6 @@ footer .row {
 
 /* index.html styles */
 
-
-
 /* --------------------------
 --------- Typography --------
 -------------------------- */
@@ -148,6 +156,10 @@ footer .row {
 }
 
 /* index.html styles */
+
+.card {
+  font-weight: bold;
+}
 
 /* --------------------------
 ----------- Images ----------
@@ -191,6 +203,17 @@ footer .row {
 
 /* index.html */
 
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../images/chevron-left-dark.png");
+}
+.carousel-control-next-icon {
+  background-image: url("../images/chevron-right-dark.png");
+}
 
 /* --------------------------
 ---------- Buttons ----------
@@ -203,7 +226,6 @@ footer .row {
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
-
 
 /* Media query for bigger than phone - Bootstrap class sm */
 @media screen and (min-width: 576px) {
@@ -221,7 +243,6 @@ footer .row {
   }
 
   /* index.html */
-
 }
 
 /* Media query for big tablet - Bootstrap class lg */
@@ -277,16 +298,7 @@ footer .row {
 -------- TESTING ONLY -------
 -------------------------- */
 
-
-
-
-
-
-
-
-
-
-/* Start of Code snippet from https://codepen.io/hellomev/pen/LYORMQW */
+/* START of Code snippet from https://codepen.io/hellomev/pen/LYORMQW */
 @media (max-width: 767px) {
   .carousel-inner .carousel-item > div {
     display: none;
@@ -304,7 +316,6 @@ footer .row {
 
 /* medium and up screens */
 @media (min-width: 768px) {
-
   .carousel-inner .carousel-item-end.active,
   .carousel-inner .carousel-item-next {
     transform: translateX(25%);
