@@ -50,64 +50,10 @@
 
     <!-- Page specific CSS -->
     {% block page-specific-css %}{% endblock %}
-
   </head>
+
   <body id="override-bootstrap" class="d-flex flex-column">
-    <header class="sticky-top">
-      <!-- Header sticks to top of screen at all times -->
-      <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid" id="header-container">
-          <a class="navbar-brand ps-2 ps-lg-4" href="#"
-            ><img
-              src="{% static './images/banana-palace-horizontal.png' %}"
-              alt="Banana Palace logo"
-          /></a>
-          <button
-            class="navbar-toggler m-3 ms-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <span id="header-phone" class="d-block d-sm-none">#header-phone</span>
-          <span id="header-address" class="d-block d-sm-none"
-            >#header-address</span
-          >
-          <!-- Navbar items -->
-          <div
-            class="collapse navbar-collapse justify-content-center mb-auto"
-            id="navbarNav">
-            <span id="header-phone-nav" class="d-none d-sm-block"
-              >#header-phone-nav</span
-            >
-            <span id="header-address-nav" class="d-none d-sm-block text-end"
-              >#header-<span class="d-lg-none"><br /></span>address-nav</span
-            >
-            <ul class="navbar-nav">
-              <li class="nav-item ms-auto me-3 mx-sm-0">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item ms-auto me-3 mx-sm-0">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item ms-auto me-3 mx-sm-0">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item ms-auto me-3 mx-sm-0">
-                <a class="nav-link" href="#">Not Disabled</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <img
-        id="main-logo"
-        src="{% static './images/banana-palace-main.png' %}"
-        alt="Banana Palace logo" />
-    </header>
+    {% include 'header.html' %}
 
     <main class="flex-grow-1">
       <!-- Watermark images -->
@@ -124,11 +70,9 @@
 
       <!-- Individual page content here -->
       {% block page-content %} {% endblock %}
-
     </main>
 
     {% include 'footer.html' %}
-
 
     <!-- jQuery -->
     <script
@@ -148,6 +92,5 @@
 
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}
-
   </body>
 </html>
