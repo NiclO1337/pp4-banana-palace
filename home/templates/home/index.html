@@ -5,6 +5,10 @@
 restaurant
 {% endblock %}
 
+{% block page-specific-css %}
+<link rel="stylesheet" href="{% static './css/multi-slider-carousel.css' %}">
+{% endblock %}
+
 {% block page-content %}
 
 {% include './carousel.html' %}
