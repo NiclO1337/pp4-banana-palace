@@ -13,7 +13,7 @@
       name="keywords"
       content="Banana restaurant, banana recipe, banana food, banana dinner,
       food with banana, tropical theme restaurant" />
-    <title>Banana Palace restaurant</title>
+    <title>Banana Palace {% block title %}{% endblock %}</title>
     <!-- Favicon -->
     <link
       href="{% static './favicon/apple-touch-icon.png' %}"
@@ -118,6 +118,7 @@
 
       <!-- Individual page content here -->
       {% block page-content %} {% endblock %}
+
     </main>
 
     <!-- Footer -->
@@ -202,5 +203,9 @@
 
     <!-- Custom JS file -->
     <script src="{% static './js/script.js' %}"></script>
+
+    <!-- Page specific JS file -->
+    {% block page-specific-js %}{% endblock %}
+
   </body>
 </html>

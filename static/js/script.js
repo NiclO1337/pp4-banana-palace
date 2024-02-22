@@ -13,6 +13,7 @@ function scrollFunction() {
 
         $('main.flex-grow-1')[0].style.marginTop = "20vh";
         $('.soft-cushion')[0].style.height = "1vh";
+        $('.soft-cushion')[1].style.height = "1vh";
 
 
         $('.navbar-brand')[0].style.display = "block";
@@ -34,6 +35,7 @@ function scrollFunction() {
 
         $('main.flex-grow-1')[0].style.marginTop = "0";
         $('.soft-cushion')[0].style.height = "8vh";
+        $('.soft-cushion')[1].style.height = "8vh";
 
         $('.navbar-brand')[0].style.display = "none";
         $('#main-logo')[0].style.display = "block";
@@ -49,21 +51,3 @@ function scrollFunction() {
         $('#header-phone')[0].classList.add('d-block')
     }
 }
-
-
-// Code snippet let items from https://codepen.io/hellomev/pen/LYORMQW
-let items = document.querySelectorAll('.carousel .carousel-item')
-
-		items.forEach((el) => {
-			const minPerSlide = 4
-			let next = el.nextElementSibling
-			for (var i=1; i<minPerSlide; i++) {
-				if (!next) {
-            // wrap carousel by using first child
-            next = items[0]
-        }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-    }
-})
