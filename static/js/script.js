@@ -13,7 +13,7 @@ function scrollFunction() {
     ) {
         $('#header-container')[0].style.height = "4rem";
 
-        $('main.flex-grow-1')[0].style.marginTop = "15rem";
+        $('main.flex-grow-1')[0].style.marginTop = "10rem";
 
         $('.navbar-brand')[0].style.display = "block";
         $('#main-logo')[0].style.display = "none";
