@@ -356,4 +356,6 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Navbar adjusted when scroll down: [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll)
 
+- Multiple items per carousel slide from [Hello Mev](https://codepen.io/hellomev/pen/LYORMQW)
+
 [Back to top](#table-of-contents)
