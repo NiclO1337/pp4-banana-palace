@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Merienda&family=Noto+Sans:ital@0;1&display=swap');
+
 /* --------------------------
 ----------- Colors ----------
 -------------------------- */
 
+/* Project color pallet */
 :root {
   --color-primary-bg: #f8f6d1;
   --color-secondary-bg: #efc600;
@@ -11,7 +14,7 @@
   --color-tertiary: #270b03;
 }
 
-/* base.html styles */
+/* base.html styles (includes header.html and footer.html) */
 
 header,
 body {
@@ -50,7 +53,7 @@ footer {
 ------- Hover effects -------
 -------------------------- */
 
-/* base.html styles */
+/* base.html styles (includes header.html and footer.html) */
 
 #override-bootstrap a:hover {
   color: var(--color-secondary);
@@ -80,15 +83,11 @@ footer {
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
-/* base.html styles */
+/* base.html styles (includes header.html and footer.html) */
 
 body {
   min-height: 150vh;
 }
-
-/* main {
-  margin-top: 0;
-} */
 
 #header-container {
   height: 8rem;
@@ -140,7 +139,39 @@ footer .row {
 --------- Typography --------
 -------------------------- */
 
-/* base.html styles */
+/* Project fonts */
+:root {
+  --headings: "M PLUS Rounded 1c", sans-serif;
+  --paragraphs: "Noto Sans", sans-serif;
+  --special: "Merienda", cursive;
+}
+
+/* base.html styles (includes header.html and footer.html) */
+
+body p,
+#header-address-nav,
+#header-phone-nav,
+#header-address,
+#header-phone {
+  font-family: var(--paragraphs);
+}
+
+body li {
+  font-family: var(--headings);
+}
+
+header li {
+  text-transform: uppercase;
+}
+
+footer li {
+  font-size: 80%;
+}
+
+.special-font {
+  font-family: var(--special);
+  font-size: 1.4rem;
+}
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link {
@@ -156,15 +187,12 @@ footer .row {
   text-decoration: none;
 }
 
-.social-media-symbols {
+.social-media-symbols li {
   font-size: 2.3rem;
 }
 
 /* index.html styles */
 
-.card {
-  font-weight: bold;
-}
 
 /* --------------------------
 ----------- Images ----------
@@ -225,7 +253,7 @@ footer .row {
 ---------- Buttons ----------
 -------------------------- */
 
-/* base.html styles */
+/* base.html styles (includes header.html and footer.html) */
 
 /* index.html styles */
 
