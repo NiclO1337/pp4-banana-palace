@@ -1,29 +1,29 @@
+<!-- prettier-ignore -->
 {% extends 'base.html' %}
 {% load static %}
-
 {% block title %}
 restaurant
 {% endblock %}
 
 {% block page-specific-css %}
-<link rel="stylesheet" href="{% static './css/multi-slider-carousel.css' %}">
+<link rel="stylesheet" href="{% static './css/multi-slider-carousel.css' %}" />
 {% endblock %}
 
+<!-- prettier-ignore -->
 {% block page-content %}
-
 {% include './carousel.html' %}
-
 
 <div class="soft-cushion"></div>
 
 <div class="container-fluid container-xxl">
-
-<div class="row">
-  <div class="col-7">Picture</div>
-  <div class="col-5">Text</div>
+  <section class="row">
+    <div
+      id="welcome-img"
+      class="col-12 col-md-7"
+      role="img"
+      aria-label="View from outside the restaurant of the terrace over the canal"></div>
+    <div class="col-12 col-md-5">Text</div>
+  </section>
 </div>
-
-</div>
-
-
+<!-- prettier-ignore -->
 {% endblock %}

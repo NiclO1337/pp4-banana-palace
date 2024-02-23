@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Merienda&family=Noto+Sans:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Merienda&family=Noto+Sans:ital@0;1&display=swap");
 
 /* --------------------------
 ----------- Colors ----------
@@ -189,7 +189,6 @@ footer li {
 
 /* index.html styles */
 
-
 /* --------------------------
 ----------- Images ----------
 -------------------------- */
@@ -245,6 +244,15 @@ footer li {
   background-image: url("../images/chevron-right-dark.png");
 }
 
+#welcome-img {
+  height: 60vh;
+  background-color: var(--color-tertiary-bg);
+  background-image: url("../images/banana-palace-outdoor-pexels-2901215-small-screen.jpg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+}
+
 /* --------------------------
 ---------- Buttons ----------
 -------------------------- */
@@ -273,6 +281,9 @@ footer li {
   }
 
   /* index.html */
+  #welcome-img {
+    border-radius: 0 1rem 1rem 0;
+  }
 }
 
 /* Media query for big tablet - Bootstrap class lg */
@@ -310,6 +321,15 @@ footer li {
 
 /* Media query for laptop - Bootstrap class xxl */
 @media screen and (min-width: 1400px) {
+
+  /* index.html */
+  #welcome-img {
+    background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.jpg");
+    background-position: left bottom;
+    background-size: cover;
+    border-radius: 1rem 1rem 1rem 1rem;
+    box-shadow: 0 0 1rem var(--color-tertiary);
+  }
 }
 
 /* Media query for desktop */
@@ -327,5 +347,3 @@ footer li {
 /* --------------------------
 -------- TESTING ONLY -------
 -------------------------- */
-
-
