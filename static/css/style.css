@@ -142,21 +142,18 @@ footer .row {
 /* Project fonts */
 :root {
   --headings: "M PLUS Rounded 1c", sans-serif;
-  --paragraphs: "Noto Sans", sans-serif;
-  --special: "Merienda", cursive;
+  --main-font: "Noto Sans", sans-serif;
+  --special-font: "Merienda", cursive;
 }
 
 /* base.html styles (includes header.html and footer.html) */
 
-body p,
-#header-address-nav,
-#header-phone-nav,
-#header-address,
-#header-phone {
-  font-family: var(--paragraphs);
+p,
+span {
+  font-family: var(--main-font);
 }
 
-body li {
+li {
   font-family: var(--headings);
 }
 
@@ -169,8 +166,8 @@ footer li {
 }
 
 .special-font {
-  font-family: var(--special);
-  font-size: 1.4rem;
+  font-family: var(--special-font);
+  font-size: larger;
 }
 
 .navbar-nav .nav-link.active,
@@ -192,6 +189,13 @@ footer li {
 /* --------------------------
 ----------- Images ----------
 -------------------------- */
+
+/* Iconic image styling */
+:root {
+  --radius-right: 0 1rem 1rem 0;
+  --radius-all: 1rem 1rem 1rem 1rem;
+  --box-shadow: 0 0 1rem var(--color-tertiary);
+}
 
 /* base.html */
 
@@ -282,7 +286,7 @@ footer li {
 
   /* index.html */
   #welcome-img {
-    border-radius: 0 1rem 1rem 0;
+    border-radius: var(--radius-right);
   }
 }
 
@@ -327,8 +331,8 @@ footer li {
     background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.jpg");
     background-position: left bottom;
     background-size: cover;
-    border-radius: 1rem 1rem 1rem 1rem;
-    box-shadow: 0 0 1rem var(--color-tertiary);
+    border-radius: var(--radius-all);
+    box-shadow: var(--box-shadow)
   }
 }
 
