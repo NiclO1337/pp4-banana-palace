@@ -358,4 +358,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Multiple items per carousel slide from [Hello Mev](https://codepen.io/hellomev/pen/LYORMQW)
 
+- Information on good way to divide up templates and link them - [Stack Overflow answer](https://stackoverflow.com/questions/16498176/is-dividing-a-template-into-parts-and-including-each-part-bad)
+
+
 [Back to top](#table-of-contents)
