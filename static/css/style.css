@@ -183,10 +183,6 @@ footer li {
   list-style-type: none;
 }
 
-#override-bootstrap footer a {
-  text-decoration: none;
-}
-
 .social-media-symbols li {
   font-size: 2.3rem;
 }
