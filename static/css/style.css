@@ -29,7 +29,7 @@ footer {
 
 .nav-link {
   color: var(--color-primary);
-  text-shadow: 0 0 1rem var(--color-primary-bg);
+  text-shadow: 0 0 0.2rem var(--color-primary-bg);
 }
 
 #override-bootstrap .nav-link.active,
@@ -86,7 +86,7 @@ footer {
 /* base.html styles (includes header.html and footer.html) */
 
 body {
-  min-height: 150vh;
+  min-height: 100vh;
 }
 
 #header-container {
@@ -159,6 +159,7 @@ li {
 
 header li {
   text-transform: uppercase;
+  font-size: larger;
 }
 
 footer li {
@@ -185,6 +186,11 @@ footer li {
 }
 
 /* index.html styles */
+
+#welcome-img + div .special-font {
+  font-size: 3rem;
+}
+
 
 /* --------------------------
 ----------- Images ----------
