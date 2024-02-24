@@ -337,6 +337,8 @@ TODO: install requirements with correct versions
 - Design and content inspiration from: [Getbento](https://www.getbento.com/blog/best-restaurant-websites-design/)
 and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
+- Footer links from [dim t](https://dimt.co.uk/book/)
+
 
 ### Media
 
