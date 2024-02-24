@@ -72,7 +72,7 @@ footer {
 /* base.html styles (includes header.html and footer.html) */
 
 #override-bootstrap a:hover,
-button:hover {
+#override-bootstrap .btn-booking:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
