@@ -1,5 +1,6 @@
-// When the user scrolls down 80px from the top of the document,
-// resize the navbar's padding and the logo's font size
+// When the user scrolls down 1px from the top of the document,
+// change many css settings to change the UI, then back again
+// if user scrolls back to top.
 window.onscroll = function () {
     scrollFunction();
 };
@@ -51,3 +52,22 @@ function scrollFunction() {
         $('#header-phone')[0].classList.add('d-block')
     }
 }
+
+
+// Code snippet let items from https://codepen.io/hellomev/pen/LYORMQW
+
+let items = document.querySelectorAll('.carousel .carousel-item')
+
+		items.forEach((el) => {
+			const minPerSlide = 4
+			let next = el.nextElementSibling
+			for (var i=1; i<minPerSlide; i++) {
+				if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
