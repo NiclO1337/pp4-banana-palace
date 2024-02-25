@@ -353,6 +353,8 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 ### Code
 
 - Inspiration from my own previous portfolio projects.
+  - HTML/CSS from [Strawberry lovers](https://github.com/NiclO1337/pp1-strawberry-lovers)
+  - JS from [RPS Battle Arena](https://github.com/NiclO1337/pp2-playtime)
 
 - Some of the code from the Codestar blog walkthrough project was used and adapted.
 
@@ -362,7 +364,6 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Information on good way to divide up templates and link them - [Stack Overflow answer](https://stackoverflow.com/questions/16498176/is-dividing-a-template-into-parts-and-including-each-part-bad)
 
-- [Navbar Hamburger Animation with CSS - Bootstrap 5](https://www.youtube.com/watch?v=vJ85fm4m7lw)
-
+- How to animate the navbar toggler from [Clueless Expert](https://www.youtube.com/watch?v=vJ85fm4m7lw)
 
 [Back to top](#table-of-contents)
