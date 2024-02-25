@@ -55,6 +55,7 @@ footer {
 -------------------------- */
 
 /* base.html styles (includes header.html and footer.html) */
+
 #override-bootstrap .btn-booking {
   border: 2px solid var(--color-primary);
   border-radius: 5rem;
@@ -62,8 +63,71 @@ footer {
   background-color: transparent;
 }
 
-/* index.html styles */
 
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--color-tertiary);
+}
+
+.toggler-icon{
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-tertiary);
+  display: block;
+  transition: transform 1s;
+}
+
+.middle-bar{
+  margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+  transform: translate(5px) rotate(45deg) ;
+  transform-origin: 5% 5%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: translate(5px) rotate(-45deg);
+  transform-origin: 5% 90%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: var(--color-primary);
+}
+
+.navbar-toggler.collapsed,
+.navbar-toggler {
+  padding: 0.8rem;
+  border: 2px solid var(--color-primary);
+  border-top-left-radius: 1.3rem 50%;
+  border-top-right-radius: 1.3rem 50%;
+  border-bottom-left-radius: 1.3rem 50%;
+  border-bottom-right-radius: 1.3rem 50%;
+}
+
+/* index.html styles */
 
 /* --------------------------
 ------- Hover effects -------
@@ -209,7 +273,6 @@ footer .footer-links li {
   font-size: 3rem;
 }
 
-
 /* --------------------------
 ----------- Images ----------
 -------------------------- */
@@ -281,7 +344,6 @@ footer .footer-links li {
   background-size: cover;
 }
 
-
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
@@ -343,7 +405,6 @@ footer .footer-links li {
 
 /* Media query for laptop - Bootstrap class xxl */
 @media screen and (min-width: 1400px) {
-
   /* index.html */
   #welcome-img {
     background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.jpg");

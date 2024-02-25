@@ -362,5 +362,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Information on good way to divide up templates and link them - [Stack Overflow answer](https://stackoverflow.com/questions/16498176/is-dividing-a-template-into-parts-and-including-each-part-bad)
 
+- [Navbar Hamburger Animation with CSS - Bootstrap 5](https://www.youtube.com/watch?v=vJ85fm4m7lw)
+
 
 [Back to top](#table-of-contents)
