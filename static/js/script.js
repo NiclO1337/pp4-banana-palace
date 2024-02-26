@@ -16,6 +16,8 @@ $(document).ready(function () {
 })
 
 $(document).ready(function() {
+
+    $('#header-container')[0].style.transition = "none";
     $('#header-container')[0].style.height = "4rem";
 
     $('main.flex-grow-1')[0].style.marginTop = "3rem";
