@@ -255,7 +255,8 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Os**, provides functions for interacting with the operating system
 - **psycopg2**, PostgreSQL database adapter for the Python programming language
 - **dj-database-url**, enables the ability to represent their database settings via a string
-- **gunicorn**, handles HTML rendering, authentication, administration, and backend logicgit
+- **gunicorn**, handles HTML rendering, authentication, administration, and backend logic
+- **whitenoise**, allows web app to serve its own static files
 
 
 ### Tools
@@ -275,6 +276,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Django Docs** to build project and apps
 - **Grammarly** for spellchecking
 - **cdnjs.com** to find relevant CDN fast
+- **paint.net** to edit logo, images and favicon
 
 
 ## Testing
@@ -337,15 +339,25 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Footer link idea from above websites, mainly from [dim t](https://dimt.co.uk/book/)
 
+- Hours & location text from [Colletta Atlanta](https://www.collettarestaurant.com/location/colletta-atlanta/)
+
 
 ### Media
 
-- Logo
-- Favicon
+- Logo created by AI tool - [Looka.com](https://looka.com/logo-maker/)
 
-- Image from
+- Favicon created from logo with help of [paint.net](https://www.getpaint.net/)
 
+#### Index page
+- Photo by [Pierre Blaché](https://www.pexels.com/sv-se/foto/restaurang-solnedgang-hus-manniskor-2901215/)
 
+#### About page
+- Photo by [Rene Asmussen](https://www.pexels.com/sv-se/foto/restaurang-hus-bord-arkitektur-1581384/)
+- Photo by [Tamas Tuzes-Katai](https://unsplash.com/photos/person-holding-white-iphone-5-c-rEn-AdBr3Ig)
+- Photo by [Rachel Claire](https://www.pexels.com/sv-se/foto/mat-restaurang-drycker-stilleben-6127316/)
+- Photo by [Pablo Merchán Montes](https://unsplash.com/photos/woman-holding-fork-in-front-table-Orz90t6o0e4)
+- Photo by [Lisa Fotios](https://www.pexels.com/sv-se/foto/restaurang-lampor-foretag-interior-776538/)
+- Photo by [Rachel Claire](https://www.pexels.com/sv-se/foto/tallrik-restaurang-semester-konst-4577179/)
 
 
 ### Code
