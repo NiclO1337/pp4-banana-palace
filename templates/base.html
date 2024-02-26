@@ -50,6 +50,10 @@
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="{% static './css/style.css' %}" />
 
+    {% if request.path != home_url %}
+    <link rel="stylesheet" href="{% static './css/not-index-page.css' %}" />
+    {% endif %}
+
     <!-- Page specific CSS -->
     {% block page-specific-css %}{% endblock %}
   </head>
@@ -92,8 +96,9 @@
     {% if request.path == home_url %}
     <script src="{% static './js/index.js' %}"></script>
     {% else %}
-    <script src="{% static './js/script.js' %}"></script>
+    <script src="{% static './js/not-index.js' %}"></script>
     {% endif %}
+    <script src="{% static './js/script.js' %}"></script>
 
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}

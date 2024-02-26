@@ -228,10 +228,12 @@ footer .row:nth-child(1) {
   min-height: 10rem;
 }
 
-
-
 div:has(> p.error-msg-links) {
   position: relative;
+}
+
+.footer-links-extra {
+  height: 2rem;
 }
 
 .error-msg-links {
