@@ -51,7 +51,7 @@
     <link rel="stylesheet" href="{% static './css/style.css' %}" />
 
     {% if request.path != home_url %}
-    <link rel="stylesheet" href="{% static './css/not-index-page.css' %}" />
+    <link rel="stylesheet" href="{% static './css/other-pages.css' %}" />
     {% endif %}
 
     <!-- Page specific CSS -->
@@ -94,9 +94,9 @@
 
     <!-- Custom JS file -->
     {% if request.path == home_url %}
-    <script src="{% static './js/index.js' %}"></script>
+    <script src="{% static './js/index-page.js' %}"></script>
     {% else %}
-    <script src="{% static './js/not-index.js' %}"></script>
+    <script src="{% static './js/other-pages.js' %}"></script>
     {% endif %}
     <script src="{% static './js/script.js' %}"></script>
 
