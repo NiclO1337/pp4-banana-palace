@@ -374,6 +374,62 @@ footer .footer-links li {
   background-size: cover;
 }
 
+/* about.html */
+
+#main-about-img,
+#map-img,
+.about-images {
+  border-radius: var(--radius-all);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  background-color: var(--color-tertiary-bg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-about-img,
+#map-img {
+  height: 22rem;
+}
+
+.about-images {
+  height: 17rem;
+}
+
+#main-about-img {
+  background-image: url("../images/main-about-img.webp");
+  background-position: center;
+}
+
+#map-img {
+  background-image: url("../images/phone-map-nature.webp");
+  background-position: bottom;
+}
+
+.about-img-1 {
+  background-image: url("../images/tropical-table-setting.webp");
+  background-position: bottom;
+}
+
+.about-img-2 {
+  background-image: url("../images/woman-enjoying-exotic-food.webp");
+  background-position: center;
+}
+
+.about-img-3 {
+  background-image: url("../images/dimlit-mysterious-bar.webp");
+  background-position: center;
+}
+
+.about-img-4 {
+  background-image: url("../images/private-room-rainforest-setting.webp");
+  background-position: center;
+}
+
+
+
+
+
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
