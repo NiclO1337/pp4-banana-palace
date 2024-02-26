@@ -1,23 +1,19 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let errorMessage = document.getElementsByClassName("error-msg-links")[0];
-    let lisExtra = document.getElementsByClassName("footer-links-extra")[0].children;
-
-    for (let link of lisExtra) {
-        link.addEventListener('click', () => {
-            errorMessage.style.display = "block";
-            window.setTimeout(() => {
-                errorMessage.style.opacity = "1";
-            }, 100)
-            window.setTimeout(() => {
-                errorMessage.style.opacity = "0";
-            }, 5100)
-            window.setTimeout(() => {
-                errorMessage.style.display = "none";
-            }, 6100)
-        });
-    }
+// Add on click function to footer links extra to display an error message
+$(document).ready(function () {
+    let errorMessage = $('.error-msg-links')[0];
+    $('.footer-links-extra').children('li').click(function () {
+        errorMessage.style.display = "block";
+        window.setTimeout(() => {
+            errorMessage.style.opacity = "1";
+        }, 100)
+        window.setTimeout(() => {
+            errorMessage.style.opacity = "0";
+        }, 5100)
+        window.setTimeout(() => {
+            errorMessage.style.display = "none";
+        }, 6100)
+    })
 })
-
 
 // When the user scrolls down 1px from the top of the document,
 // change many css settings to change the UI, then back again
