@@ -177,7 +177,7 @@ Relational database
 
 Scrum, using both incremental and iterative development, was chosen as the main Agile methodology to use in this project. Planning workload into iterations, also known as sprints, with a mindset of "continuous improvement". For each iteration, a kanban board was used to visualize the current workload. Between iterations, remaining workload in the product backlog was reviewed and next iteration was planned.
 
-All features that could possibly be implemented were added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+All features that could possibly be implemented were added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 
 
@@ -185,36 +185,34 @@ All features that could possibly be implemented were added as [issues on GitHub.
 
 Project was broken down into different epics, large bodies of work, with features that might be included in the project. Each epic in turn is broken into smaller user stories where each user story provides a value to a specified user. User stories were created from both restaurant owner and users of the website.
 
-
-TODO
-<details><summary>Screenshot of</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
+<details><summary>Screenshot of one of the Epics</summary> <p align="left"><img src="./documentation/epic.png" alt="Example of a project Epic" width="600"/></p> </details>
 
 
 ### User stories
 
-All user stories are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub. They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and some tasks to complete.
+All user stories are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub. They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and tasks to complete. Some commits were linked to the user story they completed a task for.
 
 
-<details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="TODO" alt="TODO" width="600"/></p> </details>
+<details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="./documentation/user-story.png" alt="Example of a project User story" width="600"/></p> </details>
+
+<details><summary>Screenshot of example of user story commits</summary> <p align="left"><img src="./documentation/user-story-commits.png" alt="Example of a project User story commit" width="400"/></p> </details>
 
 
 
 ### Product backlog
 
-PBI's
-backlog refinement
-GitHub Milestones [link]
+All deliverable user stories are added to the product backlog. [GitHub milestone](https://github.com/NiclO1337/pp4-banana-palace/milestone/1) is used as the backlog for this project. They are prioritized, top to bottom, based on what needs their readiness to be completed and what needs to be delivered first. PBI's (product backlog items) are reviewed and re-prioritized between development iterations, also known as backlog refinement.
+
 
 ### MoSCoW prioritization
 
 <p align="left"><img src="./documentation/moscow-prioritization.png" alt="MoSCoW prioritization labels" width="800"/></p>
 
-Each iteration
+The MoSCoW prioritization was used for this project. While planning each iteration, user stories are divided into categories depending on their importance to the project at this stage in development. Remaining user stories at the end of the iteration are marked as WONT-HAVE for this iteration and returned to the product backlog for review. They can still be developed in future iterations if time permits.
 
 ### Iterations
 
-
-Recorded as [GitHub Milestones](https://github.com/NiclO1337/pp4-banana-palace/milestones)
+Iteration process were tracked as [GitHub milestones](https://github.com/NiclO1337/pp4-banana-palace/milestones) for this project.
 
 <details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="./documentation/iteration-1-start.png" alt="Beginning of iteration 1" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="./documentation/iteration-1-end.png" alt="end of iteration 1" width="800"/></p> </details>
@@ -234,7 +232,7 @@ Github projects was used as a kanban board during development. In each iteration
 
 Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) used on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
-<p align="left"><img src="TODO" alt="TODO" width="800"/></p>
+<p align="left"><img src="./documentation/kanban-board.png" alt="Banana palace project board" width="auto"/></p>
 
 
 [Back to top](#table-of-contents)
