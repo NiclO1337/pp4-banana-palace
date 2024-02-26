@@ -246,7 +246,7 @@ div:has(> p.error-msg-links) {
   box-shadow: var(--box-shadow);
   display: none;
   opacity: 0;
-  transition: opacity 1.5s;
+  transition: opacity 1s;
 }
 
 
@@ -368,7 +368,7 @@ footer .footer-links li {
 #welcome-img {
   height: 60vh;
   background-color: var(--color-tertiary-bg);
-  background-image: url("../images/banana-palace-outdoor-pexels-2901215-small-screen.jpg");
+  background-image: url("../images/banana-palace-outdoor-pexels-2901215-small-screen.webp");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -493,7 +493,7 @@ footer .footer-links li {
 @media screen and (min-width: 1400px) {
   /* index.html */
   #welcome-img {
-    background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.jpg");
+    background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.webp");
     background-position: left bottom;
     background-size: cover;
     border-radius: var(--radius-all);
