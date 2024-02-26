@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% url 'home' as home_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +88,11 @@
       crossorigin="anonymous"></script>
 
     <!-- Custom JS file -->
+    {% if request.path == home_url %}
+    <script src="{% static './js/index.js' %}"></script>
+    {% else %}
     <script src="{% static './js/script.js' %}"></script>
+    {% endif %}
 
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}
