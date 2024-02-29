@@ -442,6 +442,11 @@ footer .footer-links li {
 
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
+  header li {
+    font-size: 95%;
+  }
+
+
   /* Main */
   #symbol-left {
     right: 60%;
@@ -467,6 +472,10 @@ footer .footer-links li {
 
   #header-phone-nav {
     left: 10%;
+  }
+
+  header li {
+    font-size: 1rem;
   }
 
   /* Main */
