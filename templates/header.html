@@ -56,11 +56,11 @@
 
           {% if user.is_authenticated %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="#">Account/Logout</a>
+            <a class="nav-link px-0 px-lg-2" href="{% url 'account_logout' %}">Account/Logout</a>
           </li>
           {% else %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="#">Login/Register</a>
+            <a class="nav-link px-0 px-lg-2" href="{% url 'account_login' %}">Login/Register</a>
           </li>
           {% endif %}
 

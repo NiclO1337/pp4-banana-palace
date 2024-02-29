@@ -50,6 +50,11 @@ footer {
   color: var(--color-primary);
 }
 
+/* Account management */
+.account-management a {
+  color: var(--color-primary);
+}
+
 /* --------------------------
 ---------- Buttons ----------
 -------------------------- */
@@ -249,6 +254,11 @@ div:has(> p.error-msg-links) {
 
 
 /* index.html styles */
+
+/* Account management */
+.account-management {
+  max-width: 16rem;
+}
 
 
 /* --------------------------
