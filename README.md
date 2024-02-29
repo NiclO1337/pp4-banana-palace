@@ -257,6 +257,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **dj-database-url**, enables the ability to represent their database settings via a string
 - **gunicorn**, handles HTML rendering, authentication, administration, and backend logic
 - **whitenoise**, allows web app to serve its own static files
+- **Allauth**, dealing with account authentication, registration, management, and third-party (social) account authentication
 
 
 ### Tools
