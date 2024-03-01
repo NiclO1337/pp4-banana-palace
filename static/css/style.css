@@ -317,8 +317,10 @@ footer .footer-links li {
 /* Account management */
 .account-management li {
   text-transform: none;
-  font-size: 90%;
+  font-family: var(--main-font);
+  font-size: 80%;
   line-height: 1.1rem;
+  font-weight: bold;
 }
 
 /* --------------------------
@@ -476,7 +478,7 @@ footer .footer-links li {
   /* Account management */
 
   .account-management ul {
-    width: 17.3rem;
+    width: 29ch;
   }
 }
 
