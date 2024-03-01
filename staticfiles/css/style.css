@@ -261,9 +261,9 @@ div:has(> p.error-msg-links) {
 
 /* Project fonts */
 :root {
-  --headings: "M PLUS Rounded 1c", sans-serif;
+  --buttons-text: "M PLUS Rounded 1c", sans-serif;
   --main-font: "Noto Sans", sans-serif;
-  --special-font: "Merienda", cursive;
+  --headings: "Merienda", cursive;
 }
 
 /* base.html styles (includes header.html and footer.html) */
@@ -275,7 +275,7 @@ span {
 
 li,
 button {
-  font-family: var(--headings);
+  font-family: var(--buttons-text);
   text-transform: uppercase;
   list-style-type: none;
 }
@@ -291,8 +291,8 @@ footer .footer-links li {
   padding-inline-start: 0;
 }
 
-.special-font {
-  font-family: var(--special-font);
+.headings {
+  font-family: var(--headings);
 }
 
 .social-media-symbols li {
@@ -301,7 +301,7 @@ footer .footer-links li {
 
 /* index.html styles */
 
-#welcome-img + div .special-font {
+#welcome-img + div .headings {
   font-size: 3rem;
 }
 
