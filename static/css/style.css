@@ -8,7 +8,7 @@
 :root {
   --color-primary-bg: #f8f6d1;
   --color-secondary-bg: #efc600;
-  --color-tertiary-bg: #e1c10c27;
+  --color-tertiary-bg: #e1c10c10;
   --color-primary: #073503;
   --color-secondary: #1f7405;
   --color-tertiary: #270b03;
@@ -53,6 +53,16 @@ footer {
 /* Account management */
 .account-management a {
   color: var(--color-primary);
+}
+
+input {
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-tertiary-bg);
+  color: var(--color-primary);
+}
+
+::placeholder {
+  color: var(--color-tertiary)
 }
 
 /* --------------------------
@@ -176,6 +186,12 @@ footer {
   background-image: url("../images/chevron-right-light.png");
 }
 
+/* Account management */
+input:hover,
+input:focus {
+  border: 2px solid var(--color-secondary);
+}
+
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
@@ -264,8 +280,11 @@ div:has(> p.error-msg-links) {
   margin-bottom: 0.4rem;
 }
 
-.account-management label {
-  display: block;
+input {
+  padding: 0.3rem 0.8rem 0.4rem;
+  border-radius: 2rem;
+  margin: 0.2rem 0;
+  outline: none;
 }
 
 .reset-pw p {
@@ -329,6 +348,10 @@ footer .footer-links li {
   font-size: 80%;
   line-height: 1.1rem;
   font-weight: bold;
+}
+
+input {
+  font-size: 90%;
 }
 
 /* --------------------------
