@@ -50,6 +50,11 @@ footer {
   color: var(--color-primary);
 }
 
+/* Account management */
+.account-management a {
+  color: var(--color-primary);
+}
+
 /* --------------------------
 ---------- Buttons ----------
 -------------------------- */
@@ -63,7 +68,6 @@ footer {
   background-color: transparent;
 }
 
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -72,7 +76,7 @@ footer {
   border: 2px solid var(--color-tertiary);
 }
 
-.toggler-icon{
+.toggler-icon {
   width: 30px;
   height: 4px;
   border-radius: 2px;
@@ -81,12 +85,12 @@ footer {
   transition: transform 1s;
 }
 
-.middle-bar{
+.middle-bar {
   margin: 5px auto;
 }
 
 .navbar-toggler .top-bar {
-  transform: translate(5px) rotate(45deg) ;
+  transform: translate(5px) rotate(45deg);
   transform-origin: 5% 5%;
 }
 
@@ -158,8 +162,6 @@ footer {
   transition: color 0.4s ease-out;
 }
 
-
-
 /* index.html styles */
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
@@ -224,16 +226,12 @@ body {
   transition: all 1s ease-out;
 }
 
-footer .row:nth-child(1) {
-  min-height: 10rem;
-}
-
 div:has(> p.error-msg-links) {
   position: relative;
 }
 
 .footer-links-extra {
-  height: 2rem;
+  min-height: 2rem;
 }
 
 .error-msg-links {
@@ -251,9 +249,20 @@ div:has(> p.error-msg-links) {
   transition: opacity 1s;
 }
 
-
 /* index.html styles */
 
+/* Account management */
+.account-management {
+  max-width: 16rem;
+}
+
+.account-management ul {
+  padding-left: 0;
+}
+
+.account-management li {
+  margin-bottom: 0.4rem;
+}
 
 /* --------------------------
 --------- Typography --------
@@ -303,6 +312,15 @@ footer .footer-links li {
 
 #welcome-img + div .headings {
   font-size: 3rem;
+}
+
+/* Account management */
+.account-management li {
+  text-transform: none;
+  font-family: var(--main-font);
+  font-size: 80%;
+  line-height: 1.1rem;
+  font-weight: bold;
 }
 
 /* --------------------------
@@ -428,10 +446,6 @@ footer .footer-links li {
   background-position: center;
 }
 
-
-
-
-
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
@@ -442,6 +456,10 @@ footer .footer-links li {
 
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
+  header li {
+    font-size: 95%;
+  }
+
   /* Main */
   #symbol-left {
     right: 60%;
@@ -456,6 +474,12 @@ footer .footer-links li {
     border-radius: var(--radius-right);
     box-shadow: var(--box-shadow);
   }
+
+  /* Account management */
+
+  .account-management ul {
+    width: 29ch;
+  }
 }
 
 /* Media query for big tablet - Bootstrap class lg */
@@ -467,6 +491,10 @@ footer .footer-links li {
 
   #header-phone-nav {
     left: 10%;
+  }
+
+  header li {
+    font-size: 1rem;
   }
 
   /* Main */
