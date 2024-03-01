@@ -264,6 +264,14 @@ div:has(> p.error-msg-links) {
   margin-bottom: 0.4rem;
 }
 
+.account-management label {
+  display: block;
+}
+
+.reset-pw p {
+  width: 27ch;
+}
+
 /* --------------------------
 --------- Typography --------
 -------------------------- */
