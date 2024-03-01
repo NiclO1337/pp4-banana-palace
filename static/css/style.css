@@ -68,7 +68,6 @@ footer {
   background-color: transparent;
 }
 
-
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -77,7 +76,7 @@ footer {
   border: 2px solid var(--color-tertiary);
 }
 
-.toggler-icon{
+.toggler-icon {
   width: 30px;
   height: 4px;
   border-radius: 2px;
@@ -86,12 +85,12 @@ footer {
   transition: transform 1s;
 }
 
-.middle-bar{
+.middle-bar {
   margin: 5px auto;
 }
 
 .navbar-toggler .top-bar {
-  transform: translate(5px) rotate(45deg) ;
+  transform: translate(5px) rotate(45deg);
   transform-origin: 5% 5%;
 }
 
@@ -162,8 +161,6 @@ footer {
   color: red;
   transition: color 0.4s ease-out;
 }
-
-
 
 /* index.html styles */
 .carousel-control-prev-icon:hover,
@@ -252,7 +249,6 @@ div:has(> p.error-msg-links) {
   transition: opacity 1s;
 }
 
-
 /* index.html styles */
 
 /* Account management */
@@ -260,6 +256,13 @@ div:has(> p.error-msg-links) {
   max-width: 16rem;
 }
 
+.account-management ul {
+  padding-left: 0;
+}
+
+.account-management li {
+  margin-bottom: 0.4rem;
+}
 
 /* --------------------------
 --------- Typography --------
@@ -309,6 +312,13 @@ footer .footer-links li {
 
 #welcome-img + div .special-font {
   font-size: 3rem;
+}
+
+/* Account management */
+.account-management li {
+  text-transform: none;
+  font-size: 90%;
+  line-height: 1.1rem;
 }
 
 /* --------------------------
@@ -434,10 +444,6 @@ footer .footer-links li {
   background-position: center;
 }
 
-
-
-
-
 /* --------------------------
 ------- Media queries -------
 -------------------------- */
@@ -452,7 +458,6 @@ footer .footer-links li {
     font-size: 95%;
   }
 
-
   /* Main */
   #symbol-left {
     right: 60%;
@@ -466,6 +471,12 @@ footer .footer-links li {
   #welcome-img {
     border-radius: var(--radius-right);
     box-shadow: var(--box-shadow);
+  }
+
+  /* Account management */
+
+  .account-management ul {
+    width: 17.3rem;
   }
 }
 
