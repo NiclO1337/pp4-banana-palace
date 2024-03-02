@@ -56,6 +56,10 @@
 
     <!-- Page specific CSS -->
     {% block page-specific-css %}{% endblock %}
+
+    <!-- prettier-ignore -->
+    {% block extra_head %}
+    {% endblock extra_head %}
   </head>
 
   <body id="override-bootstrap" class="d-flex flex-column">
@@ -73,8 +77,20 @@
         id="symbol-right"
         class="d-none d-md-block" />
 
+      {% if messages %}
+      <div>
+        <strong>Messages:</strong>
+        <ul>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
       <!-- Individual page content here -->
-      {% block content %} {% endblock %}
+      {% block page-content %}
+
+      {% endblock %}
     </main>
 
     {% include 'footer.html' %}
@@ -102,5 +118,9 @@
 
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}
+
+    <!-- prettier-ignore -->
+    {% block extra_body %}
+    {% endblock extra_body %}
   </body>
 </html>

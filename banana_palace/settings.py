@@ -15,6 +15,7 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -163,6 +164,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+MESSAGE_TAGS = {
+    messages.INFO: '',
+    50: 'critical',
+}
 
 
 # Email backend

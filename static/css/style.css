@@ -28,7 +28,8 @@ footer {
 }
 
 .nav-link,
-.btn-booking {
+.btn-booking,
+#override-bootstrap .account-management button {
   color: var(--color-primary);
   text-shadow: 0 0 0.2rem var(--color-primary-bg);
 }
@@ -71,7 +72,8 @@ input {
 
 /* base.html styles (includes header.html and footer.html) */
 
-#override-bootstrap .btn-booking {
+#override-bootstrap .btn-booking,
+#override-bootstrap .account-management button {
   border: 2px solid var(--color-primary);
   border-radius: 5rem;
   padding: 6px 10px;
@@ -150,13 +152,15 @@ input {
 /* base.html styles (includes header.html and footer.html) */
 
 #override-bootstrap a:hover,
-#override-bootstrap .btn-booking:hover {
+#override-bootstrap .btn-booking:hover,
+#override-bootstrap .account-management button:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
 }
 
-#override-bootstrap .btn-booking:hover {
+#override-bootstrap .btn-booking:hover,
+#override-bootstrap .account-management button:hover {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
   text-shadow: none;
