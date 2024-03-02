@@ -2,10 +2,10 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load allauth account %}
-{% block title %}
+{% block head_title %}
     {% trans "Sign In" %}
-{% endblock title %}
-{% block page-content %}
+{% endblock head_title %}
+{% block content %}
 <div class="row justify-content-center m-0 mb-4">
   <div class="account-management">
     <h2 class="mt-2 headings">{% trans "Sign Up" %}</h2>
@@ -37,4 +37,4 @@
     {% endif %}
   </div>
 </div>
-{% endblock page-content %}
+{% endblock content %}

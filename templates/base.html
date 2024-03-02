@@ -16,7 +16,7 @@
       content="Banana restaurant, banana recipe, banana food, banana dinner,
       food with banana, tropical theme restaurant" />
 
-    <title>Banana Palace {% block title %}{% endblock %}</title>
+    <title>Banana Palace {% block head_title %}{% endblock %}</title>
 
     <!-- Favicon -->
     <link
@@ -74,7 +74,7 @@
         class="d-none d-md-block" />
 
       <!-- Individual page content here -->
-      {% block page-content %} {% endblock %}
+      {% block content %} {% endblock %}
     </main>
 
     {% include 'footer.html' %}
