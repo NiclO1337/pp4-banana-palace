@@ -22,6 +22,11 @@ body {
   color: var(--color-primary);
 }
 
+#override-bootstrap ul.fs-2 a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+}
+
 footer {
   background-color: var(--color-tertiary);
   color: var(--color-primary-bg);
