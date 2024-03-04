@@ -78,7 +78,7 @@ footer {
 }
 
 input {
-  border: 2px solid var(--color-primary);
+  border: var(--border-width-iconic) solid var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
 }
@@ -95,8 +95,8 @@ input {
 
 #override-bootstrap .btn-booking,
 #override-bootstrap .account-management button {
-  border: 2px solid var(--color-primary);
-  border-radius: 5rem;
+  border: var(--border-width-iconic) solid var(--color-primary);
+  border-radius: var(--border-radius-iconic);
   padding: 6px 10px;
   background-color: transparent;
 }
@@ -106,13 +106,13 @@ input {
 .navbar-toggler-icon:focus {
   outline: none;
   box-shadow: none;
-  border: 2px solid var(--color-tertiary);
+  border: var(--border-width-iconic) solid var(--color-tertiary);
 }
 
 .toggler-icon {
   width: 30px;
   height: 4px;
-  border-radius: 2px;
+  border-radius: var(--border-radius-iconic);
   background-color: var(--color-tertiary);
   display: block;
   transition: transform 1s;
@@ -157,7 +157,7 @@ input {
 .navbar-toggler.collapsed,
 .navbar-toggler {
   padding: 0.8rem;
-  border: 2px solid var(--color-primary);
+  border: var(--border-width-iconic) solid var(--color-primary);
   border-top-left-radius: 1.3rem 50%;
   border-top-right-radius: 1.3rem 50%;
   border-bottom-left-radius: 1.3rem 50%;
@@ -214,12 +214,22 @@ input {
 /* Account management */
 input:hover,
 input:focus {
-  border: 2px solid var(--color-secondary);
+  border: var(--border-width-iconic) solid var(--color-secondary);
 }
 
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
+
+:root {
+  --border-radius-iconic: 2rem;
+  --border-width-iconic: 2px;
+
+  /* Alert messages */
+  --bs-border-radius: var(--border-radius-iconic);
+  --bs-border-width: var(--border-width-iconic);
+}
+
 
 /* base.html styles (includes header.html and footer.html) */
 body {
@@ -281,7 +291,7 @@ div:has(> p.error-msg-links) {
   left: 50%;
   margin-left: -130px;
   bottom: 0;
-  border-radius: var(--radius-all);
+  border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
   display: none;
   opacity: 0;
@@ -322,7 +332,7 @@ hr:has(+ h2) {
 
 input {
   padding: 0.3rem 0.8rem 0.4rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius-iconic);
   margin: 0.2rem 0;
   outline: none;
 }
@@ -333,7 +343,7 @@ input {
 
 /* Project fonts */
 :root {
-  --buttons-text: "M PLUS Rounded 1c", sans-serif;
+  --button-font: "M PLUS Rounded 1c", sans-serif;
   --main-font: "Noto Sans", sans-serif;
   --headings: "Merienda", cursive;
 }
@@ -352,7 +362,7 @@ span {
 
 li,
 button {
-  font-family: var(--buttons-text);
+  font-family: var(--button-font);
   text-transform: uppercase;
   list-style-type: none;
 }
@@ -413,7 +423,7 @@ input {
 /* Iconic image styling */
 :root {
   --radius-right: 0 1rem 1rem 0;
-  --radius-all: 1rem 1rem 1rem 1rem;
+  --border-radius-images-all: 1rem 1rem 1rem 1rem;
   --box-shadow: 0 0 1rem var(--color-tertiary);
 }
 
@@ -482,7 +492,7 @@ input {
 #main-about-img,
 #map-img,
 .about-images {
-  border-radius: var(--radius-all);
+  border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
   width: 100%;
   background-color: var(--color-tertiary-bg);
@@ -625,7 +635,7 @@ input {
     background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.webp");
     background-position: left bottom;
     background-size: cover;
-    border-radius: var(--radius-all);
+    border-radius: var(--border-radius-images-all);
   }
 }
 
