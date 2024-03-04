@@ -284,6 +284,19 @@ div:has(> p.error-msg-links) {
   margin-bottom: 0.4rem;
 }
 
+.account-management h1,
+.account-management h2,
+.account-management p,
+.account-management ul,
+.account-management button {
+  margin-bottom: 0.75rem;
+}
+
+#id_password_helptext {
+  margin-top: 0.4rem;
+  display: block;
+}
+
 input {
   padding: 0.3rem 0.8rem 0.4rem;
   border-radius: 2rem;
@@ -291,9 +304,7 @@ input {
   outline: none;
 }
 
-.reset-pw p {
-  width: 27ch;
-}
+
 
 /* --------------------------
 --------- Typography --------
@@ -364,6 +375,7 @@ footer .footer-links li {
 
 input {
   font-size: 90%;
+  text-align: center;
 }
 
 /* --------------------------
@@ -527,7 +539,8 @@ input {
   /* Account management */
 
   .account-management ul {
-    width: 29ch;
+    width: 37ch;
+    margin-left: -5ch;
   }
 }
 
