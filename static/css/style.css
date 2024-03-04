@@ -297,6 +297,10 @@ div:has(> p.error-msg-links) {
   display: block;
 }
 
+hr:has(+h2) {
+  margin-top: 0.25rem;
+}
+
 input {
   padding: 0.3rem 0.8rem 0.4rem;
   border-radius: 2rem;
