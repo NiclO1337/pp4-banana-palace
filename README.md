@@ -152,6 +152,7 @@ Screenshots of individual wireframes for the:
 <details><summary>about page</summary> <p align="left"><img src="./documentation/wireframes-about.png" alt="wireframes for the about page" width="600"/></p> </details>
 <details><summary>users profile page</summary> <p align="left"><img src="./documentation/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
 <details><summary>owners profile page</summary> <p align="left"><img src="./documentation/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
+<details><summary>fun booking page with date and time</summary> <p align="left"><img src="./documentation/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
 <details><summary>booking page with date and time</summary> <p align="left"><img src="./documentation/wireframes-booking-date-time.png" alt="wireframes for the booking page with date and time" width="600"/></p> </details>
 <details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
 <details><summary>menu page</summary> <p align="left"><img src="./documentation/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
