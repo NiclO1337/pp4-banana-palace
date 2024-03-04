@@ -12,6 +12,17 @@
   --color-primary: #073503;
   --color-secondary: #1f7405;
   --color-tertiary: #270b03;
+
+  /* Colors for alert messages */
+  --bs-success-text-emphasis: var(--color-primary);
+  --bs-success-bg-subtle: #a0da99;
+  --bs-success-border-subtle: var(--color-primary);
+  --bs-success-text-emphasis: var(--color-primary);
+
+  --bs-success-text-emphasis: var(--color-tertiary);
+  --bs-success-bg-subtle: #ca7c66;
+  --bs-success-border-subtle: var(--color-tertiary);
+  --bs-success-text-emphasis: var(--color-tertiary);
 }
 
 /* base.html styles (includes header.html and footer.html) */
@@ -381,6 +392,13 @@ footer .footer-links li {
   font-size: 80%;
   line-height: 1.1rem;
   font-weight: bold;
+}
+
+.account-management .errorlist li {
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--color-tertiary);
+  line-height: normal;
 }
 
 input {
