@@ -43,6 +43,11 @@ footer {
   color: var(--color-primary-bg);
 }
 
+.error-msg-links {
+  background-color: var(--color-secondary-bg);
+  color: var(--color-tertiary);
+}
+
 /* index.html styles */
 
 .card {
@@ -199,10 +204,10 @@ input:focus {
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
-/* base.html styles (includes header.html and footer.html) */
 
+/* base.html styles (includes header.html and footer.html) */
 body {
-  min-height: 110vh;
+  min-height: 100vh;
 }
 
 #header-container {
@@ -257,8 +262,6 @@ div:has(> p.error-msg-links) {
 .error-msg-links {
   position: absolute;
   max-width: 260px;
-  background-color: var(--color-secondary-bg);
-  color: var(--color-tertiary);
   left: 50%;
   margin-left: -130px;
   bottom: 0;
@@ -297,7 +300,7 @@ div:has(> p.error-msg-links) {
   display: block;
 }
 
-hr:has(+h2) {
+hr:has(+ h2) {
   margin-top: 0.25rem;
 }
 
@@ -307,8 +310,6 @@ input {
   margin: 0.2rem 0;
   outline: none;
 }
-
-
 
 /* --------------------------
 --------- Typography --------
@@ -516,8 +517,7 @@ input {
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
   /* Base */
-  h1,
-  h2 {
+  h1 {
     font-size: 2.5rem;
   }
 
@@ -542,9 +542,19 @@ input {
 
   /* Account management */
 
-  .account-management ul {
+  .account-management ul,
+  .wider-text {
     width: 37ch;
     margin-left: -5ch;
+  }
+
+  .account-management h1 {
+    width: 15ch;
+    margin-left: -3ch;
+  }
+
+  .account-management h2 {
+    width: 11ch;
   }
 }
 

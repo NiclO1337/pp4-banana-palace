@@ -63,6 +63,13 @@
   </head>
 
   <body id="override-bootstrap" class="d-flex flex-column">
+    {% if user.is_superuser %}
+      <ul class="mx-auto fs-2">
+        <li>
+          <a href="http://127.0.0.1:8000/admin/">Admin</a>
+        </li>
+      </ul>
+    {% endif %}
     {% include 'header.html' %}
 
     <main class="flex-grow-1">
