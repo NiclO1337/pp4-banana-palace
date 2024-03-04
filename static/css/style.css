@@ -19,10 +19,10 @@
   --bs-success-border-subtle: var(--color-primary);
   --bs-success-text-emphasis: var(--color-primary);
 
-  --bs-success-text-emphasis: var(--color-tertiary);
-  --bs-success-bg-subtle: #ca7c66;
-  --bs-success-border-subtle: var(--color-tertiary);
-  --bs-success-text-emphasis: var(--color-tertiary);
+  --bs-danger-text-emphasis: var(--color-tertiary);
+  --bs-danger-bg-subtle: #ca7c66;
+  --bs-danger-border-subtle: var(--color-tertiary);
+  --bs-danger-text-emphasis: var(--color-tertiary);
 }
 
 /* base.html styles (includes header.html and footer.html) */
