@@ -165,8 +165,8 @@ USE_TZ = True
 
 
 MESSAGE_TAGS = {
-    messages.INFO: '',
-    50: 'critical',
+    messages.SUCCESS: 'alert-success',
+    messages.ERROR: 'alert-danger',
 }
 
 
