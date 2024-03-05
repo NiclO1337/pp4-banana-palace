@@ -10,17 +10,19 @@
   --color-secondary-bg: #efc600;
   --color-tertiary-bg: #e1c10c10;
   --color-primary: #073503;
+  --color-primary-light: #a0da99;
   --color-secondary: #1f7405;
   --color-tertiary: #270b03;
+  --color-tertiary-light: #ca7c66;
 
   /* Colors for alert messages */
   --bs-success-text-emphasis: var(--color-primary);
-  --bs-success-bg-subtle: #a0da99;
+  --bs-success-bg-subtle: var(--color-primary-light);
   --bs-success-border-subtle: var(--color-primary);
   --bs-success-text-emphasis: var(--color-primary);
 
   --bs-danger-text-emphasis: var(--color-tertiary);
-  --bs-danger-bg-subtle: #ca7c66;
+  --bs-danger-bg-subtle: var(--color-tertiary-light)
   --bs-danger-border-subtle: var(--color-tertiary);
   --bs-danger-text-emphasis: var(--color-tertiary);
 }
