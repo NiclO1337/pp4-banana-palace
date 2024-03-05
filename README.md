@@ -141,7 +141,7 @@ TODO (maybe)
 
 ### Wireframes
 
-<p align="left"><img src="./documentation/wireframes-all.png" alt="Entity relationship diagram" width="600"/></p>
+<p align="left"><img src="./documentation/wireframes-all.png" alt="Entity relationship diagram" width="700"/></p>
 
 Initial wireframes as a guide for development and design.
 
@@ -163,14 +163,35 @@ Screenshots of individual wireframes for the:
 
 ### Database Schema
 
+A relational database is used for this project, it is a PostgreSQL provided by Code Institute. <br>Entity relationship diagrams (ERD) are used to plan the SQL tables and relationships, i.e. how tables interact with eachother.
 
+#### Business goals
+- The menu is visible on website and can easily be edited.
+- Customers can reserve tables if they register an account.
+- Customers can make multiple reservations in advance.
+- Reservations are limited to 1 per customer per day
+- Each table is avalible for booking once per day, rest of the time it is saved for walk-in customers.
+- Customers can leave reviews about their experience.
+- Staff members can comment on customers reviews.
+- A select few customers can recieve a friends and family discount.
 
-<p align="left"><img src="./documentation/entity-relationship-diagram.png" alt="Entity relationship diagram" width="600"/></p>
+#### Progressive data model
+A progressive data model is used with three levels of abstraction. <br>These evolving stages bridges the communication gap between buisness people and the technical team.
 
-TODO
-PostgreSQL
-Relational database
+#### Conceptional
+The conceptional ERD is used by business analysts to bind the scope, key entities, and relationships in a way that is easy for the business people to confirm and understand. Business goals are used as guide to create tables at this stage. See image below.
 
+<p align="left"><img src="./documentation/entity-relationship-diagram-conceptual.png" alt="Entity relationship diagram" width="700"/></p>
+
+#### Logical
+When the conceptional stage is complete and confirmed, the logical ERD evolves the conceptional by going deeper into what each table need and what type of relationships that will be needed. Business analysts provide a simple visual that both business people and the development team can understand. See image below.
+
+<p align="left"><img src="./documentation/entity-relationship-diagram-logical.png" alt="Entity relationship diagram" width="700"/></p>
+
+#### Physical
+Lastly the development team elaborates upon the logical model with data specifications to transforms it into a blueprint for building and implementing the database. See image below.
+
+<p align="left"><img src="./documentation/entity-relationship-diagram-physical.png" alt="Entity relationship diagram" width="700"/></p>
 
 
 ## Agile software development
@@ -377,5 +398,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 - Information on good way to divide up templates and link them - [Stack Overflow answer](https://stackoverflow.com/questions/16498176/is-dividing-a-template-into-parts-and-including-each-part-bad)
 
 - How to animate the navbar toggler from [Clueless Expert](https://www.youtube.com/watch?v=vJ85fm4m7lw)
+
+- How to create entity relationship diagrams from [The Business Analysis Doctor](https://www.youtube.com/watch?v=wMgirP7z4k8&t=2s)
 
 [Back to top](#table-of-contents)
