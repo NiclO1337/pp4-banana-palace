@@ -12,7 +12,7 @@ function scrollFunction() {
     ) {
         $('#header-container')[0].style.height = "4rem";
 
-        $('main.flex-grow-1')[0].style.marginTop = "20vh";
+        $('main.flex-grow-1')[0].style.marginTop = "14vh";
         $('.soft-cushion')[0].style.height = "1vh";
         $('.soft-cushion')[1].style.height = "1vh";
 
@@ -28,6 +28,8 @@ function scrollFunction() {
         $('#header-phone-nav')[0].classList.remove('d-sm-block')
         $('#header-address')[0].classList.remove('d-block')
         $('#header-phone')[0].classList.remove('d-block')
+
+        $('.alert').hide();
 
     } else {
         document.body.scrollTop = 0;

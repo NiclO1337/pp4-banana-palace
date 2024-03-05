@@ -2,7 +2,6 @@
 {% load static %}
 {% url 'about' as about_url %}
 
-
 <header class="sticky-top">
   <!-- Header sticks to top of screen at all times -->
   <nav class="navbar navbar-expand-md">
@@ -41,14 +40,26 @@
           >Tall tree road 986, 226262 Banana Republic</span
         >
         <ul class="navbar-nav">
+          <!-- Admin quick login button dev -->
+          {% if user.is_superuser %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2"
-            href="#">Menu</a>
+            <a
+              class="nav-link px-0 px-lg-2"
+              href="http://127.0.0.1:8000/admin/">
+              Admin <i class="fa-solid fa-key"></i>
+            </a>
+          </li>
+          {% endif %}
+          <li class="nav-item ms-auto me-3 mx-sm-1">
+            <a class="nav-link px-0 px-lg-2" href="#">Menu</a>
           </li>
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2 {% if request.path == about_url %}active"
-            aria-current="page{% endif %}"
-            href="{% url 'about' %}">Hours & location</a>
+            <a
+              class="nav-link px-0 px-lg-2 {% if request.path == about_url %}active"
+              aria-current="page{% endif %}"
+              href="{% url 'about' %}"
+              >Hours & location</a
+            >
           </li>
           <li class="nav-item ms-auto me-3 mx-sm-1">
             <a class="nav-link px-0 px-lg-2" href="#">Our story</a>
@@ -56,11 +67,15 @@
 
           {% if user.is_authenticated %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="{% url 'account_logout' %}">Account/Logout</a>
+            <a class="nav-link px-0 px-lg-2" href="{% url 'account_logout' %}"
+              >Account/Logout</a
+            >
           </li>
           {% else %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="{% url 'account_login' %}">Login/Register</a>
+            <a class="nav-link px-0 px-lg-2" href="{% url 'account_login' %}"
+              >Login/Register</a
+            >
           </li>
           {% endif %}
 

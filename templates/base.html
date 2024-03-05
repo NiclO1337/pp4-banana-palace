@@ -57,42 +57,12 @@
     <!-- Page specific CSS -->
     {% block page-specific-css %}{% endblock %}
 
-    <!-- prettier-ignore -->
-    {% block extra_head %}
-    {% endblock extra_head %}
+    <!-- Page specific extra -->
+    {% block extra_head %}{% endblock extra_head %}
   </head>
 
   <body id="override-bootstrap" class="d-flex flex-column">
-    {% if user.is_superuser %}
-    <ul class="mx-auto p-0 fs-2">
-      <li>
-        <a href="http://127.0.0.1:8000/admin/">
-          Admin <i class="fa-solid fa-key"></i>
-        </a>
-      </li>
-    </ul>
-    {% endif %} {% include 'header.html' %}
-
-    <!-- displaying Django messages -->
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-8 col-lg-5 col-xxl-4 mx-auto mt-4">
-          {% for message in messages %}
-          <div
-            class="alert {{ message.tags }} alert-dismissible fade show text-center"
-            id="msg"
-            role="alert">
-            {{ message | safe }}
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="alert"
-              aria-label="Close"></button>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
+    {% include 'header.html' %}
 
     <main class="flex-grow-1">
       <!-- Watermark images -->
@@ -105,6 +75,27 @@
         alt=""
         id="symbol-right"
         class="d-none d-md-block" />
+
+      <!-- displaying Django messages -->
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-8 col-lg-5 col-xxl-4 mx-auto mt-4">
+            {% for message in messages %}
+            <div
+              class="alert {{ message.tags }} alert-dismissible fade show text-center"
+              id="msg"
+              role="alert">
+              {{ message | safe }}
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"></button>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
 
       <!-- Individual page content here -->
       {% block page-content %} {% endblock %}
@@ -136,8 +127,7 @@
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}
 
-    <!-- prettier-ignore -->
-    {% block extra_body %}
-    {% endblock extra_body %}
+    <!-- Page specific extra -->
+    {% block extra_body %}{% endblock extra_body %}
   </body>
 </html>
