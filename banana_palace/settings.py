@@ -51,9 +51,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.instagram',
     'home',
     'about',
-    'profile_app',
-
-
+    'customer',
 ]
 
 SITE_ID = 1
