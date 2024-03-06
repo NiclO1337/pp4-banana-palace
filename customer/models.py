@@ -14,6 +14,8 @@ class Customer(models.Model):
     has_clicked = models.BooleanField(default=False)
     is_owner = models.BooleanField(default=False)
     phone = models.IntegerField()
+
     restaurant = models.ForeignKey(
-        Restaurant, on_delete=models.CASCADE, related_name="customers"
+        Restaurant, on_delete=models.CASCADE, related_name="customers",
+        default="1"
     )
