@@ -25,6 +25,11 @@
   --bs-danger-bg-subtle: var(--color-tertiary-light)
   --bs-danger-border-subtle: var(--color-tertiary);
   --bs-danger-text-emphasis: var(--color-tertiary);
+
+  --bs-info-text-emphasis: var(--color-secondary-bg);
+  --bs-info-bg-subtle: var(--color-tertiary-bg);
+  --bs-info-border-subtle: var(--color-secondary-bg);
+  --bs-info-text-emphasis: var(--color-secondary-bg);
 }
 
 /* base.html styles (includes header.html and footer.html) */
@@ -580,6 +585,10 @@ input {
   .account-management ul,
   .wider-text {
     width: 37ch;
+    margin-left: -5ch;
+  }
+
+  .wider-text a {
     margin-left: -5ch;
   }
 
