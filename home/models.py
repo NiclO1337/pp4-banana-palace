@@ -11,20 +11,8 @@ class Restaurant(models.Model):
     location = models.CharField(max_length=50)
     avalible_tables = models.IntegerField()
 
-    # customer = models.ForeignKey(
-    #     Customer, on_delete=models.CASCADE, related_name="customers"
-    # )
-    # menu = models.ForeignKey(
-    #     Menu, on_delete=models.CASCADE, related_name="menu"
-    # )
-    # feedbacks = models.ForeignKey(
-    #     Feedback, on_delete=models.CASCADE, related_name="feedback_posts"
-    # )
-    # reservations = models.ForeignKey(
-    #     Reservation, on_delete=models.CASCADE, related_name="reservations"
-    # )
-
-
+    def __str__(self):
+        return f'Restaurant name: *{self.name}*'
 
 
 

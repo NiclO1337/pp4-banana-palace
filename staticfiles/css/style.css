@@ -10,8 +10,23 @@
   --color-secondary-bg: #efc600;
   --color-tertiary-bg: #e1c10c10;
   --color-primary: #073503;
+  --color-primary-light: #a0da99;
   --color-secondary: #1f7405;
   --color-tertiary: #270b03;
+  --color-tertiary-light: #ca7c66;
+
+  /* Colors for alert messages */
+  --bs-success-text-emphasis: var(--color-primary);
+  --bs-success-bg-subtle: var(--color-primary-light);
+  --bs-success-border-subtle: var(--color-primary);
+
+  --bs-danger-text-emphasis: var(--color-tertiary);
+  --bs-danger-bg-subtle: var(--color-tertiary-light)
+  --bs-danger-border-subtle: var(--color-tertiary);
+
+  --bs-info-text-emphasis: var(--color-tertiary);
+  --bs-info-bg-subtle: var(--color-tertiary-bg);
+  --bs-info-border-subtle: var(--color-secondary-bg);
 }
 
 /* base.html styles (includes header.html and footer.html) */
@@ -43,6 +58,11 @@ footer {
   color: var(--color-primary-bg);
 }
 
+.error-msg-links {
+  background-color: var(--color-secondary-bg);
+  color: var(--color-tertiary);
+}
+
 /* index.html styles */
 
 .card {
@@ -57,7 +77,7 @@ footer {
 }
 
 input {
-  border: 2px solid var(--color-primary);
+  border: var(--border-width-iconic) solid var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
 }
@@ -74,8 +94,8 @@ input {
 
 #override-bootstrap .btn-booking,
 #override-bootstrap .account-management button {
-  border: 2px solid var(--color-primary);
-  border-radius: 5rem;
+  border: var(--border-width-iconic) solid var(--color-primary);
+  border-radius: var(--border-radius-iconic);
   padding: 6px 10px;
   background-color: transparent;
 }
@@ -85,13 +105,13 @@ input {
 .navbar-toggler-icon:focus {
   outline: none;
   box-shadow: none;
-  border: 2px solid var(--color-tertiary);
+  border: var(--border-width-iconic) solid var(--color-tertiary);
 }
 
 .toggler-icon {
   width: 30px;
   height: 4px;
-  border-radius: 2px;
+  border-radius: var(--border-radius-iconic);
   background-color: var(--color-tertiary);
   display: block;
   transition: transform 1s;
@@ -136,7 +156,7 @@ input {
 .navbar-toggler.collapsed,
 .navbar-toggler {
   padding: 0.8rem;
-  border: 2px solid var(--color-primary);
+  border: var(--border-width-iconic) solid var(--color-primary);
   border-top-left-radius: 1.3rem 50%;
   border-top-right-radius: 1.3rem 50%;
   border-bottom-left-radius: 1.3rem 50%;
@@ -193,16 +213,26 @@ input {
 /* Account management */
 input:hover,
 input:focus {
-  border: 2px solid var(--color-secondary);
+  border: var(--border-width-iconic) solid var(--color-secondary);
 }
 
 /* --------------------------
 ------- Layout styles -------
 -------------------------- */
-/* base.html styles (includes header.html and footer.html) */
 
+:root {
+  --border-radius-iconic: 2rem;
+  --border-width-iconic: 2px;
+
+  /* Alert messages */
+  --bs-border-radius: var(--border-radius-iconic);
+  --bs-border-width: var(--border-width-iconic);
+}
+
+
+/* base.html styles (includes header.html and footer.html) */
 body {
-  min-height: 110vh;
+  min-height: 100vh;
 }
 
 #header-container {
@@ -241,6 +271,10 @@ body {
   top: 30%;
 }
 
+#msg {
+  padding: 1rem 3rem;
+}
+
 .soft-cushion {
   height: 8vh;
   transition: all 1s ease-out;
@@ -257,12 +291,10 @@ div:has(> p.error-msg-links) {
 .error-msg-links {
   position: absolute;
   max-width: 260px;
-  background-color: var(--color-secondary-bg);
-  color: var(--color-tertiary);
   left: 50%;
   margin-left: -130px;
   bottom: 0;
-  border-radius: var(--radius-all);
+  border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
   display: none;
   opacity: 0;
@@ -297,14 +329,16 @@ div:has(> p.error-msg-links) {
   display: block;
 }
 
+hr:has(+ h2) {
+  margin-top: 0.25rem;
+}
+
 input {
   padding: 0.3rem 0.8rem 0.4rem;
-  border-radius: 2rem;
+  border-radius: var(--border-radius-iconic);
   margin: 0.2rem 0;
   outline: none;
 }
-
-
 
 /* --------------------------
 --------- Typography --------
@@ -312,7 +346,7 @@ input {
 
 /* Project fonts */
 :root {
-  --buttons-text: "M PLUS Rounded 1c", sans-serif;
+  --button-font: "M PLUS Rounded 1c", sans-serif;
   --main-font: "Noto Sans", sans-serif;
   --headings: "Merienda", cursive;
 }
@@ -325,13 +359,14 @@ h2 {
 }
 
 p,
-span {
+span,
+div {
   font-family: var(--main-font);
 }
 
 li,
 button {
-  font-family: var(--buttons-text);
+  font-family: var(--button-font);
   text-transform: uppercase;
   list-style-type: none;
 }
@@ -373,6 +408,13 @@ footer .footer-links li {
   font-weight: bold;
 }
 
+.account-management .errorlist li {
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--color-tertiary);
+  line-height: normal;
+}
+
 input {
   font-size: 90%;
   text-align: center;
@@ -385,7 +427,7 @@ input {
 /* Iconic image styling */
 :root {
   --radius-right: 0 1rem 1rem 0;
-  --radius-all: 1rem 1rem 1rem 1rem;
+  --border-radius-images-all: 1rem 1rem 1rem 1rem;
   --box-shadow: 0 0 1rem var(--color-tertiary);
 }
 
@@ -454,7 +496,7 @@ input {
 #main-about-img,
 #map-img,
 .about-images {
-  border-radius: var(--radius-all);
+  border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
   width: 100%;
   background-color: var(--color-tertiary-bg);
@@ -512,8 +554,7 @@ input {
 /* Media query for tablet - Bootstrap class md */
 @media screen and (min-width: 768px) {
   /* Base */
-  h1,
-  h2 {
+  h1 {
     font-size: 2.5rem;
   }
 
@@ -538,9 +579,23 @@ input {
 
   /* Account management */
 
-  .account-management ul {
+  .account-management ul,
+  .wider-text {
     width: 37ch;
     margin-left: -5ch;
+  }
+
+  .wider-text a {
+    margin-left: -5ch;
+  }
+
+  .account-management h1 {
+    width: 15ch;
+    margin-left: -3ch;
+  }
+
+  .account-management h2 {
+    width: 11ch;
   }
 }
 
@@ -588,7 +643,7 @@ input {
     background-image: url("../images/banana-palace-outdoor-pexels-2901215-big-screen.webp");
     background-position: left bottom;
     background-size: cover;
-    border-radius: var(--radius-all);
+    border-radius: var(--border-radius-images-all);
   }
 }
 
