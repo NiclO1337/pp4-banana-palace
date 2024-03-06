@@ -401,4 +401,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - How to create entity relationship diagrams from [The Business Analysis Doctor](https://www.youtube.com/watch?v=wMgirP7z4k8&t=2s)
 
+- Django tutorial by [Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)<br>
+Outdated content but Shaun is amazing at explaining things.
+
 [Back to top](#table-of-contents)
