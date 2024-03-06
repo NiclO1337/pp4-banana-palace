@@ -269,7 +269,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 
 ### Frameworks
 - **Django 5.0.2** as main framework for web development
-- **Bootstrap v5.3** as framefork for styling and positioning
+- **Bootstrap v5.3.2** as framefork for styling and positioning
 - **jQuery** for more efficient DOM manipulation
 
 
@@ -295,7 +295,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Favicon.io** for the favicon
 - **color.adobe.com** to extract color pallet from image
 - **Bootstrap Docs** to build page structure and design
-- **Bootstrap GitHub page** to check properties of classes
+- **Bootstrap GitHub page** to check properties of classes [Link to v5.3.2](https://github.com/twbs/bootstrap/blob/v5.3.0/dist/css/bootstrap.css)
 - **Django Docs** to build project and apps
 - **Grammarly** for spellchecking
 - **cdnjs.com** to find relevant CDN fast
