@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def Account(request):
+def account(request):
     """
     Display users account page
     """
-    return render(request, 'account/account.html')
+    return render(request, 'customer/account.html')
