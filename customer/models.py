@@ -7,7 +7,7 @@ class Customer(models.Model):
     """
     Creates a customer related to :model:`auth.User`
     """
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="customer"
     )
     has_discount = models.BooleanField(default=False)
