@@ -151,7 +151,7 @@ footer {
 }
 
 .btn-iconic,
-.btn-delete,
+.btn-warning,
 #override-bootstrap .account-management button {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
@@ -162,7 +162,7 @@ footer {
 #override-bootstrap .account-management button:hover,
 #override-bootstrap a:hover,
 .btn-iconic:hover,
-.btn-delete:hover {
+.btn-warning:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
