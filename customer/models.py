@@ -7,8 +7,8 @@ class Customer(models.Model):
     """
     Creates a customer related to :model:`auth.User`
     """
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="customer"
+    user = models.OneToOneField(
+        User, null=True, on_delete=models.CASCADE
     )
     has_discount = models.BooleanField(default=False)
     has_clicked = models.BooleanField(default=False)
@@ -19,3 +19,7 @@ class Customer(models.Model):
         Restaurant, on_delete=models.CASCADE, related_name="customers",
         default="1"
     )
+
+
+    def __str__(self):
+        return str(self.user)
