@@ -15,23 +15,25 @@
 <!-- prettier-ignore -->
 {% block page-content %}
 
-<section class="container bg-info">
-  <div class="row bg-danger mx-auto">
+<section class="container ">
+  <div class="row mx-auto">
     <div class="col-12 bg-primary d-md-none">
       <h1>Heading small device</h1>
     </div>
-    <div class="col-12 col-md-4 bg-secondary order-md-3">Image</div>
-    <div class="col-12 col-md-8 bg-warning">
+    <div class="col-12 col-md-4 col-xxl-3 bg-secondary order-md-3">Image</div>
+    <div class="col-12 col-md-8 col-xxl-5 offset-xxl-2 bg-warning">
       <h1 class="d-none d-md-block bg-primary mb-3">Heading tablet</h1>
       <div class="row">
         <div class="col-12 col-md-6 bg-danger">info</div>
         <div class="col-12 col-md-6 bg-success">info</div>
       </div>
-      <button class="btn-iconic">Edit</button>
-      <button class="btn-warning">Delete</button>
-      <a href="{% url 'account_logout' %}">
-        <button class="btn-warning">Logout</button>
-      </a>
+      <div class="d-flex flex-wrap justify-content-end gap-2 my-3">
+        <button class="btn-iconic">Edit</button>
+        <button class="btn-warning">Delete</button>
+        <a href="{% url 'account_logout' %}">
+          <button class="btn-warning">Logout</button>
+        </a>
+      </div>
     </div>
   </div>
 </section>
