@@ -404,4 +404,6 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 - Django tutorial by [Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)<br>
 Outdated content but Shaun is amazing at explaining things.
 
+- Django tutorial by [John Codemy.com](https://www.youtube.com/watch?v=Alua227cOmY)
+
 [Back to top](#table-of-contents)
