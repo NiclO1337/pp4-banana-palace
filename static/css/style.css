@@ -175,12 +175,14 @@ footer {
   text-shadow: none;
 }
 
-.btn-delete {
+.btn-warning,
+#override-bootstrap .account-management button.btn-warning {
   color: var(--color-tertiary);
   border: var(--border-width-solid-iconic) var(--color-tertiary);
 }
 
-.btn-delete:hover {
+.btn-warning:hover,
+#override-bootstrap .account-management button.btn-warning:hover {
   background-color: var(--color-tertiary);
   color: var(--color-primary-bg);
 }
