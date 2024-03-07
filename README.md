@@ -403,7 +403,10 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Django tutorial by [Net Ninja](https://www.youtube.com/playlist?list=PL4cUxeGkcC9ib4HsrXEYpQnTOTZE1x0uc)<br>
 Outdated content but Shaun is amazing at explaining things.
+Specifically used for urls and views.
 
-- Django tutorial by [John Codemy.com](https://www.youtube.com/watch?v=Alua227cOmY)
+- Django tutorial by [John Codemy.com](https://www.youtube.com/watch?v=Alua227cOmY)<br>
+Specifically used for extending user model and creating account page.
+
 
 [Back to top](#table-of-contents)
