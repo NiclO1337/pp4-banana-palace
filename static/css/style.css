@@ -138,7 +138,16 @@ footer {
 .btn-iconic,
 #override-bootstrap .account-management button {
   color: var(--color-primary);
-  text-shadow: 0 0 0.2rem var(--color-primary-bg);
+}
+
+.nav-link,
+#override-bootstrap .account-management button {
+  color: var(--color-primary);
+  text-shadow: 0 0 0.4rem var(--color-primary-bg);
+}
+
+.nav-link.btn-iconic {
+  box-shadow: 0 0 0.4rem var(--color-primary-bg);
 }
 
 #override-bootstrap .btn-iconic,
@@ -162,6 +171,11 @@ footer {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
   text-shadow: none;
+}
+
+.btn-delete {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary-bg)
 }
 
 /* --------------------------
