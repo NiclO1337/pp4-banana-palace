@@ -1,11 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Merienda&family=Noto+Sans:ital@0;1&display=swap");
 
 /* --------------------------
------------ Colors ----------
+----- Table of contents -----
+
+Root variables
+General styles
+    Elements
+    Messages
+    Buttons
+Header
+    Navbar
+    Navbar toggler
+Base template
+Index page
+About page
+Account page
+
+Account management (allauth templates)
+Footer
+Media queries
+
+------- End of table --------
+---------------------------*/
+
+/* --------------------------
+------- Root variables ------
 -------------------------- */
 
-/* Project color pallet */
 :root {
+  /* Project color pallet */
   --color-primary-bg: #f8f6d1;
   --color-secondary-bg: #efc600;
   --color-tertiary-bg: #e1c10c10;
@@ -15,26 +38,85 @@
   --color-tertiary: #270b03;
   --color-tertiary-light: #ca7c66;
 
-  /* Colors for alert messages */
+  /* Alert messages */
   --bs-success-text-emphasis: var(--color-primary);
   --bs-success-bg-subtle: var(--color-primary-light);
   --bs-success-border-subtle: var(--color-primary);
 
   --bs-danger-text-emphasis: var(--color-tertiary);
-  --bs-danger-bg-subtle: var(--color-tertiary-light)
+  --bs-danger-bg-subtle: var(--color-tertiary-light);
   --bs-danger-border-subtle: var(--color-tertiary);
 
   --bs-info-text-emphasis: var(--color-tertiary);
   --bs-info-bg-subtle: var(--color-tertiary-bg);
   --bs-info-border-subtle: var(--color-secondary-bg);
+
+  --bs-border-radius: var(--border-radius-iconic);
+  --bs-border-width: var(--border-width-iconic);
+
+  /* Iconic styles */
+  --border-radius-iconic: 2rem;
+  --border-width-iconic: 2px;
+  --border-width-solid-iconic: 2px solid;
+  --radius-right: 0 1rem 1rem 0;
+  --border-radius-images-all: 1rem 1rem 1rem 1rem;
+  --box-shadow: 0 0 1rem var(--color-tertiary);
+
+  /* Project fonts */
+  --button-font: "M PLUS Rounded 1c", sans-serif;
+  --main-font: "Noto Sans", sans-serif;
+  --headings: "Merienda", cursive;
 }
 
-/* base.html styles (includes header.html and footer.html) */
+/* --------------------------
+------- General styles ------
+-------------------------- */
 
+/* Elements */
 header,
 body {
   background-color: var(--color-primary-bg);
   color: var(--color-primary);
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: var(--headings);
+  font-size: 2rem;
+}
+
+p,
+span,
+div {
+  font-family: var(--main-font);
+}
+
+li,
+button {
+  font-family: var(--button-font);
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+input {
+  border: var(--border-width-solid-iconic) var(--color-primary);
+  background-color: var(--color-tertiary-bg);
+  color: var(--color-primary);
+  padding: 0.3rem 0.8rem 0.4rem;
+  border-radius: var(--border-radius-iconic);
+  margin: 0.2rem 0;
+  outline: none;
+  font-size: 90%;
+  text-align: center;
+}
+
+input:hover,
+input:focus {
+  border: var(--border-width-solid-iconic) var(--color-secondary);
 }
 
 footer {
@@ -42,55 +124,22 @@ footer {
   color: var(--color-primary-bg);
 }
 
+::placeholder {
+  color: var(--color-tertiary);
+}
+
+/* Messages */
+#msg {
+  padding: 1rem 3rem;
+}
+
+/* Buttons */
 .nav-link,
 .btn-booking,
 #override-bootstrap .account-management button {
   color: var(--color-primary);
   text-shadow: 0 0 0.2rem var(--color-primary-bg);
 }
-
-#override-bootstrap .nav-link.active,
-#override-bootstrap .nav-link.show {
-  color: var(--color-secondary);
-}
-
-#override-bootstrap footer a {
-  color: var(--color-primary-bg);
-}
-
-.error-msg-links {
-  background-color: var(--color-secondary-bg);
-  color: var(--color-tertiary);
-}
-
-/* index.html styles */
-
-.card {
-  background-color: transparent;
-  border: none;
-  color: var(--color-primary);
-}
-
-/* Account management */
-.account-management a {
-  color: var(--color-primary);
-}
-
-input {
-  border: var(--border-width-solid-iconic) var(--color-primary);
-  background-color: var(--color-tertiary-bg);
-  color: var(--color-primary);
-}
-
-::placeholder {
-  color: var(--color-tertiary);
-}
-
-/* --------------------------
----------- Buttons ----------
--------------------------- */
-
-/* base.html styles (includes header.html and footer.html) */
 
 #override-bootstrap .btn-booking,
 #override-bootstrap .account-management button {
@@ -100,6 +149,88 @@ input {
   background-color: transparent;
 }
 
+#override-bootstrap a:hover,
+#override-bootstrap .btn-booking:hover,
+#override-bootstrap .account-management button:hover {
+  color: var(--color-secondary);
+  transform: scale(1.1);
+  transition: all 0.4s ease-out;
+}
+
+#override-bootstrap .btn-booking:hover,
+#override-bootstrap .account-management button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-primary-bg);
+  text-shadow: none;
+}
+
+/* --------------------------
+----------- Header ----------
+-------------------------- */
+
+/* Navbar */
+#override-bootstrap .nav-link.active,
+#override-bootstrap .nav-link.show {
+  color: var(--color-secondary);
+}
+
+#header-container {
+  height: 8rem;
+  transition: all 1s ease-out;
+}
+
+#header-address-nav,
+#header-phone-nav,
+#header-address,
+#header-phone {
+  position: absolute;
+}
+
+#header-address-nav {
+  top: 1rem;
+  right: 6%;
+}
+
+#header-phone-nav {
+  top: 1rem;
+  left: 6%;
+}
+
+#header-address,
+#header-phone {
+  left: 10%;
+  display: none;
+}
+
+#header-address {
+  top: 50%;
+}
+
+#header-phone {
+  top: 30%;
+}
+
+.soft-cushion {
+  height: 8vh;
+  transition: all 1s ease-out;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+.navbar-brand img {
+  width: 8rem;
+}
+
+#main-logo {
+  width: 90%;
+  max-width: 30rem;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navbar toggler */
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -163,291 +294,9 @@ input {
   border-bottom-right-radius: 1.3rem 50%;
 }
 
-/* index.html styles */
-
 /* --------------------------
-------- Hover effects -------
+-------- Base template ------
 -------------------------- */
-
-/* base.html styles (includes header.html and footer.html) */
-
-#override-bootstrap a:hover,
-#override-bootstrap .btn-booking:hover,
-#override-bootstrap .account-management button:hover {
-  color: var(--color-secondary);
-  transform: scale(1.1);
-  transition: all 0.4s ease-out;
-}
-
-#override-bootstrap .btn-booking:hover,
-#override-bootstrap .account-management button:hover {
-  background-color: var(--color-primary);
-  color: var(--color-primary-bg);
-  text-shadow: none;
-}
-
-#override-bootstrap footer a:hover {
-  color: var(--color-secondary-bg);
-  transition: color 0.4s ease-out;
-}
-
-#override-bootstrap footer .footer-links-extra li:hover {
-  color: red;
-  transition: color 0.4s ease-out;
-}
-
-/* index.html styles */
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  transform: scale(1.3);
-  transition: all 0.4s ease-out;
-}
-
-.carousel-control-prev-icon:hover {
-  background-image: url("../images/chevron-left-light.png");
-}
-.carousel-control-next-icon:hover {
-  background-image: url("../images/chevron-right-light.png");
-}
-
-/* Account management */
-input:hover,
-input:focus {
-  border: var(--border-width-solid-iconic) var(--color-secondary);
-}
-
-/* --------------------------
-------- Layout styles -------
--------------------------- */
-
-:root {
-  --border-radius-iconic: 2rem;
-  --border-width-iconic: 2px;
-  --border-width-solid-iconic: 2px solid;
-
-  /* Alert messages */
-  --bs-border-radius: var(--border-radius-iconic);
-  --bs-border-width: var(--border-width-iconic);
-}
-
-
-/* base.html styles (includes header.html and footer.html) */
-body {
-  min-height: 100vh;
-}
-
-#header-container {
-  height: 8rem;
-  transition: all 1s ease-out;
-}
-
-#header-address-nav,
-#header-phone-nav,
-#header-address,
-#header-phone {
-  position: absolute;
-}
-
-#header-address-nav {
-  top: 1rem;
-  right: 6%;
-}
-
-#header-phone-nav {
-  top: 1rem;
-  left: 6%;
-}
-
-#header-address,
-#header-phone {
-  left: 10%;
-  display: none;
-}
-
-#header-address {
-  top: 50%;
-}
-
-#header-phone {
-  top: 30%;
-}
-
-#msg {
-  padding: 1rem 3rem;
-}
-
-.soft-cushion {
-  height: 8vh;
-  transition: all 1s ease-out;
-}
-
-div:has(> p.error-msg-links) {
-  position: relative;
-}
-
-.footer-links-extra {
-  min-height: 2rem;
-}
-
-.error-msg-links {
-  position: absolute;
-  max-width: 260px;
-  left: 50%;
-  margin-left: -130px;
-  bottom: 0;
-  border-radius: var(--border-radius-images-all);
-  box-shadow: var(--box-shadow);
-  display: none;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-/* index.html styles */
-
-/* Account management */
-.account-management {
-  max-width: 16rem;
-}
-
-.account-management ul {
-  padding-left: 0;
-}
-
-.account-management li {
-  margin-bottom: 0.4rem;
-}
-
-.account-management h1,
-.account-management h2,
-.account-management p,
-.account-management ul,
-.account-management button {
-  margin-bottom: 0.75rem;
-}
-
-#id_password_helptext {
-  margin-top: 0.4rem;
-  display: block;
-}
-
-hr:has(+ h2) {
-  margin-top: 0.25rem;
-}
-
-input {
-  padding: 0.3rem 0.8rem 0.4rem;
-  border-radius: var(--border-radius-iconic);
-  margin: 0.2rem 0;
-  outline: none;
-}
-
-/* --------------------------
---------- Typography --------
--------------------------- */
-
-/* Project fonts */
-:root {
-  --button-font: "M PLUS Rounded 1c", sans-serif;
-  --main-font: "Noto Sans", sans-serif;
-  --headings: "Merienda", cursive;
-}
-
-/* base.html styles (includes header.html and footer.html) */
-h1,
-h2 {
-  font-family: var(--headings);
-  font-size: 2rem;
-}
-
-p,
-span,
-div {
-  font-family: var(--main-font);
-}
-
-li,
-button {
-  font-family: var(--button-font);
-  text-transform: uppercase;
-  list-style-type: none;
-}
-
-footer .footer-links li {
-  font-size: 90%;
-}
-
-.footer-links-extra li {
-  text-transform: capitalize;
-  font-size: 80%;
-  list-style-type: none;
-  padding-inline-start: 0;
-}
-
-.headings {
-  font-family: var(--headings);
-}
-
-.social-media-symbols li {
-  font-size: 2.3rem;
-}
-
-/* index.html styles */
-#welcome-img + div h1 {
-  font-size: 3rem;
-}
-
-#hours-and-location {
-  font-size: 2rem;
-}
-
-/* Account management */
-.account-management li {
-  text-transform: none;
-  font-family: var(--main-font);
-  font-size: 80%;
-  line-height: 1.1rem;
-  font-weight: bold;
-}
-
-.account-management .errorlist li {
-  font-size: 100%;
-  font-weight: bold;
-  color: var(--color-tertiary);
-  line-height: normal;
-}
-
-input {
-  font-size: 90%;
-  text-align: center;
-}
-
-/* --------------------------
------------ Images ----------
--------------------------- */
-
-/* Iconic image styling */
-:root {
-  --radius-right: 0 1rem 1rem 0;
-  --border-radius-images-all: 1rem 1rem 1rem 1rem;
-  --box-shadow: 0 0 1rem var(--color-tertiary);
-}
-
-/* base.html */
-
-.navbar-brand {
-  display: none;
-}
-
-.navbar-brand img {
-  width: 8rem;
-}
-
-#main-logo {
-  width: 90%;
-  max-width: 30rem;
-  display: block;
-  margin: 0 auto;
-}
 
 #symbol-left,
 #symbol-right {
@@ -468,8 +317,32 @@ input {
   left: 40%;
 }
 
-/* index.html */
+/* --------------------------
+--------- Index page --------
+-------------------------- */
 
+.card {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary);
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  transform: scale(1.3);
+  transition: all 0.4s ease-out;
+}
+
+.carousel-control-prev-icon:hover {
+  background-image: url("../images/chevron-left-light.png");
+}
+.carousel-control-next-icon:hover {
+  background-image: url("../images/chevron-right-light.png");
+}
+
+#welcome-img + div h1 {
+  font-size: 3rem;
+}
 .carousel-control-next,
 .carousel-control-prev {
   opacity: 1;
@@ -492,7 +365,13 @@ input {
   background-size: cover;
 }
 
-/* about.html */
+/* --------------------------
+--------- About page --------
+-------------------------- */
+
+#hours-and-location {
+  font-size: 2rem;
+}
 
 #main-about-img,
 #map-img,
@@ -529,19 +408,137 @@ input {
   background-position: bottom;
 }
 
+.about-img-2,
+.about-img-3,
+.about-img-4 {
+  background-position: center;
+}
+
 .about-img-2 {
   background-image: url("../images/woman-enjoying-exotic-food.webp");
-  background-position: center;
 }
 
 .about-img-3 {
   background-image: url("../images/dimlit-mysterious-bar.webp");
-  background-position: center;
 }
 
 .about-img-4 {
   background-image: url("../images/private-room-rainforest-setting.webp");
-  background-position: center;
+}
+
+/* --------------------------
+-------- Account page -------
+-------------------------- */
+
+/* --------------------------
+----- Account management ----
+-------------------------- */
+
+.account-management a {
+  color: var(--color-primary);
+}
+
+.account-management {
+  max-width: 16rem;
+}
+
+.account-management ul {
+  padding-left: 0;
+}
+
+.account-management li {
+  margin-bottom: 0.4rem;
+}
+
+.account-management h1,
+.account-management h2,
+.account-management p,
+.account-management ul,
+.account-management button {
+  margin-bottom: 0.75rem;
+}
+
+#id_password_helptext {
+  margin-top: 0.4rem;
+  display: block;
+}
+
+hr:has(+ h2) {
+  margin-top: 0.25rem;
+}
+
+.account-management li {
+  text-transform: none;
+  font-family: var(--main-font);
+  font-size: 80%;
+  line-height: 1.1rem;
+  font-weight: bold;
+}
+
+.account-management .errorlist li {
+  font-size: 100%;
+  font-weight: bold;
+  color: var(--color-tertiary);
+  line-height: normal;
+}
+
+/* --------------------------
+----------- Footer ----------
+-------------------------- */
+
+#override-bootstrap footer a {
+  color: var(--color-primary-bg);
+}
+
+.error-msg-links {
+  background-color: var(--color-secondary-bg);
+  color: var(--color-tertiary);
+}
+
+#override-bootstrap footer a:hover {
+  color: var(--color-secondary-bg);
+  transition: color 0.4s ease-out;
+}
+
+#override-bootstrap footer .footer-links-extra li:hover {
+  color: red;
+  transition: color 0.4s ease-out;
+}
+
+div:has(> p.error-msg-links) {
+  position: relative;
+}
+
+.footer-links-extra {
+  min-height: 2rem;
+}
+
+.error-msg-links {
+  position: absolute;
+  max-width: 260px;
+  left: 50%;
+  margin-left: -130px;
+  bottom: 0;
+  border-radius: var(--border-radius-images-all);
+  box-shadow: var(--box-shadow);
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+footer .footer-links li {
+  font-size: 90%;
+}
+
+.footer-links-extra li {
+  text-transform: capitalize;
+  font-size: 80%;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.social-media-symbols li {
+  font-size: 2.3rem;
 }
 
 /* --------------------------
@@ -659,3 +656,9 @@ input {
 /* --------------------------
 -------- TESTING ONLY -------
 -------------------------- */
+
+/* ????????? */
+
+.headings {
+  font-family: var(--headings);
+}
