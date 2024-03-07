@@ -135,13 +135,13 @@ footer {
 
 /* Buttons */
 .nav-link,
-.btn-booking,
+.btn-iconic,
 #override-bootstrap .account-management button {
   color: var(--color-primary);
   text-shadow: 0 0 0.2rem var(--color-primary-bg);
 }
 
-#override-bootstrap .btn-booking,
+#override-bootstrap .btn-iconic,
 #override-bootstrap .account-management button {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
@@ -150,14 +150,14 @@ footer {
 }
 
 #override-bootstrap a:hover,
-#override-bootstrap .btn-booking:hover,
+#override-bootstrap .btn-iconic:hover,
 #override-bootstrap .account-management button:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
 }
 
-#override-bootstrap .btn-booking:hover,
+#override-bootstrap .btn-iconic:hover,
 #override-bootstrap .account-management button:hover {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
