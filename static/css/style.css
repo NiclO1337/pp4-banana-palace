@@ -453,7 +453,8 @@ footer {
 -------- Account page -------
 -------------------------- */
 
-.fa-ranking-star {
+.fa-ranking-star,
+.fa-star {
   color: var(--color-secondary-bg)
 }
 

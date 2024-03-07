@@ -15,7 +15,7 @@
 <!-- prettier-ignore -->
 {% block page-content %}
 
-<div class="container ">
+<div class="container">
   <div class="row mx-auto">
     <div class="col-12 bg-primary d-md-none">
       <h1>Heading small device</h1>
@@ -28,22 +28,32 @@
         <div class="col-12 col-md-6 bg-success">info</div>
       </div>
       <div class="d-flex flex-wrap justify-content-end gap-2 my-3">
-        {% if user.customer.has_discount %}
-        <i class="fa-solid fa-ranking-star
-        {% if not user.customer.has_clicked %} fa-shake {% endif %} fa-2xl mt-4 me-auto"></i>
+        <!-- prettier-ignore -->
+        {% if user.customer.has_clicked %}
+        <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"></i>
+        {% elif user.customer.has_discount and not user.customer.has_clicked %}
+        <i class="fa-solid fa-ranking-star fa-shake fa-2xl mt-4 me-auto ps-2">
+        </i>
         {% endif %}
+
         <button class="btn-iconic">Edit</button>
         <button class="btn-warning">Delete</button>
         <a href="{% url 'account_logout' %}">
           <button class="btn-warning">Logout</button>
         </a>
       </div>
-      <div class="row mx-auto pt-3 bg-primary-subtle">
-        Bookings
+      <div class="row mx-auto bg-primary-subtle">
+        <p class="small">
+          Your reservations qualify for our friends and family discount!
+        </p>
+        <h2 class="mt-2">Reservations</h2>
+        <p>Upcoming reservations:</p>
+
+        <!-- if no reservations -->
+        <p class="small">You currently do not have any upcoming reservations.</p>
       </div>
     </section>
   </div>
-
 </div>
 
 <p>{{ user.username }}</p>
