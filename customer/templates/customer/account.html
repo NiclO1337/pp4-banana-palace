@@ -16,19 +16,22 @@
 {% block page-content %}
 
 <section class="container bg-info">
-  <div class="row bg-danger">
+  <div class="row bg-danger mx-auto">
     <div class="col-12 bg-primary d-md-none">
       <h1>Heading small device</h1>
     </div>
-    <div class="col-12 bg-secondary order-md-3">Image</div>
-    <div class="col-12 bg-warning">
-      <h1 class="d-none d-md-block bg-primary mb-4">Heading tablet</h1>
+    <div class="col-12 col-md-4 bg-secondary order-md-3">Image</div>
+    <div class="col-12 col-md-8 bg-warning">
+      <h1 class="d-none d-md-block bg-primary mb-3">Heading tablet</h1>
       <div class="row">
-        <div class="col-6 bg-danger">info</div>
-        <div class="col-6 bg-success">info</div>
+        <div class="col-12 col-md-6 bg-danger">info</div>
+        <div class="col-12 col-md-6 bg-success">info</div>
       </div>
       <button class="btn-iconic">Edit</button>
       <button class="btn-warning">Delete</button>
+      <a href="{% url 'account_logout' %}">
+        <button class="btn-warning">Logout</button>
+      </a>
     </div>
   </div>
 </section>
