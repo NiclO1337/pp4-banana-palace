@@ -7,4 +7,4 @@ def account(request):
     """
     Display users account page
     """
-    return render(request, 'customer/account.html')
+    return render(request, 'account/account.html')
