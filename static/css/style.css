@@ -398,17 +398,18 @@ footer {
 
 #main-about-img,
 #map-img,
-.about-images {
+.about-images,
+#account-img {
   border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
-  width: 100%;
   background-color: var(--color-tertiary-bg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 #main-about-img,
-#map-img {
+#map-img,
+#account-img {
   height: 22rem;
 }
 
@@ -416,7 +417,8 @@ footer {
   height: 17rem;
 }
 
-#main-about-img {
+#main-about-img,
+#account-img {
   background-image: url("../images/main-about-img.webp");
   background-position: center;
 }
@@ -456,6 +458,11 @@ footer {
 .fa-ranking-star,
 .fa-star {
   color: var(--color-secondary-bg)
+}
+
+/* Uses same image as about page #main-about-img */
+#account-img {
+  height: 17rem;
 }
 
 /* --------------------------
