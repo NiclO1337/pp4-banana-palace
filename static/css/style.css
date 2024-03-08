@@ -538,12 +538,12 @@ hr:has(+ h2) {
 
 #override-bootstrap footer a:hover {
   color: var(--color-secondary-bg);
-  transition: color 0.4s ease-out;
+  transition: color 1s ease-out;
 }
 
 #override-bootstrap footer .footer-links-extra li:hover {
   color: red;
-  transition: color 0.4s ease-out;
+  transition: color 1s ease-out;
 }
 
 div:has(> p.error-msg-links) {
