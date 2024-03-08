@@ -43,14 +43,18 @@
         </a>
       </div>
       <div class="row mx-auto bg-primary-subtle">
+        {% if user.customer.has_clicked %}
         <p class="small">
           Your reservations qualify for our friends and family discount!
         </p>
+        {% endif %}
         <h2 class="mt-2">Reservations</h2>
         <p>Upcoming reservations:</p>
 
         <!-- if no reservations -->
-        <p class="small">You currently do not have any upcoming reservations.</p>
+        <p class="small">
+          You currently do not have any upcoming reservations.
+        </p>
       </div>
     </section>
   </div>
