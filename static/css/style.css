@@ -166,7 +166,7 @@ footer {
 }
 
 #override-bootstrap .account-management button:hover,
-#override-bootstrap a:hover,
+#override-bootstrap header a:hover,
 .btn-iconic:hover,
 .btn-warning:hover {
   color: var(--color-secondary);
