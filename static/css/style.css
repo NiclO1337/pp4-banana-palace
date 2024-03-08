@@ -58,7 +58,8 @@ Media queries
   --border-radius-iconic: 2rem;
   --border-width-iconic: 2px;
   --border-width-solid-iconic: 2px solid;
-  --radius-right: 0 1rem 1rem 0;
+  --radius-right-only: 0 1rem 1rem 0;
+  --radius-left-only: 1rem 0 0 1rem;
   --border-radius-images-all: 1rem 1rem 1rem 1rem;
   --box-shadow: 0 0 1rem var(--color-tertiary);
 
@@ -117,6 +118,11 @@ input {
 input:hover,
 input:focus {
   border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+hr {
+  opacity: 1;
+  border-radius: var(--border-radius-iconic);
 }
 
 footer {
@@ -398,8 +404,7 @@ footer {
 
 #main-about-img,
 #map-img,
-.about-images,
-#account-img {
+.about-images {
   border-radius: var(--border-radius-images-all);
   box-shadow: var(--box-shadow);
   background-color: var(--color-tertiary-bg);
@@ -408,8 +413,7 @@ footer {
 }
 
 #main-about-img,
-#map-img,
-#account-img {
+#map-img {
   height: 22rem;
 }
 
@@ -463,6 +467,8 @@ footer {
 /* Uses same image as about page #main-about-img */
 #account-img {
   height: 17rem;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* --------------------------
@@ -606,7 +612,7 @@ footer .footer-links li {
 
   /* index.html */
   #welcome-img {
-    border-radius: var(--radius-right);
+    border-radius: var(--radius-right-only);
     box-shadow: var(--box-shadow);
   }
 
@@ -625,6 +631,13 @@ footer .footer-links li {
 
   .account-management h2 {
     width: 11ch;
+  }
+
+  /* account.html */
+  #account-img {
+    height: 30rem;
+    border-radius: var(--radius-left-only);
+    box-shadow: var(--box-shadow);
   }
 }
 
@@ -650,6 +663,10 @@ footer .footer-links li {
 
   #symbol-right {
     left: 80%;
+  }
+
+  #account-img {
+    border-radius: var(--border-radius-images-all);
   }
 }
 
