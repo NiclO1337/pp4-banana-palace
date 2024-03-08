@@ -134,6 +134,10 @@ footer {
   color: var(--color-tertiary);
 }
 
+.special-font {
+  font-family: var(--headings);
+}
+
 /* Messages */
 #msg {
   padding: 1rem 3rem;
@@ -146,8 +150,7 @@ footer {
   color: var(--color-primary);
 }
 
-.nav-link,
-#override-bootstrap .account-management button {
+.nav-link {
   color: var(--color-primary);
   text-shadow: 0 0 0.4rem var(--color-primary-bg);
 }
@@ -183,14 +186,14 @@ footer {
 
 .btn-warning,
 #override-bootstrap .account-management button.btn-warning {
-  color: var(--color-tertiary);
+  background-color: var(--color-tertiary);
+  color: var(--color-primary-bg);
   border: var(--border-width-solid-iconic) var(--color-tertiary);
 }
 
 .btn-warning:hover,
 #override-bootstrap .account-management button.btn-warning:hover {
-  background-color: var(--color-tertiary);
-  color: var(--color-primary-bg);
+  color: var(--color-tertiary-light);
 }
 
 /* --------------------------
@@ -469,6 +472,17 @@ footer {
   height: 17rem;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 1;
+}
+
+#user-details li {
+  text-transform: none;
+  font-family: var(--main-font);
+  padding-bottom: 0.4rem;
+}
+
+#account-info-text {
+  font-size: 95%;
 }
 
 /* --------------------------
@@ -635,9 +649,17 @@ footer .footer-links li {
 
   /* account.html */
   #account-img {
-    height: 30rem;
+    height: 33rem;
     border-radius: var(--radius-left-only);
     box-shadow: var(--box-shadow);
+  }
+
+  #account-info-text {
+    font-size: 85%;
+  }
+
+  #user-details {
+    font-size: 95%;
   }
 }
 
@@ -665,8 +687,13 @@ footer .footer-links li {
     left: 80%;
   }
 
+  /* Account page */
   #account-img {
     border-radius: var(--border-radius-images-all);
+  }
+
+  #account-info-text {
+    font-size: 95%;
   }
 }
 

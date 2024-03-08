@@ -16,21 +16,55 @@
 {% block page-content %}
 
 <div class="container-fluid container-lg p-0">
-  <div class="row mx-auto">
+  <div class="row">
     <div class="col-12 d-md-none">
-      <h1 class="text-center" aria-hidden="true">Welcome {{ user.first_name }}</h1>
+      <h1 class="text-center" aria-hidden="true">
+        Welcome {{ user.first_name }}
+      </h1>
     </div>
     <div class="col-12 col-md-4 col-xxl-3 order-md-3 p-0 ps-md-3">
-      <div id="account-img" class="mt-2 mb-3 my-md-1"></div>
+      <div id="account-img" class="mt-2 mb-3 mt-md-1 mb-3"></div>
     </div>
-    <section class="col-12 col-md-8 col-xxl-5 offset-xxl-2">
+    <section class="col-12 col-md-8 col-xxl-5 offset-xxl-2 ps-lg-0">
       <h1 class="d-none d-md-block mb-3">Welcome {{ user.first_name }}</h1>
-      <hr class="my-2 d-none d-md-block">
+      <hr class="my-2 d-none d-md-block" />
       <div class="row">
-        <div class="col-12 col-md-6">info</div>
-        <div class="col-12 col-md-6 bg-success">info</div>
+        <div id="account-info-text" class="col-12 col-md-6">
+          <p>
+            This is your personal account page. <br>Here you can add and edit your
+            <br>personal information as well as <br>manage your reservations.
+          </p>
+          <p class="mb-md-0">
+            Don't hesitate to contact us if <br>you have any questions!
+          </p>
+        </div>
+        <div class="col-12 col-md-6 p-md-0">
+          <ul class="p-0" id="user-details">
+            <li>
+              Username:
+              <span class="special-font">{{ user.username }}</span>
+            </li>
+            <li>
+              First name:
+              <span class="special-font">{{ user.first_name }}</span>
+            </li>
+            <li>
+              Last name: <span class="special-font">{{ user.last_name }}</span>
+            </li>
+            <li>
+              Phone number:
+              <span class="special-font">{{ user.customer.phone }}</span>
+            </li>
+            <li>
+              Email:
+              <span class="small special-font text-break"
+                >{{ user.email }}</span
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="d-flex flex-wrap justify-content-end gap-2 my-3">
+      <div class="d-flex flex-wrap justify-content-end gap-2 pe-2 pe-lg-4">
         <!-- prettier-ignore -->
         {% if user.customer.has_clicked %}
         <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"></i>
@@ -45,14 +79,13 @@
           <button class="btn-warning">Logout</button>
         </a>
       </div>
-      <div class="row mx-auto bg-primary-subtle">
+      <div class="col-12 mx-auto p-0">
         {% if user.customer.has_clicked %}
-        <p class="small">
+        <p class="small mt-3">
           Your reservations qualify for our friends and family discount!
         </p>
         {% endif %}
         <h2 class="mt-2">Reservations</h2>
-        <p>Upcoming reservations:</p>
 
         <!-- if no reservations -->
         <p class="small">
@@ -62,11 +95,6 @@
     </section>
   </div>
 </div>
-
-<p>{{ user.username }}</p>
-
-<p>{{ user.customer.phone }}</p>
-<p>Has discount? {{ user.customer.restaurant.name }}</p>
 
 <!-- prettier-ignore -->
 {% endblock %}
