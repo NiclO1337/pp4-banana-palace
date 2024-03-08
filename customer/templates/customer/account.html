@@ -15,7 +15,7 @@
 <!-- prettier-ignore -->
 {% block page-content %}
 
-<div class="container-fluid container-lg p-0">
+<div class="container-fluid container-lg">
   <div class="row">
     <div class="col-12 d-md-none">
       <h1 class="text-center" aria-hidden="true">
@@ -31,11 +31,12 @@
       <div class="row">
         <div id="account-info-text" class="col-12 col-md-6">
           <p>
-            This is your personal account page. <br>Here you can add and edit your
-            <br>personal information as well as <br>manage your reservations.
+            This is your personal account page. <br />Here you can add and edit
+            your <br />personal information as well as <br />manage your
+            reservations.
           </p>
           <p class="mb-md-0">
-            Don't hesitate to contact us if <br>you have any questions!
+            Don't hesitate to contact us if <br />you have any questions!
           </p>
         </div>
         <div class="col-12 col-md-6 p-md-0">
@@ -64,27 +65,35 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex flex-wrap justify-content-end gap-2 pe-2 pe-lg-4">
-        <!-- prettier-ignore -->
-        {% if user.customer.has_clicked %}
-        <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"></i>
-        {% elif user.customer.has_discount and not user.customer.has_clicked %}
-        <i class="fa-solid fa-ranking-star fa-shake fa-2xl mt-4 me-auto ps-2">
-        </i>
-        {% endif %}
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 p-0">
+          {% if user.customer.has_clicked %}
+          <p>
+            <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"> </i>
+            <span class="small"> Friends and family discount</span>
+          </p>
 
-        <button class="btn-iconic">Edit</button>
-        <button class="btn-warning">Delete</button>
-        <a href="{% url 'account_logout' %}">
-          <button class="btn-warning">Logout</button>
-        </a>
+          <!-- prettier-ignore -->
+          {% elif user.customer.has_discount and not user.customer.has_clicked %}
+          <p class="mt-2 fs-4 special-font">
+            <a href="" class="text-decoration-none"
+              ><i
+                class="fa-solid fa-ranking-star fa-shake fa-2xl mt-4 me-auto ps-2">
+              </i
+              ><span class="ps-3" id="click-me">Click me!</span></a
+            >
+          </p>
+          {% endif %}
+        </div>
+        <div class="col-12 col-md-6 p-md-0 my-4 my-md-0">
+          <button class="btn-iconic">Edit</button>
+          <button class="btn-warning">Delete</button>
+          <a href="{% url 'account_logout' %}">
+            <button class="btn-warning">Logout</button>
+          </a>
+        </div>
       </div>
       <div class="col-12 mx-auto p-0">
-        {% if user.customer.has_clicked %}
-        <p class="small mt-3">
-          Your reservations qualify for our friends and family discount!
-        </p>
-        {% endif %}
         <h2 class="mt-2">Reservations</h2>
 
         <!-- if no reservations -->

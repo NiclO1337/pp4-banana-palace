@@ -463,7 +463,8 @@ footer {
 -------------------------- */
 
 .fa-ranking-star,
-.fa-star {
+.fa-star,
+#click-me {
   color: var(--color-secondary-bg)
 }
 
@@ -483,6 +484,11 @@ footer {
 
 #account-info-text {
   font-size: 95%;
+}
+
+#click-me {
+  opacity: 0;
+  transition: opacity 2s ease-in;
 }
 
 /* --------------------------
