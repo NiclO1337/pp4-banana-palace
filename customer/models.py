@@ -18,7 +18,7 @@ class Customer(models.Model):
 
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="customers",
-        null=True, blank=True
+        null=True, blank=True, default=2
     )
 
 
