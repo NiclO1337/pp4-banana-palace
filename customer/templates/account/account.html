@@ -86,7 +86,9 @@
           {% endif %}
         </div>
         <div class="col-12 col-md-6 p-md-0 my-4 my-md-0">
-          <button class="btn-iconic">Edit</button>
+          <a href="{% url 'edit_account' %}">
+            <button class="btn-iconic">Edit</button>
+          </a>
           <button class="btn-warning">Delete</button>
           <a href="{% url 'account_logout' %}">
             <button class="btn-warning">Logout</button>
