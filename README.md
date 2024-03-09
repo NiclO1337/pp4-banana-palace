@@ -405,8 +405,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 Outdated content but Shaun is amazing at explaining things.
 Specifically used for urls and views.
 
-- Django tutorial by [John Codemy.com](https://www.youtube.com/watch?v=Alua227cOmY)<br>
-Specifically used for extending user model and creating account page.
-
+- Django tutorial by [Hana Belay](https://dev.to/earthcomfy/django-user-profile-3hik)<br>
+How to extend user model and update account information.
 
 [Back to top](#table-of-contents)
