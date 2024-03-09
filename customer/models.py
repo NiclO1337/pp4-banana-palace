@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 from home.models import Restaurant
 
@@ -13,7 +14,7 @@ class Customer(models.Model):
     has_discount = models.BooleanField(default=False)
     has_clicked = models.BooleanField(default=False)
     is_owner = models.BooleanField(default=False)
-    phone = models.IntegerField()
+    phone = PhoneNumberField()
 
     restaurant = models.ForeignKey(
         Restaurant, on_delete=models.CASCADE, related_name="customers",

@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'home',
     'about',
     'customer',
+    'phonenumber_field',
 ]
 
 SITE_ID = 1
@@ -197,3 +198,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
+PHONENUMBER_DEFAULT_FORMAT = 'INTERNATIONAL'
+PHONENUMBER_DEFAULT_REGION = 'SE'

@@ -7,10 +7,12 @@ defusedxml==0.7.1
 dj-database-url==2.1.0
 Django==5.0.2
 django-allauth==0.61.1
+django-phonenumber-field==7.3.0
 gunicorn==21.2.0
 idna==3.6
 oauthlib==3.2.2
 packaging==23.2
+phonenumberslite==8.13.31
 psycopg2==2.9.9
 pycparser==2.21
 PyJWT==2.8.0
