@@ -1,6 +1,7 @@
 <!-- prettier-ignore -->
 {% extends 'base.html' %}
 {% load static %}
+
 {% block head_title %}
 Edit Account
 {% endblock %}
@@ -17,11 +18,33 @@ Edit Account
 <section class="row justify-content-center m-0 mb-4">
     <div class="account-management text-center">
         <h1>Edit account</h1>
-        <div class="form-group">
-            <form method=""POST>
+        <div class="form-content">
+            <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button>Edit</button>
+                <div class="form-row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="small mb-1">Username:</label>
+                                {{ user_form.username }}
+                            <label class="small mb-1">First name:</label>
+                                {{ user_form.first_name }}
+                            <label class="small mb-1">Last name:</label>
+                                {{ user_form.last_name }}
+                            <label class="small mb-1">Phone number:</label>
+                                {{ customer_form.phone }}
+                            <label class="small mb-1">Email:</label>
+                                {{ user_form.email }}
+                        </div>
+                        <div class="form-group">
+                            <a href="#">Change Password</a>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <button type="submit" class="btn-iconic">Save</button>
+                <button type="reset" class="btn-warning">Reset</button>
+            </form>
         </div>
     </div>
 </section>
