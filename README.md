@@ -410,5 +410,7 @@ How to extend user model and update account information.
 
 - Delete account guide by [Cloud With Django](https://www.youtube.com/watch?v=wRFUTDBUgsA)
 
+- Fireworks CSS by [Eddie Lin](https://jsfiddle.net/elin/7m3bL/)
+
 
 [Back to top](#table-of-contents)
