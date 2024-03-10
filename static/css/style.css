@@ -91,9 +91,12 @@ h2 {
 }
 
 p,
-span,
 div {
   font-family: var(--main-font);
+}
+
+span {
+  font-family: inherit;
 }
 
 li,
