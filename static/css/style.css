@@ -103,7 +103,8 @@ button {
   list-style-type: none;
 }
 
-input {
+input,
+.form-control {
   border: var(--border-width-solid-iconic) var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
