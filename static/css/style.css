@@ -482,6 +482,10 @@ footer {
   color: var(--color-secondary-bg)
 }
 
+a:has(> i.fa-star) {
+  color: var(--color-primary);
+}
+
 /* Uses same image as about page #main-about-img */
 #account-img {
   height: 17rem;

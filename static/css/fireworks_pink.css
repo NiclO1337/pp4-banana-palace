@@ -350,3 +350,16 @@ body {
   }
 }
 
+#override-bootstrap .account-management button.btn-iconic {
+  border: var(--border-width-solid-iconic) var(--color-primary-bg);
+  border-radius: var(--border-radius-iconic);
+  color: var(--color-primary-bg);
+}
+
+#override-bootstrap .account-management button.btn-iconic:hover {
+  background-color: var(--color-primary-bg);
+  color: var(--color-tertiary);
+  transform: scale(1.1);
+  transition: all 0.4s ease-out;
+}
+

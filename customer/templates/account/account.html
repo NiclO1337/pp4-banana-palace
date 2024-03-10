@@ -71,10 +71,10 @@
       <div class="row align-items-center">
         <div class="col-12 col-md-6 p-0">
           {% if user.customer.has_clicked %}
-          <p>
+          <a href="{% url 'fireworks_page' %}" class="text-decoration-none">
             <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"> </i>
-            <span class="small"> Friends and family discount</span>
-          </p>
+            <span class="small special-font"> Friends and family discount</span>
+          </a>
 
           <!-- prettier-ignore -->
           {% elif user.customer.has_discount and not user.customer.has_clicked %}
