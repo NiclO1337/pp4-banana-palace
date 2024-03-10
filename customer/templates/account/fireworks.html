@@ -21,107 +21,23 @@
   <div class="after"></div>
 </div>
 
-<div class="container-fluid container-lg">
-  <div class="row">
-    <div class="col-12 d-md-none">
-      <h1 class="text-center" aria-hidden="true">
-        Welcome {{ user.first_name }}
-      </h1>
-    </div>
-    <div class="col-12 col-md-4 col-xxl-3 order-md-3 p-0 ps-md-3">
-      <div id="account-img" class="mt-2 mb-3 mt-md-1 mb-3"></div>
-    </div>
-    <section class="col-12 col-md-8 col-xxl-5 offset-xxl-2 ps-lg-0">
-      <h1 class="d-none d-md-block mb-3">Welcome {{ user.first_name }}</h1>
-      <hr class="my-2 d-none d-md-block" />
-      <div class="row">
-        <div id="account-info-text" class="col-12 col-md-6">
-          <p>
-            This is your personal account page. <br />Here you can add and edit
-            your <br />personal information as well as <br />manage your
-            reservations.
-          </p>
-          <p class="mb-md-0">
-            Don't hesitate to contact us if <br />you have any questions!
-          </p>
-        </div>
-        <div class="col-12 col-md-6 p-md-0">
-          <ul class="p-0" id="user-details">
-            <li>
-              Username:
-              <span class="special-font">{{ user.username }}</span>
-            </li>
-            <li>
-              First name:
-              <span class="special-font">{{ user.first_name }}</span>
-            </li>
-            <li>
-              Last name: <span class="special-font">{{ user.last_name }}</span>
-            </li>
-            <li>
-              Phone number:
-              <span class="special-font"
-                >{{ user.customer.phone.as_international }}</span
-              >
-            </li>
-            <li>
-              Email:
-              <span class="small special-font text-break"
-                >{{ user.email }}</span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-12 col-md-6 p-0">
-          {% if user.customer.has_clicked %}
-          <p>
-            <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"> </i>
-            <span class="small"> Friends and family discount</span>
-          </p>
-
-          <!-- prettier-ignore -->
-          {% elif user.customer.has_discount and not user.customer.has_clicked %}
-          <p class="mt-2 fs-4">
-            <a href="" class="text-decoration-none"
-              ><i
-                class="fa-solid fa-ranking-star fa-shake fa-xl mt-4 me-auto ps-2">
-              </i
-              ><span class="ps-3 special-font" id="click-me">Click me!</span></a
-            >
-          </p>
-          {% endif %}
-        </div>
-        <div class="col-12 col-md-6 p-md-0 my-4 my-md-0">
-          <a href="{% url 'edit_account' %}" class="text-decoration-none">
-            <button class="btn-iconic-reverse">Edit</button>
-          </a>
-          <a href="{% url 'delete_account' %}" class="text-decoration-none">
-            <button class="btn-warning">Delete</button>
-          </a>
-          <a href="{% url 'account_logout' %}">
-            <button class="btn-warning">Logout</button>
-          </a>
-        </div>
-      </div>
-      <div class="col-12 mx-auto p-0">
-        <h2 class="mt-2">Reservations</h2>
-
-        <!-- if no reservations -->
-        <p class="small">
-          You currently do not have any upcoming reservations.
-        </p>
-      </div>
-    </section>
+<section class="row justify-content-center m-0 mb-4">
+  <div class="account-management text-center">
+    <h1 class="lh-base mt-5">Congratulations<br />{{ user.first_name }}</h1>
+    <p class="mt-5">You have been granted our friends and family discount!</p>
+    <a class="" href="{% url 'account' %}">
+      <button class="btn-iconic">
+        Account
+      </button>
+    </a>
   </div>
-</div>
+</section>
 
 <!-- prettier-ignore -->
 {% endblock %}
 
 {% block page-specific-js %}
-<script src="{% static './js/account-page.js' %}/"></script>
+<script src="{% static './js/fireworks.js' %}/"></script>
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html body -->

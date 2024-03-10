@@ -341,3 +341,12 @@ body {
     margin-left: 80%;
   }
 }
+
+
+/* Media query only for phones */
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
