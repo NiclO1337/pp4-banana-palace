@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page-specific-css %}
-<link rel="stylesheet" href="{% static './css/fireworks.css' %}" />
+<link rel="stylesheet" href="{% static './css/fireworks_pink.css' %}" />
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html head -->
@@ -97,7 +97,7 @@
           <a href="{% url 'edit_account' %}" class="text-decoration-none">
             <button class="btn-iconic-reverse">Edit</button>
           </a>
-          <a href="{% url 'delete_account' %}">
+          <a href="{% url 'delete_account' %}" class="text-decoration-none">
             <button class="btn-warning">Delete</button>
           </a>
           <a href="{% url 'account_logout' %}">
