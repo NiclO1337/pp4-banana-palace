@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from .forms import EditUserForm, EditCustomerForm
 
 # Create your views here.
@@ -26,8 +27,8 @@ def account_edit_view(request):
                              'Your account information updated succesfully')
             return redirect(to='account')
         else:
-            messages.error(request,
-                           'Something is wrong and could not be submitted')
+            messages.error(request, 'Some field is incorrect and could not \
+be submitted. See message next to relevant field.')
 
     else:
         user_form = EditUserForm(instance=request.user)
@@ -38,3 +39,19 @@ def account_edit_view(request):
         'user_form': user_form, 'customer_form': customer_form
         })
 
+
+@login_required
+def delete_account(request):
+
+    if request.method == 'POST':
+
+        delete_user = User.objects.get(username=request.user)
+
+        delete_user.delete()
+        messages.success(request, 'Your account has been deleted and your \
+personal information removed from the database. Welcome back anytime!')
+        return redirect(to='home')
+
+    else:
+
+        return render(request, 'account/delete_account.html')

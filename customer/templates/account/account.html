@@ -92,7 +92,9 @@
           <a href="{% url 'edit_account' %}" class="text-decoration-none">
             <button class="btn-iconic-reverse">Edit</button>
           </a>
-          <button class="btn-warning">Delete</button>
+          <a href="{% url 'delete_account' %}">
+            <button class="btn-warning">Delete</button>
+          </a>
           <a href="{% url 'account_logout' %}">
             <button class="btn-warning">Logout</button>
           </a>

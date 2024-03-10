@@ -408,4 +408,7 @@ Specifically used for urls and views.
 - Django tutorial by [Hana Belay](https://dev.to/earthcomfy/django-user-profile-3hik)<br>
 How to extend user model and update account information.
 
+- Delete account guide by [Cloud With Django](https://www.youtube.com/watch?v=wRFUTDBUgsA)
+
+
 [Back to top](#table-of-contents)
