@@ -78,12 +78,12 @@
 
           <!-- prettier-ignore -->
           {% elif user.customer.has_discount and not user.customer.has_clicked %}
-          <p class="mt-2 fs-4 special-font">
+          <p class="mt-2 fs-4">
             <a href="" class="text-decoration-none"
               ><i
-                class="fa-solid fa-ranking-star fa-shake fa-2xl mt-4 me-auto ps-2">
+                class="fa-solid fa-ranking-star fa-shake fa-xl mt-4 me-auto ps-2">
               </i
-              ><span class="ps-3" id="click-me">Click me!</span></a
+              ><span class="ps-3 special-font" id="click-me">Click me!</span></a
             >
           </p>
           {% endif %}
@@ -116,7 +116,7 @@
 {% endblock %}
 
 {% block page-specific-js %}
-<!-- <script src="{% static './js/' %}/"></script> -->
+<script src="{% static './js/account-page.js' %}/"></script>
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html body -->
