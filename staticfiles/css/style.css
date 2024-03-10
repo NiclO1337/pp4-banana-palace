@@ -161,6 +161,7 @@ footer {
 }
 
 .btn-iconic,
+.btn-iconic-reverse,
 .btn-warning,
 #override-bootstrap .account-management button {
   border: var(--border-width-solid-iconic) var(--color-primary);
@@ -172,6 +173,7 @@ footer {
 #override-bootstrap .account-management button:hover,
 #override-bootstrap header a:hover,
 .btn-iconic:hover,
+.btn-iconic-reverse:hover,
 .btn-warning:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
@@ -183,6 +185,17 @@ footer {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
   text-shadow: none;
+}
+
+#override-bootstrap .account-management button.btn-iconic-reverse,
+.btn-iconic-reverse {
+  background-color: var(--color-primary);
+  color: var(--color-primary-bg);
+}
+
+#override-bootstrap .account-management button.btn-iconic-reverse:hover,
+.btn-iconic-reverse:hover {
+  color: var(--color-primary-light);
 }
 
 .btn-warning,
