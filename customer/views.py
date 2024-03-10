@@ -60,4 +60,9 @@ personal information removed from the database. Welcome back anytime!')
 @login_required
 def fireworks_page(request):
 
+    user = request.user
+
+    user.customer.has_clicked = "True"
+    user.save()
+
     return render(request, 'account/fireworks.html')
