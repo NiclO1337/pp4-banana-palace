@@ -1,0 +1,53 @@
+/* All code in this file copied from Eddie Lin
+https://jsfiddle.net/elin/7m3bL/ */
+
+
+
+.pyro > .before,
+.pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  color: #b1159c;
+  color: #c42bbc;
+  color: #d641c2;
+  color: #da2a90;
+
+  box-shadow: -120px -218.66667px #d641c2, 248px -16.66667px #ff00d0,
+  190px 16.33333px #da2a90, -113px -308.66667px #ff009d,
+    -109px -287.66667px #da2a90, -50px -313.66667px #da2a90,
+    226px -31.66667px #da2a90, 180px -351.66667px #ff00d0,
+    -12px -338.66667px #d641c2, 220px -388.66667px #b1159c,
+    -69px -27.66667px #da2a90, -111px -339.66667px #c42bbc,
+    155px -237.66667px #c42bbc, -152px -380.66667px #da2a90,
+    -50px -37.66667px #b1159c, -95px -175.66667px #da2a90,
+    -88px 10.33333px #c42bbc, 112px -309.66667px #d641c2,
+    69px -415.66667px #ff00a6, 168px -100.66667px #da2a90,
+    -244px 24.33333px #c42bbc, 97px -325.66667px #d641c2,
+    -211px -182.66667px #d641c2, 236px -126.66667px #da2a90,
+    140px -196.66667px #c42bbc, 125px -175.66667px #d641c2,
+    118px -381.66667px #da2a90, 144px -111.66667px #c42bbc,
+    36px -78.66667px #f600ff, -63px -196.66667px #da2a90,
+    -218px -227.66667px #da2a90, -134px -377.66667px #ea00ff,
+    -36px -412.66667px #ff00d4, 209px -106.66667px #963291,
+    91px -278.66667px #da2a90, -22px -191.66667px #da2a90,
+    139px -392.66667px #d641c2, 56px -2.66667px #d641c2,
+    -156px -276.66667px #ea00ff, -163px -233.66667px #c42bbc,
+    -238px -346.66667px #d641c2, 62px -363.66667px #d641c2,
+    244px -170.66667px #da2a90, 224px -142.66667px #da2a90,
+    141px -208.66667px #da2a90, 211px -285.66667px #b1159c,
+    181px -128.66667px #c42bbc, 90px -123.66667px #da2a90,
+    189px 70.33333px #b1159c, -18px -383.66667px #d641c2,
+    100px -6.66667px #ff008c;
+  -moz-animation: 1s bang ease-out infinite backwards,
+    1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -webkit-animation: 1s bang ease-out infinite backwards,
+    1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -o-animation: 1s bang ease-out infinite backwards,
+    1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  -ms-animation: 1s bang ease-out infinite backwards,
+    1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+  animation: 1s bang ease-out infinite backwards,
+    1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+}
