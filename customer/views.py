@@ -55,3 +55,9 @@ personal information removed from the database. Welcome back anytime!')
     else:
 
         return render(request, 'account/delete_account.html')
+
+
+@login_required
+def fireworks_page(request):
+
+    return render(request, 'account/fireworks.html')

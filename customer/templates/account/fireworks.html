@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block page-specific-css %}
-<!-- <link rel="stylesheet" href="{% static './css/.css' %}" /> -->
+<link rel="stylesheet" href="{% static './css/fireworks_pink.css' %}" />
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html head -->
@@ -15,6 +15,11 @@
 
 <!-- prettier-ignore -->
 {% block page-content %}
+
+<div class="pyro">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
 
 <div class="container-fluid container-lg">
   <div class="row">
@@ -79,7 +84,7 @@
           <!-- prettier-ignore -->
           {% elif user.customer.has_discount and not user.customer.has_clicked %}
           <p class="mt-2 fs-4">
-            <a href="{% url 'fireworks_page' %}" class="text-decoration-none"
+            <a href="" class="text-decoration-none"
               ><i
                 class="fa-solid fa-ranking-star fa-shake fa-xl mt-4 me-auto ps-2">
               </i
