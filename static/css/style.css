@@ -489,6 +489,12 @@ a:has(> i.fa-star) {
   color: var(--color-primary);
 }
 
+.fa-heart,
+a:has(i.fa-heart) #click-me,
+a:has(> i.fa-heart) {
+  color: #d641c2;
+}
+
 /* Uses same image as about page #main-about-img */
 #account-img {
   height: 17rem;

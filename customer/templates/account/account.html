@@ -72,8 +72,20 @@
         <div class="col-12 col-md-6 p-0">
           {% if user.customer.has_clicked %}
           <a href="{% url 'fireworks_page' %}" class="text-decoration-none">
-            <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"> </i>
-            <span class="small special-font"> Friends and family discount</span>
+            <i class="
+            {% if user.username == "Lauralientje" %}
+            fa-solid fa-heart fa-2xl mt-1 me-auto ps-3
+            {% else %}
+            fa-solid fa-star fa-2xl mt-4 me-auto ps-2
+            {% endif %}
+             "> </i>
+            <span class="small special-font">
+              {% if user.username == "Lauralientje" %}
+                Free food for life!
+                {% else %}
+                Friends and family discount
+                {% endif %}
+              </span>
           </a>
 
           <!-- prettier-ignore -->
@@ -81,7 +93,15 @@
           <p class="mt-2 fs-4">
             <a href="{% url 'fireworks_page' %}" class="text-decoration-none"
               ><i
-                class="fa-solid fa-ranking-star fa-shake fa-xl mt-4 me-auto ps-2">
+                class="fa-solid
+
+                {% if user.username == "Lauralientje" %}
+                fa-heart fa-beat-fade fa-2xl
+                {% else %}
+                fa-ranking-star fa-shake fa-xl
+                {% endif %}
+
+                mt-4 me-auto ps-2">
               </i
               ><span class="ps-3 special-font" id="click-me">Click me!</span></a
             >
