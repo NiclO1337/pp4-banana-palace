@@ -29,21 +29,33 @@
 
 <section class="row justify-content-center m-0 mb-4">
   <div class="account-management text-center">
-    <h1 class="lh-base mt-5 pt-xl-5">
-      Congratulations<br />
-      <span id="name"> {{ user.first_name }} </span>
-    </h1>
+
     {% if user.username == "Lauralientje" %}
-    <p class="mt-5">
-      Mijn lieverd, you have been granted VIP status and you
-      get 100% discount.<br><span class="d-block mt-2">Free food for life!</span>
-    </p>
+
+      <h1 class="lh-base mt-5 pt-xl-5">
+        Congratulations<br />
+        <span id="name"> Laura </span>
+      </h1>
+      <p class="mt-5">
+        Mijn lieverd, you have been granted VIP status and you
+        get 100% discount.<br>
+        <span class="d-block mt-2">Free food for life!</span>
+      </p>
+
     {% else %}
-    <p class="mt-5">You have been granted our friends and family discount!</p>
+
+      <h1 class="lh-base mt-5 pt-xl-5">
+        Congratulations<br />
+        <span id="name"> {{ user.first_name }} </span>
+      </h1>
+        <p class="mt-5">You have been granted our friends and family discount!</p>
+
     {% endif %}
+
     <a class="" href="{% url 'account' %}">
       <button class="btn-iconic mt-4 text-decoration-none">Account</button>
     </a>
+
   </div>
 </section>
 
@@ -51,7 +63,7 @@
 {% endblock %}
 
 {% block page-specific-js %}
-<script src="{% static './js/fireworks.js' %}/"></script>
+<script type="application/javascript" src="{% static './js/fireworks.js' %}/"></script>
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html body -->
