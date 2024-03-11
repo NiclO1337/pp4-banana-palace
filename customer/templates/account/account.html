@@ -77,13 +77,12 @@
 
               {% if user.username == "Lauralientje" %}
                 <i class="fa-solid fa-heart fa-2xl mt-1 me-auto ps-3"></i>
-              {% else %}
-                <i class="fa-solid fa-star fa-2xl mt-4 me-auto ps-2"></i>
-
-              {% endif %} {% if user.username == "Lauralientje" %}
                 <span class="small special-font">Free food for life!</span>
+
               {% else %}
+                <i class="fa-solid fa-star fa-2xl me-auto ps-2"></i>
                 <span class="small special-font">Friends and family discount</span>
+
               {% endif %}
             </a>
 
@@ -93,12 +92,12 @@
             <a href="{% url 'fireworks_page' %}" class="text-decoration-none">
 
               {% if user.username == "Lauralientje" %}
-                <i class="fa-heart fa-beat-fade fa-2xl"></i>
+                <i class="fa-solid fa-heart fa-beat-fade fa-2xl ps-3 pt-4"></i>
               {% else %}
-                <i class="fa-ranking-star fa-shake fa-xl"></i>
+                <i class="fa-solid fa-ranking-star fa-shake fa-xl ps-3"></i>
               {% endif %}
 
-              <span class="ps-3 special-font" id="click-me">Click me!</span></a
+              <span class="ps-2 special-font" id="click-me">Click me!</span></a
             >
           </p>
           {% endif %}
@@ -131,7 +130,11 @@
 {% endblock %}
 
 {% block page-specific-js %}
-<script src="{% static './js/account-page.js' %}"></script>
+
+  {% if user.customer.has_discount and not user.customer.has_clicked %}
+    <script src="{% static './js/account-page.js' %}"></script>
+  {% endif %}
+
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html body -->
