@@ -1,3 +1,4 @@
+// Fade in elements on fireworks page on timers
 $(document).ready(function() {
     setInterval(function() {
         $('h1')[0].style.opacity = "1";
