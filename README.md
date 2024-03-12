@@ -18,11 +18,37 @@ TODO
     * [Returning user goals](#returning-user-goals)
 * [Design](#design)
     * [Colours](#colours)
+    * [Typography](#typography)
+    * [Images](#images)
+    * [Logo and Favicon](#logo-and-favicon)
 * [Features](#features)
     * [Welcome screen](#welcome-screen)
-* [Future features](#future-features)
+    * [Welcome screen]()
+    * [Welcome screen]()
+    * [Welcome screen]()
+    * [Security Features and Defensive Design](#security-features-and-defensive-design)
+    * [Future features](#future-features)
+* [Project planning and execution](#project-planning-and-execution)
+    * [Design thinking](#design-thinking)
+    * [Wireframes](#wireframes)
+    * [Database Schema](#database-schema)
+        * [Business goals](#business-goals)
+        * [Progressive data model](#progressive-data-model)
+        * [Conceptional](#conceptional)
+        * [Logical](#logical)
+        * [Physical](#physical)
+    * [Agile software development](#agile-software-development)
+        * [Epics](#epics)
+        * [User stories](#user-stories)
+        * [Product backlog](#product-backlog)
+        * [MoSCoW prioritization](#moscow-prioritization)
+        * [Iterations](#iterations)
+        * [Kanban board](#kanban-board)
 * [Technologies used](#technologies-used)
     * [Languages](#languages)
+    * [Frameworks](#frameworks)
+    * [Libraries](#libraries)
+    * [Tools](#tools)
 * [Testing](#testing)
 * [Deployment](#deployment)
     * [Heroku](#deployment-to-heroku)
@@ -36,6 +62,8 @@ TODO
     * [Code](#code)
 
 <hr>
+
+
 
 
 ## Introduction
