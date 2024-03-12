@@ -76,7 +76,10 @@ Semantic HTML is used to aid people with dissabilities such as visual impairment
 
 
 ### Typography
-
+Headings - Merienda
+Button-font - M PLUS Rounded 1c
+Main-font - Noto Sans
+Google fonts
 
 
 ### Images
