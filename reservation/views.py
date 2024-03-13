@@ -1,14 +1,18 @@
 from django.shortcuts import render
 
+from django.contrib.auth.decorators import login_required
+
 # Create your views here.
 
 
 
 # create reservation page
-
+@login_required
 def reservation_page(request):
 
-    pass
+    return render(request, 'reservation/reservation.html')
+
+
 
 
 # create automated bookings when selecting time to pre populate the
