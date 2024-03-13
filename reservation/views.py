@@ -1,8 +1,7 @@
 from django.shortcuts import render
-
 from django.contrib.auth.decorators import login_required
+# from django.contrib.auth import User
 
-# Create your views here.
 
 
 
@@ -10,7 +9,11 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def reservation_page(request):
 
-    return render(request, 'reservation/reservation.html')
+    nr_of_tables = request.user.customer.restaurant.avalible_tables
+
+
+    return render(request, 'reservation/reservation.html',
+                  {'range': range(nr_of_tables)})
 
 
 

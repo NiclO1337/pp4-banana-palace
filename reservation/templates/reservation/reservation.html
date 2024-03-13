@@ -2,9 +2,8 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head_title %}
-TITLE
+Reservation
 {% endblock %}
-
 {% block page-specific-css %}
 <!-- <link rel="stylesheet" href="{% static './css/' %}" /> -->
 {% endblock %}
@@ -25,10 +24,21 @@ TITLE
   </div>
 </div>
 
-<div class="container-fluid mt-3">
-  <div class="row bg-primary px-lg-3 gap-4 justify-content-center">
-    <div class="bg-secondary table-container col-12 col-lg-8 col-xxl-7">
-      Layout
+<div class="container-fluid my-3">
+  <div class="row px-lg-3 gap-4 justify-content-center">
+    <div class="bg-primary-subtle table-container col-12 col-lg-8 col-xxl-7">
+
+      {{ user.customer.restaurant }}
+      {{ user.customer.restaurant.avalible_tables }}
+
+      {{ user.first_name }}
+      {{ range }}
+      {{ user }}
+
+      {% for table in range %}
+        <div class="table d-inline px-2 mx-1" id="table{{ table }}"></div>
+      {% endfor %}
+
     </div>
     <div class="bg-primary-subtle col-12 col-lg-3">Text information</div>
   </div>

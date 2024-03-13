@@ -576,7 +576,17 @@ hr:has(+ h2) {
 
 .table-container {
   height: 60vh;
+  border-radius: var(--border-radius-images-all);
 }
+
+.table {
+  width: 3rem;
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-primary);
+  border-radius: var(--border-radius-iconic);
+}
+
+
 
 /* --------------------------
 ----------- Footer ----------
