@@ -568,24 +568,37 @@ hr:has(+ h2) {
   line-height: normal;
 }
 
-
-
 /* --------------------------
 ----- Reservation page ------
 -------------------------- */
 
 .table-container {
-  height: 60vh;
+  /* height: 60vh; */
   border-radius: var(--border-radius-images-all);
 }
 
 .table {
-  width: 3rem;
-  background-color: var(--color-primary-light);
-  border: var(--border-width-solid-iconic) var(--color-primary);
+  width: 2rem;
+  height: 2rem;
+  background-color: lightgrey;
   border-radius: var(--border-radius-iconic);
+  border: var(--border-width-solid-iconic) grey;
 }
 
+.table:hover {
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+.red {
+  background-color: var(--color-tertiary-light);
+  border: none;
+}
+
+.table.red:hover {
+  background-color: var(--color-tertiary-light);
+  border: var(--border-width-solid-iconic) var(--color-tertiary);
+}
 
 
 /* --------------------------
