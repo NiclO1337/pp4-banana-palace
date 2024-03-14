@@ -1,13 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
 from home.models import Restaurant
+from datetime import date
 
 
 class Table(models.Model):
 
     # Do I acctually need date field on both models...
     # They are already OneToOneField...
-    # date = models.DateField()
+    date = models.DateField(default=date.today)
     reserved = models.BooleanField(default=False)
 
 
@@ -20,7 +21,8 @@ class Reservation(models.Model):
                   (4, '6'), (5, '7'), (6, '8'))
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateField()
+    # date = models.DateField()
+    time = models.TimeField(default="17:00")
     party_size = models.IntegerField(choices=PARTY_SIZE, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)

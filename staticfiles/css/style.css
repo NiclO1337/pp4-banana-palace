@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&family=Merienda&family=Noto+Sans:ital@0;1&display=swap");
-
 /* --------------------------
 ----- Table of contents -----
 
@@ -15,8 +13,8 @@ Base template
 Index page
 About page
 Account page
-
-Account management (allauth templates)
+Account management
+Reservation page
 Footer
 Media queries
 
@@ -569,6 +567,39 @@ hr:has(+ h2) {
   color: var(--color-tertiary);
   line-height: normal;
 }
+
+/* --------------------------
+----- Reservation page ------
+-------------------------- */
+
+.table-container {
+  /* height: 60vh; */
+  border-radius: var(--border-radius-images-all);
+}
+
+.table {
+  width: 2rem;
+  height: 2rem;
+  background-color: lightgrey;
+  border-radius: var(--border-radius-iconic);
+  border: var(--border-width-solid-iconic) grey;
+}
+
+.table:hover {
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+.red {
+  background-color: var(--color-tertiary-light);
+  border: none;
+}
+
+.table.red:hover {
+  background-color: var(--color-tertiary-light);
+  border: var(--border-width-solid-iconic) var(--color-tertiary);
+}
+
 
 /* --------------------------
 ----------- Footer ----------
