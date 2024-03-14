@@ -36,7 +36,16 @@ Reservation
       </div>
 
     </div>
-    <div class="bg-primary-subtle col-12 col-lg-3">Text information</div>
+    <div class="bg-primary-subtle col-12 col-lg-3">
+      Text information
+      <p>{{ tables }}</p>
+
+      {% for table in tables %}
+        <p class="red">{{ table.date }}</p>
+      {% endfor %}
+      <p>{{ today }}</p>
+
+    </div>
   </div>
 </div>
 

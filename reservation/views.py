@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import Table
+from datetime import date
 # from django.contrib.auth import User
 
 
@@ -11,9 +13,29 @@ def reservation_page(request):
 
     nr_of_tables = request.user.customer.restaurant.avalible_tables
 
+    today = date.today
+
+    tables = Table.objects.filter()
+
+    if not tables:
+        for table in nr_of_tables:
+            Table()
+            table.save
+
+
+
+    # tables = [
+    #     Table(),
+    # # ]
+    # Table.objects.bulk_create(tables)
+
+
+
 
     return render(request, 'reservation/reservation.html',
-                  {'range': range(nr_of_tables)})
+                  {'range': range(nr_of_tables),
+                   'tables': tables,
+                   'today': today})
 
 
 
