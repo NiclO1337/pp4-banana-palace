@@ -9,6 +9,9 @@ class Table(models.Model):
     date = models.DateField(default=date.today)
     reserved = models.BooleanField(default=False)
 
+    def __str__(self):
+        return f'Table ID: {self.id} - {self.date}'
+
 
 class Reservation(models.Model):
     """
@@ -30,3 +33,8 @@ class Reservation(models.Model):
     # Do not think I need this one since user is a FK and I should be able
     # to get it by targetting User.customer.has_discount
     # has_discount = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f'Date: {self.table.date} ---- Party size: {self.party_size} \
+---- Customer: {self.user.first_name} {self.user.last_name}. ---- \
+Has discount: {self.user.customer.has_discount}'
