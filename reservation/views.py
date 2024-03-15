@@ -13,15 +13,26 @@ def reservation_page(request):
 
     nr_of_tables = request.user.customer.restaurant.avalible_tables
 
-    today = date.today
+    today = date.today()
+    string_today = str(today)
 
-    tables = Table.objects.filter()
+    # tables = Table.objects.filter()
+
+    tables = Table.objects.filter(date=today)
+
+    # for table in tables:
+    #     if table.date not in today:
+    #         for table in nr_of_tables:
+    #             Table()
+    #             table.save
 
     if not tables:
-        for table in nr_of_tables:
-            Table()
-            table.save
-
+        tables = []
+        for table in range(nr_of_tables):
+            new_table = Table()
+            new_table.save()
+            tables.append(new_table)
+        return tables
 
 
     # tables = [
@@ -30,12 +41,13 @@ def reservation_page(request):
     # Table.objects.bulk_create(tables)
 
 
-
-
     return render(request, 'reservation/reservation.html',
                   {'range': range(nr_of_tables),
                    'tables': tables,
-                   'today': today})
+                   'today': today,
+                   'string_today': string_today,
+                   'nr_of_tables': nr_of_tables,
+                   })
 
 
 
