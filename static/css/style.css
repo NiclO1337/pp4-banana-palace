@@ -600,6 +600,20 @@ hr:has(+ h2) {
   border: var(--border-width-solid-iconic) var(--color-tertiary);
 }
 
+.asteriskField {
+  display: none;
+}
+
+#date-pick-form .form-label {
+  margin-bottom: 0;
+}
+
+#date-pick-form #id_date {
+  max-width: 10rem;
+  margin: 0.2rem auto;
+}
+
+
 
 /* --------------------------
 ----------- Footer ----------

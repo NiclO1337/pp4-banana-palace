@@ -18,12 +18,12 @@ Reservation
 <div class="container">
   <h1 class="text-center">Make a reservation</h1>
   <div class="row">
-    <div class="col-8 col-lg-4 offset-lg-3 justify-content-lg-end">
+    <div class="col-12 col-md-8 col-lg-4 offset-lg-3 ">
       <p>Select a date and then pick a table below</p>
     </div>
-    <div class="col-4 col-lg-2">
+    <div class="col-12 col-md-4 col-lg-2">
 
-      <form id="date-pick-form" method="post" enctype="multipart/form-data">
+      <form id="date-pick-form" class="text-center mx-auto" method="post" enctype="multipart/form-data">
         {{ date_form | crispy }}
         {% csrf_token %}
         <button type="submit" class="btn-iconic">Check date</button>
@@ -48,6 +48,11 @@ Reservation
     </div>
     <div class="bg-primary-subtle col-12 col-lg-3">
       Text information
+
+      <p class="text-break">{{ request.POST }}</p>
+
+      <p>{{ request.POST.date }}</p>
+
     </div>
   </div>
 </div>

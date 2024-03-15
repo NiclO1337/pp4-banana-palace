@@ -6,7 +6,7 @@ from datetime import date
 
 class Table(models.Model):
 
-    date = models.DateField('Select date', default=date.today)
+    date = models.DateField(default=date.today)
     reserved = models.BooleanField(default=False)
 
 

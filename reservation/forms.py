@@ -6,8 +6,9 @@ from datetime import datetime, date
 
 
 class PickDateForm(forms.ModelForm):
-    date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+    date = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}),
+                           label="Select date:")
 
     class Meta:
         model = Table
-        fields = ('date',)
+        fields = ['date',]
