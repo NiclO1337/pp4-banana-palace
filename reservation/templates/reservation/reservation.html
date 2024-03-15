@@ -31,23 +31,13 @@ Reservation
       <div class="d-flex flex-wrap gap-5 justify-content-between
       align-items-center m-5 p-5">
         {% for table in tables %}
-          <div class="table m-0" id="table{{ table }}"></div>
+          <div class="table m-0" id="table{{ table.id }}"></div>
         {% endfor %}
       </div>
 
     </div>
     <div class="bg-primary-subtle col-12 col-lg-3">
       Text information
-      <!-- <p>{{ tables }}</p> -->
-
-      <!-- {% for table in tables %}
-        <p class="red">{{ table.date }}</p>
-      {% endfor %} -->
-
-      <p>Today variable: {{ today }}</p>
-      <p>String_today variable:{{ string_today }}</p>
-      <p>Nr of tables:{{ nr_of_tables }}</p>
-
     </div>
   </div>
 </div>
