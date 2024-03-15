@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Table
 from datetime import date
+from .forms import PickDateForm
 # from django.contrib.auth import User
 
 
@@ -28,8 +29,15 @@ def reservation_page(request):
             tables.append(new_table)
 
 
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+
+    date_form = PickDateForm()
+
     return render(request, 'reservation/reservation.html',
-                  {'tables': tables})
+                  {'tables': tables,
+                   'date_form': date_form,
+                   })
 
 
 
