@@ -20,15 +20,15 @@ Reservation
   <div class="row">
     <div class="col-12 col-md-8 col-lg-4 offset-lg-3 ">
       <p>Select a date and then pick a table below</p>
+      <p>Showing tables on: <span class="special-font">{{ today }}</span></p>
     </div>
     <div class="col-12 col-md-4 col-lg-2">
 
       <form id="date-pick-form" class="text-center mx-auto" method="post" enctype="multipart/form-data">
         {{ date_form | crispy }}
         {% csrf_token %}
-        <button type="submit" class="btn-iconic">Check date</button>
+        <button type="submit" class="btn-iconic d-none">Check date</button>
     </form>
-
 
     </div>
   </div>
@@ -48,10 +48,6 @@ Reservation
     </div>
     <div class="bg-primary-subtle col-12 col-lg-3">
       Text information
-
-      <p>{{ tables }}</p>
-
-      <p>{{ request.POST.date }}</p>
 
     </div>
   </div>

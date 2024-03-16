@@ -132,7 +132,8 @@ footer {
   color: var(--color-primary-bg);
 }
 
-::placeholder {
+::placeholder,
+#id_date::placeholder {
   color: var(--color-tertiary);
 }
 

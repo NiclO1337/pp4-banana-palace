@@ -20,6 +20,8 @@ def reservation_page(request):
     # get all tables for todays date (today is when page is loaded)
     tables = Table.objects.filter(date=date.today())
 
+    today = date.today()
+
     # if there are no tables, create tables and save them to the database
     # nr of tables created depends on restaurants nr of avalible tables
     if not tables:
@@ -46,6 +48,7 @@ def reservation_page(request):
             return render(request, 'reservation/reservation.html',
                           {'tables': tables,
                            'date_form': date_form,
+                           'today': selected_date
                            })
 
 
@@ -54,6 +57,7 @@ def reservation_page(request):
     return render(request, 'reservation/reservation.html',
                   {'tables': tables,
                    'date_form': date_form,
+                   'today': today
                    })
 
 
