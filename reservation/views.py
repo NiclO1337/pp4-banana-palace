@@ -31,8 +31,24 @@ def reservation_page(request):
         return tables
 
 
-    # if request.method == "POST":
-    #     date_form = PickDateForm(data=request.POST)
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+        if date_form.is_valid():
+            selected_date = date_form.cleaned_data['date']
+            tables = Table.objects.filter(date=selected_date)
+            if not tables:
+                tables = []
+                for table in range(nr_of_tables):
+                    new_table = Table(
+                        date=selected_date,
+                        reserved=False)
+                    new_table.save()
+                    tables.append(new_table)
+                return tables
+            return render(request, 'reservation/reservation.html',
+                          {'tables': tables,
+                           'date_form': date_form,})
+
 
     date_form = PickDateForm()
 
