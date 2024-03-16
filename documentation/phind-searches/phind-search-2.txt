@@ -1,0 +1,100 @@
+I want to this PickDateForm to reload the page and change queryset to use the date submitted in the datepicker.
+This is my code:
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from .models import Table
+from datetime import date
+from .forms import PickDateForm
+# from django.contrib.auth import User
+
+
+
+
+# create reservation page
+@login_required
+def reservation_page(request):
+
+
+    # Get number of avalible tables from the resturant
+    # associated with the logged in user
+    nr_of_tables = request.user.customer.restaurant.avalible_tables
+
+    # get all tables for todays date (today is when page is loaded)
+    tables = Table.objects.filter(date=date.today())
+
+    # if there are no tables, create tables and save them to the database
+    # nr of tables created depends on restaurants nr of avalible tables
+    if not tables:
+        for table in range(nr_of_tables):
+            new_table = Table()
+            new_table.save()
+            tables.append(new_table)
+
+
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+
+    date_form = PickDateForm()
+
+    return render(request, 'reservation/reservation.html',
+                  {'tables': tables,
+                   'date_form': date_form,
+                   'request': request,
+                   })
+Tired of pasting in code?
+
+ANSWER | PHIND-34B MODEL
+To achieve the functionality where the page reloads and changes the queryset based on the date submitted in the datepicker, you need to modify your Django view to handle the form submission and filter the queryset based on the submitted date. Additionally, you'll need to ensure that your datepicker submits the form when a date is selected.
+
+First, let's address the form submission part. You already have a PickDateForm in your view, but you need to check if the form is valid and then use the submitted date to filter the Table objects. Here's how you can modify your view:
+
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from .models import Table
+from datetime import date
+from .forms import PickDateForm
+
+@login_required
+def reservation_page(request):
+    nr_of_tables = request.user.customer.restaurant.avalible_tables
+    tables = Table.objects.filter(date=date.today())
+
+    if not tables:
+        for table in range(nr_of_tables):
+            new_table = Table()
+            new_table.save()
+            tables.append(new_table)
+
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+        if date_form.is_valid():
+            selected_date = date_form.cleaned_data['date']
+            tables = Table.objects.filter(date=selected_date)
+            return render(request, 'reservation/reservation.html',
+                          {'tables': tables,
+                           'date_form': date_form,
+                           'request': request,
+                           })
+    else:
+        date_form = PickDateForm()
+
+    return render(request, 'reservation/reservation.html',
+                 {'tables': tables,
+                   'date_form': date_form,
+                   'request': request,
+                   })
+Next, to ensure the datepicker submits the form when a date is selected, you can use JavaScript or jQuery to submit the form automatically. Based on the information from 0, you can use the onChange event of the datepicker to submit the form. Here's an example using jQuery:
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#id_date").datepicker({
+        onSelect: function(dateText, inst) {
+            $(this).closest('form').submit();
+        }
+    });
+});
+</script>
+Make sure to replace "#id_date" with the actual ID of your date input field in the form. This script listens for the date selection and submits the form containing the date input field.
+
+Remember to include jQuery and the datepicker library in your template for the datepicker to work. This approach ensures that when a user selects a date from the datepicker, the form is submitted, and the page reloads with the queryset filtered based on the selected date.

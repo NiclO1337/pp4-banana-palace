@@ -331,6 +331,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Grammarly** for spellchecking
 - **cdnjs.com** to find relevant CDN fast
 - **paint.net** to edit logo, images and favicon
+- **phind.com** to search for specific solutions
 
 
 ## Testing
@@ -442,6 +443,23 @@ How to extend user model and update account information.
 - Delete account guide by [Cloud With Django](https://www.youtube.com/watch?v=wRFUTDBUgsA)
 
 - Fireworks CSS by [Eddie Lin](https://jsfiddle.net/elin/7m3bL/)
+
+
+#### Phind.com
+
+After spending too many hours on google trying various outdated or incorrect or incapatible solutions I changed tactic and tested phind.com because of multiple recommendations. Immediatly amazed at the speed and accuracy of search results.
+
+- Better looking datepicker. [Phind search 1](https://www.phind.com/search?cache=q6943vmjbf51bp9848g2hlcb)
+
+- Help with how to get date from datepicker as a variable: [Phind search 2](https://www.phind.com/search?cache=sqrlc22rb0n70z8fbuh61mvs)
+
+- Help with specific server error due to mistake in code: [Phind search 3](https://www.phind.com/search?cache=hlyju3zxzwvjql9yktalgy49)
+
+
+*Message from the developer*:<br>
+Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
+
+If online links stops working, results are saved in .txt format [here](https://github.com/NiclO1337/pp4-banana-palace/tree/main/documentation/phind-searches/)
 
 
 [Back to top](#table-of-contents)
