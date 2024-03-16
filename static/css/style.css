@@ -132,8 +132,7 @@ footer {
   color: var(--color-primary-bg);
 }
 
-::placeholder,
-#id_date::placeholder {
+::placeholder {
   color: var(--color-tertiary);
 }
 
@@ -649,6 +648,11 @@ html .ui-button.ui-state-disabled:active {
   border: 1px solid var(--color-tertiary);
   color: var(--color-tertiary);
 }
+
+#id_date::placeholder {
+  color: var(--color-primary);
+}
+
 
 /* --------------------------
 ----------- Footer ----------
