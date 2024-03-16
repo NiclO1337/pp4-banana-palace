@@ -153,6 +153,8 @@ Notes:
 All testing was made on up-to-date browsers.
 The desktop computer also tested with Chrome developer tools from 280px wide screen up to 2560px.
 
+Note: Datepicker on reservation does not look good on Galaxy fold (unfolded) 280px width. Problem ignored since it is functional on Galaxy fold with a sideways scrollbar and that model can be opened to view bigger. Problem does not exist on screenwidth 300px and above.
+
 
 ## Bugs
 

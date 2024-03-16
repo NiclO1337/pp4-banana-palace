@@ -1,0 +1,119 @@
+How do I style datepicker with jQuery dark-hive theme?
+ANSWER | PHIND-34B MODEL
+To style a jQuery UI datepicker with a dark theme, you can follow these steps:
+
+Choose a Theme: First, you need to select a theme that suits your needs. jQuery UI provides a theme builder called ThemeRoller, where you can customize the look and feel of your UI components, including the datepicker. Visit the jQuery UI website to access ThemeRoller and create a theme that matches your "dark-hive" theme requirements.
+Download the Theme: Once you've customized your theme, download the theme files. These files typically include CSS and images that define the look of your UI components.
+Include the Theme in Your Project: After downloading the theme, include the CSS file in your project. You can do this by adding a link to the CSS file in the head section of your HTML document. For example:
+<link rel="stylesheet" href="path/to/your/theme/jquery-ui.css">
+Make sure to replace "path/to/your/theme/jquery-ui.css" with the actual path to your downloaded theme's CSS file.
+
+Initialize the Datepicker: Ensure that you have included jQuery and jQuery UI in your project. Then, initialize the datepicker on your input elements. For example:
+$(function() {
+  $("#datepicker").datepicker();
+});
+Replace "#datepicker" with the selector for your input element.
+
+Customize the Datepicker (Optional): If you need further customization beyond what the theme provides, you can use the datepicker's options to adjust its appearance and behavior. For example, to change the date format:
+$(function() {
+  $("#datepicker").datepicker({
+    dateFormat: 'dd-mm-yy'
+  });
+});
+Adjust the Datepicker's CSS (Optional): If the theme does not perfectly match your "dark-hive" theme, you may need to adjust the CSS for the datepicker. This can be done by adding custom CSS rules that target the datepicker's classes. For example:
+.ui-datepicker {
+  background-color: #333;
+  color: #fff;
+}
+This CSS snippet changes the background color of the datepicker to a dark color and the text color to white, which could be part of a "dark-hive" theme.
+
+Remember, the exact steps and code may vary depending on the specifics of your project and the theme you choose. The key is to use the ThemeRoller to create a theme that fits your needs, include it in your project, and then initialize the datepicker with any additional customization as needed.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 1309601 > how-to-change-the-theme-of-jquery-ui-datepicker
+How to change the theme of jQuery UI datepicker?
+Aug 21, 2009 — You can go to http://jqueryui.com/ and pick a new one. Share. Share a link to this answer...
+
+2
+favicon-gist.github.com
+gist.github.com > alokraj68 > 87f6b1522e9587cbabcd
+Jquery UI DatePicker Dark Style
+Jquery-UI-DatePicker-Dark-Style.markdown. Jquery UI DatePicker Dark Style. simple from / to date picker with styled calendar. Forked from Andrew Pougher's Pen ...
+
+3
+favicon-www.mojoportal.com
+www.mojoportal.com > changing-the-jquery-ui-theme
+Changing the jQuery UI Theme
+Jul 9, 2011 — Changing the jQuery UI Theme. In mojoPortal content management system we use jQueryUI for things like tabs, accordion, and datepicker, .....
+
+4
+favicon-community.adobe.com
+community.adobe.com > t5 > dreamweaver > jquery-ui-datepicker-and-jquery-versions > m-p > 11916288
+jQuery UI Datepicker and jQuery versions
+Mar 22, 2021 — Solved: Hi. If I use this datepicker is because I don't find any other better option. DW gives it to me..
+
+5
+favicon-www.plus2net.com
+www.plus2net.com > jquery > msg-demo > date-picker-themes.php
+Demo of Date Picker with different Themes : smoothness
+Apply different themes to date picker by user in jquery ... 31. Select different Themes, base, Black-tie, Blitzer, cupertino, dark-hive ... themes/smoothness/jq..
+
+1
+2
+How do I customize the datepicker's appearance beyond the options provided by the theme?
+ANSWER | PHIND-34B MODEL
+
+To customize the appearance of the jQuery UI datepicker beyond the options provided by the theme, you can use custom CSS. Here's how you can do it:
+
+Create a Custom CSS File: Start by creating a new CSS file, for example, custom-datepicker.css. This file will contain all your custom styles for the datepicker.
+Link the Custom CSS File: Include the custom CSS file in your HTML document after the jQuery UI CSS file. This ensures that your custom styles override the default styles.
+<link rel="stylesheet" href="path/to/jquery-ui.css">
+<link rel="stylesheet" href="path/to/custom-datepicker.css">
+Customize the Datepicker Appearance: In your custom-datepicker.css file, you can start customizing the datepicker. Here are some examples of what you can do:
+Change the Background Color:
+.ui-datepicker {
+  background-color: #333;
+  color: #fff;
+}
+Style the Date Cells:
+.ui-datepicker td span, .ui-datepicker td a {
+  color: #666666;
+  text-shadow: 1px 1px 0px #fff;
+}
+.ui-datepicker-calendar .ui-state-default {
+  background: #ededed;
+}
+.ui-datepicker-calendar .ui-state-hover {
+  background: #f7f7f7;
+}
+.ui-datepicker-calendar .ui-state-active {
+  background: #6eafbf;
+  color: #e0e0e0;
+}
+Adjust the Width and Height:
+.ui-datepicker {
+  width: 250px;
+  height: 220px;
+}
+Customize Fonts:
+.ui-datepicker {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}
+Use Custom Icons: If you want to replace the default icons (e.g., for navigating between months), you can do so by specifying custom text or images in the datepicker initialization script.
+$("#datepicker").datepicker({
+  prevText: "Prev",
+  nextText: "Next"
+});
+Inline Datepicker: If you prefer the datepicker to be always visible, you can set it to display inline.
+$("#inlineDatepicker").datepicker({
+  inline: true
+});
+Adjust Date Format: You can change the format of the date displayed in the input field.
+$("#datepicker").datepicker({
+  dateFormat: "yy-mm-dd"
+});
+By following these steps and using the examples provided, you can significantly customize the appearance of the jQuery UI datepicker to match your website's design or the "dark-hive" theme you're aiming for. Remember, the key to effective customization is to experiment with different CSS properties and values until you achieve the desired look.

@@ -450,11 +450,13 @@ How to extend user model and update account information.
 
 After spending too many hours on google trying various outdated or incorrect or incapatible solutions I changed tactic and tested phind.com because of multiple recommendations. Immediatly amazed at the speed and accuracy of search results.
 
-- Better looking datepicker. [Phind search 1](https://www.phind.com/search?cache=q6943vmjbf51bp9848g2hlcb)
+- Better looking datepicker: [Phind search 1](https://www.phind.com/search?cache=q6943vmjbf51bp9848g2hlcb)
 
 - Help with how to get date from datepicker as a variable: [Phind search 2](https://www.phind.com/search?cache=sqrlc22rb0n70z8fbuh61mvs)
 
 - Help with specific server error due to mistake in code: [Phind search 3](https://www.phind.com/search?cache=hlyju3zxzwvjql9yktalgy49)
+
+- Help with adding and styling jQuery datepicker: [Phind search 4](https://www.phind.com/search?cache=ikbfeuzueqibp1far0jj35pt)
 
 
 *Message from the developer*:<br>
