@@ -23,14 +23,16 @@ def reservation_page(request):
     # if there are no tables, create tables and save them to the database
     # nr of tables created depends on restaurants nr of avalible tables
     if not tables:
+        tables = []
         for table in range(nr_of_tables):
             new_table = Table()
             new_table.save()
             tables.append(new_table)
+        return tables
 
 
-    if request.method == "POST":
-        date_form = PickDateForm(data=request.POST)
+    # if request.method == "POST":
+    #     date_form = PickDateForm(data=request.POST)
 
     date_form = PickDateForm()
 
