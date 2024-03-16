@@ -379,6 +379,7 @@ If changes has been made in local development, the requirements.txt might need t
 Type 'git clone' into the terminal and then paste the link you copied in step 3.
 5. Press enter.
 
+TODO: create env.py
 TODO: Optional, create viritual environment.
 TODO: install requirements with correct versions
 
