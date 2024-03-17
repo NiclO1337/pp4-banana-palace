@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .models import Table
+from django.contrib.auth.models import User
+from .models import Table, Reservation
+from home.models import Restaurant
 from datetime import date
 from .forms import PickDateForm
 # from django.contrib.auth import User
-
 
 
 
@@ -12,15 +13,29 @@ from .forms import PickDateForm
 @login_required
 def reservation_page(request):
 
+    test_user = User.objects.filter(id=3)
+    table = Table.objects.filter(id=1000)
+    restaurant = Restaurant.objects.filter(id=2)
+
+
+
+    # testers = [
+    #     Reservation(
+    #         user='tester',
+    #         party_size='4',
+    #         table=1,
+    #         restaurant='2'
+    #     )
+    # ]
 
     # Get number of avalible tables from the resturant
     # associated with the logged in user
     nr_of_tables = request.user.customer.restaurant.avalible_tables
 
-    # get all tables for todays date (today is when page is loaded)
+    # get all tables and reservations for todays date
+    # (today is when page is loaded)
     tables = Table.objects.filter(date=date.today())
-
-
+    reservations = Reservation.objects.filter(table__date=date.today())
 
     # if there are no tables, create tables and save them to the database
     # nr of tables created depends on restaurants nr of avalible tables
@@ -31,13 +46,28 @@ def reservation_page(request):
             new_table.save()
             tables.append(new_table)
 
+    tester = Reservation(
+            user=test_user[0],
+            party_size='4',
+            table=table[0],
+            restaurant=restaurant[0],
+        )
+
+    if not reservations:
+        reservations = []
+        for reservation in range(1):
+            new_reservation = tester
+            new_reservation.save()
+            reservations.append(new_reservation)
+
 
     if request.method == "POST":
         date_form = PickDateForm(data=request.POST)
         if date_form.is_valid():
             selected_date = date_form.cleaned_data['date']
             tables = Table.objects.filter(date=selected_date)
-
+            reservations = Reservation.objects.filter(
+                table__date=selected_date)
             if not tables:
                 tables = []
                 for table in range(nr_of_tables):
@@ -48,6 +78,7 @@ def reservation_page(request):
             return render(request, 'reservation/reservation.html',
                           {'tables': tables,
                            'date_form': date_form,
+                           'reservations': reservations,
                            })
 
 
@@ -56,6 +87,7 @@ def reservation_page(request):
     return render(request, 'reservation/reservation.html',
                   {'tables': tables,
                    'date_form': date_form,
+                   'reservations': reservations,
                    })
 
 

@@ -18,8 +18,8 @@ class Reservation(models.Model):
     Creates a reservation related to user, customer, table
     """
 
-    PARTY_SIZE = ((0, '2'), (1, '3'), (2, '4'), (3, '5'),
-                  (4, '6'), (5, '7'), (6, '8'))
+    PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
+                  (6, '6'), (7, '7'), (8, '8'))
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     time = models.TimeField(default="17:00")

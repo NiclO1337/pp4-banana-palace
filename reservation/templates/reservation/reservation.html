@@ -47,7 +47,17 @@ Reservation
 
     </div>
     <div class="bg-primary-subtle col-12 col-lg-3">
-      Text information
+
+      <p>User ID: {{ user.id }}</p>
+      <p>User: {{ user }}</p>
+
+      <p>Reservations</p>
+
+      {% for reservation in reservations %}
+        Date: {{reservation.table.date}} ----
+        Party size: {{reservation.party_size}} ----
+        Customer: {{reservation.user}}.
+      {% endfor %}
 
     </div>
   </div>

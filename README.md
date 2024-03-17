@@ -445,6 +445,8 @@ How to extend user model and update account information.
 
 - Fireworks CSS by [Eddie Lin](https://jsfiddle.net/elin/7m3bL/)
 
+- Insert data in database by [Anjaneyulu Batta](https://learnbatta.com/course/django/insert-data/)
+
 
 #### Phind.com
 
