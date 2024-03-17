@@ -27,9 +27,11 @@ def reservation_page(request):
     tables = Table.objects.filter(date=date.today()).order_by('id')
     reservations = Reservation.objects.filter(table__date=date.today())
 
+
+
+
     # if there are no tables, create tables and save them to the database
     # nr of tables created depends on restaurants nr of avalible tables
-
     if not tables:
         tables = []
         for table in range(nr_of_tables):
@@ -39,9 +41,17 @@ def reservation_page(request):
         # If there are no tables then there are no reservation
         # Pre-populate reservations to make it look realistic
         reservations = []
-        random_number = random.randint(10,20)
 
-        for table in range(random_number):
+        random_number = random.randint(10,20)
+        list_of_nums = list(range(1, nr_of_tables))
+        random.shuffle(list_of_nums)
+        list_of_random_nums = []
+        for num in range(random_number):
+            random_num = list_of_nums[num]
+            list_of_random_nums.append(random_num)
+
+        for table in list_of_random_nums:
+
             new_reservation = Reservation(table=tables[table])
             new_reservation.save()
             reservations.append(new_reservation)
@@ -91,8 +101,11 @@ def reservation_page(request):
                   {'tables': tables,
                    'date_form': date_form,
                    'reservations': reservations,
-                   })
+                   'random_number': random_number,
+                   'list_of_nums': list_of_nums,
+                   'list_of_random_nums': list_of_random_nums,
 
+                   })
 
 
 
