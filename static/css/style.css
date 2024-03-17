@@ -595,6 +595,7 @@ hr:has(+ h2) {
 .red {
   background-color: var(--color-tertiary-light);
   border: none;
+  pointer-events: none;
 }
 
 .table.red:hover {

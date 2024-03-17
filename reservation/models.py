@@ -43,7 +43,7 @@ Has discount: {self.user.customer.has_discount}'
     def save(self, *args, **kvargs):
 
         # Call original reservation save
-        super(Reservation.self).save(*args, **kvargs)
+        super(Reservation, self).save(*args, **kvargs)
 
         # Update associated table to be reserved
         self.table.reserved = True
