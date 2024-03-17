@@ -5,6 +5,7 @@ from .models import Table, Reservation
 from home.models import Restaurant
 from datetime import date
 from .forms import PickDateForm
+import random
 # from django.contrib.auth import User
 
 
@@ -28,28 +29,39 @@ def reservation_page(request):
 
     # if there are no tables, create tables and save them to the database
     # nr of tables created depends on restaurants nr of avalible tables
+
     if not tables:
         tables = []
         for table in range(nr_of_tables):
             new_table = Table()
             new_table.save()
             tables.append(new_table)
+        # If there are no tables then there are no reservation
+        # Pre-populate reservations to make it look realistic
+        reservations = []
+        random_number = random.randint(10,20)
 
-    if tables:
-        tester = Reservation(
-                user=test_user[0],
-                party_size='4',
-                table=table[0],
-                restaurant=restaurant[0],
-            )
+        for table in range(random_number):
+            new_reservation = Reservation(table=tables[table])
+            new_reservation.save()
+            reservations.append(new_reservation)
 
 
-        if not reservations:
-            reservations = []
-            for reservation in range(1):
-                new_reservation = tester
-                new_reservation.save()
-                reservations.append(new_reservation)
+    # if tables:
+    #     tester = Reservation(
+    #             user=test_user[0],
+    #             party_size='4',
+    #             table=table[0],
+    #             restaurant=restaurant[0],
+    #         )
+
+
+    #     if not reservations:
+    #         reservations = []
+    #         for reservation in range(1):
+    #             new_reservation = tester
+    #             new_reservation.save()
+    #             reservations.append(new_reservation)
 
 
     if request.method == "POST":

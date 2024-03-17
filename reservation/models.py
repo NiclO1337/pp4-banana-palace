@@ -21,13 +21,14 @@ class Reservation(models.Model):
     PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
                   (6, '6'), (7, '7'), (8, '8'))
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
     time = models.TimeField(default="17:00")
-    party_size = models.IntegerField(choices=PARTY_SIZE, default=0)
+    party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     table = models.OneToOneField(Table, on_delete=models.CASCADE)
-    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE,
+                                   default=2)
 
 
     # Do not think I need this one since user is a FK and I should be able
