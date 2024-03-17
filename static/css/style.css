@@ -573,15 +573,18 @@ hr:has(+ h2) {
 -------------------------- */
 
 .table-container {
-  /* height: 60vh; */
-  border-radius: var(--border-radius-images-all);
+  background-image: url("../images/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  z-index: 1050;
 }
 
 .table {
-  width: 2rem;
-  height: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   background-color: lightgrey;
-  border-radius: var(--border-radius-iconic);
+  border-radius: 0.3rem;
   border: var(--border-width-solid-iconic) grey;
 }
 
