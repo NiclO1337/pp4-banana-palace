@@ -498,7 +498,6 @@ a:has(> i.fa-heart) {
   height: 17rem;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
 }
 
 #user-details li {
@@ -614,6 +613,10 @@ hr:has(+ h2) {
 #date-pick-form #id_date {
   max-width: 10rem;
   margin: 0.2rem auto;
+}
+
+.ui-datepicker {
+  z-index: 1060 !important;
 }
 
 .ui-widget-content {
