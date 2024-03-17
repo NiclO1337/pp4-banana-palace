@@ -460,6 +460,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Help with adding and styling jQuery datepicker: [Phind search 4](https://www.phind.com/search?cache=ikbfeuzueqibp1far0jj35pt)
 
+- Cascading save from one model to another: [Phind search 5](https://www.phind.com/search?cache=f2dg3carzn3lkulie483rui5)
+
 
 *Message from the developer*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.

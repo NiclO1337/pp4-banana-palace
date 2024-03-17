@@ -1,3 +1,6 @@
+How can I change the table connected to the reservation to reserved = True when reservation is made?
+
+This is my code:
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -126,4 +129,38 @@ def reservation_page(request):
 
 
 # Delete reservation page, get ID, check request.user vs user
+Tired of pasting in code?
 
+ANSWER | PHIND-34B MODEL
+To change the reserved attribute of a Table to True when a reservation is made, you need to modify the Reservation model's save method to update the related Table object. This involves overriding the save method in your Reservation model to include logic that sets the reserved attribute of the associated Table to True upon saving a new Reservation instance.
+
+Here's how you can do it:
+
+Override the save method in the Reservation model: You need to override the save method in your Reservation model to include logic that updates the reserved attribute of the associated Table object.
+Use the update_fields parameter for efficiency: When updating the Table object, you can use the update_fields parameter to specify that only the reserved field should be updated. This is more efficient than updating all fields of the Table object.
+Here's an example of how you might implement this:
+
+from django.db import models
+
+class Table(models.Model):
+    # Assuming you have a reserved field in your Table model
+    reserved = models.BooleanField(default=False)
+    # Other fields...
+
+class Reservation(models.Model):
+    # Assuming you have a foreign key to Table in your Reservation model
+    table = models.ForeignKey(Table, on_delete=models.CASCADE)
+    # Other fields...
+
+    def save(self, *args, **kwargs):
+        # Call the original save method to save the reservation
+        super(Reservation, self).save(*args, **kwargs)
+
+        # Update the reserved field of the associated table to True
+        self.table.reserved = True
+        self.table.save(update_fields=['reserved'])
+In this example, when a Reservation instance is saved, it first calls the original save method to save the reservation itself. Then, it updates the reserved attribute of the associated Table object to True and saves the Table object, specifying that only the reserved field should be updated.
+
+This approach ensures that the reserved attribute of the Table is updated to True whenever a new reservation is made, reflecting the reservation status accurately in your database.
+
+Remember, overriding the save method can have implications, especially if you're not careful with how you handle exceptions or if you're not fully aware of the side effects. Always test thoroughly to ensure that your changes work as expected and do not introduce any unintended side effects 5.

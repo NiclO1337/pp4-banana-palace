@@ -38,3 +38,13 @@ class Reservation(models.Model):
         return f'Date: {self.table.date} ---- Party size: {self.party_size} \
 ---- Customer: {self.user.first_name} {self.user.last_name}. ---- \
 Has discount: {self.user.customer.has_discount}'
+
+
+    def save(self, *args, **kvargs):
+
+        # Call original reservation save
+        super(Reservation.self).save(*args, **kvargs)
+
+        # Update associated table to be reserved
+        self.table.reserved = True
+        self.table.save(update_fields=['reserved'])

@@ -41,7 +41,14 @@ Reservation
       <div class="d-flex flex-wrap gap-5 justify-content-between
       align-items-center m-5 p-5">
         {% for table in tables %}
-          <div class="table m-1" id="{{ table.id }}"></div>
+          {{ table.reserved }}
+
+          {% if table.reserved %}
+            <div class="table m-1 red" id="{{ table.id }}"></div>
+          {% else %}
+            <div class="table m-1" id="{{ table.id }}"></div>
+          {% endif %}
+
         {% endfor %}
       </div>
 
