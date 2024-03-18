@@ -4,11 +4,8 @@ from .models import Table, Reservation
 from datetime import date
 from .forms import PickDateForm
 import random
-# from django.contrib.auth import User
 
 
-
-# create reservation page
 @login_required
 def reservation_page(request):
 
@@ -95,11 +92,6 @@ def reservation_page(request):
 
 
 
-# create automated bookings when selecting time to pre populate the
-# bookings to create the appearance of existing bookings every day
-# JavaScript? check PP2 get value from input and walkthrough project
-# check rosie resume, github connection
-
 # might be slow for user, create tables and pre-populate bookings
 # when loading reservation page
 # if reservations filter through each day
@@ -107,7 +99,11 @@ def reservation_page(request):
 
 
 
+def reserve_table(request):
 
+
+
+    return render(request, 'reservation/reserve_table.html')
 
 
 
