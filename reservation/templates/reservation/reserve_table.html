@@ -15,13 +15,17 @@ Reservation
 <!-- prettier-ignore -->
 {% block page-content %}
 
-<div class="container">
-  <h1 class="text-center mb-3">Reserve table</h1>
-  <div class="row align-items-center">
 
+<div class="container-fluid mb-3">
+  <div class="row justify-content-center">
+    <h1 class="col-12 text-center mb-3">Reserve table</h1>
+    <div class="bg-primary col-12">
+      {{ table }}
+    </div>
+    <div class="bg-primary-subtle col-12 col-xl-3">
+      Text information
 
-  </div>
-</div>
+    </div>
 
 <!-- prettier-ignore -->
 {% endblock %}

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Table, Reservation
 from datetime import date
@@ -99,11 +99,12 @@ def reservation_page(request):
 
 
 @login_required
-def reserve_table(request):
+def reserve_table(request, table_id):
 
+    table = get_object_or_404(Table, pk=table_id)
 
-
-    return render(request, 'reservation/reserve_table.html')
+    return render(request, 'reservation/reserve_table.html',
+                  {'table': table})
 
 
 

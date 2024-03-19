@@ -9,15 +9,24 @@ $(document).ready(function () {
     });
 
     // Initialize jQuery datepicker
-    $("#id_date").datepicker({
-        // limit date input between today and 12 months from now
+    $('#id_date').datepicker({
+    // limit date input between today and 12 months from now
         minDate: 0,
         maxDate: "+12m"
     }).on('change', function() {
-        // Submit form when selecting date as well as hide blueprint/tables,
-        // and show the loading animation.
+    // Submit form when selecting date as well as hide blueprint/tables,
+    // and show the loading animation.
         $(this).closest('form').submit();
         $('.table-container')[0].style.opacity = "0";
         $('.spinner')[0].style.display = "block";
     });
+
+    const errorMsg = $('#error-msg')
+
+    $('.table').on('click', function(e) {
+        let tableId = e.target.getAttribute('id');
+        errorMsg.text(`${tableId}`);
+        console.log("click");
+    })
+
 });
