@@ -25,14 +25,14 @@ reserve table
       {{ table.date|date:"l F d, Y" }}
     </div>
 
-    <div class="bg-primary-subtle order-md-3
-    col-12 col-md-6 col-lg-5 col-xl-4 col-xxl-4">
-      Text information
-    </div>
-
-    <div id="reservation-form" class="bg-success
-    col-12 col-md-4 col-lg-3 col-xxl-2">
-      Form
+    <div id="reservation-form" class="col-12 col-md-4 col-lg-3 col-xxl-2">
+      <form method="post">
+        {{ reserve_table_form | crispy }}
+        {% csrf_token %}
+        <input type="checkbox" name="accept-terms" id="accept-terms" required>
+        <label for="accept-terms">I have read and accept the terms and conditions LINK</label>
+        <button type="submit" class="btn-iconic">Reserve table</button>
+      </form>
     </div>
 
 <!-- prettier-ignore -->

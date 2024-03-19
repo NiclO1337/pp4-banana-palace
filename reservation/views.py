@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Table, Reservation
 from datetime import date
-from .forms import PickDateForm
+from .forms import PickDateForm, ReserveTableForm
 import random
 
 
@@ -103,8 +103,20 @@ def reserve_table(request, table_id):
 
     table = get_object_or_404(Table, pk=table_id)
 
+    if request.method == 'POST':
+        reserve_table_form = ReserveTableForm(request.POST)
+        if reserve_table_form.is_valid():
+            reservation = reserve_table_form.save()
+
+            # Redirect account page and display success message.
+
+    else:
+        reserve_table_form = ReserveTableForm()
+
     return render(request, 'reservation/reserve_table.html',
-                  {'table': table})
+                  {'table': table,
+                   'reserve_table_form': reserve_table_form,
+                   })
 
 
 

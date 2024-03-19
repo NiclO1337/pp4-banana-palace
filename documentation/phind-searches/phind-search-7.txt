@@ -1,0 +1,74 @@
+I am working on a Django project.
+How do I create a form that uses both Reservation, Customer and User model in the same form?
+I want the following fields in my form: user.first_name, user.last_name user.customer.phone, time and, party_size.
+
+This is my model:
+class Reservation(models.Model):
+    """
+    Creates a reservation related to user, customer, table
+    """
+
+    PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
+                  (6, '6'), (7, '7'), (8, '8'))
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
+    time = models.TimeField(default="17:00")
+    party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    table = models.OneToOneField(Table, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE,
+                                   default=2)
+
+    class Meta:
+        ordering = ['table__date'
+Tired of pasting in code?
+
+ANSWER | PHIND-34B MODEL
+To create a form in Django that uses both Reservation, Customer, and User models in the same form, you can follow these steps. This approach involves creating a custom form that manually handles the fields from different models and saves them accordingly.
+
+Define the Form: Create a form class that includes fields from the User, Customer, and Reservation models. Since Django's ModelForm is designed to work with a single model, you'll need to manually define the fields and handle the saving logic.
+Handle Form Submission: In your view, you'll need to manually handle the form submission, extracting data from the form, and saving it to the appropriate models.
+Here's an example implementation:
+
+from django import forms
+from django.contrib.auth.models import User
+from .models import Reservation, Customer
+
+class ReservationForm(forms.Form):
+    first_name = forms.CharField(max_length=30)
+    last_name = forms.CharField(max_length=30)
+    phone = forms.CharField(max_length=15)
+    time = forms.TimeField()
+    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE)
+
+    def save(self, commit=True):
+        # Assuming the user is already authenticated and you have access to the user object
+        user = User.objects.get(username=self.cleaned_data['username'])
+        customer, created = Customer.objects.get_or_create(user=user, phone=self.cleaned_data['phone'])
+        reservation = Reservation(
+            user=user,
+            time=self.cleaned_data['time'],
+            party_size=self.cleaned_data['party_size'],
+            # Assuming you have a way to set the table and restaurant
+        )
+        if commit:
+            reservation.save()
+        return reservation
+In your view, you would handle the form like this:
+
+from django.shortcuts import render
+from .forms import ReservationForm
+
+def make_reservation(request):
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            reservation = form.save()
+            # Redirect or show a success message
+    else:
+        form = ReservationForm()
+    return render(request, 'reservation.html', {'form': form})
+This approach requires you to manually handle the saving logic in the save method of your form. You'll need to ensure that the Customer model is correctly associated with the User model and that the Reservation model is correctly populated with the data from the form.
+
+Remember, this is a simplified example. Depending on your application's requirements, you might need to adjust the logic, especially around handling the Customer and Reservation models.
