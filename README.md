@@ -447,6 +447,8 @@ How to extend user model and update account information.
 
 - Insert data in database by [Anjaneyulu Batta](https://learnbatta.com/course/django/insert-data/)
 
+- Loading screen animation by [Tobias Ahlin](https://tobiasahlin.com/spinkit/)
+
 
 #### Phind.com
 
