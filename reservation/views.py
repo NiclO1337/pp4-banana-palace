@@ -98,7 +98,7 @@ def reservation_page(request):
 # for 30 days and if 0 = create 10 bookings
 
 
-
+@login_required
 def reserve_table(request):
 
 
