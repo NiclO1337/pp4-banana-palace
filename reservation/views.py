@@ -110,6 +110,8 @@ def reserve_table(request, table_id):
 
             # Redirect account page and display success message.
 
+            # Check if table is reserved!!! incase user cheated with URL.
+
     else:
         reserve_table_form = ReserveTableForm()
 
