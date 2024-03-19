@@ -655,6 +655,13 @@ html .ui-button.ui-state-disabled:active {
   color: var(--color-primary);
 }
 
+.spinner {
+  display: none;
+}
+
+.table-container {
+  transition: opacity 0.2s;
+}
 
 /* --------------------------
 ----------- Footer ----------

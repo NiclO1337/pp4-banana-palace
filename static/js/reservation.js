@@ -10,6 +10,9 @@ $(document).ready(function () {
     $("#id_date").datepicker({
         onSelect: function (dateText, inst) {
             $(this).closest('form').submit();
+            $('.table-container')[0].style.opacity = "0";
+            $('.spinner')[0].style.display = "block";
         }
     });
+
 });
