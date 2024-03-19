@@ -16,11 +16,16 @@ Reservation
 {% block page-content %}
 
 
-<div class="container-fluid mb-3">
+<div class="container-fluid mb-3 text-center">
   <div class="row justify-content-center">
-    <h1 class="col-12 text-center mb-3">Reserve table</h1>
-    <div class="bg-primary text-center col-12">
-      {{ table }}
+    <h1 class="col-12 mb-3">Reserve table</h1>
+
+    <div class="col-12 mb-3">
+      Reservation for table on <span class="d-md-none"><br></span>
+      {{ table.date|date:"l F d, Y" }}
+    </div>
+    <div id="reservation-form" class="bg-success col-12">
+      Form
     </div>
     <div class="bg-primary-subtle col-12 col-xl-3">
       Text information
