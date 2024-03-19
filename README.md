@@ -464,6 +464,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Cascading save from one model to another: [Phind search 5](https://www.phind.com/search?cache=f2dg3carzn3lkulie483rui5)
 
+- Limit avalible dates in datepicker: [Phind search 6](https://www.phind.com/search?cache=abcz5qcai1whrk4z47hjtd7g)
+
 
 *Message from the developer*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
