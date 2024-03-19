@@ -20,13 +20,4 @@ $(document).ready(function () {
         $('.table-container')[0].style.opacity = "0";
         $('.spinner')[0].style.display = "block";
     });
-
-    const errorMsg = $('#error-msg')
-
-    $('.table').on('click', function(e) {
-        let tableId = e.target.getAttribute('id');
-        errorMsg.text(`${tableId}`);
-        console.log("click");
-    })
-
 });
