@@ -100,7 +100,7 @@ Semantic HTML is used to aid people with dissabilities such as visual impairment
 ### Colours
 
 
- <p align="left"><img src="./documentation/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
+ <p align="left"><img src="./documentation/images/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
 
 
 ### Typography
@@ -172,22 +172,22 @@ TODO (maybe)
 
 ### Wireframes
 
-<p align="left"><img src="./documentation/wireframes-all.png" alt="Entity relationship diagram" width="700"/></p>
+<p align="left"><img src="./documentation/images/wireframes-all.png" alt="Entity relationship diagram" width="700"/></p>
 
 Initial wireframes as a guide for development and design.
 
 Screenshots of individual wireframes for the:
-<details><summary>top part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-top.png" alt="wireframes for the top part of home page" width="600"/></p> </details>
-<details><summary>middle part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-middle.png" alt="wireframes for the middle part of home page" width="600"/></p> </details>
-<details><summary>bottom part of home page</summary> <p align="left"><img src="./documentation/wireframes-home-bottom.png" alt="wireframes for the bottom part of home page" width="600"/></p> </details>
-<details><summary>about page</summary> <p align="left"><img src="./documentation/wireframes-about.png" alt="wireframes for the about page" width="600"/></p> </details>
-<details><summary>users profile page</summary> <p align="left"><img src="./documentation/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
-<details><summary>owners profile page</summary> <p align="left"><img src="./documentation/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
-<details><summary>fun booking page with date and time</summary> <p align="left"><img src="./documentation/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
-<details><summary>booking page with date and time</summary> <p align="left"><img src="./documentation/wireframes-booking-date-time.png" alt="wireframes for the booking page with date and time" width="600"/></p> </details>
-<details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
-<details><summary>menu page</summary> <p align="left"><img src="./documentation/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
-<details><summary>feedback section</summary> <p align="left"><img src="./documentation/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
+<details><summary>top part of home page</summary> <p align="left"><img src="./documentation/images/wireframes-home-top.png" alt="wireframes for the top part of home page" width="600"/></p> </details>
+<details><summary>middle part of home page</summary> <p align="left"><img src="./documentation/images/wireframes-home-middle.png" alt="wireframes for the middle part of home page" width="600"/></p> </details>
+<details><summary>bottom part of home page</summary> <p align="left"><img src="./documentation/images/wireframes-home-bottom.png" alt="wireframes for the bottom part of home page" width="600"/></p> </details>
+<details><summary>about page</summary> <p align="left"><img src="./documentation/images/wireframes-about.png" alt="wireframes for the about page" width="600"/></p> </details>
+<details><summary>users profile page</summary> <p align="left"><img src="./documentation/images/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
+<details><summary>owners profile page</summary> <p align="left"><img src="./documentation/images/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
+<details><summary>fun booking page with date and time</summary> <p align="left"><img src="./documentation/images/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
+<details><summary>booking page with date and time</summary> <p align="left"><img src="./documentation/images/wireframes-booking-date-time.png" alt="wireframes for the booking page with date and time" width="600"/></p> </details>
+<details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/images/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
+<details><summary>menu page</summary> <p align="left"><img src="./documentation/images/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
+<details><summary>feedback section</summary> <p align="left"><img src="./documentation/images/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
 
 
 
@@ -212,17 +212,17 @@ A progressive data model is used with three levels of abstraction. <br>These evo
 #### Conceptional
 The conceptional ERD is used by business analysts to bind the scope, key entities, and relationships in a way that is easy for the business people to confirm and understand. Business goals are used as guide to create tables at this stage. See image below.
 
-<p align="left"><img src="./documentation/entity-relationship-diagram-conceptual.png" alt="Entity relationship diagram" width="700"/></p>
+<p align="left"><img src="./documentation/images/entity-relationship-diagram-conceptual.png" alt="Entity relationship diagram" width="700"/></p>
 
 #### Logical
 When the conceptional stage is complete and confirmed, the logical ERD evolves the conceptional by going deeper into what each table need and what type of relationships that will be needed. Business analysts provide a simple visual that both business people and the development team can understand. See image below.
 
-<p align="left"><img src="./documentation/entity-relationship-diagram-logical.png" alt="Entity relationship diagram" width="700"/></p>
+<p align="left"><img src="./documentation/images/entity-relationship-diagram-logical.png" alt="Entity relationship diagram" width="700"/></p>
 
 #### Physical
 Lastly the development team elaborates upon the logical model with data specifications to transforms it into a blueprint for building and implementing the database. See image below.
 
-<p align="left"><img src="./documentation/entity-relationship-diagram-physical.png" alt="Entity relationship diagram" width="700"/></p>
+<p align="left"><img src="./documentation/images/entity-relationship-diagram-physical.png" alt="Entity relationship diagram" width="700"/></p>
 
 
 ## Agile software development
@@ -238,7 +238,7 @@ All features that could possibly be implemented were added as [issues](https://g
 
 Project was broken down into different epics, large bodies of work, with features that might be included in the project. Each epic in turn is broken into smaller user stories where each user story provides a value to a specified user. User stories were created from both restaurant owner and users of the website.
 
-<details><summary>Screenshot of one of the Epics</summary> <p align="left"><img src="./documentation/epic.png" alt="Example of a project Epic" width="600"/></p> </details>
+<details><summary>Screenshot of one of the Epics</summary> <p align="left"><img src="./documentation/images/epic.png" alt="Example of a project Epic" width="600"/></p> </details>
 
 
 ### User stories
@@ -246,9 +246,9 @@ Project was broken down into different epics, large bodies of work, with feature
 All user stories are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub. They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and tasks to complete. Some commits were linked to the user story they completed a task for.
 
 
-<details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="./documentation/user-story.png" alt="Example of a project User story" width="600"/></p> </details>
+<details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="./documentation/images/user-story.png" alt="Example of a project User story" width="600"/></p> </details>
 
-<details><summary>Screenshot of example of user story commits</summary> <p align="left"><img src="./documentation/user-story-commits.png" alt="Example of a project User story commit" width="400"/></p> </details>
+<details><summary>Screenshot of example of user story commits</summary> <p align="left"><img src="./documentation/images/user-story-commits.png" alt="Example of a project User story commit" width="400"/></p> </details>
 
 
 
@@ -259,7 +259,7 @@ All deliverable user stories are added to the product backlog. [GitHub milestone
 
 ### MoSCoW prioritization
 
-<p align="left"><img src="./documentation/moscow-prioritization.png" alt="MoSCoW prioritization labels" width="800"/></p>
+<p align="left"><img src="./documentation/images/moscow-prioritization.png" alt="MoSCoW prioritization labels" width="800"/></p>
 
 The MoSCoW prioritization was used for this project. While planning each iteration, user stories are divided into categories depending on their importance to the project at this stage in development. Remaining user stories at the end of the iteration are marked as WONT-HAVE for this iteration and returned to the product backlog for review. They can still be developed in future iterations if time permits.
 
@@ -267,11 +267,11 @@ The MoSCoW prioritization was used for this project. While planning each iterati
 
 Iteration process were tracked as [GitHub milestones](https://github.com/NiclO1337/pp4-banana-palace/milestones) for this project.
 
-<details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="./documentation/iteration-1-start.png" alt="Beginning of iteration 1" width="800"/></p> </details>
-<details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="./documentation/iteration-1-end.png" alt="end of iteration 1" width="800"/></p> </details>
-<details><summary>Screenshot of the start of iteration 2</summary> <p align="left"><img src="./documentation/iteration-2-start.png" alt="Beginning of iteration 2" width="800"/></p> </details>
-<details><summary>Screenshot of the end of iteration 2</summary> <p align="left"><img src="./documentation/iteration-2-end.png" alt="end of iteration 2" width="800"/></p> </details>
-<details><summary>Screenshot of the start of iteration 3</summary> <p align="left"><img src="./documentation/iteration-3-start.png" alt="Beginning of iteration 3" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 1</summary> <p align="left"><img src="./documentation/images/iteration-1-start.png" alt="Beginning of iteration 1" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 1</summary> <p align="left"><img src="./documentation/images/iteration-1-end.png" alt="end of iteration 1" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 2</summary> <p align="left"><img src="./documentation/images/iteration-2-start.png" alt="Beginning of iteration 2" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 2</summary> <p align="left"><img src="./documentation/images/iteration-2-end.png" alt="end of iteration 2" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 3</summary> <p align="left"><img src="./documentation/images/iteration-3-start.png" alt="Beginning of iteration 3" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 3</summary> <p align="left"><img src="TODO" alt="end of iteration 3" width="800"/></p> </details>
 <details><summary>Screenshot of the start of iteration 4</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 4" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 4</summary> <p align="left"><img src="TODO" alt="end of iteration 4" width="800"/></p> </details>
@@ -285,7 +285,7 @@ Github projects was used as a kanban board during development. In each iteration
 
 Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) used on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
-<p align="left"><img src="./documentation/kanban-board.png" alt="Banana palace project board" width="auto"/></p>
+<p align="left"><img src="./documentation/images/kanban-board.png" alt="Banana palace project board" width="auto"/></p>
 
 
 [Back to top](#table-of-contents)
@@ -422,7 +422,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
   - HTML/CSS from [Strawberry lovers](https://github.com/NiclO1337/pp1-strawberry-lovers)
   - JS from [RPS Battle Arena](https://github.com/NiclO1337/pp2-playtime)
 
-- Some of the code from the Codestar blog walkthrough project was used and adapted.
+- Some of the code from the Code Institutes blog walkthrough project was used and adapted.
 
 - Navbar adjusted when scroll down: [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll)
 
