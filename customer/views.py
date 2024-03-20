@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import EditUserForm, EditCustomerForm
+from reservation.models import Reservation
 
 # Create your views here.
 @login_required()
@@ -10,7 +11,11 @@ def account(request):
     """
     Display users account page
     """
-    return render(request, 'account/account.html')
+
+    reservations = Reservation.objects.filter(user=request.user)
+
+    return render(request, 'account/account.html',
+                  {'reservations': reservations})
 
 
 @login_required

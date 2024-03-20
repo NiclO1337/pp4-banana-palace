@@ -105,7 +105,9 @@ button {
 }
 
 input,
-.form-control {
+.form-control,
+#id_party_size,
+#id_time {
   border: var(--border-width-solid-iconic) var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
@@ -118,7 +120,9 @@ input,
 }
 
 input:hover,
-input:focus {
+input:focus,
+#id_party_size:hover,
+#id_time:hover {
   border: var(--border-width-solid-iconic) var(--color-secondary);
 }
 
@@ -498,7 +502,6 @@ a:has(> i.fa-heart) {
   height: 17rem;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: 1;
 }
 
 #user-details li {
@@ -573,15 +576,18 @@ hr:has(+ h2) {
 -------------------------- */
 
 .table-container {
-  /* height: 60vh; */
-  border-radius: var(--border-radius-images-all);
+  background-image: url("../images/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
+  z-index: 1050;
 }
 
 .table {
-  width: 2rem;
-  height: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
   background-color: lightgrey;
-  border-radius: var(--border-radius-iconic);
+  border-radius: 0.3rem;
   border: var(--border-width-solid-iconic) grey;
 }
 
@@ -593,13 +599,74 @@ hr:has(+ h2) {
 .red {
   background-color: var(--color-tertiary-light);
   border: none;
+  pointer-events: none;
 }
 
-.table.red:hover {
-  background-color: var(--color-tertiary-light);
-  border: var(--border-width-solid-iconic) var(--color-tertiary);
+.asteriskField {
+  display: none;
 }
 
+#date-pick-form .form-label,
+#reservation-form .form-label {
+  margin-bottom: 0;
+}
+
+#date-pick-form #id_date {
+  max-width: 10rem;
+  margin: 0.2rem auto;
+}
+
+.ui-datepicker {
+  z-index: 1060 !important;
+}
+
+.ui-widget-content {
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+.ui-widget-header {
+  color: var(--color-primary-bg);
+}
+
+.ui-widget.ui-widget-content {
+  border: var(--border-width-solid-iconic) var(--color-primary)
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-radius: var(--border-radius-images-all);
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  color: var(--color-primary-bg);
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid var(--color-tertiary);
+  color: var(--color-tertiary);
+}
+
+#id_date::placeholder {
+  color: var(--color-primary);
+}
+
+.spinner {
+  display: none;
+}
+
+.table-container {
+  transition: opacity 0.2s;
+}
 
 /* --------------------------
 ----------- Footer ----------

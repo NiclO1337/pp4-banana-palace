@@ -104,24 +104,52 @@
         </div>
         <div class="col-12 col-md-6 p-md-0 my-4 my-md-0">
           <a href="{% url 'edit_account' %}" class="text-decoration-none">
-            <button class="btn-iconic-reverse">Edit</button>
+            <button class="btn-iconic-reverse me-1">Edit</button>
           </a>
           <a href="{% url 'delete_account' %}" class="text-decoration-none">
-            <button class="btn-warning">Delete</button>
+            <button class="btn-warning me-1">Delete</button>
           </a>
           <a href="{% url 'account_logout' %}">
             <button class="btn-warning">Logout</button>
           </a>
         </div>
       </div>
-      <div class="col-12 mx-auto p-0">
-        <h2 class="mt-2">Reservations</h2>
-
+        <h2 class="col-12 mx-auto p-0 mt-2">Reservations</h2>
+        <hr>
         <!-- if no reservations -->
-        <p class="small">
-          You currently do not have any upcoming reservations.
-        </p>
-      </div>
+        {% if reservations %}
+          {% for reservation in reservations %}
+        <div class="card">
+          <div class="card-body p-0 py-2">
+
+            <div class="row align-items-center">
+              <div class="col-12 col-md-7 col-lg-6 col-xl-5 col-xxl-7">
+                <h5 class="card-title">
+                  {{ reservation.table.date|date:"l F d, Y" }}
+                </h5>
+                <p class="card-text">
+                  Time of arrival: {{ reservation.time|date:"H:i" }} -
+                  Party size: {{ reservation.party_size }}
+                </p>
+              </div>
+              <div class="col-11 col-md-5 p-0 pt-1 pt-md-0 mx-auto">
+                <a href="#">
+                  <button class="btn-iconic-reverse me-2">Edit</button>
+                </a>
+                <a href="#">
+                  <button class="btn-warning">Delete</button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <hr>
+          {% endfor %} {% else %}
+          <p class="small">
+            You currently do not have any upcoming reservations.
+          </p>
+          {% endif %}
+        </div>
+
     </section>
   </div>
 </div>
