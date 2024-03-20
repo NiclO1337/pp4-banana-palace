@@ -123,7 +123,12 @@ def reserve_table(request, table_id):
             messages.error(request, 'form not valid')
 
     else:
-        reserve_table_form = ReserveTableForm()
+        reserve_table_form = ReserveTableForm(initial={
+            'first_name': request.user.first_name,
+            'last_name': request.user.last_name,
+            'phone': request.user.customer.phone,
+            'party_size': 4,
+        })
 
     return render(request, 'reservation/reserve_table.html',
                   {'table': table,

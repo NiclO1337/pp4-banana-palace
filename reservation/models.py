@@ -29,11 +29,8 @@ class Reservation(models.Model):
 
         start_time_slot = start_time.strftime('%H:%M')
 
-        time_slot = 1
+        TIME_CHOISES.append((start_time_slot, start_time_slot))
 
-        TIME_CHOISES.append((time_slot, start_time_slot))
-
-        time_slot += 1
         start_time += timedelta(minutes=15)
 
 
