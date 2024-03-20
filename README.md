@@ -476,6 +476,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Use form fields from multiple Models in same form: [Phind search 7](https://www.phind.com/search?cache=j714958f5qh78goy9r9hkn1b)
 
+- Change reservation timefield into choices: [Phind search 8](https://www.phind.com/search?cache=fmxo7lh6w89ngaji1ykom5xj)
+
 
 *Message from the developer*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
