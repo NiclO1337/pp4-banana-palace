@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Table, Reservation
 from datetime import date
 from .forms import PickDateForm, ReserveTableForm
@@ -104,13 +105,22 @@ def reserve_table(request, table_id):
     table = get_object_or_404(Table, pk=table_id)
 
     if request.method == 'POST':
-        reserve_table_form = ReserveTableForm(request.POST)
-        if reserve_table_form.is_valid():
+        reserve_table_form = ReserveTableForm(request.POST,
+                                              instance=request.user)
+        if table.reserved:
+            # Check if table is reserved!!! incase user cheated with URL.
+            messages.error(request, 'text - table reserved')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid():
             reservation = reserve_table_form.save()
 
             # Redirect account page and display success message.
+            messages.success(request, 'text- woohoo')
+            return redirect('account')
 
-            # Check if table is reserved!!! incase user cheated with URL.
+        else:
+            messages.error(request, 'form not valid')
 
     else:
         reserve_table_form = ReserveTableForm()

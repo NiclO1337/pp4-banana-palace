@@ -15,11 +15,12 @@ class PickDateForm(forms.ModelForm):
 
 
 class ReserveTableForm(forms.ModelForm):
-    first_name = forms.CharField(max_length=20)
-    last_name = forms.CharField(max_length=30)
-    phone = PhoneNumberField()
-    time = forms.TimeField()
-    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE)
+    first_name = forms.CharField(max_length=20, label="First name:")
+    last_name = forms.CharField(max_length=30, label="Last name:")
+    phone = PhoneNumberField(label="Phone number:")
+    time = forms.TimeField(label="Time of arrival:")
+    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
+                                   label="Party size:")
 
     def save(self, commit=True):
         user = User.objects.get(username=self.cleaned_data['username'])

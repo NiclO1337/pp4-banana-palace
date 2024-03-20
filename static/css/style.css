@@ -105,7 +105,8 @@ button {
 }
 
 input,
-.form-control {
+.form-control,
+#id_party_size {
   border: var(--border-width-solid-iconic) var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
@@ -118,7 +119,8 @@ input,
 }
 
 input:hover,
-input:focus {
+input:focus,
+#id_party_size:hover {
   border: var(--border-width-solid-iconic) var(--color-secondary);
 }
 
@@ -602,7 +604,8 @@ hr:has(+ h2) {
   display: none;
 }
 
-#date-pick-form .form-label {
+#date-pick-form .form-label,
+#reservation-form .form-label {
   margin-bottom: 0;
 }
 
