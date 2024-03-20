@@ -424,6 +424,8 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Some of the code from the Code Institutes blog walkthrough project was used and adapted.
 
+- This project from a fellow classmate was a good help many times during my development [Amy Richardson](https://github.com/amylour/FreeFido_v2)
+
 - Navbar adjusted when scroll down: [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll)
 
 - Multiple items per carousel slide from [Hello Mev](https://codepen.io/hellomev/pen/LYORMQW)
