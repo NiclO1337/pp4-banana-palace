@@ -105,8 +105,8 @@ def reserve_table(request, table_id):
     table = get_object_or_404(Table, pk=table_id)
 
     if request.method == 'POST':
-        reserve_table_form = ReserveTableForm(request.POST,
-                                              instance=request.user)
+        reserve_table_form = ReserveTableForm(request.POST, request=request,
+                                              table=table)
         if table.reserved:
             # Check if table is reserved!!! incase user cheated with URL.
             messages.error(request, 'text - table reserved')

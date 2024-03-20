@@ -1,6 +1,4 @@
 from django import forms
-from django.contrib.auth.models import User
-from customer.models import Customer
 from .models import Table, Reservation
 from datetime import date
 from phonenumber_field.formfields import PhoneNumberField
@@ -24,18 +22,22 @@ class ReserveTableForm(forms.ModelForm):
     party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
                                    label="Party size:")
 
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        self.table = kwargs.pop('table', None)
+        super(ReserveTableForm, self).__init__(*args, **kwargs)
+
     def save(self, commit=True):
-        first_name = User.objects.get(
-            first_name=self.cleaned_data['first_name'])
-        last_name = User.objects.get(
-            last_name=self.cleaned_data['last_name'])
-        phone = User.objects.get(customer__phone=self.cleaned_data['phone'])
+
+        user = self.request.user
+
+        table = self.table
+
         reservation = Reservation(
-            first_name=first_name,
-            last_name=last_name,
-            phone=phone,
+            user=user,
             time=self.cleaned_data['time'],
             party_size=self.cleaned_data['party_size'],
+            table=table,
         )
         if commit:
             reservation.save()

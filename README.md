@@ -478,6 +478,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Change reservation timefield into choices: [Phind search 8](https://www.phind.com/search?cache=fmxo7lh6w89ngaji1ykom5xj)
 
+- Prepopulate reserve table form and multitude of errors: [Phind search 9](https://www.phind.com/search?cache=h8h0wt4fi9yy7dl63k72324x)
+
 
 *Message from the developer*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
