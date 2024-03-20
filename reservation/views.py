@@ -45,7 +45,6 @@ def reservation_page(request):
             new_reservation.save()
             reservations.append(new_reservation)
 
-
     if request.method == "POST":
         date_form = PickDateForm(data=request.POST)
         if date_form.is_valid():
@@ -82,7 +81,6 @@ def reservation_page(request):
                            'reservations': reservations,
                            })
 
-
     date_form = PickDateForm()
 
     return render(request, 'reservation/reservation.html',
@@ -90,13 +88,6 @@ def reservation_page(request):
                    'date_form': date_form,
                    'reservations': reservations,
                    })
-
-
-
-# might be slow for user, create tables and pre-populate bookings
-# when loading reservation page
-# if reservations filter through each day
-# for 30 days and if 0 = create 10 bookings
 
 
 @login_required
@@ -109,18 +100,20 @@ def reserve_table(request, table_id):
                                               table=table)
         if table.reserved:
             # Check if table is reserved!!! incase user cheated with URL.
-            messages.error(request, 'text - table reserved')
+            messages.error(request,
+                           'This table is already reserved, try another table')
             return redirect('reservation_page')
 
         elif reserve_table_form.is_valid():
-            reservation = reserve_table_form.save()
+            reserve_table_form.save()
 
             # Redirect account page and display success message.
-            messages.success(request, 'text- woohoo')
+            messages.success(request, 'Reservation completed successfully')
             return redirect('account')
 
         else:
-            messages.error(request, 'form not valid')
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information')
 
     else:
         reserve_table_form = ReserveTableForm(initial={
