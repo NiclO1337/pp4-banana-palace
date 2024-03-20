@@ -101,7 +101,8 @@ def reserve_table(request, table_id):
         if table.reserved:
             # Check if table is reserved!!! incase user cheated with URL.
             messages.error(request,
-                           'This table is already reserved, try another table')
+                           'This table has already been reserved, please \
+choose another table')
             return redirect('reservation_page')
 
         elif reserve_table_form.is_valid():
@@ -113,7 +114,7 @@ def reserve_table(request, table_id):
 
         else:
             messages.error(request, 'Form is not valid, please enter all \
-necessairy information')
+necessairy information below')
 
     else:
         reserve_table_form = ReserveTableForm(initial={
