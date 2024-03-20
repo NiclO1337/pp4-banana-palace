@@ -38,7 +38,8 @@ class Reservation(models.Model):
                   (6, '6'), (7, '7'), (8, '8'))
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
-    time = models.CharField(max_length=15, choices=TIME_CHOISES)
+    time = models.CharField(max_length=15, choices=TIME_CHOISES,
+                            default="17:00")
     party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
