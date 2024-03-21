@@ -7,3 +7,7 @@ class About(TemplateView):
 
     template_name = 'about/about.html'
 
+
+class OurStory(TemplateView):
+
+    template_name = 'about/our-story.html'

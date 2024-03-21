@@ -15,6 +15,7 @@ About page
 Account page
 Account management
 Reservation page
+Information pages
 Footer
 Media queries
 
@@ -666,6 +667,18 @@ html .ui-button.ui-state-disabled:active {
 
 .table-container {
   transition: opacity 0.2s;
+}
+
+/* --------------------------
+----- Information pages -----
+-------------------------- */
+
+.info-page {
+  max-width: 40rem;
+}
+
+.info-page h1 {
+  margin-bottom: 1.5rem;
 }
 
 /* --------------------------

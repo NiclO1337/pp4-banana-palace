@@ -333,6 +333,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **cdnjs.com** to find relevant CDN fast
 - **paint.net** to edit logo, images and favicon
 - **phind.com** to search for specific solutions
+- **ChatGPT** to generate text content for website
 
 
 ## Testing
