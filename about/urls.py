@@ -12,4 +12,6 @@ urlpatterns = [
          name='cookie-policy'),
     path('modern-slavery-statement/', views.ModernSlaveryStatement.as_view(),
          name='modern-slavery-statement'),
+    path('gender-pay-gap/', views.GenderPayGap.as_view(),
+         name='gender-pay-gap'),
 ]
