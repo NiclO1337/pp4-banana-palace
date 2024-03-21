@@ -11,3 +11,8 @@ class About(TemplateView):
 class OurStory(TemplateView):
 
     template_name = 'about/our-story.html'
+
+
+class TermsAndConditions(TemplateView):
+
+    template_name = 'about/terms-and-conditions.html'

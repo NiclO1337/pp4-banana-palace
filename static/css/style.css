@@ -675,6 +675,7 @@ html .ui-button.ui-state-disabled:active {
 
 .info-page {
   max-width: 40rem;
+  margin-bottom: 2rem;
 }
 
 .info-page h1 {

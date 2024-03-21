@@ -1,0 +1,87 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}
+- Our story
+{% endblock %}
+
+{% block page-specific-css %}
+<!-- <link rel="stylesheet" href="{% static './css/' %}" /> -->
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html head -->
+{% block extra_head %}{% endblock extra_head %}
+
+<!-- prettier-ignore -->
+{% block page-content %}
+
+<div class="container text-center info-page">
+  <h1>Terms and Conditions</h1>
+  <h2>Reservation Policy</h2>
+  <p>
+    Reservations can be made online through our official website or by
+    contacting us directly via phone. We recommend making reservations in
+    advance to ensure availability, especially for larger groups or special
+    occasions. Reservations are subject to availability and confirmation from
+    Banana Palace restaurant.
+  </p>
+  <h2>Cancellation Policy</h2>
+  <p>
+    We understand that plans may change. If you need to cancel or modify your
+    reservation, please notify us at least 24 hours in advance. Failure to
+    cancel or modify your reservation within the specified time frame may result
+    in a cancellation fee.
+  </p>
+  <h2>Dining Experience</h2>
+  <p>
+    At Banana Palace restaurant, we strive to provide a memorable dining
+    experience for all our guests. Our menu offerings are subject to change
+    based on seasonal availability and chef's recommendations. We accommodate
+    dietary restrictions and preferences whenever possible. Please inform us of
+    any special dietary requirements at the time of booking.
+  </p>
+  <h2>Payment</h2>
+  <p>
+    We accept payment via cash, credit/debit cards, and other accepted forms of
+    payment. All prices are listed in [currency], inclusive of applicable taxes
+    and service charges. For group reservations or special events, a deposit may
+    be required to secure the booking.
+  </p>
+  <h2>Code of Conduct</h2>
+  <p>
+    We maintain a respectful and inclusive environment for all our guests and
+    staff. Any behavior deemed disruptive, offensive, or harmful to others will
+    not be tolerated and may result in refusal of service or removal from the
+    premises.
+  </p>
+  <h2>Feedback and Complaints</h2>
+  <p>
+    Your feedback is valuable to us. If you have any comments, suggestions, or
+    concerns about your experience at Banana Palace restaurant, please don't
+    hesitate to reach out to us. We are committed to addressing any complaints
+    promptly and ensuring your satisfaction to the best of our abilities.
+  </p>
+  <h2>Changes to Terms and Conditions</h2>
+  <p>
+    Banana Palace restaurant reserves the right to modify or update these terms
+    and conditions at any time without prior notice. By continuing to use our
+    services, you agree to be bound by the most current version of the terms and
+    conditions.
+  </p>
+  <hr>
+  <p>
+    By making a reservation or dining at Banana Palace restaurant, you
+    acknowledge and agree to abide by these terms and conditions. If you have
+    any questions or require further clarification, please contact us.
+  </p>
+</div>
+
+<!-- prettier-ignore -->
+{% endblock %}
+
+{% block page-specific-js %}
+<!-- <script src="{% static './js/.js' %}"></script> -->
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html body -->
+{% block extra_body %}{% endblock extra_body %}
