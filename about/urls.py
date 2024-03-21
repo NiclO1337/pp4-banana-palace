@@ -16,4 +16,6 @@ urlpatterns = [
          name='gender-pay-gap'),
     path('animal-welfare/', views.AnimalWelfare.as_view(),
          name='animal-welfare'),
+    path('investor-relations/', views.InvestorRelations.as_view(),
+         name='investor-relations'),
 ]

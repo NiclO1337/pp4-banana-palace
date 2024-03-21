@@ -41,3 +41,8 @@ class GenderPayGap(TemplateView):
 class AnimalWelfare(TemplateView):
 
     template_name = 'about/animal-welfare.html'
+
+
+class InvestorRelations(TemplateView):
+
+    template_name = 'about/investor-relations.html'
