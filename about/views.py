@@ -46,3 +46,8 @@ class AnimalWelfare(TemplateView):
 class InvestorRelations(TemplateView):
 
     template_name = 'about/investor-relations.html'
+
+
+class Allergens(TemplateView):
+
+    template_name = 'about/allergens.html'
