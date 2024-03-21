@@ -26,3 +26,8 @@ class PrivacyPolicy(TemplateView):
 class CookiePolicy(TemplateView):
 
     template_name = 'about/cookie-policy.html'
+
+
+class ModernSlaveryStatement(TemplateView):
+
+    template_name = 'about/modern-slavery-statement.html'

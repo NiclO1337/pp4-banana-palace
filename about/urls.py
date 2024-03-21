@@ -10,4 +10,6 @@ urlpatterns = [
          name='privacy-policy'),
     path('cookie-policy/', views.CookiePolicy.as_view(),
          name='cookie-policy'),
+    path('modern-slavery-statement/', views.ModernSlaveryStatement.as_view(),
+         name='modern-slavery-statement'),
 ]
