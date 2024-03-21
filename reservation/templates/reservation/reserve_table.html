@@ -30,7 +30,7 @@ reserve table
         {{ reserve_table_form | crispy }}
         {% csrf_token %}
         <label for="accept-terms">
-          I have read and accept the <a href="" class="text-reset">terms and conditions</a>
+          I have read and accept the <a href="{% url 'terms-and-conditions' %}" class="text-reset">terms and conditions</a>
         </label>
         <input type="checkbox" name="accept-terms" id="accept-terms" required>
         <button type="submit" class="btn-iconic d-block mx-auto my-2">Reserve table</button>
@@ -41,7 +41,7 @@ reserve table
 {% endblock %}
 
 {% block page-specific-js %}
-<script src="{% static './js/reservation.js' %}"></script>
+<!-- <script src="{% static './js/reservation.js' %}"></script> -->
 {% endblock %}
 
 <!-- If anything extra is needed for specific page in html body -->

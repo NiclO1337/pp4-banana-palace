@@ -99,7 +99,8 @@ span {
 }
 
 li,
-button {
+button,
+#back-one-page {
   font-family: var(--button-font);
   text-transform: uppercase;
   list-style-type: none;
@@ -169,7 +170,8 @@ footer {
 .btn-iconic,
 .btn-iconic-reverse,
 .btn-warning,
-#override-bootstrap .account-management button {
+#override-bootstrap .account-management button,
+#back-one-page {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
   padding: 6px 10px;
@@ -180,7 +182,8 @@ footer {
 #override-bootstrap header a:hover,
 .btn-iconic:hover,
 .btn-iconic-reverse:hover,
-.btn-warning:hover {
+.btn-warning:hover,
+#back-one-page:hover {
   color: var(--color-secondary);
   transform: scale(1.1);
   transition: all 0.4s ease-out;
@@ -688,7 +691,9 @@ html .ui-button.ui-state-disabled:active {
   padding-bottom: 0.3rem;
 }
 
-
+#back-one-page {
+  font-size: 100%;
+}
 
 /* --------------------------
 ----------- Footer ----------
@@ -884,8 +889,3 @@ footer .footer-links li {
     left: 20%;
   }
 }
-
-/* --------------------------
--------- TESTING ONLY -------
--------------------------- */
-
