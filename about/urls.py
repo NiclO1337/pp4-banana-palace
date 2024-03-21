@@ -18,6 +18,6 @@ urlpatterns = [
          name='animal-welfare'),
     path('investor-relations/', views.InvestorRelations.as_view(),
          name='investor-relations'),
-    path('allergens/', views.Allergens.as_view(),
-         name='allergens'),
+    path('allergens/', views.Allergens.as_view(), name='allergens'),
+    path('careers/', views.Careers.as_view(), name='careers'),
 ]

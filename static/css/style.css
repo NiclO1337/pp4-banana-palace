@@ -682,6 +682,14 @@ html .ui-button.ui-state-disabled:active {
   margin-bottom: 1.5rem;
 }
 
+.info-page li {
+  font-family: var(--main-font);
+  text-transform: none;
+  padding-bottom: 0.3rem;
+}
+
+
+
 /* --------------------------
 ----------- Footer ----------
 -------------------------- */
