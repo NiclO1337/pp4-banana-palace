@@ -54,14 +54,14 @@
         </ul>
         <ul class="footer-links d-flex d-sm-none flex-wrap justify-content-center ps-0 mb-0">
           <li><a href="{% url 'home' %}" class="px-2 text-decoration-none">Home</a></li>
-          <li><a href="#" class="px-2 text-decoration-none">Allergens</a></li>
-          <li><a href="#" class="px-2 text-decoration-none">Careers</a></li>
+          <li><a href="{% url 'allergens' %}" class="px-2 text-decoration-none">Allergens</a></li>
+          <li><a href="{% url 'careers' %}" class="px-2 text-decoration-none">Careers</a></li>
           <li><a href="{% url 'about' %}" class="px-2 text-decoration-none">Contact</a></li>
         </ul>
         <ul class="footer-links d-none d-sm-flex justify-content-center ps-0 mb-0">
           <li><a href="{% url 'home' %}" class="px-2 text-decoration-none">Home</a></li>
-          <li><a href="#" class="px-2 text-decoration-none">Allergens</a></li>
-          <li><a href="#" class="px-2 text-decoration-none">Careers</a></li>
+          <li><a href="{% url 'allergens' %}" class="px-2 text-decoration-none">Allergens</a></li>
+          <li><a href="{% url 'careers' %}" class="px-2 text-decoration-none">Careers</a></li>
           <li><a href="{% url 'about' %}" class="px-2 text-decoration-none">Contact</a></li>
         </ul>
       </div>
@@ -71,26 +71,35 @@
     <div class="col-12 col-md-7 col-lg-12 p-0 mx-auto">
       <ul
         class="footer-links-extra d-flex justify-content-center flex-wrap mb-0 p-0">
-        <li class="px-2">
-          Terms & Conditions
+        <li>
+          <a href="{% url 'terms-and-conditions' %}" class="px-2 text-decoration-none">
+            Terms & Conditions</a>
         </li>
-        <li class="px-2">
-          Privacy Policy
+        <li>
+          <a href="{% url 'privacy-policy' %}" class="px-2 text-decoration-none">
+            Privacy Policy</a>
         </li>
-        <li class="px-2">
-          Cookie Policy
+        <li>
+          <a href="{% url 'cookie-policy' %}" class="px-2 text-decoration-none">
+            Cookie Policy</a>
         </li>
-        <li class="px-2">
-          Modern Slavery Statement
+        <li>
+          <a href="{% url 'modern-slavery-statement' %}" class="px-2 text-decoration-none">
+          Modern Slavery Statement</a>
         </li>
-        <li class="px-2">
-          Gender Pay Gap
+        <li>
+          <a href="{% url 'gender-pay-gap' %}" class="px-2 text-decoration-none">
+            Gender Pay Gap
+          </a>
         </li>
-        <li class="px-2">
-          Animal Welfare
+        <li>
+          <a href="{% url 'animal-welfare' %}" class="px-2 text-decoration-none">
+          Animal Welfare</a>
         </li>
-        <li class="px-2">
-          Investor Relations
+        <li>
+          <a href="{% url 'investor-relations' %}" class="px-2 text-decoration-none">
+            Investor Relations
+          </a>
         </li>
       </ul>
     </div>

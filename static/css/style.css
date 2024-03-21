@@ -713,10 +713,10 @@ html .ui-button.ui-state-disabled:active {
   transition: color 1s ease-out;
 }
 
-#override-bootstrap footer .footer-links-extra li:hover {
+/* #override-bootstrap footer .footer-links-extra li:hover {
   color: red;
   transition: color 1s ease-out;
-}
+} */
 
 div:has(> p.error-msg-links) {
   position: relative;
