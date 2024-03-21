@@ -31,9 +31,13 @@ class CookiePolicy(TemplateView):
 class ModernSlaveryStatement(TemplateView):
 
     template_name = 'about/modern-slavery-statement.html'
-    template_name = 'about/cookie-policy.html'
 
 
 class GenderPayGap(TemplateView):
 
     template_name = 'about/gender-pay-gap.html'
+
+
+class AnimalWelfare(TemplateView):
+
+    template_name = 'about/animal-welfare.html'

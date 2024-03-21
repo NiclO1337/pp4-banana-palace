@@ -14,4 +14,6 @@ urlpatterns = [
          name='modern-slavery-statement'),
     path('gender-pay-gap/', views.GenderPayGap.as_view(),
          name='gender-pay-gap'),
+    path('animal-welfare/', views.AnimalWelfare.as_view(),
+         name='animal-welfare'),
 ]
