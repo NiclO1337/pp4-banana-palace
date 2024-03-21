@@ -16,3 +16,8 @@ class OurStory(TemplateView):
 class TermsAndConditions(TemplateView):
 
     template_name = 'about/terms-and-conditions.html'
+
+
+class PrivacyPolicy(TemplateView):
+
+    template_name = 'about/privacy-policy.html'
