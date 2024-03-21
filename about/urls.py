@@ -8,4 +8,6 @@ urlpatterns = [
          name='terms'),
     path('privacy-policy/', views.PrivacyPolicy.as_view(),
          name='privacy-policy'),
+    path('cookie-policy/', views.CookiePolicy.as_view(),
+         name='cookie-policy'),
 ]

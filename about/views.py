@@ -21,3 +21,8 @@ class TermsAndConditions(TemplateView):
 class PrivacyPolicy(TemplateView):
 
     template_name = 'about/privacy-policy.html'
+
+
+class CookiePolicy(TemplateView):
+
+    template_name = 'about/cookie-policy.html'
