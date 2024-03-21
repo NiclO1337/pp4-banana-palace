@@ -1,6 +1,10 @@
 <!-- prettier-ignore -->
 {% load static %}
 {% url 'about' as about_url %}
+{% url 'our-story' as our_story_url %}
+{% url 'account_login' as account_login_url %}
+{% url 'account' as account_url %}
+{% url 'reservation_page' as reservation_page_url %}
 
 <header class="sticky-top">
   <!-- Header sticks to top of screen at all times -->
@@ -65,25 +69,29 @@
             </a>
           </li>
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="{% url 'our-story' %}">Our story</a>
+            <a class="nav-link px-0 px-lg-2 {% if request.path == our_story_url %}active"
+            aria-current="page{% endif %}" href="{% url 'our-story' %}">Our story</a>
           </li>
 
           {% if user.is_authenticated %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="{% url 'account' %}"
+            <a class="nav-link px-0 px-lg-2 {% if request.path == account_url %}active"
+            aria-current="page{% endif %}" href="{% url 'account' %}"
               >Account/Logout</a
             >
           </li>
           {% else %}
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link px-0 px-lg-2" href="{% url 'account_login' %}"
+            <a class="nav-link px-0 px-lg-2 {% if request.path == account_login_url %}active"
+            aria-current="page{% endif %}" href="{% url 'account_login' %}"
               >Login/Register</a
             >
           </li>
           {% endif %}
 
           <li class="nav-item ms-auto me-3 mx-sm-1">
-            <a class="nav-link btn-iconic" href="{% url 'reservation_page' %}">Book a table</a>
+            <a class="nav-link btn-iconic{% if request.path == reservation_page_url %}-reverse"
+            aria-current="page{% endif %}" href="{% url 'reservation_page' %}">Book a table</a>
           </li>
         </ul>
       </div>
