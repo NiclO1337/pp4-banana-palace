@@ -10,25 +10,27 @@
 
 
 
-// Add on click function to footer links extra to display an error message
-// $(document).ready(function () {
+// Add on click function to footer social media icons
+//  to display an error message
+$(document).ready(function () {
 
-//     let errorMessage = $('.error-msg-links')[0];
+    let errorMessage = $('.error-msg-links')[0];
+    let socialMediaIcons = $('.social-media-symbols').children('li');
 
-//     $('.footer-links-extra').children('li').click(function () {
+    socialMediaIcons.click(function () {
+        console.log('click');
+        errorMessage.style.display = "block";
+        socialMediaIcons.css('pointer-events', 'none');
 
-//         errorMessage.style.display = "block";
-//         $('.footer-links-extra').children('li').addClass("d-none");
-
-//         window.setTimeout(() => {
-//             errorMessage.style.opacity = "1";
-//         }, 100)
-//         window.setTimeout(() => {
-//             errorMessage.style.opacity = "0";
-//         }, 5100)
-//         window.setTimeout(() => {
-//             errorMessage.style.display = "none";
-//             $('.footer-links-extra').children('li').removeClass("d-none");
-//         }, 6100)
-//     })
-// })
+        window.setTimeout(() => {
+            errorMessage.style.opacity = "1";
+        }, 100)
+        window.setTimeout(() => {
+            errorMessage.style.opacity = "0";
+        }, 5100)
+        window.setTimeout(() => {
+            errorMessage.style.display = "none";
+            socialMediaIcons.css('pointer-events', 'all');
+        }, 6100)
+    })
+})
