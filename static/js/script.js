@@ -1,24 +1,11 @@
-
-
-
-
-
-
-
-
-
-
-
-
 // Add on click function to footer social media icons
-//  to display an error message
+// to display an error message about missing links
 $(document).ready(function () {
 
     let errorMessage = $('.error-msg-links')[0];
     let socialMediaIcons = $('.social-media-symbols').children('li');
 
     socialMediaIcons.click(function () {
-        console.log('click');
         errorMessage.style.display = "block";
         socialMediaIcons.css('pointer-events', 'none');
 
