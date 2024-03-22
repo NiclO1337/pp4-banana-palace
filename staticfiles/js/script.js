@@ -10,7 +10,8 @@
 
 
 
-// Add on click function to footer links extra to display an error message
+// Add on click function to footer social media icons
+//  to display an error message
 $(document).ready(function () {
 
     let errorMessage = $('.error-msg-links')[0];

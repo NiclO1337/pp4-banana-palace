@@ -714,7 +714,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 i.fa-brands:hover {
-  color: red;
+  color: var(--color-tertiary-light);
   transition: color 1s ease-out;
 }
 
