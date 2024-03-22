@@ -19,17 +19,20 @@ reservation
   <h1 class="text-center mb-3">Make a reservation</h1>
   <div class="row align-items-center">
     <div class="col-12 col-md-3 col-xl-2 text-center ms-auto p-0">
-      <p class="mb-3 mb-md-1">Select a date and then<br>pick a table below.</p>
+      <p class="mb-3 mb-md-1">
+        Select a date and then<br />pick a table below.
+      </p>
     </div>
     <div class="col-12 col-md-3 col-xl-2 me-auto p-0">
-
-      <form id="date-pick-form" class="text-center mx-auto" method="post"
-      enctype="multipart/form-data" autocomplete="off">
-        {{ date_form | crispy }}
-        {% csrf_token %}
+      <form
+        id="date-pick-form"
+        class="text-center mx-auto"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off">
+        {{ date_form | crispy }} {% csrf_token %}
         <button type="submit" class="btn-iconic d-none">Check date</button>
-    </form>
-
+      </form>
     </div>
   </div>
   <div>
@@ -41,26 +44,27 @@ reservation
   </div>
 </div>
 
-<div class="container-fluid mb-3">
-  <div class="row px-lg-3 gap-5 justify-content-center">
-    <div class="table-container p-0 col-12 col-lg-10 col-xxl-7">
+<div class="container text-center d-sm-none p-3">
+    <p>
+      Your screen size is to small<br>to use this feature.
+    </p>
+    <p>
+      Try rotating your device<br>horizontally or use a larger<br>device (minimum 576px).
+    </p>
+</div>
 
-      <div class="d-flex flex-wrap gap-5 justify-content-between
-      align-items-center m-5 p-5">
-        {% for table in tables %}
+<div class="container-fluid mb-3 d-none d-sm-block">
 
-          {% if table.reserved %}
-            <div class="table m-1 red" id="{{ table.id }}"></div>
-          {% else %}
-            <a href="{% url 'reserve_table' table.id %}">
-              <button class="table m-1" id="{{ table.id }}"></button>
-            </a>
-          {% endif %}
+  <div id="blueprint">
 
-        {% endfor %}
-      </div>
+        {% for table in tables %} {% if table.reserved %}
+          <div class="table red" id="{{ table.id }}"></div>
+        {% else %}
+          <a href="{% url 'reserve_table' table.id %}">
+            <button class="table" id="{{ table.id }}"></button>
+          </a>
+        {% endif %} {% endfor %}
 
-    </div>
   </div>
 </div>
 

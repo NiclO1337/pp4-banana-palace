@@ -488,7 +488,7 @@ footer {
 .fa-ranking-star,
 .fa-star,
 #click-me {
-  color: var(--color-secondary-bg)
+  color: var(--color-secondary-bg);
 }
 
 a:has(> i.fa-star) {
@@ -579,19 +579,19 @@ hr:has(+ h2) {
 ----- Reservation page ------
 -------------------------- */
 
-.table-container {
+#blueprint {
   background-image: url("../images/blueprint.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 90%;
+  background-size: 100%;
   z-index: 1050;
+  position: relative;
+  margin: 0 auto;
 }
 
 .table {
-  width: 1.4rem;
-  height: 1.4rem;
+  position: absolute;
   background-color: lightgrey;
-  border-radius: 0.3rem;
   border: var(--border-width-solid-iconic) grey;
 }
 
@@ -634,7 +634,7 @@ hr:has(+ h2) {
 }
 
 .ui-widget.ui-widget-content {
-  border: var(--border-width-solid-iconic) var(--color-primary)
+  border: var(--border-width-solid-iconic) var(--color-primary);
 }
 
 .ui-corner-all,
@@ -668,7 +668,7 @@ html .ui-button.ui-state-disabled:active {
   display: none;
 }
 
-.table-container {
+#blueprint {
   transition: opacity 0.2s;
 }
 
@@ -760,6 +760,16 @@ footer .footer-links li {
 
 /* Media query for bigger than phone - Bootstrap class sm */
 @media screen and (min-width: 576px) {
+  #blueprint {
+    height: 300px;
+    width: 500px;
+  }
+
+  .table {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
 }
 
 /* Media query for tablet - Bootstrap class md */
@@ -876,6 +886,18 @@ footer .footer-links li {
     background-size: cover;
     border-radius: var(--border-radius-images-all);
   }
+
+    /* reservation page  */
+    #blueprint {
+      width: 1000px;
+      height: 600px;
+    }
+
+    .table {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
 }
 
 /* Media query for desktop */
