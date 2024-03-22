@@ -5,6 +5,7 @@
 {% url 'account_login' as account_login_url %}
 {% url 'account' as account_url %}
 {% url 'reservation_page' as reservation_page_url %}
+{% url 'home' as home_url %}
 
 <header class="sticky-top">
   <!-- Header sticks to top of screen at all times -->
@@ -27,20 +28,26 @@
         <span class="toggler-icon middle-bar"></span>
         <span class="toggler-icon bottom-bar"></span>
       </button>
-      <span id="header-phone" class="d-block d-sm-none"
+      <span id="header-phone" class="d-sm-none"
         >+22 (6)262 725 232</span
       >
-      <span id="header-address" class="d-block d-sm-none">
+      <span id="header-address" class="d-sm-none">
         Tall tree road 986 <br />226262 Banana Republic</span
       >
       <!-- Navbar items -->
       <div
-        class="collapse navbar-collapse justify-content-center mt-3"
+        class="collapse navbar-collapse
+        {% if request.path == home_url %}
+          justify-content-center
+        {% else %}
+          justify-content-end
+        {% endif %}
+         mt-3"
         id="navbarNav">
-        <span id="header-phone-nav" class="d-none d-sm-block"
+        <span id="header-phone-nav" class="d-none"
           >+22 (6)262 725 232</span
         >
-        <span id="header-address-nav" class="d-none d-sm-block text-end"
+        <span id="header-address-nav" class="d-none text-end"
           >Tall tree road 986, 226262 Banana Republic</span
         >
         <ul class="navbar-nav">

@@ -55,6 +55,12 @@ function scrollFunction() {
     }
 }
 
+$(document).ready(function() {
+    $('#header-address-nav')[0].classList.add('d-sm-block')
+    $('#header-phone-nav')[0].classList.add('d-sm-block')
+    $('#header-address')[0].classList.add('d-block')
+    $('#header-phone')[0].classList.add('d-block')
+})
 
 // Code snippet let carouselItems from https://codepen.io/hellomev/pen/LYORMQW
 
