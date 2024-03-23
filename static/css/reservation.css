@@ -1,0 +1,125 @@
+/* --------------------------
+----- Reservation page ------
+-------------------------- */
+
+.asteriskField {
+  display: none;
+}
+
+#date-pick-form .form-label,
+#reservation-form .form-label {
+  margin-bottom: 0;
+}
+
+#date-pick-form #id_date {
+  max-width: 10rem;
+  margin: 0.2rem auto;
+}
+
+.ui-datepicker {
+  z-index: 1060 !important;
+}
+
+.ui-widget-content {
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+.ui-widget-header {
+  color: var(--color-primary-bg);
+}
+
+.ui-widget.ui-widget-content {
+  border: var(--border-width-solid-iconic) var(--color-primary);
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-radius: var(--border-radius-images-all);
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  color: var(--color-primary-bg);
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid var(--color-tertiary);
+  color: var(--color-tertiary);
+}
+
+#id_date::placeholder {
+  color: var(--color-primary);
+}
+
+.spinner {
+  display: none;
+}
+
+#blueprint {
+  background-image: url("../images/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: 1050;
+  position: relative;
+  margin: 0 auto;
+  transition: opacity 0.2s;
+}
+
+.table {
+  position: absolute;
+  background-color: lightgrey;
+  border: var(--border-width-solid-iconic) grey;
+}
+
+.table:hover {
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+.red {
+  background-color: var(--color-tertiary-light);
+  border: none;
+  pointer-events: none;
+}
+
+#table-1 {
+  top: 10%;
+}
+
+/* Media query for bigger than phone - Bootstrap class sm */
+@media screen and (min-width: 576px) {
+  #blueprint {
+    height: 300px;
+    width: 500px;
+  }
+
+  .table {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+  }
+}
+
+/* Media query for laptop - Bootstrap class xxl */
+@media screen and (min-width: 1400px) {
+  #blueprint {
+    width: 1000px;
+    height: 600px;
+  }
+
+  .table {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+}

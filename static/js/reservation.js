@@ -17,7 +17,7 @@ $(document).ready(function () {
     // Submit form when selecting date as well as hide blueprint/tables,
     // and show the loading animation.
         $(this).closest('form').submit();
-        $('.table-container')[0].style.opacity = "0";
+        $('#blueprint')[0].style.opacity = "0";
         $('.spinner')[0].style.display = "block";
     });
 });
