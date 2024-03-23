@@ -243,23 +243,23 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #table-31 {
-  top: 68%;
+  top: 67%;
   left: 52%;
 }
 
 #table-32 {
-  top: 68%;
+  top: 67%;
   left: 59%;
 }
 
 #table-33 {
   top: 76%;
-  left: 64%;
+  left: 64.5%;
 }
 
 #table-34 {
   top: 88%;
-  left: 64%;
+  left: 64.5%;
 }
 
 #table-35 {
@@ -268,23 +268,123 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #table-36 {
-  top: 62%;
-  left: 70%;
+  top: 65%;
+  left: 69%;
 }
 
 #table-37 {
   top: 51%;
-  left: 70%;
+  left: 69%;
 }
 
 #table-38 {
-  top: 40.5%;
-  left: 70%;
+  top: 41%;
+  left: 69%;
 }
 
 #table-39 {
-  top: 30%;
-  left: 70%;
+  top: 31%;
+  left: 69%;
+}
+
+#table-40 {
+  top: 39%;
+  left: 78%;
+}
+
+#table-41 {
+  top: 39%;
+  left: 85%;
+}
+
+#table-42 {
+  top: 39%;
+  left: 92%;
+}
+
+#table-43 {
+  top: 29%;
+  left: 92%;
+}
+
+#table-44 {
+  top: 29%;
+  left: 85%;
+}
+
+#table-45 {
+  top: 29%;
+  left: 78%;
+}
+
+#table-46 {
+  top: 16%;
+  left: 78%;
+}
+
+#table-47 {
+  top: 16%;
+  left: 85%;
+}
+
+#table-48 {
+  top: 16%;
+  left: 92%;
+}
+
+#table-49 {
+  top: 6%;
+  left: 92%;
+}
+
+#table-50 {
+  top: 6%;
+  left: 85%;
+}
+
+#table-51 {
+  top: 6%;
+  left: 78%;
+}
+
+#table-52 {
+  top: 6%;
+  left: 69%;
+}
+
+#table-53 {
+  top: 16%;
+  left: 69%;
+}
+
+#table-54 {
+  top: 16%;
+  left: 62%;
+}
+
+#table-55 {
+  top: 6%;
+  left: 62%;
+}
+
+#table-56 {
+  top: 6%;
+  left: 55%;
+}
+
+#table-57 {
+  top: 16%;
+  left: 55%;
+}
+
+#table-58 {
+  top: 16%;
+  left: 48%;
+}
+
+#table-59 {
+  top: 6%;
+  left: 48%;
 }
 
 /* Media query for bigger than phone - Bootstrap class sm */

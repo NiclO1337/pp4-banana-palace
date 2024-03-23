@@ -23,6 +23,7 @@ reservation
       <p class="mb-3 mb-md-1">
         Select a date and then<br />pick a table below.
       </p>
+      {{ nr_of_tables }}
     </div>
     <div class="col-12 col-md-3 col-xl-2 me-auto p-0">
       <form
@@ -61,10 +62,10 @@ reservation
         {% for table in tables %}
 
           {% if table.reserved %}
-            <div class="table red" id="table-{{ forloop.counter }}"></div>
+            <div class="table red" id="table-{{ forloop.counter }}">{{ forloop.counter }}</div>
           {% else %}
             <a href="{% url 'reserve_table' table.id %}">
-              <button class="table" id="table-{{ forloop.counter }}"></button>
+              <button class="table" id="table-{{ forloop.counter }}">{{ forloop.counter }}</button>
             </a>
           {% endif %}
 
