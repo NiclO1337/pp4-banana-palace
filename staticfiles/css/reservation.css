@@ -1,0 +1,623 @@
+/* --------------------------
+----- Reservation page ------
+-------------------------- */
+
+.asteriskField {
+  display: none;
+}
+
+#date-pick-form .form-label,
+#reservation-form .form-label {
+  margin-bottom: 0;
+}
+
+#date-pick-form #id_date {
+  max-width: 10rem;
+  margin: 0.2rem auto;
+}
+
+.ui-datepicker {
+  z-index: 1060 !important;
+}
+
+.ui-widget-content {
+  background: var(--color-primary-bg);
+  color: var(--color-primary);
+}
+
+.ui-widget-header {
+  color: var(--color-primary-bg);
+}
+
+.ui-widget.ui-widget-content {
+  border: var(--border-width-solid-iconic) var(--color-primary);
+}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+  border-radius: var(--border-radius-images-all);
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  color: var(--color-primary-bg);
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid var(--color-tertiary);
+  color: var(--color-tertiary);
+}
+
+#id_date::placeholder {
+  color: var(--color-primary);
+}
+
+.spinner {
+  display: none;
+}
+
+#blueprint {
+  background-image: url("../images/blueprint.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  z-index: 1050;
+  position: relative;
+  margin: 0 auto;
+  transition: opacity 0.2s;
+}
+
+#blueprint .table {
+  font-family: var(--headings);
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.private-room {
+  font-family: var(--headings);
+  position: absolute;
+  top: 18%;
+  left: 76.5%;
+  font-size: 0.5rem;
+  transform: rotate(-10deg);
+  font-weight: bolder;
+}
+
+.table {
+  position: absolute;
+  background-color: lightgrey;
+  border: var(--border-width-solid-iconic) grey;
+}
+
+.table:hover {
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+.long-table,
+.double-table1,
+.double-table2 {
+  position: absolute;
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
+.red {
+  background-color: var(--color-tertiary-light);
+  border: none;
+  pointer-events: none;
+}
+
+#blueprint i.fa-water,
+#blueprint i.fa-dungeon,
+#blueprint i.fa-road-barrier,
+#blueprint i.fa-champagne-glasses,
+#blueprint i.fa-martini-glass,
+#blueprint i.fa-beer-mug-empty {
+  color: var(--color-primary);
+  position: absolute;
+}
+
+#blueprint i.fa-water:nth-of-type(1) {
+  top: 18%;
+  left: 6%;
+}
+
+#blueprint i.fa-water:nth-of-type(2) {
+  top: 39%;
+  left: -6%;
+}
+
+#blueprint i.fa-water:nth-of-type(3) {
+  top: 73%;
+  left: -8%;
+}
+
+#blueprint i.fa-dungeon {
+  top: 93%;
+  left: 88.5%;
+}
+
+#blueprint i.fa-road-barrier {
+  top: 83%;
+  left: 77.8%;
+}
+
+#blueprint i.fa-champagne-glasses {
+  top: 49%;
+  left: 78%;
+}
+
+#blueprint i.fa-martini-glass {
+  top: 49%;
+  left: 84%;
+}
+
+#blueprint i.fa-beer-mug-empty {
+  top: 49%;
+  left: 90%;
+}
+
+.long-table {
+  top: 14%;
+  left: 90%;
+}
+
+.double-table1 {
+  top: 9%;
+  left: 78%;
+}
+
+.double-table2 {
+  top: 36%;
+  left: 78%;
+}
+
+#table-1 {
+  top: 34%;
+  left: 4%;
+}
+
+#table-2 {
+  top: 47%;
+  left: 4%;
+}
+
+#table-3 {
+  top: 60%;
+  left: 4%;
+}
+
+#table-4 {
+  top: 74%;
+  left: 4%;
+}
+
+#table-5 {
+  top: 87%;
+  left: 4%;
+}
+
+#table-6 {
+  top: 34%;
+  left: 13%;
+}
+
+#table-7 {
+  top: 47%;
+  left: 13%;
+}
+
+#table-8 {
+  top: 60%;
+  left: 13%;
+}
+
+#table-9 {
+  top: 74%;
+  left: 13%;
+}
+
+#table-10 {
+  top: 10%;
+  left: 23%;
+}
+
+#table-11 {
+  top: 23%;
+  left: 23%;
+}
+
+#table-12 {
+  top: 36%;
+  left: 23%;
+}
+
+#table-13 {
+  top: 49%;
+  left: 19.5%;
+}
+
+#table-14 {
+  top: 62%;
+  left: 19.5%;
+}
+
+#table-15 {
+  top: 74%;
+  left: 19.5%;
+}
+
+#table-16 {
+  top: 49%;
+  left: 28.5%;
+}
+
+#table-17 {
+  top: 60%;
+  left: 28.5%;
+}
+
+#table-18 {
+  top: 74%;
+  left: 28.5%;
+}
+
+#table-19 {
+  top: 88%;
+  left: 24%;
+}
+
+#table-20 {
+  top: 88%;
+  left: 32%;
+}
+
+#table-21 {
+  top: 88%;
+  left: 40%;
+}
+
+#table-22 {
+  top: 88%;
+  left: 49%;
+}
+
+#table-23 {
+  top: 88%;
+  left: 57.5%;
+}
+
+#table-24 {
+  top: 78%;
+  left: 57.5%;
+}
+
+#table-25 {
+  top: 78%;
+  left: 49%;
+}
+
+#table-26 {
+  top: 78%;
+  left: 40%;
+}
+
+#table-27 {
+  top: 60%;
+  left: 36%;
+}
+
+#table-28 {
+  top: 49%;
+  left: 36%;
+}
+
+#table-29 {
+  top: 49%;
+  left: 44%;
+}
+
+#table-30 {
+  top: 60%;
+  left: 44%;
+}
+
+#table-31 {
+  top: 67%;
+  left: 52%;
+}
+
+#table-32 {
+  top: 67%;
+  left: 59%;
+}
+
+#table-33 {
+  top: 76%;
+  left: 64.5%;
+}
+
+#table-34 {
+  top: 88%;
+  left: 64.5%;
+}
+
+#table-35 {
+  top: 88%;
+  left: 72%;
+}
+
+#table-36 {
+  top: 64%;
+  left: 69%;
+}
+
+#table-37 {
+  top: 51%;
+  left: 69%;
+}
+
+#table-38 {
+  top: 41%;
+  left: 69%;
+}
+
+#table-39 {
+  top: 31%;
+  left: 69%;
+}
+
+#table-40 {
+  top: 16%;
+  left: 69%;
+}
+
+#table-41 {
+  top: 6%;
+  left: 69%;
+}
+
+#table-42 {
+  top: 6%;
+  left: 62%;
+}
+
+#table-43 {
+  top: 6%;
+  left: 55%;
+}
+
+#table-44 {
+  top: 6%;
+  left: 48%;
+}
+
+#table-45 {
+  top: 16%;
+  left: 48%;
+}
+
+#table-46 {
+  top: 16%;
+  left: 55%;
+}
+
+#table-47 {
+  top: 16%;
+  left: 62%;
+}
+
+#table-48 {
+  top: 28%;
+  left: 59%;
+}
+
+#table-49 {
+  top: 28%;
+  left: 52%;
+}
+
+#table-50 {
+  top: 28%;
+  left: 45%;
+}
+
+#table-51 {
+  top: 38%;
+  left: 45%;
+}
+
+#table-52 {
+  top: 38%;
+  left: 52%;
+}
+
+#table-53 {
+  top: 38%;
+  left: 59%;
+}
+
+#table-54 {
+  top: 6%;
+  left: 36%;
+}
+
+#table-55 {
+  top: 6%;
+  left: 30%;
+}
+
+#table-56 {
+  top: 15.5%;
+  left: 30%;
+}
+
+#table-57 {
+  top: 26%;
+  left: 29%;
+}
+
+#table-58 {
+  top: 37%;
+  left: 29%;
+}
+
+#table-59 {
+  top: 38%;
+  left: 36%;
+}
+
+#table-60 {
+  top: 28%;
+  left: 36%;
+}
+
+/* Media query for bigger than phone - Bootstrap class sm */
+@media screen and (min-width: 576px) {
+  #blueprint {
+    height: 300px;
+    width: 500px;
+  }
+
+  #blueprint .table {
+    font-size: 0.7rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 2px;
+  }
+
+  .table {
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+  .long-table {
+    width: 18px;
+    height: 70px;
+    border-radius: 5px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 36px;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+  .fa-water {
+    font-size: x-large;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: large;
+  }
+}
+
+/* Media query for big tablet - Bootstrap class lg */
+@media screen and (min-width: 992px) {
+  #blueprint {
+    width: 750px;
+    height: 450px;
+  }
+
+  #blueprint .table {
+    font-size: 0.8rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 3px;
+  }
+
+  .private-room {
+    font-size: 0.8rem;
+  }
+
+  .table {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+
+  .long-table {
+    width: 25px;
+    height: 105px;
+    border-radius: 6px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 50px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .fa-water {
+    font-size: xx-large;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: x-large;
+  }
+}
+
+/* Media query for laptop - Bootstrap class xxl */
+@media screen and (min-width: 1400px) {
+  #blueprint {
+    width: 1000px;
+    height: 600px;
+  }
+
+  #blueprint .table {
+    font-size: 1rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 4px;
+  }
+
+  .private-room {
+    font-size: 1rem;
+  }
+
+  .table {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+
+  .long-table {
+    width: 32px;
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 64px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: xx-large;
+  }
+}

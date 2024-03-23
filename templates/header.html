@@ -53,42 +53,42 @@
         <ul class="navbar-nav">
           <!-- Admin quick login button dev -->
           {% if user.is_superuser or user.customer.is_owner %}
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2" href="{% url 'admin:index' %}">
-              Admin <i class="fa-solid fa-key"></i>
+              Admin <i class="fa-solid fa-key d-none d-lg-inline"></i>
             </a>
           </li>
           {% endif %}
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2" href="#">Menu</a>
           </li>
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a
               class="nav-link px-0 px-lg-2 {% if request.path == about_url %}active"
               aria-current="page{% endif %}"
               href="{% url 'about' %}">
               <!-- prettier-ignore -->
               {% if user.is_superuser or user.customer.is_owner %}
-              Hours
+              About
               {% else %}
               Hours & location
               {% endif %}
             </a>
           </li>
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2 {% if request.path == our_story_url %}active"
             aria-current="page{% endif %}" href="{% url 'our-story' %}">Our story</a>
           </li>
 
           {% if user.is_authenticated %}
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2 {% if request.path == account_url %}active"
             aria-current="page{% endif %}" href="{% url 'account' %}"
               >Account/Logout</a
             >
           </li>
           {% else %}
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2 {% if request.path == account_login_url %}active"
             aria-current="page{% endif %}" href="{% url 'account_login' %}"
               >Login/Register</a
@@ -96,7 +96,7 @@
           </li>
           {% endif %}
 
-          <li class="nav-item ms-auto me-3 mx-sm-1">
+          <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link btn-iconic{% if request.path == reservation_page_url %}"
             aria-current="page{% endif %}" href="{% url 'reservation_page' %}">Book a table</a>
           </li>

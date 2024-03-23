@@ -488,7 +488,7 @@ footer {
 .fa-ranking-star,
 .fa-star,
 #click-me {
-  color: var(--color-secondary-bg)
+  color: var(--color-secondary-bg);
 }
 
 a:has(> i.fa-star) {
@@ -573,103 +573,6 @@ hr:has(+ h2) {
   font-weight: bold;
   color: var(--color-tertiary);
   line-height: normal;
-}
-
-/* --------------------------
------ Reservation page ------
--------------------------- */
-
-.table-container {
-  background-image: url("../images/blueprint.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 90%;
-  z-index: 1050;
-}
-
-.table {
-  width: 1.4rem;
-  height: 1.4rem;
-  background-color: lightgrey;
-  border-radius: 0.3rem;
-  border: var(--border-width-solid-iconic) grey;
-}
-
-.table:hover {
-  background-color: var(--color-primary-light);
-  border: var(--border-width-solid-iconic) var(--color-secondary);
-}
-
-.red {
-  background-color: var(--color-tertiary-light);
-  border: none;
-  pointer-events: none;
-}
-
-.asteriskField {
-  display: none;
-}
-
-#date-pick-form .form-label,
-#reservation-form .form-label {
-  margin-bottom: 0;
-}
-
-#date-pick-form #id_date {
-  max-width: 10rem;
-  margin: 0.2rem auto;
-}
-
-.ui-datepicker {
-  z-index: 1060 !important;
-}
-
-.ui-widget-content {
-  background: var(--color-primary-bg);
-  color: var(--color-primary);
-}
-
-.ui-widget-header {
-  color: var(--color-primary-bg);
-}
-
-.ui-widget.ui-widget-content {
-  border: var(--border-width-solid-iconic) var(--color-primary)
-}
-
-.ui-corner-all,
-.ui-corner-top,
-.ui-corner-right,
-.ui-corner-tr {
-  border-radius: var(--border-radius-images-all);
-}
-
-.ui-state-default,
-.ui-widget-content .ui-state-default,
-.ui-widget-header .ui-state-default,
-.ui-button,
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-  color: var(--color-primary-bg);
-}
-
-.ui-state-highlight,
-.ui-widget-content .ui-state-highlight,
-.ui-widget-header .ui-state-highlight {
-  border: 1px solid var(--color-tertiary);
-  color: var(--color-tertiary);
-}
-
-#id_date::placeholder {
-  color: var(--color-primary);
-}
-
-.spinner {
-  display: none;
-}
-
-.table-container {
-  transition: opacity 0.2s;
 }
 
 /* --------------------------
