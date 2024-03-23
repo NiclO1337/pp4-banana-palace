@@ -93,7 +93,198 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #table-1 {
+  top: 34%;
+  left: 4%;
+}
+
+#table-2 {
+  top: 47%;
+  left: 4%;
+}
+
+#table-3 {
+  top: 60%;
+  left: 4%;
+}
+
+#table-4 {
+  top: 74%;
+  left: 4%;
+}
+
+#table-5 {
+  top: 87%;
+  left: 4%;
+}
+
+#table-6 {
+  top: 34%;
+  left: 13%;
+}
+
+#table-7 {
+  top: 47%;
+  left: 13%;
+}
+
+#table-8 {
+  top: 60%;
+  left: 13%;
+}
+
+#table-9 {
+  top: 74%;
+  left: 13%;
+}
+
+#table-10 {
   top: 10%;
+  left: 23%;
+}
+
+#table-11 {
+  top: 23%;
+  left: 23%;
+}
+
+#table-12 {
+  top: 36%;
+  left: 23%;
+}
+
+#table-13 {
+  top: 49%;
+  left: 19.5%;
+}
+
+#table-14 {
+  top: 62%;
+  left: 19.5%;
+}
+
+#table-15 {
+  top: 74%;
+  left: 19.5%;
+}
+
+#table-16 {
+  top: 49%;
+  left: 28.5%;
+}
+
+#table-17 {
+  top: 60%;
+  left: 28.5%;
+}
+
+#table-18 {
+  top: 74%;
+  left: 28.5%;
+}
+
+#table-19 {
+  top: 88%;
+  left: 24%;
+}
+
+#table-20 {
+  top: 88%;
+  left: 32%;
+}
+
+#table-21 {
+  top: 88%;
+  left: 40%;
+}
+
+#table-22 {
+  top: 88%;
+  left: 49%;
+}
+
+#table-23 {
+  top: 88%;
+  left: 57.5%;
+}
+
+#table-24 {
+  top: 78%;
+  left: 57.5%;
+}
+
+#table-25 {
+  top: 78%;
+  left: 49%;
+}
+
+#table-26 {
+  top: 78%;
+  left: 40%;
+}
+
+#table-27 {
+  top: 60%;
+  left: 36%;
+}
+
+#table-28 {
+  top: 49%;
+  left: 36%;
+}
+
+#table-29 {
+  top: 49%;
+  left: 44%;
+}
+
+#table-30 {
+  top: 60%;
+  left: 44%;
+}
+
+#table-31 {
+  top: 68%;
+  left: 52%;
+}
+
+#table-32 {
+  top: 68%;
+  left: 59%;
+}
+
+#table-33 {
+  top: 76%;
+  left: 64%;
+}
+
+#table-34 {
+  top: 88%;
+  left: 64%;
+}
+
+#table-35 {
+  top: 88%;
+  left: 72%;
+}
+
+#table-36 {
+  top: 62%;
+  left: 70%;
+}
+
+#table-37 {
+  top: 51%;
+  left: 70%;
+}
+
+#table-38 {
+  top: 40.5%;
+  left: 70%;
+}
+
+#table-39 {
+  top: 30%;
+  left: 70%;
 }
 
 /* Media query for bigger than phone - Bootstrap class sm */
@@ -104,8 +295,8 @@ html .ui-button.ui-state-disabled:active {
   }
 
   .table {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 5px;
   }
 }
