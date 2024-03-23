@@ -57,13 +57,17 @@ reservation
 
   <div id="blueprint">
 
-        {% for table in tables %} {% if table.reserved %}
-          <div class="table red" id="{{ table.id }}"></div>
-        {% else %}
-          <a href="{% url 'reserve_table' table.id %}">
-            <button class="table" id="{{ table.id }}"></button>
-          </a>
-        {% endif %} {% endfor %}
+        {% for table in tables %}
+
+          {% if table.reserved %}
+            <div class="table red" id="table-{{ forloop.counter }}"></div>
+          {% else %}
+            <a href="{% url 'reserve_table' table.id %}">
+              <button class="table" id="table-{{ forloop.counter }}"></button>
+            </a>
+          {% endif %}
+
+        {% endfor %}
 
   </div>
 </div>
