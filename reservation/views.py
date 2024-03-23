@@ -87,7 +87,6 @@ def reservation_page(request):
                   {'tables': tables,
                    'date_form': date_form,
                    'reservations': reservations,
-                   'nr_of_tables': nr_of_tables
                    })
 
 

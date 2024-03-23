@@ -268,7 +268,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #table-36 {
-  top: 65%;
+  top: 64%;
   left: 69%;
 }
 
@@ -288,103 +288,108 @@ html .ui-button.ui-state-disabled:active {
 }
 
 #table-40 {
-  top: 39%;
-  left: 78%;
+  top: 16%;
+  left: 69%;
 }
 
 #table-41 {
-  top: 39%;
-  left: 85%;
+  top: 6%;
+  left: 69%;
 }
 
 #table-42 {
-  top: 39%;
-  left: 92%;
+  top: 6%;
+  left: 62%;
 }
 
 #table-43 {
-  top: 29%;
-  left: 92%;
+  top: 6%;
+  left: 55%;
 }
 
 #table-44 {
-  top: 29%;
-  left: 85%;
+  top: 6%;
+  left: 48%;
 }
 
 #table-45 {
-  top: 29%;
-  left: 78%;
+  top: 16%;
+  left: 48%;
 }
 
 #table-46 {
   top: 16%;
-  left: 78%;
+  left: 55%;
 }
 
 #table-47 {
   top: 16%;
-  left: 85%;
+  left: 62%;
 }
 
 #table-48 {
-  top: 16%;
-  left: 92%;
+  top: 28%;
+  left: 59%;
 }
 
 #table-49 {
-  top: 6%;
-  left: 92%;
+  top: 28%;
+  left: 52%;
 }
 
 #table-50 {
-  top: 6%;
-  left: 85%;
+  top: 28%;
+  left: 45%;
 }
 
 #table-51 {
-  top: 6%;
-  left: 78%;
+  top: 38%;
+  left: 45%;
 }
 
 #table-52 {
-  top: 6%;
-  left: 69%;
+  top: 38%;
+  left: 52%;
 }
 
 #table-53 {
-  top: 16%;
-  left: 69%;
+  top: 38%;
+  left: 59%;
 }
 
 #table-54 {
-  top: 16%;
-  left: 62%;
+  top: 6%;
+  left: 36%;
 }
 
 #table-55 {
   top: 6%;
-  left: 62%;
+  left: 30%;
 }
 
 #table-56 {
-  top: 6%;
-  left: 55%;
+  top: 15.5%;
+  left: 30%;
 }
 
 #table-57 {
-  top: 16%;
-  left: 55%;
+  top: 26%;
+  left: 29%;
 }
 
 #table-58 {
-  top: 16%;
-  left: 48%;
+  top: 37%;
+  left: 29%;
 }
 
 #table-59 {
-  top: 6%;
-  left: 48%;
+  top: 38%;
+  left: 36%;
+}
+
+#table-60 {
+  top: 28%;
+  left: 36%;
 }
 
 /* Media query for bigger than phone - Bootstrap class sm */
