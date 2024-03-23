@@ -75,6 +75,24 @@ html .ui-button.ui-state-disabled:active {
   transition: opacity 0.2s;
 }
 
+#blueprint .table {
+  font-family: var(--headings);
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.private-room {
+  font-family: var(--headings);
+  position: absolute;
+  top: 18%;
+  left: 76.5%;
+  font-size: 0.5rem;
+  transform: rotate(-10deg);
+  font-weight: bolder;
+}
+
 .table {
   position: absolute;
   background-color: lightgrey;
@@ -86,10 +104,83 @@ html .ui-button.ui-state-disabled:active {
   border: var(--border-width-solid-iconic) var(--color-secondary);
 }
 
+.long-table,
+.double-table1,
+.double-table2 {
+  position: absolute;
+  background-color: var(--color-primary-light);
+  border: var(--border-width-solid-iconic) var(--color-secondary);
+}
+
 .red {
   background-color: var(--color-tertiary-light);
   border: none;
   pointer-events: none;
+}
+
+#blueprint i.fa-water,
+#blueprint i.fa-dungeon,
+#blueprint i.fa-road-barrier,
+#blueprint i.fa-champagne-glasses,
+#blueprint i.fa-martini-glass,
+#blueprint i.fa-beer-mug-empty {
+  color: var(--color-primary);
+  position: absolute;
+}
+
+#blueprint i.fa-water:nth-of-type(1) {
+  top: 18%;
+  left: 6%;
+}
+
+#blueprint i.fa-water:nth-of-type(2) {
+  top: 39%;
+  left: -6%;
+}
+
+#blueprint i.fa-water:nth-of-type(3) {
+  top: 73%;
+  left: -8%;
+}
+
+#blueprint i.fa-dungeon {
+  top: 93%;
+  left: 88.5%;
+}
+
+#blueprint i.fa-road-barrier {
+  top: 83%;
+  left: 77.8%;
+}
+
+#blueprint i.fa-champagne-glasses {
+  top: 49%;
+  left: 78%;
+}
+
+#blueprint i.fa-martini-glass {
+  top: 49%;
+  left: 84%;
+}
+
+#blueprint i.fa-beer-mug-empty {
+  top: 49%;
+  left: 90%;
+}
+
+.long-table {
+  top: 14%;
+  left: 90%;
+}
+
+.double-table1 {
+  top: 9%;
+  left: 78%;
+}
+
+.double-table2 {
+  top: 36%;
+  left: 78%;
 }
 
 #table-1 {
@@ -399,10 +490,90 @@ html .ui-button.ui-state-disabled:active {
     width: 500px;
   }
 
+  #blueprint .table {
+    font-size: 0.7rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 2px;
+  }
+
   .table {
     width: 18px;
     height: 18px;
     border-radius: 5px;
+  }
+
+  .long-table {
+    width: 18px;
+    height: 70px;
+    border-radius: 5px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 36px;
+    height: 18px;
+    border-radius: 5px;
+  }
+
+  .fa-water {
+    font-size: x-large;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: large;
+  }
+}
+
+/* Media query for big tablet - Bootstrap class lg */
+@media screen and (min-width: 992px) {
+  #blueprint {
+    width: 750px;
+    height: 450px;
+  }
+
+  #blueprint .table {
+    font-size: 0.8rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 3px;
+  }
+
+  .private-room {
+    font-size: 0.8rem;
+  }
+
+  .table {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+
+  .long-table {
+    width: 25px;
+    height: 105px;
+    border-radius: 6px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 50px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .fa-water {
+    font-size: xx-large;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: x-large;
   }
 }
 
@@ -413,9 +584,40 @@ html .ui-button.ui-state-disabled:active {
     height: 600px;
   }
 
+  #blueprint .table {
+    font-size: 1rem;
+  }
+
+  #blueprint div.table {
+    padding-top: 4px;
+  }
+
+  .private-room {
+    font-size: 1rem;
+  }
+
   .table {
     width: 32px;
     height: 32px;
     border-radius: 8px;
+  }
+
+  .long-table {
+    width: 32px;
+    height: 140px;
+    border-radius: 8px;
+  }
+
+  .double-table1,
+  .double-table2 {
+    width: 64px;
+    height: 31px;
+    border-radius: 8px;
+  }
+
+  .fa-champagne-glasses,
+  .fa-martini-glass,
+  .fa-beer-mug-empty {
+    font-size: xx-large;
   }
 }
