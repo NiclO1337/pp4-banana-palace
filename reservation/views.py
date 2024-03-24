@@ -101,10 +101,10 @@ def reserve_table(request, table_id):
                                             instance=request.user)
         customer_form = EditCustomerForm(request.POST,
                                         instance=request.user.customer)
-        reserve_table_form = ReserveTableForm(request.POST, request=request,
-                                              table=table)
+        reserve_table_form = ReserveTableForm(request.POST,
+                                              request=request, table=table)
         if table.reserved:
-            # Check if table is reserved!!! incase user cheated with URL.
+            # Check if table is reserved incase user cheated with URL.
             messages.error(request,
                            'This table has already been reserved, please \
 choose another table')
@@ -148,10 +148,10 @@ def edit_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     Table.objects.filter(id=reservation.table.id).update(reserved=False)
 
+
     tables = Table.objects.filter(date=reservation.table.date).order_by('id')
     reservations = Reservation.objects.filter(
         table__date=reservation.table.date)
-
 
     if request.method == "POST":
         date_form = PickDateForm(data=request.POST)
@@ -183,20 +183,46 @@ def edit_reservation(request, reservation_id):
                     new_reservation.save()
                     reservations.append(new_reservation)
 
-            return render(request, 'reservation/reservation.html',
+            return render(request, 'reservation/edit-reservation.html',
                           {'tables': tables,
                            'date_form': date_form,
                            'reservations': reservations,
+                           'reservation': reservation,
                            })
 
     date_form = PickDateForm(initial={
             'date': reservation.table.date,})
 
-    return render(request, 'reservation/reservation.html',
+    return render(request, 'reservation/edit-reservation.html',
                   {'tables': tables,
                    'date_form': date_form,
                    'reservations': reservations,
+                   'reservation': reservation,
                    })
+
+
+def edit_reserve_table(request, table_id, reservation_id):
+
+    table = get_object_or_404(Table, pk=table_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+
+    if request.method == 'POST':
+        pass
+
+    else:
+        user_form = EditUserFormReservation(instance=reservation.user)
+        customer_form = EditCustomerForm(instance=reservation.user.customer)
+        reserve_table_form = ReserveTableForm(instance=reservation)
+
+
+    return render(request, 'reservation/reserve-table.html',
+                  {'table': table,
+                   'reservation': reservation,
+                   'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
+                   })
+
 
 # Delete reservation page, get ID, check request.user vs user
 

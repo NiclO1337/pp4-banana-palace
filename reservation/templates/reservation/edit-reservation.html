@@ -1,0 +1,111 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block head_title %}
+reservation
+{% endblock %}
+{% block page-specific-css %}
+<link rel="stylesheet" href="{% static './css/loading-dots.css' %}" />
+<link rel="stylesheet" href="{% static './css/reservation.css' %}" />
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html head -->
+{% block extra_head %}{% endblock extra_head %}
+
+<!-- prettier-ignore -->
+{% block page-content %}
+
+<div class="container">
+  <h1 class="text-center mb-3">Make a reservation</h1>
+  <div class="row align-items-center">
+    <div class="col-12 col-md-3 col-xl-2 text-center ms-auto p-0">
+      <p class="mb-3 mb-md-1">
+        Select a date and then<br />pick a table below.
+      </p>
+      {{ nr_of_tables }}
+    </div>
+    <div class="col-12 col-md-3 col-xl-2 me-auto p-0">
+      <form
+        id="date-pick-form"
+        class="text-center mx-auto"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off">
+        {{ date_form | crispy }} {% csrf_token %}
+        <button type="submit" class="btn-iconic d-none">Check date</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center d-sm-none p-3">
+    <p>
+      Your screen size is too small<br>to use this feature.
+    </p>
+    <p>
+      Try rotating your device<br>horizontally or use a larger<br>device (minimum 576px).
+    </p>
+</div>
+
+<div class="container-fluid mb-3 d-none d-sm-block">
+
+  <div id="blueprint">
+
+    {% for table in tables %}
+
+      {% if table.reserved %}
+        <div class="table red" id="table-{{ forloop.counter }}">
+          {% if user.is_staff %}
+            {{ forloop.counter }}
+          {% endif %}
+        </div>
+      {% else %}
+        <a href="{% url 'edit_reserve_table' table.id reservation.id %}">
+          <button class="table" id="table-{{ forloop.counter }}">
+            {% if user.is_staff %}
+              {{ forloop.counter }}
+            {% endif %}
+          </button>
+        </a>
+      {% endif %}
+
+    {% endfor %}
+
+    <i class="fa-solid fa-water d-none d-md-block"></i>
+    <i class="fa-solid fa-water "></i>
+    <i class="fa-solid fa-water "></i>
+    <i class="fa-solid fa-dungeon fa-2xl d-none d-xxl-block"></i>
+    <i class="fa-solid fa-road-barrier fa-lg d-none d-xxl-block"></i>
+    <i class="fa-solid fa-champagne-glasses"></i>
+    <i class="fa-solid fa-martini-glass"></i>
+    <i class="fa-solid fa-beer-mug-empty"></i>
+
+    <div class="long-table"></div>
+    <div class="double-table1"></div>
+    <div class="double-table2"></div>
+
+    <p class="private-room text-center">
+      Private room<br>Deep Djungle <br> (call or email)
+    </p>
+
+
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+{% endblock %}
+
+{% block page-specific-js %}
+<script src="{% static './js/reservation.js' %}"></script>
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html body -->
+{% block extra_body %}{% endblock extra_body %}

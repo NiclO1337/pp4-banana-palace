@@ -64,3 +64,10 @@ Has discount: {self.user.customer.has_discount}'
         # Update associated table to be reserved
         self.table.reserved = True
         self.table.save(update_fields=['reserved'])
+
+
+    def update(self, **kwargs):
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+        self.save()
