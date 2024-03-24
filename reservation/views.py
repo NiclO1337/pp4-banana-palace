@@ -142,8 +142,23 @@ necessairy information below')
 
 # edit reservation page, get ID, check customer edit.
 
+def edit_reservation(request, reservation_id):
+
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+
+    tables = Table.objects.filter(date=reservation.table.date).order_by('id')
+    reservations = Reservation.objects.filter(
+        table__date=reservation.table.date)
 
 
+
+    date_form = PickDateForm()
+
+    return render(request, 'reservation/reservation.html',
+                  {'tables': tables,
+                   'date_form': date_form,
+                   'reservations': reservations,
+                   })
 
 # Delete reservation page, get ID, check request.user vs user
 
