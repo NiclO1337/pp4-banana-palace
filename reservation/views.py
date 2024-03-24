@@ -148,7 +148,6 @@ def edit_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
     Table.objects.filter(id=reservation.table.id).update(reserved=False)
 
-
     tables = Table.objects.filter(date=reservation.table.date).order_by('id')
     reservations = Reservation.objects.filter(
         table__date=reservation.table.date)
@@ -207,7 +206,32 @@ def edit_reserve_table(request, table_id, reservation_id):
     reservation = get_object_or_404(Reservation, pk=reservation_id)
 
     if request.method == 'POST':
-        pass
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=reservation.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=reservation.user.customer)
+        reserve_table_form = ReserveTableForm(request.POST, table=table,
+                                              instance=reservation)
+        if table.reserved:
+            # Check if table is reserved incase user cheated with URL.
+            messages.error(request,
+                           'This table has already been reserved, please \
+choose another table')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid() and reservation.user == request.user:
+            user_form.save()
+            customer_form.save()
+            reserve_table_form.save()
+
+            # Redirect account page and display success message.
+            messages.success(request, 'Reservation completed successfully')
+            return redirect('account')
+
+        else:
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information below')
+
 
     else:
         user_form = EditUserFormReservation(instance=reservation.user)
@@ -215,7 +239,7 @@ def edit_reserve_table(request, table_id, reservation_id):
         reserve_table_form = ReserveTableForm(instance=reservation)
 
 
-    return render(request, 'reservation/reserve-table.html',
+    return render(request, 'reservation/edit-reserve-table.html',
                   {'table': table,
                    'reservation': reservation,
                    'reserve_table_form': reserve_table_form,

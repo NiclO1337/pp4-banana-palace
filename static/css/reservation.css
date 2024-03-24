@@ -2,10 +2,6 @@
 ----- Reservation page ------
 -------------------------- */
 
-.asteriskField {
-  display: none;
-}
-
 #date-pick-form .form-label,
 #reservation-form .form-label {
   margin-bottom: 0;

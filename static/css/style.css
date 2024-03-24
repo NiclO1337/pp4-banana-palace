@@ -146,6 +146,10 @@ footer {
   font-family: var(--headings);
 }
 
+.asteriskField {
+  display: none;
+}
+
 /* Messages */
 #msg {
   padding: 1rem 3rem;

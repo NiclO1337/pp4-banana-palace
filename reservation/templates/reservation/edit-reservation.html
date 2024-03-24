@@ -68,7 +68,7 @@ reservation
           {% endif %}
         </div>
       {% else %}
-        <a href="{% url 'edit_reserve_table' table.id reservation.id %}">
+        <a href="{% url 'edit_reserve_table' reservation.id table.id %}">
           <button class="table" id="table-{{ forloop.counter }}">
             {% if user.is_staff %}
               {{ forloop.counter }}
