@@ -33,7 +33,7 @@ def reservation_page(request):
         # Pre-populate reservations to make it look realistic
         reservations = []
 
-        random_number = random.randint(10,20)
+        random_number = random.randint(20,40)
         list_of_nums = list(range(1, nr_of_tables))
         random.shuffle(list_of_nums)
         list_of_random_nums = []
@@ -62,7 +62,7 @@ def reservation_page(request):
 
                 reservations = []
 
-                random_number = random.randint(10,20)
+                random_number = random.randint(20,40)
                 list_of_nums = list(range(1, nr_of_tables))
                 random.shuffle(list_of_nums)
                 list_of_random_nums = []
@@ -167,7 +167,7 @@ def edit_reservation(request, reservation_id):
 
                 reservations = []
 
-                random_number = random.randint(10,20)
+                random_number = random.randint(20,40)
                 list_of_nums = list(range(1, nr_of_tables))
                 random.shuffle(list_of_nums)
                 list_of_random_nums = []
