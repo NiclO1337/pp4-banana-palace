@@ -14,9 +14,6 @@ class PickDateForm(forms.ModelForm):
 
 
 class ReserveTableForm(forms.ModelForm):
-    first_name = forms.CharField(max_length=20, label="First name:")
-    last_name = forms.CharField(max_length=30, label="Last name:")
-    phone = PhoneNumberField(label="Phone number:")
     time = forms.ChoiceField(choices=Reservation.TIME_CHOISES,
                              label="Time of arrival:")
     party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
@@ -45,4 +42,4 @@ class ReserveTableForm(forms.ModelForm):
 
     class Meta:
         model = Reservation
-        fields = ['first_name', 'last_name', 'phone', 'time', 'party_size',]
+        fields = ['time', 'party_size',]

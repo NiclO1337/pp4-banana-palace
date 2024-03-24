@@ -18,6 +18,17 @@ class EditUserForm(forms.ModelForm):
         fields = ['username', 'first_name', 'last_name', 'email',]
 
 
+class EditUserFormReservation(forms.ModelForm):
+    first_name = forms.CharField(max_length=20, widget=forms.TextInput(
+        attrs={'class': 'form-control'}))
+    last_name = forms.CharField(max_length=30, widget=forms.TextInput(
+        attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name',]
+
+
 class EditCustomerForm(forms.ModelForm):
     phone = PhoneNumberField()
 

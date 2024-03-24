@@ -39,7 +39,6 @@ be submitted. See message next to relevant field.')
         user_form = EditUserForm(instance=request.user)
         customer_form = EditCustomerForm(instance=request.user.customer)
 
-
     return render(request, 'account/edit_account.html', {
         'user_form': user_form, 'customer_form': customer_form
         })

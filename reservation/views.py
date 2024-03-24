@@ -4,6 +4,7 @@ from django.contrib import messages
 from .models import Table, Reservation
 from datetime import date
 from .forms import PickDateForm, ReserveTableForm
+from customer.forms import EditUserFormReservation, EditCustomerForm
 import random
 
 
@@ -96,6 +97,10 @@ def reserve_table(request, table_id):
     table = get_object_or_404(Table, pk=table_id)
 
     if request.method == 'POST':
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=request.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=request.user.customer)
         reserve_table_form = ReserveTableForm(request.POST, request=request,
                                               table=table)
         if table.reserved:
@@ -106,6 +111,8 @@ choose another table')
             return redirect('reservation_page')
 
         elif reserve_table_form.is_valid():
+            user_form.save()
+            customer_form.save()
             reserve_table_form.save()
 
             # Redirect account page and display success message.
@@ -117,16 +124,17 @@ choose another table')
 necessairy information below')
 
     else:
+        user_form = EditUserFormReservation(instance=request.user)
+        customer_form = EditCustomerForm(instance=request.user.customer)
         reserve_table_form = ReserveTableForm(initial={
-            'first_name': request.user.first_name,
-            'last_name': request.user.last_name,
-            'phone': request.user.customer.phone,
             'party_size': 4,
         })
 
     return render(request, 'reservation/reserve_table.html',
                   {'table': table,
                    'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
                    })
 
 
