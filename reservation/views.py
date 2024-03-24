@@ -130,7 +130,7 @@ necessairy information below')
             'party_size': 4,
         })
 
-    return render(request, 'reservation/reserve_table.html',
+    return render(request, 'reservation/reserve-table.html',
                   {'table': table,
                    'reserve_table_form': reserve_table_form,
                    'user_form': user_form,
@@ -141,15 +141,17 @@ necessairy information below')
 
 
 # edit reservation page, get ID, check customer edit.
-
+@login_required
 def edit_reservation(request, reservation_id):
 
     nr_of_tables = request.user.customer.restaurant.avalible_tables
     reservation = get_object_or_404(Reservation, pk=reservation_id)
+    Table.objects.filter(id=reservation.table.id).update(reserved=False)
 
     tables = Table.objects.filter(date=reservation.table.date).order_by('id')
     reservations = Reservation.objects.filter(
         table__date=reservation.table.date)
+
 
     if request.method == "POST":
         date_form = PickDateForm(data=request.POST)
@@ -158,6 +160,7 @@ def edit_reservation(request, reservation_id):
             tables = Table.objects.filter(date=selected_date).order_by('id')
             reservations = Reservation.objects.filter(
                 table__date=selected_date)
+
             if not tables:
                 tables = []
                 for table in range(nr_of_tables):
@@ -179,7 +182,6 @@ def edit_reservation(request, reservation_id):
                     new_reservation = Reservation(table=tables[table])
                     new_reservation.save()
                     reservations.append(new_reservation)
-
 
             return render(request, 'reservation/reservation.html',
                           {'tables': tables,
