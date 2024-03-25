@@ -20,9 +20,9 @@ class EditUserForm(forms.ModelForm):
 
 class EditUserFormReservation(forms.ModelForm):
     first_name = forms.CharField(max_length=20, widget=forms.TextInput(
-        attrs={'class': 'form-control'}))
+        attrs={'class': 'form-control'}), label="First name:")
     last_name = forms.CharField(max_length=30, widget=forms.TextInput(
-        attrs={'class': 'form-control'}))
+        attrs={'class': 'form-control'}), label="Last name:")
 
     class Meta:
         model = User
@@ -30,7 +30,7 @@ class EditUserFormReservation(forms.ModelForm):
 
 
 class EditCustomerForm(forms.ModelForm):
-    phone = PhoneNumberField()
+    phone = PhoneNumberField(label="Phone number:")
 
     class Meta:
         model = Customer

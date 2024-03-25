@@ -41,7 +41,7 @@ class Reservation(models.Model):
     time = models.CharField(max_length=15, choices=TIME_CHOISES,
                             default=TIME_CHOISES[0][0])
     party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
-    notes = models.TextField(null=True, blank=True)
+    notes = models.TextField(null=True, blank=True, max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     table = models.OneToOneField(Table, on_delete=models.CASCADE, null=True)

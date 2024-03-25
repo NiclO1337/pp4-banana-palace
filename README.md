@@ -484,6 +484,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Edit current reservation: [Phind search 10](https://www.phind.com/search?cache=x0xiwtsjxgeka9gqtjd4v9ls)
 
+- Include another html file and style input fields: [Phind search 11](https://www.phind.com/search?cache=vae5ls1yns8ddcmrvtzz1bef)
+
 
 *Message from the developer:*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.

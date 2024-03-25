@@ -18,7 +18,11 @@ class ReserveTableForm(forms.ModelForm):
                              label="Time of arrival:")
     party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
                                    label="Party size:")
-    notes = forms.Textarea()
+    notes = forms.CharField(label="Notes or special requests:",
+                            widget=forms.Textarea(attrs={
+                                'rows': '3',
+                                'maxlength': '200',
+                            }))
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
