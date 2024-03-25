@@ -481,9 +481,14 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Prepopulate reserve table form and multitude of errors: [Phind search 9](https://www.phind.com/search?cache=h8h0wt4fi9yy7dl63k72324x)
 
+- Edit current reservation: [Phind search 10](https://www.phind.com/search?cache=x0xiwtsjxgeka9gqtjd4v9ls)
+
 
 *Message from the developer*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
+
+Update efter search 10:<br>
+I no longer feel stupid, using this tool takes skill, patience and a lot of thinking.
 
 If online links stops working, results are saved in .txt format [here](https://github.com/NiclO1337/pp4-banana-palace/tree/main/documentation/phind-searches/)
 
