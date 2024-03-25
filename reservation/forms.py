@@ -18,6 +18,7 @@ class ReserveTableForm(forms.ModelForm):
                              label="Time of arrival:")
     party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
                                    label="Party size:")
+    notes = forms.Textarea()
 
     def __init__(self, *args, **kwargs):
         self.request = kwargs.pop('request', None)
@@ -26,20 +27,41 @@ class ReserveTableForm(forms.ModelForm):
 
     def save(self, commit=True):
 
-        user = self.request.user
+        if self.instance:
 
-        table = self.table
+            if self.instance.table is not None:
 
-        reservation = Reservation(
-            user=user,
-            time=self.cleaned_data['time'],
-            party_size=self.cleaned_data['party_size'],
-            table=table,
-        )
-        if commit:
-            reservation.save()
-        return reservation
+                self.instance.table.reserved = False
+                self.instance.table.save()
+
+            self.instance.time = self.cleaned_data['time']
+            self.instance.party_size = self.cleaned_data['party_size']
+            self.instance.table = self.table
+            if commit:
+                self.instance.save()
+
+            if self.table is not None:
+                self.table.reserved = True
+                self.table.save()
+
+            return self.instance
+
+        else:
+
+            user = self.request.user
+
+            table = self.table
+
+            reservation = Reservation(
+                user=user,
+                time=self.cleaned_data['time'],
+                party_size=self.cleaned_data['party_size'],
+                table=table,
+            )
+            if commit:
+                reservation.save()
+            return reservation
 
     class Meta:
         model = Reservation
-        fields = ['time', 'party_size',]
+        fields = ['time', 'party_size', 'notes',]

@@ -219,13 +219,14 @@ def edit_reserve_table(request, table_id, reservation_id):
 choose another table')
             return redirect('reservation_page')
 
-        elif reserve_table_form.is_valid() and reservation.user == request.user:
+        elif user_form.is_valid() and customer_form.is_valid() and \
+            reserve_table_form.is_valid() and reservation.user == request.user:
             user_form.save()
             customer_form.save()
             reserve_table_form.save()
 
             # Redirect account page and display success message.
-            messages.success(request, 'Reservation completed successfully')
+            messages.success(request, 'Reservation updated successfully')
             return redirect('account')
 
         else:
@@ -236,7 +237,8 @@ necessairy information below')
     else:
         user_form = EditUserFormReservation(instance=reservation.user)
         customer_form = EditCustomerForm(instance=reservation.user.customer)
-        reserve_table_form = ReserveTableForm(instance=reservation)
+        reserve_table_form = ReserveTableForm(
+            instance=reservation, initial={'time': reservation.time})
 
 
     return render(request, 'reservation/edit-reserve-table.html',

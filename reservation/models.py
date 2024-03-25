@@ -39,11 +39,12 @@ class Reservation(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
     time = models.CharField(max_length=15, choices=TIME_CHOISES,
-                            default="17:00")
+                            default=TIME_CHOISES[0][0])
     party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
+    notes = models.TextField(null=True, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    table = models.OneToOneField(Table, on_delete=models.CASCADE)
+    table = models.OneToOneField(Table, on_delete=models.CASCADE, null=True)
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE,
                                    default=2)
 
