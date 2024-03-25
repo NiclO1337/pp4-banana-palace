@@ -1,10 +1,12 @@
-# Banana Palace
+# Banana Palace ![Banana Palace restaurant logo](./static/images/banana-palace-horizontal.png)
 TODO: Add logo image
+
+# <p align="left">Banana Palace restaurant<img src="./static/images/banana-palace-horizontal.png" alt="Banana Palace restaurant logo" width="200"/></p>
 
 ![Amiresponsive image](TODO)
 
 
-Link to live website: [Banana Palace](TODO) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 <hr>
 
@@ -156,15 +158,14 @@ Validating every user input creates a defensive design that runs correctly and k
 
 
 
-## Future features
+### Future features
 -
 
 
 [Back to top](#table-of-contents)
 
 
-# Project planning and execution
-
+## Project planning and execution
 
 ### Design thinking
 
@@ -231,7 +232,7 @@ Lastly the development team elaborates upon the logical model with data specific
 
 Scrum, using both incremental and iterative development, was chosen as the main Agile methodology to use in this project. Planning workload into iterations, also known as sprints, with a mindset of "continuous improvement". For each iteration, a kanban board was used to visualize the current workload. Between iterations, remaining workload in the product backlog was reviewed and next iteration was planned.
 
-All features that could possibly be implemented were added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+All features that could possibly be implemented were added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 
 
@@ -244,7 +245,7 @@ Project was broken down into different epics, large bodies of work, with feature
 
 ### User stories
 
-All user stories are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues) on GitHub. They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and tasks to complete. Some commits were linked to the user story they completed a task for.
+All user stories are added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and tasks to complete. Some commits were linked to the user story they completed a task for.
 
 
 <details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="./documentation/images/user-story.png" alt="Example of a project User story" width="600"/></p> </details>
@@ -431,7 +432,7 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Some of the code from the Code Institutes blog walkthrough project was used and adapted.
 
-- This project from a fellow classmate was a good help many times during my development, [Amy Richardson](https://github.com/amylour/FreeFido_v2)
+- This project from a fellow classmate was a good help many times during my development: [Amy Richardson](https://github.com/amylour/FreeFido_v2)
 
 - Navbar adjusted when scroll down: [w3schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_navbar_shrink_scroll)
 
@@ -484,10 +485,10 @@ After spending too many hours on google trying various outdated or incorrect or 
 - Edit current reservation: [Phind search 10](https://www.phind.com/search?cache=x0xiwtsjxgeka9gqtjd4v9ls)
 
 
-*Message from the developer*:<br>
+*Message from the developer:*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
 
-Update efter search 10:<br>
+*Update efter search 10:*<br>
 I no longer feel stupid, using this tool takes skill, patience and a lot of thinking.
 
 If online links stops working, results are saved in .txt format [here](https://github.com/NiclO1337/pp4-banana-palace/tree/main/documentation/phind-searches/)
