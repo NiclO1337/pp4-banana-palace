@@ -110,7 +110,10 @@ def reserve_table(request, table_id):
 choose another table')
             return redirect('reservation_page')
 
-        elif reserve_table_form.is_valid():
+        elif user_form.is_valid() and customer_form.is_valid() and \
+            reserve_table_form.is_valid():
+            reservation = reserve_table_form.save(commit=False)
+            reservation.user = request.user
             user_form.save()
             customer_form.save()
             reserve_table_form.save()

@@ -3,11 +3,12 @@
 $(document).ready(function () {
 
     let errorMessage = $('.error-msg-links')[0];
-    let socialMediaIcons = $('.social-media-symbols').children('li');
+    let socialMediaIcons = $('.social-media-symbols li');
 
-    socialMediaIcons.click(function () {
+    socialMediaIcons.on('click', socialMediaIcons, function () {
         errorMessage.style.display = "block";
         socialMediaIcons.css('pointer-events', 'none');
+        socialMediaIcons.css('color', 'var(--color-tertiary-light)');
 
         window.setTimeout(() => {
             errorMessage.style.opacity = "1";
@@ -18,6 +19,7 @@ $(document).ready(function () {
         window.setTimeout(() => {
             errorMessage.style.display = "none";
             socialMediaIcons.css('pointer-events', 'all');
+            socialMediaIcons.css('color', 'var(--color-primary-bg');
         }, 6100)
     })
 })

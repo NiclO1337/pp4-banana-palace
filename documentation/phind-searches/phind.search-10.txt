@@ -5,7 +5,50 @@ How do I update a previously made reservation?
 This is my current reserve-table view:
 
 @login_required
-def ...
+def reserve_table(request, table_id):
+
+    table = get_object_or_404(Table, pk=table_id)
+
+    if request.method == 'POST':
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=request.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=request.user.customer)
+        reserve_table_form = ReserveTableForm(request.POST, request=request,
+                                              table=table)
+        if table.reserved:
+            # Check if table is reserved!!! incase user cheated with URL.
+            messages.error(request,
+                           'This table has already been reserved, please \
+choose another table')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid():
+            user_form.save()
+            customer_form.save()
+            reserve_table_form.save()
+
+            # Redirect account page and display success message.
+            messages.success(request, 'Reservation completed successfully')
+            return redirect('account')
+
+        else:
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information below')
+
+    else:
+        user_form = EditUserFormReservation(instance=request.user)
+        customer_form = EditCustomerForm(instance=request.user.customer)
+        reserve_table_form = ReserveTableForm(initial={
+            'party_size': 4,
+        })
+
+    return render(request, 'reservation/reserve-table.html',
+                  {'table': table,
+                   'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
+                   })
 Tired of pasting in code?
 
 ANSWER | PHIND-34B MODEL
@@ -156,7 +199,35 @@ I got an error saying that Reservation has no update attribute, so I tried to cr
 Here is my code:
     def update(self, *args, **kwargs):
 
-   ...
+        super(Reservation, self).update(*args, **kwargs)
+
+It did not work and I get this error:
+
+AttributeError at /reservation/3091
+'super' object has no attribute 'update'
+Request Method:	POST
+Request URL:	http://127.0.0.1:8000/reservation/3091
+Django Version:	5.0.2
+Exception Type:	AttributeError
+Exception Value:
+'super' object has no attribute 'update'
+Exception Location:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\reservation\models.py, line 71, in update
+Raised during:	reservation.views.reserve_table
+Python Executable:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\.venv\Scripts\python.exe
+Python Version:	3.12.0
+Python Path:
+['C:\\Users\\nicla\\OneDrive\\Dokument\\Coding projects\\pp4-banana-palace',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv\\Lib\\site-packages']
+Server time:	Sun, 24 Mar 2024 12:57:16 +0000
+
+Can you explain what I did wrong and how to fix it?
 ANSWER | PHIND-34B MODEL
 The error you're encountering, 'super' object has no attribute 'update', is because the update method is not a built-in method of Django model instances or the superclass of your model. The update method is typically used with querysets to update multiple records in the database at once, not with individual model instances.
 
@@ -213,7 +284,350 @@ You signed in with another tab or window. Reload to refresh your session. You si
 Hello, it only updates current reservation if I select the same table.
 
 How can I change so it always updates IF the user has clicked on edit.
-Please...
+Please explain in detail.
+
+This is all my code:
+
+from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from .models import Table, Reservation
+from datetime import date
+from .forms import PickDateForm, ReserveTableForm
+from customer.forms import EditUserFormReservation, EditCustomerForm
+import random
+
+
+@login_required
+def reservation_page(request):
+
+    # Get number of avalible tables from the resturant
+    # associated with the logged in user
+    nr_of_tables = request.user.customer.restaurant.avalible_tables
+
+    # get all tables and reservations for todays date
+    # (today is when page is loaded)
+    tables = Table.objects.filter(date=date.today()).order_by('id')
+    reservations = Reservation.objects.filter(table__date=date.today())
+
+    # if there are no tables, create tables and save them to the database
+    # nr of tables created depends on restaurants nr of avalible tables
+    if not tables:
+        tables = []
+        for table in range(nr_of_tables):
+            new_table = Table()
+            new_table.save()
+            tables.append(new_table)
+
+        # If there are no tables then there are no reservations.
+        # Pre-populate reservations to make it look realistic
+        reservations = []
+
+        random_number = random.randint(20,40)
+        list_of_nums = list(range(1, nr_of_tables))
+        random.shuffle(list_of_nums)
+        list_of_random_nums = []
+        for num in range(random_number):
+            random_num = list_of_nums[num]
+            list_of_random_nums.append(random_num)
+
+        for table in list_of_random_nums:
+            new_reservation = Reservation(table=tables[table])
+            new_reservation.save()
+            reservations.append(new_reservation)
+
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+        if date_form.is_valid():
+            selected_date = date_form.cleaned_data['date']
+            tables = Table.objects.filter(date=selected_date).order_by('id')
+            reservations = Reservation.objects.filter(
+                table__date=selected_date)
+            if not tables:
+                tables = []
+                for table in range(nr_of_tables):
+                    new_table = Table(date=selected_date)
+                    new_table.save()
+                    tables.append(new_table)
+
+                reservations = []
+
+                random_number = random.randint(20,40)
+                list_of_nums = list(range(1, nr_of_tables))
+                random.shuffle(list_of_nums)
+                list_of_random_nums = []
+                for num in range(random_number):
+                    random_num = list_of_nums[num]
+                    list_of_random_nums.append(random_num)
+
+                for table in list_of_random_nums:
+                    new_reservation = Reservation(table=tables[table])
+                    new_reservation.save()
+                    reservations.append(new_reservation)
+
+
+            return render(request, 'reservation/reservation.html',
+                          {'tables': tables,
+                           'date_form': date_form,
+                           'reservations': reservations,
+                           })
+
+    date_form = PickDateForm()
+
+    return render(request, 'reservation/reservation.html',
+                  {'tables': tables,
+                   'date_form': date_form,
+                   'reservations': reservations,
+                   })
+
+
+@login_required
+def reserve_table(request, table_id):
+
+    table = get_object_or_404(Table, pk=table_id)
+    existing_reservation = Reservation.objects.filter(
+        user=request.user, table=table).first()
+
+    if request.method == 'POST':
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=request.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=request.user.customer)
+        reserve_table_form = ReserveTableForm(request.POST, request=request,
+                                              table=table)
+        if table.reserved:
+            # Check if table is reserved incase user cheated with URL.
+            messages.error(request,
+                           'This table has already been reserved, please \
+choose another table')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid():
+            user_form.save()
+            customer_form.save()
+
+            if existing_reservation:
+                existing_reservation.update(**reserve_table_form.cleaned_data)
+                messages.success(request, 'Reservation updated successfully')
+            else:
+                reserve_table_form.save()
+                messages.success(request, 'Reservation completed successfully')
+
+            # Redirect account page and display success message.
+
+            return redirect('account')
+
+        else:
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information below')
+
+    else:
+        user_form = EditUserFormReservation(instance=request.user)
+        customer_form = EditCustomerForm(instance=request.user.customer)
+        if existing_reservation:
+            reserve_table_form = ReserveTableForm(initial={
+                'time': existing_reservation.time,
+                'party_size': existing_reservation.party_size,
+            })
+
+        else:
+            reserve_table_form = ReserveTableForm(initial={
+                'party_size': 4,
+            })
+
+    return render(request, 'reservation/reserve-table.html',
+                  {'table': table,
+                   'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
+                   })
+
+
+
+
+# edit reservation page, get ID, check customer edit.
+@login_required
+def edit_reservation(request, reservation_id):
+
+    nr_of_tables = request.user.customer.restaurant.avalible_tables
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+    Table.objects.filter(id=reservation.table.id).update(reserved=False)
+
+    tables = Table.objects.filter(date=reservation.table.date).order_by('id')
+    reservations = Reservation.objects.filter(
+        table__date=reservation.table.date)
+
+
+    if request.method == "POST":
+        date_form = PickDateForm(data=request.POST)
+        if date_form.is_valid():
+            selected_date = date_form.cleaned_data['date']
+            tables = Table.objects.filter(date=selected_date).order_by('id')
+            reservations = Reservation.objects.filter(
+                table__date=selected_date)
+
+            if not tables:
+                tables = []
+                for table in range(nr_of_tables):
+                    new_table = Table(date=selected_date)
+                    new_table.save()
+                    tables.append(new_table)
+
+                reservations = []
+
+                random_number = random.randint(20,40)
+                list_of_nums = list(range(1, nr_of_tables))
+                random.shuffle(list_of_nums)
+                list_of_random_nums = []
+                for num in range(random_number):
+                    random_num = list_of_nums[num]
+                    list_of_random_nums.append(random_num)
+
+                for table in list_of_random_nums:
+                    new_reservation = Reservation(table=tables[table])
+                    new_reservation.save()
+                    reservations.append(new_reservation)
+
+            return render(request, 'reservation/reservation.html',
+                          {'tables': tables,
+                           'date_form': date_form,
+                           'reservations': reservations,
+                           })
+
+    date_form = PickDateForm(initial={
+            'date': reservation.table.date,})
+
+    return render(request, 'reservation/reservation.html',
+                  {'tables': tables,
+                   'date_form': date_form,
+                   'reservations': reservations,
+                   })
+
+# Delete reservation page, get ID, check request.user vs user
+
+from django import forms
+from .models import Table, Reservation
+from datetime import date
+from phonenumber_field.formfields import PhoneNumberField
+
+
+class PickDateForm(forms.ModelForm):
+    date = forms.DateField(widget=forms.DateInput(attrs={
+        'placeholder': date.today()}), label="Select date:")
+
+    class Meta:
+        model = Table
+        fields = ['date',]
+
+
+class ReserveTableForm(forms.ModelForm):
+    time = forms.ChoiceField(choices=Reservation.TIME_CHOISES,
+                             label="Time of arrival:")
+    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
+                                   label="Party size:")
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        self.table = kwargs.pop('table', None)
+        super(ReserveTableForm, self).__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+
+        user = self.request.user
+
+        table = self.table
+
+        reservation = Reservation(
+            user=user,
+            time=self.cleaned_data['time'],
+            party_size=self.cleaned_data['party_size'],
+            table=table,
+        )
+        if commit:
+            reservation.save()
+        return reservation
+
+    class Meta:
+        model = Reservation
+        fields = ['time', 'party_size',]
+
+from django.db import models
+from django.contrib.auth.models import User
+from home.models import Restaurant
+from datetime import date, datetime, timedelta
+
+
+class Table(models.Model):
+
+    date = models.DateField(default=date.today)
+    reserved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return f'Table ID: {self.id} - {self.date}'
+
+
+class Reservation(models.Model):
+    """
+    Creates a reservation related to user, customer, table
+    """
+
+    TIME_CHOISES = []
+    start_time = datetime.strptime('17:00', '%H:%M')
+    end_time = datetime.strptime('21:15', '%H:%M')
+
+    while start_time < end_time:
+
+        start_time_slot = start_time.strftime('%H:%M')
+
+        TIME_CHOISES.append((start_time_slot, start_time_slot))
+
+        start_time += timedelta(minutes=15)
+
+
+    PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
+                  (6, '6'), (7, '7'), (8, '8'))
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
+    time = models.CharField(max_length=15, choices=TIME_CHOISES,
+                            default="17:00")
+    party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    table = models.OneToOneField(Table, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE,
+                                   default=2)
+
+    class Meta:
+        ordering = ['table__date']
+
+    def __str__(self):
+        return f'Date: {self.table.date} ---- Party size: {self.party_size} \
+---- Customer: {self.user.first_name} {self.user.last_name}. ---- \
+Has discount: {self.user.customer.has_discount}'
+
+
+    def save(self, *args, **kwargs):
+
+        # Call original reservation save
+        super(Reservation, self).save(*args, **kwargs)
+
+        # Update associated table to be reserved
+        self.table.reserved = True
+        self.table.save(update_fields=['reserved'])
+
+
+    def update(self, **kwargs):
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+        self.save()
+
+ <a href="{% url 'edit_reservation' reservation.id %}" class="text-decoration-none">
+                      <button class="btn-iconic-reverse me-2">Edit</button>
+                    </a>
 ANSWER | PHIND-34B MODEL
 To ensure that a reservation is always updated when a user clicks on the "Edit" button, regardless of whether they select the same table or a different one, you need to adjust your approach in the edit_reservation view. The current implementation seems to be focused on updating the reservation only if the user selects the same table. However, you want to allow the user to edit the reservation details and potentially change the table as well.
 
@@ -281,7 +695,7 @@ In this four-part tutorial series, you're building a social network with Django 
 
 1
 2
-That does not work, my booking is split on 2 pages, first the table is selected on reservation page, and then details are entered on reserve table pag...
+That does not work, my booking is split on 2 pages, first the table is selected on reservation page, and then details are entered on reserve table page
 ANSWER | PHIND-34B MODEL
 Given your booking process is split across two pages and you want to ensure that reservations are always updated when a user clicks on the "Edit" button, regardless of whether they select the same table or a different one, you need to adjust your approach to handle the two-step process of selecting a table and then entering details.
 
@@ -361,7 +775,119 @@ I am trying to create a Table Reservation System, here I want to give the list o
 
 1
 2
-This is my current reservation.html page, it works by user clicking on the table they want to choose are are directed to reserve_table view to enter b...
+This is my current reservation.html page, it works by user clicking on the table they want to choose are are directed to reserve_table view to enter booking details.
+
+<!-- prettier-ignore -->
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block head_title %}
+reservation
+{% endblock %}
+{% block page-specific-css %}
+<link rel="stylesheet" href="{% static './css/loading-dots.css' %}" />
+<link rel="stylesheet" href="{% static './css/reservation.css' %}" />
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html head -->
+{% block extra_head %}{% endblock extra_head %}
+
+<!-- prettier-ignore -->
+{% block page-content %}
+
+<div class="container">
+  <h1 class="text-center mb-3">Make a reservation</h1>
+  <div class="row align-items-center">
+    <div class="col-12 col-md-3 col-xl-2 text-center ms-auto p-0">
+      <p class="mb-3 mb-md-1">
+        Select a date and then<br />pick a table below.
+      </p>
+      {{ nr_of_tables }}
+    </div>
+    <div class="col-12 col-md-3 col-xl-2 me-auto p-0">
+      <form
+        id="date-pick-form"
+        class="text-center mx-auto"
+        method="post"
+        enctype="multipart/form-data"
+        autocomplete="off">
+        {{ date_form | crispy }} {% csrf_token %}
+        <button type="submit" class="btn-iconic d-none">Check date</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <div class="spinner">
+      <div class="bounce1"></div>
+      <div class="bounce2"></div>
+      <div class="bounce3"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center d-sm-none p-3">
+    <p>
+      Your screen size is too small<br>to use this feature.
+    </p>
+    <p>
+      Try rotating your device<br>horizontally or use a larger<br>device (minimum 576px).
+    </p>
+</div>
+
+<div class="container-fluid mb-3 d-none d-sm-block">
+
+  <div id="blueprint">
+
+    {% for table in tables %}
+
+      {% if table.reserved %}
+        <div class="table red" id="table-{{ forloop.counter }}">
+          {% if user.is_staff %}
+            {{ forloop.counter }}
+          {% endif %}
+        </div>
+      {% else %}
+        <a href="{% url 'reserve_table' table.id %}">
+          <button class="table" id="table-{{ forloop.counter }}">
+            {% if user.is_staff %}
+              {{ forloop.counter }}
+            {% endif %}
+          </button>
+        </a>
+      {% endif %}
+
+    {% endfor %}
+
+    <i class="fa-solid fa-water d-none d-md-block"></i>
+    <i class="fa-solid fa-water "></i>
+    <i class="fa-solid fa-water "></i>
+    <i class="fa-solid fa-dungeon fa-2xl d-none d-xxl-block"></i>
+    <i class="fa-solid fa-road-barrier fa-lg d-none d-xxl-block"></i>
+    <i class="fa-solid fa-champagne-glasses"></i>
+    <i class="fa-solid fa-martini-glass"></i>
+    <i class="fa-solid fa-beer-mug-empty"></i>
+
+    <div class="long-table"></div>
+    <div class="double-table1"></div>
+    <div class="double-table2"></div>
+
+    <p class="private-room text-center">
+      Private room<br>Deep Djungle <br> (call or email)
+    </p>
+
+
+  </div>
+</div>
+
+<!-- prettier-ignore -->
+{% endblock %}
+
+{% block page-specific-js %}
+<script src="{% static './js/reservation.js' %}"></script>
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html body -->
+{% block extra_body %}{% endblock extra_body %}
 ANSWER | PHIND-34B MODEL
 Given your current setup where users select a table on the reservation.html page and are then directed to the reserve_table view to enter booking details, you need to ensure that the process of editing a reservation is seamless and allows for changes in the table selection. This involves modifying the flow to accommodate the possibility of changing the table during the reservation process.
 
@@ -456,7 +982,62 @@ This is my current reserve_table view
 def reserve_table(request, table_id):
 
     table = get_object_or_404(Table, pk=table_id)
-    ex...
+    existing_reservation = Reservation.objects.filter(
+        user=request.user, table=table).first()
+
+    if request.method == 'POST':
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=request.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=request.user.customer)
+        reserve_table_form = ReserveTableForm(request.POST,
+                                              request=request, table=table)
+        if table.reserved:
+            # Check if table is reserved incase user cheated with URL.
+            messages.error(request,
+                           'This table has already been reserved, please \
+choose another table')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid():
+            user_form.save()
+            customer_form.save()
+
+            if existing_reservation:
+                existing_reservation.update(**reserve_table_form.cleaned_data)
+                messages.success(request, 'Reservation updated successfully')
+            else:
+                reserve_table_form.save()
+                messages.success(request, 'Reservation completed successfully')
+
+            # Redirect account page and display success message.
+
+            return redirect('account')
+
+        else:
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information below')
+
+    else:
+        user_form = EditUserFormReservation(instance=request.user)
+        customer_form = EditCustomerForm(instance=request.user.customer)
+        if existing_reservation:
+            reserve_table_form = ReserveTableForm(initial={
+                'time': existing_reservation.time,
+                'party_size': existing_reservation.party_size,
+            })
+
+        else:
+            reserve_table_form = ReserveTableForm(initial={
+                'party_size': 4,
+            })
+
+    return render(request, 'reservation/reserve-table.html',
+                  {'table': table,
+                   'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
+                   })
 ANSWER | PHIND-34B MODEL
 Given your current reserve_table view, it seems you're handling both the creation and updating of reservations within the same view. This approach is quite flexible and allows for a seamless user experience, especially when users want to edit their reservations, including changing the table. However, to ensure that the reservation is always updated when a user clicks on the "Edit" button, regardless of whether they select the same table or a different one, you need to make sure that your logic correctly handles the reservation update process.
 
@@ -568,7 +1149,53 @@ An API that needs to retrieve an object from the database usually works in this 
 2
 I want to update current reservation with new details but my code is not working, can you help me and explain why and show me how to adjust it?
 
-Here ...
+Here is my code:
+def edit_reserve_table(request, table_id, reservation_id):
+
+    table = get_object_or_404(Table, pk=table_id)
+    reservation = get_object_or_404(Reservation, pk=reservation_id)
+
+    if request.method == 'POST':
+        user_form = EditUserFormReservation(request.POST,
+                                            instance=reservation.user)
+        customer_form = EditCustomerForm(request.POST,
+                                        instance=reservation.user.customer)
+        reserve_table_form = ReserveTableForm(request.POST, table=table,
+                                              instance=reservation)
+        if table.reserved:
+            # Check if table is reserved incase user cheated with URL.
+            messages.error(request,
+                           'This table has already been reserved, please \
+choose another table')
+            return redirect('reservation_page')
+
+        elif reserve_table_form.is_valid() and reservation.user == request.user:
+            user_form.save()
+            customer_form.save()
+            reserve_table_form.save()
+
+            # Redirect account page and display success message.
+            messages.success(request, 'Reservation completed successfully')
+            return redirect('account')
+
+        else:
+            messages.error(request, 'Form is not valid, please enter all \
+necessairy information below')
+
+
+    else:
+        user_form = EditUserFormReservation(instance=reservation.user)
+        customer_form = EditCustomerForm(instance=reservation.user.customer)
+        reserve_table_form = ReserveTableForm(instance=reservation)
+
+
+    return render(request, 'reservation/edit-reserve-table.html',
+                  {'table': table,
+                   'reservation': reservation,
+                   'reserve_table_form': reserve_table_form,
+                   'user_form': user_form,
+                   'customer_form': customer_form,
+                   })
 ANSWER | PHIND-34B MODEL
 The issue with your edit_reserve_table function not updating the current reservation with new details could be due to several reasons. Let's go through the potential issues and how to adjust your code accordingly.
 
@@ -621,7 +1248,6 @@ This adjustment ensures that you're checking the validity of all forms before at
 
 Remember, the key to debugging issues like this is to carefully check each part of your code to ensure it's functioning as expected. Printing out variables and form errors can be very helpful in identifying where things are going wrong.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -704,7 +1330,6 @@ The save method of ReserveTableForm should be responsible for updating the reser
 If the form's save method is not correctly updating the reservation, you might need to manually update the reservation instance with the form's cleaned data before calling save.
 By ensuring that your form is correctly set up for updates and that the form's save method is correctly implemented, you should be able to resolve the issue with updating the current reservation with new details 245.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -741,7 +1366,54 @@ Some field types need some extra handling. For example, files that are uploaded 
 I have looked over my forms current save methods, what do I need to adjust in order to make it work?
 
 These are my forms:
-class EditUserFormReservatio...
+class EditUserFormReservation(forms.ModelForm):
+    first_name = forms.CharField(max_length=20, widget=forms.TextInput(
+        attrs={'class': 'form-control'}))
+    last_name = forms.CharField(max_length=30, widget=forms.TextInput(
+        attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name',]
+
+
+class EditCustomerForm(forms.ModelForm):
+    phone = PhoneNumberField()
+
+    class Meta:
+        model = Customer
+        fields = ['phone',]
+
+class ReserveTableForm(forms.ModelForm):
+    time = forms.ChoiceField(choices=Reservation.TIME_CHOISES,
+                             label="Time of arrival:")
+    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
+                                   label="Party size:")
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        self.table = kwargs.pop('table', None)
+        super(ReserveTableForm, self).__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+
+        user = self.request.user
+
+        table = self.table
+
+        reservation = Reservation(
+            user=user,
+            time=self.cleaned_data['time'],
+            party_size=self.cleaned_data['party_size'],
+            table=table,
+        )
+        if commit:
+            reservation.save()
+        return reservation
+
+    class Meta:
+        model = Reservation
+        fields = ['time', 'party_size',]
 ANSWER | PHIND-34B MODEL
 To adjust your ReserveTableForm to correctly handle updates, you need to modify the save method to check if an instance is being passed to the form. If an instance is provided, it means you're updating an existing reservation, and you should update that instance with the new data. If no instance is provided, it means you're creating a new reservation, and you should create a new instance as you're currently doing.
 
@@ -791,7 +1463,6 @@ Update Existing Reservation: If updating, directly modify the fields of self.ins
 Create New Reservation: If self.instance does not exist, proceed with creating a new Reservation instance as you were doing before.
 This adjustment ensures that your form can handle both creating new reservations and updating existing ones, depending on whether an instance is passed to the form. This approach is consistent with Django's design for ModelForm, where the same form can be used for both creating and updating instances of a model 12.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -829,7 +1500,6 @@ Thank you, this works!
 ANSWER | PHIND-34B MODEL
 I'm glad to hear that the adjustments worked for you! If you have any more questions or need further assistance with Django or any other programming topic, feel free to ask. Happy coding!
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -864,7 +1534,7 @@ When it comes to updating objects, you can often reuse the ModelForm that you us
 1
 2
 3
-My problem now is that on the edit reserve table page, the time field is not pre populated with the time from previous reservation. How can I make tha...
+My problem now is that on the edit reserve table page, the time field is not pre populated with the time from previous reservation. How can I make that work?
 ANSWER | PHIND-34B MODEL
 To pre-populate the time field in your ReserveTableForm with the time from the previous reservation, you can use the initial parameter when initializing the form. This parameter allows you to set initial values for the form fields, which will be displayed when the form is rendered.
 
@@ -905,7 +1575,6 @@ def edit_reserve_table(request, table_id, reservation_id):
     })
 In this adjustment, when initializing ReserveTableForm for a GET request (i.e., when the form is being displayed for editing), the initial parameter is used to set the initial value of the time field to the time from the previous reservation (reservation.time). This ensures that when the form is rendered, the time field will already be filled with the time from the previous reservation, making it easier for the user to see and edit this information 1.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -986,7 +1655,6 @@ def edit_reserve_table(request, table_id, reservation_id):
     })
 This adjustment ensures that the initial values are set only for GET requests, preventing them from being overridden by request.POST data. Additionally, ensure that the initial value for the time field matches one of the choices defined in Reservation.TIME_CHOISES to avoid any issues with the field not being pre-populated correctly 15.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -1023,7 +1691,60 @@ This is why initial values are only displayed for unbound forms. For bound forms
 Good point, this is my reservation model, is the issue my default value on time? should it be default=1 or similar?
 
 class Reservation(models.Model):
-...
+    """
+    Creates a reservation related to user, customer, table
+    """
+
+    TIME_CHOISES = []
+    start_time = datetime.strptime('17:00', '%H:%M')
+    end_time = datetime.strptime('21:15', '%H:%M')
+
+    while start_time < end_time:
+
+        start_time_slot = start_time.strftime('%H:%M')
+
+        TIME_CHOISES.append((start_time_slot, start_time_slot))
+
+        start_time += timedelta(minutes=15)
+
+
+    PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
+                  (6, '6'), (7, '7'), (8, '8'))
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
+    time = models.CharField(max_length=15, choices=TIME_CHOISES,
+                            default="17:00")
+    party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
+    table = models.OneToOneField(Table, on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE,
+                                   default=2)
+
+    class Meta:
+        ordering = ['table__date']
+
+    def __str__(self):
+        return f'Date: {self.table.date} ---- Party size: {self.party_size} \
+---- Customer: {self.user.first_name} {self.user.last_name}. ---- \
+Has discount: {self.user.customer.has_discount}'
+
+
+    def save(self, *args, **kwargs):
+
+        # Call original reservation save
+        super(Reservation, self).save(*args, **kwargs)
+
+        # Update associated table to be reserved
+        self.table.reserved = True
+        self.table.save(update_fields=['reserved'])
+
+
+    def update(self, **kwargs):
+
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+        self.save()
 ANSWER | PHIND-34B MODEL
 Given the details of your Reservation model and the issue you're facing with the time field not being pre-populated correctly, the problem might indeed be related to how the default value for the time field is set. In your model, the time field is defined with a default value of "17:00". This default value is a string representation of a time, which should be one of the choices defined in TIME_CHOISES.
 
@@ -1046,7 +1767,6 @@ Migrations: After making changes to your model, remember to create and apply mig
 Form Initialization: When initializing the form in your view, ensure that you're setting the initial value correctly, especially if you're using the initial parameter. The initial value should match one of the choices in TIME_CHOISES.
 By ensuring that the default value for the time field matches one of the choices in TIME_CHOISES, you should be able to resolve the issue with the field not being pre-populated correctly 12.
 
-SUGGESTIONS
 SOURCES
 1
 favicon-stackoverflow.com
@@ -1083,7 +1803,75 @@ Feb 17, 2021 — This message is generated in a makemigrations when you're addin
 Thank you! After applying the migrations I got this error:
 
 IntegrityError at /reservation/edit/778/3091
-duplicate key value violates unique constrain...
+duplicate key value violates unique constraint "reservation_reservation_table_id_key"
+DETAIL:  Key (table_id)=(3091) already exists.
+Request Method:	POST
+Request URL:	http://127.0.0.1:8000/reservation/edit/778/3091
+Django Version:	5.0.2
+Exception Type:	IntegrityError
+Exception Value:
+duplicate key value violates unique constraint "reservation_reservation_table_id_key"
+DETAIL:  Key (table_id)=(3091) already exists.
+Exception Location:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\.venv\Lib\site-packages\django\db\backends\utils.py, line 105, in _execute
+Raised during:	reservation.views.edit_reserve_table
+Python Executable:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\.venv\Scripts\python.exe
+Python Version:	3.12.0
+Python Path:
+['C:\\Users\\nicla\\OneDrive\\Dokument\\Coding projects\\pp4-banana-palace',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv\\Lib\\site-packages']
+Server time:	Mon, 25 Mar 2024 12:09:48 +0000
+
+Is there something wrong with my ReserveTableForm?
+
+lass ReserveTableForm(forms.ModelForm):
+    time = forms.ChoiceField(choices=Reservation.TIME_CHOISES,
+                             label="Time of arrival:")
+    party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
+                                   label="Party size:")
+
+    def __init__(self, *args, **kwargs):
+        self.request = kwargs.pop('request', None)
+        self.table = kwargs.pop('table', None)
+        super(ReserveTableForm, self).__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+
+        if self.instance:
+            self.instance.time = self.cleaned_data['time']
+            self.instance.party_size = self.cleaned_data['party_size']
+            self.instance.table = self.table
+            if commit:
+                self.instance.save()
+            return self.instance
+
+        else:
+
+            user = self.request.user
+
+            table = self.table
+
+            reservation = Reservation(
+                user=user,
+                time=self.cleaned_data['time'],
+                party_size=self.cleaned_data['party_size'],
+                table=table,
+            )
+            if commit:
+                reservation.save()
+            return reservation
+
+    class Meta:
+        model = Reservation
+        fields = ['time', 'party_size',]
+
+Should I create a new EditReserveTableForm instead of using the same one?
 ANSWER | PHIND-34B MODEL
 The IntegrityError you're encountering is due to a violation of a unique constraint on the table field in your Reservation model. This error typically occurs when you try to create a new Reservation instance with a table that is already associated with another Reservation instance, and the table field is defined as a OneToOneField.
 
@@ -1101,3 +1889,412 @@ Additional Considerations
 Form Handling: When updating a reservation, ensure that the form does not attempt to change the table field to a table that is already reserved. This might involve custom validation in your form or view logic.
 Database Constraints: If you decide to change the OneToOneField to a ForeignKey, remember that this will also affect how you handle reservations in your database and application logic. You'll need to ensure that your application logic correctly handles multiple reservations for the same table.
 Given the error message and the context of your application, the most straightforward solution would likely be to change the OneToOneField to a ForeignKey if your business logic allows for multiple reservations per table. This change will require updating your model, creating a new migration, and adjusting your application logic to handle the new relationship correctly 1.
+
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 19135161 > django-db-utils-integrityerror-duplicate-key-value-violates-unique-constraint
+django.db.utils.IntegrityError: duplicate key value violates ...
+Oct 2, 2013 — This one means that you have out of date sequence within your database (improper previous migrations or jumps between different versions..
+
+2
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > django-db-utils-integrityerror-duplicate-key-value-violates-unique-key-constraint > 15625
+Django.db.utils.IntegrityError: duplicate key value violates ...
+Aug 26, 2022 — Hey, I get a weird error trying to save related objects. Basically documents related to a model. I have a Postgres..
+
+3
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > solved-keep-getting-integrityerror-duplicate-key-value-violates-unique-constraint-django-migrations-pkey-detail-key-id-n-already-exists > 27069
+duplicate key value violates unique constraint ...
+Jan 18, 2024 — After installing django-simple-history, I attempted to migrate my database and was met with the following error: IntegrityError: duplicate key ....
+
+4
+favicon-www.reddit.com
+www.reddit.com > r > django > comments > xmxgrw > error_duplicate_key_value_violates_unique
+Error: duplicate key value violates unique constraint - django
+When I am posting data in the Django web application server using one of app features, we have an issue where the primary key already..
+
+5
+favicon-github.com
+github.com > jazzband > django-silk > issues > 26
+IntegrityError: duplicate key value violates unique ...
+Jul 17, 2014 — I am getting this exception a lot when I use Django with Apache and mod_wsgi (Windows). Please ignore my commit above,..
+
+1
+2
+I know that the issue is not that the table is already reserved because it is not possible in my HTML to choose a reserved table, and my view prevents tampering with the URL. I think the issue is in the if self.instance: code. When I change table when editing the reservation, is the old table still connected with this reservation? I can see in my database that the table in question, 3091, is not reserved. When editing reservation I change reserved to false, but is it still connected with my reservation because it is onetoonefield?
+ANSWER | PHIND-34B MODEL
+The IntegrityError you're encountering is indeed related to the OneToOneField relationship between your Reservation and Table models. When you attempt to update a reservation and change the associated table, the database enforces the unique constraint on the table field, preventing the new reservation from being saved because the new table is already associated with another reservation.
+
+Given that your application logic prevents the selection of a reserved table and you've confirmed that the table in question is not reserved, the issue likely arises from how the OneToOneField relationship is managed during the update process.
+
+Understanding the Issue
+When you update a reservation and change the associated table, the old table is still connected to the reservation because of the OneToOneField relationship. This relationship ensures that each Table can only be associated with one Reservation at a time. If you try to associate a new Reservation with a Table that is already associated with another Reservation, the database will raise an IntegrityError due to the unique constraint violation.
+
+Solution
+To resolve this issue, you need to ensure that when you update a reservation and change the associated table, the old table is disassociated from the reservation before the new table is associated. This involves two steps:
+
+Disassociate the Old Table: Before updating the reservation with the new table, you need to disassociate the old table from the reservation. This can be done by setting the table field of the reservation to None or to a different table if you're implementing a system where tables can be reassigned.
+Update the Reservation: After disassociating the old table, you can proceed to update the reservation with the new table.
+Here's an adjusted version of your save method in ReserveTableForm that includes these steps:
+
+def save(self, commit=True):
+    if self.instance:
+        # Disassociate the old table from the reservation
+        self.instance.table = None
+        self.instance.save()
+
+        # Update the reservation with the new details
+        self.instance.time = self.cleaned_data['time']
+        self.instance.party_size = self.cleaned_data['party_size']
+        self.instance.table = self.table
+        if commit:
+            self.instance.save()
+        return self.instance
+    else:
+        user = self.request.user
+        table = self.table
+        reservation = Reservation(
+            user=user,
+            time=self.cleaned_data['time'],
+            party_size=self.cleaned_data['party_size'],
+            table=table,
+        )
+        if commit:
+            reservation.save()
+        return reservation
+Considerations
+Database Constraints: Ensure that your database schema and constraints are correctly set up to support this behavior. If you're allowing tables to be reassigned, you might need to adjust your database schema to allow NULL values for the table field in the Reservation model.
+Application Logic: Review your application logic to ensure that it correctly handles the disassociation of tables from reservations and the reassociation of tables with reservations. This might involve updating other parts of your application to reflect these changes.
+By disassociating the old table from the reservation before updating the reservation with the new table, you should be able to resolve the IntegrityError and allow for the update of reservations with new tables 235.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 16620324 > delete-related-object-via-onetoonefield
+python - Delete related object via OneToOneField - Stack Overflow
+Cascading delete is already provided by django, through on_delete attribute value CASCADE.It is also available for OneToOneField along with ForeignKey.. Foreign..
+
+2
+favicon-stackoverflow.com
+stackoverflow.com > questions > 9800490 > django-onetoonefield-in-which-model-should-i-put-it
+Django OneToOneField - in which model should I put it?
+OneToOneFields are really only for two purposes: 1) inheritance (Django uses these for its implementation of MTI) or 2) extension of a uneditable model (like..
+
+3
+favicon-docs.djangoproject.com
+docs.djangoproject.com > en > 5.0 > topics > db > examples > one_to_one
+One-to-one relationships | Django documentation | Django
+To define a one-to-one relationship, use OneToOneField. What follows are examples of operations that can be performed using the Python API facilities. Create a ..
+
+4
+favicon-medium.com
+medium.com > django-rest > one-to-one-relationships-onetoonefield-917cfd2e4ce3
+One-To-One Relationship (OneToOneField) | by Emre Cevik - Medium
+Django Model Relations — 1. One record in a table is associated with one and only one record in another table. - Car company can..
+
+5
+favicon-python-code.dev
+python-code.dev > articles > 26311711
+python - Understanding Relationships in Django Models: OneToOneField ...
+Access related objects easily using related_name in field definitions. Remember: Django models are powerful tools for defining data relationships. Understanding..
+
+1
+2
+3
+Thank you, you were right that it now violates the not-null constraint. Do I add null=True on the table in Reservation model?
+ANSWER | PHIND-34B MODEL
+Yes, adding null=True to the table field in your Reservation model is the correct approach to resolve the IntegrityError you're encountering. This error occurs because the OneToOneField in Django does not allow NULL values by default, and when you try to disassociate a table from a reservation by setting it to None, the database enforces the not-null constraint, leading to the error.
+
+By setting null=True for the table field, you're explicitly allowing NULL values for this field, which means a reservation can exist without being associated with a table. This is particularly useful in scenarios where you might need to temporarily disassociate a table from a reservation, such as when updating the reservation to a new table.
+
+Here's how you can adjust the table field in your Reservation model:
+
+class Reservation(models.Model):
+    # Other fields...
+    table = models.OneToOneField(Table, on_delete=models.CASCADE, null=True)
+    # Other fields...
+After making this change, you'll need to create and apply a new migration to update your database schema:
+
+python manage.py makemigrations
+python manage.py migrate
+This adjustment allows your application to handle cases where a reservation might not be associated with a table, which is necessary for your use case of updating reservations and potentially changing the associated table.
+
+Remember, when you allow NULL values for a OneToOneField, you should ensure that your application logic correctly handles cases where a reservation might not have an associated table. This might involve checking for None values before accessing the table attribute of a Reservation instance 1.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 46985372 > django-one-to-one-field-is-not-saving-violates-not-null-constraint
+Django One-to-One field is not saving (violates not-null ...
+Oct 28, 2017 — I'm trying to save a form that has a one-to-one field. However it keep getting an error null value in column..
+
+2
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > not-null-constraint-field-issue > 2917
+NOT NULL constraint field issue
+Jun 11, 2020 — Hello everyone ! I'm trying to create a little blog app but when I try to create a new post from..
+
+3
+favicon-github.com
+github.com > FactoryBoy > factory_boy > issues > 556
+Integrity error with OneToOneField and RelatedFactory #556
+Jan 10, 2019 — I wrote the code below, almost as in documentation example, and got: IntegrityError: null value in column "user_id" violates not-null constraint ..
+
+4
+favicon-www.reddit.com
+www.reddit.com > r > django > comments > zdtp9d > how_to_solve_not_null_constraint_failed
+How to solve: NOT NULL constraint failed: : r/django
+When I click on the button to submit the form, It gives me this error: "NOT NULL constraint failed:". Here's my field in my models.py:..
+
+5
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > not-null-constraint-failed-issue-when-creating-a-custom-user-model-with-onetoone-settings-field > 5077
+NOT NULL constraint failed issue when creating a Custom ...
+Nov 4, 2020 — Hi,. I have created a custom user model inheriting the AbstractUser class. This works fine. But I want to add a..
+
+1
+2
+Now I got a different error, it sais the problem is with this line of code:
+self.table.reserved = True
+
+Why is it calling my table a nonetype?
+AttributeError at /reservation/edit/778/3091
+'NoneType' object has no attribute 'reserved'
+Request Method:	POST
+Request URL:	http://127.0.0.1:8000/reservation/edit/778/3091
+Django Version:	5.0.2
+Exception Type:	AttributeError
+Exception Value:
+'NoneType' object has no attribute 'reserved'
+Exception Location:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\reservation\models.py, line 65, in save
+Raised during:	reservation.views.edit_reserve_table
+Python Executable:	C:\Users\nicla\OneDrive\Dokument\Coding projects\pp4-banana-palace\.venv\Scripts\python.exe
+Python Version:	3.12.0
+Python Path:
+['C:\\Users\\nicla\\OneDrive\\Dokument\\Coding projects\\pp4-banana-palace',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
+ 'C:\\Users\\nicla\\AppData\\Local\\Programs\\Python\\Python312',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv',
+ 'C:\\Users\\nicla\\OneDrive\\Dokument\\Coding '
+ 'projects\\pp4-banana-palace\\.venv\\Lib\\site-packages']
+Server time:	Mon, 25 Mar 2024 20:06:47 +0000
+ANSWER | PHIND-34B MODEL
+The error you're encountering, AttributeError: 'NoneType' object has no attribute 'reserved', indicates that self.table is None at the time you're trying to access its reserved attribute. This situation arises because you've set null=True for the table field in your Reservation model, allowing a reservation to exist without being associated with a table. When you attempt to update a reservation and disassociate it from its current table by setting self.table = None, and then try to access self.table.reserved, you're essentially trying to access an attribute of None, which leads to the AttributeError.
+
+Understanding the Issue
+The line self.table.reserved = True is attempting to set the reserved attribute of the table associated with the reservation. However, if self.table is None (which can happen if you've disassociated the reservation from its table), you cannot access any attributes of None, including reserved.
+
+Solution
+To resolve this issue, you should check if self.table is None before attempting to access its reserved attribute. If self.table is None, you should handle this case appropriately, perhaps by skipping the operation or by setting the reserved attribute of a different table if applicable.
+
+Here's an adjusted version of your save method that includes a check for None:
+
+def save(self, commit=True):
+    if self.instance:
+        # Disassociate the old table from the reservation
+        if self.instance.table is not None:
+            self.instance.table.reserved = False
+            self.instance.table.save()
+
+        # Update the reservation with the new details
+        self.instance.time = self.cleaned_data['time']
+        self.instance.party_size = self.cleaned_data['party_size']
+        self.instance.table = self.table
+        if commit:
+            self.instance.save()
+
+        # If a new table is associated, mark it as reserved
+        if self.table is not None:
+            self.table.reserved = True
+            self.table.save()
+
+        return self.instance
+    else:
+        # Your existing logic for creating a new reservation
+Additional Considerations
+Handling None Values: Always check if an object is None before accessing its attributes to avoid AttributeError.
+Database Constraints: Ensure that your database schema and constraints are correctly set up to support the logic you're implementing. For example, if you're allowing tables to be reassigned, you might need to adjust your database schema to allow NULL values for the table field in the Reservation model.
+By adding a check for None before accessing the reserved attribute of self.table, you can prevent the AttributeError and ensure that your application logic correctly handles cases where a reservation might not be associated with a table 13.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 8949252 > why-do-i-get-attributeerror-nonetype-object-has-no-attribute-something
+Why do I get AttributeError: 'NoneType' object has no ...
+Jan 20, 2012 — It means the object you are trying to access None . None is a Null variable in python. This type of..
+
+2
+favicon-www.reddit.com
+www.reddit.com > r > djangolearning > comments > wlodtu > getting_nonetype_object_has_no_attribute_id_error
+Getting 'NoneType' object has no attribute 'id' error
+Because, in my development server this error doesn't exist. And, it's the same Django version. (I know I can't run django with debug mode on,..
+
+3
+favicon-www.codeproject.com
+www.codeproject.com > Questions > 5340175 > How-do-I-fix-attributeerror-nonetype-object-has-no
+How do I fix : attributeerror: 'nonetype' object has no ...
+Aug 20, 2022 — The message is telling you that info_box.find did not find anythings, so it returned None . And a None object does..
+
+4
+favicon-github.com
+github.com > AUTOMATIC1111 > stable-diffusion-webui > issues > 5490
+Runtime error AND AttributeError: 'NoneType' object has ...
+Dec 6, 2022 — just paste it and try run again and non attribute error will be gone . 4..
+
+5
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > atributeerror-nonetype-object-has-no-atribute-meta > 15427
+AtributeError: 'NoneType' object has no atribute '_meta'
+Aug 14, 2022 — Hello everyone, I am now in part 7 of the tutorial. After following through all of that part, now I am..
+
+1
+2
+Thank you, now I can edit reservations. But now when I make a new reservation, they do not get the request.user as user. They all get the default user in model, why and how can I change it back?
+ANSWER | PHIND-34B MODEL
+The issue you're encountering with new reservations not being associated with the correct request.user and instead defaulting to a specified user in the model likely stems from how the user field is being set in your Reservation model. If the user field is defaulting to a specific user (e.g., default=3), it means that every new Reservation instance created without explicitly setting the user field will use this default value.
+
+To ensure that new reservations are associated with the request.user making the reservation, you need to adjust your form or view logic to explicitly set the user field of the Reservation instance to request.user when creating a new reservation.
+
+Adjusting the Form or View Logic
+When creating a new reservation, you should ensure that the user field is set to request.user. This can be done in the view where the reservation is being created. Here's an example adjustment to your view logic:
+
+def create_reservation(request):
+    if request.method == 'POST':
+        form = ReserveTableForm(request.POST)
+        if form.is_valid():
+            # Create a new reservation instance
+            reservation = form.save(commit=False)
+            # Set the user field to the current user
+            reservation.user = request.user
+            # Save the reservation instance
+            reservation.save()
+            messages.success(request, 'Reservation created successfully')
+            return redirect('some_view')
+    else:
+        form = ReserveTableForm()
+
+    return render(request, 'reservation/create_reservation.html', {'form': form})
+In this example, form.save(commit=False) creates a new Reservation instance without saving it to the database yet. Then, reservation.user = request.user explicitly sets the user field of the Reservation instance to the current user. Finally, reservation.save() saves the instance to the database with the correct user association.
+
+Ensuring Consistency
+Make sure that this logic is consistently applied wherever new reservations are being created in your application. This ensures that every new reservation is correctly associated with the user making the reservation, rather than defaulting to a predefined user.
+
+By adjusting your form or view logic to explicitly set the user field of new reservations to request.user, you can resolve the issue and ensure that new reservations are correctly associated with the user making the reservation 3.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 74186422 > django-user-model-override
+Django user model override
+Oct 24, 2022 — I need to override Django's user model, and change the fields "username" to "sr_usuario" and "password" to "sr_password", but I would..
+
+2
+favicon-docs.djangoproject.com
+docs.djangoproject.com > en > 5.0 > topics > forms > modelforms
+Creating forms from models
+Finally, note that you can override the form field used for a given model field. See Overriding the default fields below...
+
+3
+favicon-docs.djangoproject.com
+docs.djangoproject.com > en > 5.0 > topics > auth > customizing
+Customizing authentication in Django
+You can override Django's default database-based scheme, or you can use the default system in tandem with other systems...
+
+4
+favicon-medium.com
+medium.com > agatha-codes > options-objects-customizing-the-django-user-model-6d42b3e971a4
+Options & Objects: Customizing the Django User Model
+Use default fields from the Django User model ... Override the username field parameters in your models ... require it when a new user is..
+
+5
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > permissions-based-on-foreign-key > 3069
+Permissions based on foreign key?
+Jun 23, 2020 — Override the get_queryset method in your view (assuming you are using Class Based Views), check if the user is a superuser..
+
+1
+2
+Thank you, it seems to be working as intended now. But another thing is broken. It seems like the change we made to default value of time in reservation model has made this time formatting not work {{ reservation.time|date:"H:i" }} it no longer shows any time. Is the "H:i" no longer relevant since we fixed the default to be correct?
+ANSWER | PHIND-34B MODEL
+The issue you're encountering with the time formatting not working as expected, despite fixing the default value in the Reservation model, is likely due to the fact that the time field in your model is a CharField and not a DateTimeField or TimeField. The Django template filter date is designed to work with date and time objects, not with string representations of time.
+
+Given that your time field is a CharField and you're storing time as a string (e.g., "17:00"), you cannot directly use the date filter to format this field in your template. The date filter is intended for formatting DateField, DateTimeField, and TimeField objects, not strings.
+
+Solution
+To display the time stored in your time field in the desired format, you have a couple of options:
+
+Convert the String to a Time Object in Your View: Before passing the reservation object to your template, convert the time string to a datetime.time object. This way, you can use the time filter in your template.
+from datetime import datetime
+
+def your_view(request):
+    # Assuming you have a reservation object
+    reservation = Reservation.objects.get(pk=some_id)
+    # Convert the time string to a datetime.time object
+    reservation.time = datetime.strptime(reservation.time, '%H:%M').time()
+    return render(request, 'your_template.html', {'reservation': reservation})
+Then, in your template, you can use the time filter:
+
+{{ reservation.time|time:"H:i" }}
+Use a Custom Template Filter: If you prefer not to modify the view, you can create a custom template filter that formats the time string according to your needs.
+First, create a new file in your app's `templatetags` directory, for example, `time_filters.py`, and define your custom filter:
+from django import template
+from datetime import datetime
+
+register = template.Library()
+
+@register.filter
+def format_time(value):
+    return datetime.strptime(value, '%H:%M').strftime('%H:%M')
+Then, in your template, load the custom filter and use it:
+
+{% load time_filters %}
+{{ reservation.time|format_time }}
+Conclusion
+The date filter is not applicable to your time field because it's a CharField storing time as a string. You need to either convert the string to a time object in your view or use a custom template filter to format the time string in your template. Both approaches will allow you to display the time in the desired format 4.
+
+SUGGESTIONS
+SOURCES
+1
+favicon-stackoverflow.com
+stackoverflow.com > questions > 25141832 > django-date-filter-not-working-in-template
+Django date filter not working in template
+Aug 5, 2014 — Based on this post it looks like you can change the format your dates are saved into your DB so that..
+
+2
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > initialize-a-django-filter-with-date > 11565
+Initialize a Django Filter with Date - Forms & APIs
+Jan 13, 2022 — Using initial values as defaults is inconsistent with the behavior of Django forms. Default values prevent users from filtering by empty..
+
+3
+favicon-forum.djangoproject.com
+forum.djangoproject.com > t > using-date-template-filter-for-thousands-of-instances-solved > 4861
+Using date template filter for thousands of instances - Solved
+Oct 19, 2020 — I recently ran into a performance problem that was new to me. It stemmed from using the date template filter thousands..
+
+4
+favicon-docs.djangoproject.com
+docs.djangoproject.com > en > 5.0 > ref > templates > builtins
+Built-in template tags and filters
+Built-in template tags and filters¶. This document describes Django's built-in template tags and filters. It is recommended that you use the automatic .....
+
+5
+favicon-earthly.dev
+earthly.dev > blog > django-template-filters
+How to Use Django Template Filters
+Jul 19, 2023 — The default filter is used to set a default value to a variable. If the variable evaluates to False, it will..
+
+1
+2
+Thank you, I understand!
+ANSWER | PHIND-34B MODEL
+I'm glad to hear that everything is working as intended now! If you have any more questions or need further assistance in the future, feel free to ask. Happy coding!

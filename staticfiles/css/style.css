@@ -146,6 +146,10 @@ footer {
   font-family: var(--headings);
 }
 
+.asteriskField {
+  display: none;
+}
+
 /* Messages */
 #msg {
   padding: 1rem 3rem;
@@ -676,6 +680,11 @@ footer .footer-links li {
     font-size: 95%;
   }
 
+  /* Header */
+  .navbar-brand img {
+    width: 6rem;
+  }
+
   /* Main */
   #symbol-left {
     right: 60%;
@@ -737,6 +746,10 @@ footer .footer-links li {
 
   header li {
     font-size: 1rem;
+  }
+
+  .navbar-brand img {
+    width: 8rem;
   }
 
   /* Main */

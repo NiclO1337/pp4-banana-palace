@@ -128,10 +128,10 @@
                       {{ reservation.table.date|date:"l F d, Y" }}
                     </h5>
                     <p class="card-text">
-                      Time of arrival: {{ reservation.time|date:"H:i" }} -
+                      Time of arrival: {{ reservation.time }} -
                       Party size: {{ reservation.party_size }}
-                      Table: {{ reservation.table.id }}
-                      Reservation: {{ reservation.id }}
+                      <br>
+                      Notes: {{ reservation.notes }}
                     </p>
                   </div>
                   <div class="col-11 col-md-5 p-0 pt-1 pt-md-0 mx-auto">
