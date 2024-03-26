@@ -225,7 +225,7 @@ def edit_reserve_table(request, table_id, reservation_id):
             messages.error(request,
                            'This table has already been reserved, please \
 choose another table')
-            return redirect('reservation_page')
+            return redirect('account')
 
         elif user_form.is_valid() and customer_form.is_valid() and \
             reserve_table_form.is_valid() and reservation.user == request.user:
