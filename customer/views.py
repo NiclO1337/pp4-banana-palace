@@ -4,15 +4,18 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import EditUserForm, EditCustomerForm
 from reservation.models import Reservation
+from django.utils import timezone
 
-# Create your views here.
+
 @login_required()
 def account(request):
     """
     Display users account page
     """
 
-    reservations = Reservation.objects.filter(user=request.user)
+    today = timezone.now().date()
+    reservations = Reservation.objects.filter(
+        user=request.user, table__date__gte=today)
 
     return render(request, 'account/account.html',
                   {'reservations': reservations})
