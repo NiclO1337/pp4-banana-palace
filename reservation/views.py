@@ -267,6 +267,7 @@ def delete_reservation(request, reservation_id):
 
         if reservation.user == request.user:
             reservation.table.reserved = False
+            reservation.table.save()
             reservation.delete()
             messages.success(request, 'Your reservation has been successfully \
 deleted. We hope to see you soon!')
