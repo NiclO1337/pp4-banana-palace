@@ -11,10 +11,10 @@
         <div class="col-1">
             Time:
         </div>
-        <div class="col-2">
+        <div class="col-2 text-start">
             Last name:
         </div>
-        <div class="col">
+        <div class="col text-start">
             Notes:
         </div>
     </div>
@@ -26,8 +26,8 @@
                 <div class="col-1">{{ forloop.counter }}</div>
                 <div class="col-1">{{ table.reservation.party_size }}</div>
                 <div class="col-1">{{ table.reservation.time }}</div>
-                <div class="col-2">{{ table.reservation.user.last_name }}</div>
-                <div class="col">{{ table.reservation.notes }}</div>
+                <div class="col-2 text-start">{{ table.reservation.user.last_name }}</div>
+                <div class="col text-start">{{ table.reservation.notes }}</div>
             </div>
 
         {% endif %}

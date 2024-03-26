@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .models import Table, Reservation
+from .models import Table, Reservation, Restaurant
 from datetime import date
 from .forms import PickDateForm, ReserveTableForm
 from customer.forms import EditUserFormReservation, EditCustomerForm
@@ -9,12 +9,15 @@ import random
 from django.contrib.auth.models import User
 
 
-@login_required
 def reservation_page(request):
 
     # Get number of avalible tables from the resturant
     # associated with the logged in user
-    nr_of_tables = request.user.customer.restaurant.avalible_tables
+    if request.user.is_authenticated:
+        nr_of_tables = request.user.customer.restaurant.avalible_tables
+    # or first restaurant in the database
+    else:
+        nr_of_tables = Restaurant.objects.all().first()
 
     # get all tables and reservations for todays date
     # (today is when page is loaded)
@@ -204,6 +207,7 @@ def edit_reservation(request, reservation_id):
                    })
 
 
+@login_required
 def edit_reserve_table(request, table_id, reservation_id):
 
     table = get_object_or_404(Table, pk=table_id)
@@ -262,6 +266,7 @@ def delete_reservation(request, reservation_id):
         reservation = get_object_or_404(Reservation, pk=reservation_id)
 
         if reservation.user == request.user:
+            reservation.table.reserved = False
             reservation.delete()
             messages.success(request, 'Your reservation has been successfully \
 deleted. We hope to see you soon!')
