@@ -10,6 +10,6 @@ urlpatterns = [
     path('edit/<int:reservation_id>/<int:table_id>',
          views.edit_reserve_table, name='edit_reserve_table'),
 
-    path('delete-reservation/',
+    path('delete-reservation/<int:reservation_id>',
          views.delete_reservation, name='delete_reservation' )
 ]

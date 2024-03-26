@@ -256,16 +256,20 @@ necessairy information below')
 
 # Delete reservation page, get ID, check request.user vs user
 
-def delete_reservation(request):
+def delete_reservation(request, reservation_id):
     if request.method == 'POST':
 
-        reservation = request.user
+        reservation = get_object_or_404(Reservation, pk=reservation_id)
 
-        delete_reservation = User.objects.get(reservation)
+        if reservation.user == request.user:
+            reservation.delete()
+            messages.success(request, 'Your reservation has been successfully \
+deleted. We hope to see you soon!')
+        else:
+            messages.error(request, 'Something went wrong, please \
+try again or contact our support.')
 
-        return render(request, 'reservation/delete_reservation.html', {
-            'reservation': reservation,
-        })
+        return redirect(to='account')
 
 
     else:
