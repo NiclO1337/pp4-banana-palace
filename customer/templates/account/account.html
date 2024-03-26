@@ -135,10 +135,14 @@
                     </p>
                   </div>
                   <div class="col-11 col-md-5 p-0 pt-1 pt-md-0 mx-auto">
-                    <a href="{% url 'edit_reservation' reservation.id %}" class="text-decoration-none">
+                    <a
+                      href="{% url 'edit_reservation' reservation.id %}"
+                      class="text-decoration-none">
                       <button class="btn-iconic-reverse me-2">Edit</button>
                     </a>
-                    <a href="#" class="text-decoration-none">
+                    <a
+                      href="{% url 'delete_reservation' %}"
+                      class="text-decoration-none">
                       <button class="btn-warning">Delete</button>
                     </a>
                   </div>

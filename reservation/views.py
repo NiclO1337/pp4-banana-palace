@@ -6,6 +6,7 @@ from datetime import date
 from .forms import PickDateForm, ReserveTableForm
 from customer.forms import EditUserFormReservation, EditCustomerForm
 import random
+from django.contrib.auth.models import User
 
 
 @login_required
@@ -255,3 +256,17 @@ necessairy information below')
 
 # Delete reservation page, get ID, check request.user vs user
 
+def delete_reservation(request):
+    if request.method == 'POST':
+
+        reservation = request.user
+
+        delete_reservation = User.objects.get(reservation)
+
+        return render(request, 'reservation/delete_reservation.html', {
+            'reservation': reservation,
+        })
+
+
+    else:
+        return render(request, 'reservation/delete_reservation.html')

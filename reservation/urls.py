@@ -9,4 +9,7 @@ urlpatterns = [
          views.edit_reservation, name='edit_reservation'),
     path('edit/<int:reservation_id>/<int:table_id>',
          views.edit_reserve_table, name='edit_reserve_table'),
+
+    path('delete-reservation/',
+         views.delete_reservation, name='delete_reservation' )
 ]
