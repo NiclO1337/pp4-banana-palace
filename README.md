@@ -274,8 +274,8 @@ Iteration process were tracked as [GitHub milestones](https://github.com/NiclO13
 <details><summary>Screenshot of the start of iteration 2</summary> <p align="left"><img src="./documentation/images/iteration-2-start.png" alt="Beginning of iteration 2" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 2</summary> <p align="left"><img src="./documentation/images/iteration-2-end.png" alt="end of iteration 2" width="800"/></p> </details>
 <details><summary>Screenshot of the start of iteration 3</summary> <p align="left"><img src="./documentation/images/iteration-3-start.png" alt="Beginning of iteration 3" width="800"/></p> </details>
-<details><summary>Screenshot of the end of iteration 3</summary> <p align="left"><img src="TODO" alt="end of iteration 3" width="800"/></p> </details>
-<details><summary>Screenshot of the start of iteration 4</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 4" width="800"/></p> </details>
+<details><summary>Screenshot of the end of iteration 3</summary> <p align="left"><img src="./documentation/images/iteration-3-end.png" alt="end of iteration 3" width="800"/></p> </details>
+<details><summary>Screenshot of the start of iteration 4</summary> <p align="left"><img src="./documentation/images/iteration-4-start.png" alt="Beginning of iteration 4" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 4</summary> <p align="left"><img src="TODO" alt="end of iteration 4" width="800"/></p> </details>
 <details><summary>Screenshot of the start of iteration 5</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 5" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 5</summary> <p align="left"><img src="TODO" alt="end of iteration 5" width="800"/></p> </details>
