@@ -109,7 +109,8 @@ button,
 input,
 .form-control,
 #id_party_size,
-#id_time {
+#id_time,
+#id_category {
   border: var(--border-width-solid-iconic) var(--color-primary);
   background-color: var(--color-tertiary-bg);
   color: var(--color-primary);
@@ -124,7 +125,10 @@ input,
 input:hover,
 input:focus,
 #id_party_size:hover,
-#id_time:hover {
+#id_time:hover,
+#id_category:hover,
+#id_content:hover,
+#id_price_1:hover {
   border: var(--border-width-solid-iconic) var(--color-secondary);
 }
 
