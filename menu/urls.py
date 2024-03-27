@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.MenuPage.as_view(), name='menu_page'),
-    path('edit/', views.edit_meal, name='edit_meal'),
-    path('add/', views.add_meal, name='add_meal'),
-    path('delete/', views.delete_meal, name='delete_meal'),
+    path('edit/', views.edit_menu_item, name='edit_menu_item'),
+    path('add/', views.add_menu_item, name='add_menu_item'),
+    path('delete/', views.delete_menu_item, name='delete_menu_item'),
 ]

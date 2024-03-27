@@ -1,27 +1,27 @@
 from django.shortcuts import render
 from django.views import generic
-from home.models import Restaurant
+from .models import Menu
 
 # Create your views here.
 class MenuPage(generic.ListView):
 
-    queryset = Restaurant.objects.all()
+    queryset = Menu.objects.all()
     template_name = 'menu/menu.html'
 
 
-def add_meal(request):
+def add_menu_item(request):
 
-    return render(request, 'menu/add_meal.html')
-
-
-def edit_meal(request, meal_id):
+    return render(request, 'menu/add_menu_item.html')
 
 
-    return render(request, 'menu/edit_meal.html',)
+def edit_menu_item(request, meal_id):
 
 
-def delete_meal(request, meal_id):
+    return render(request, 'menu/edit_menu_item.html',)
 
 
-    return render(request, 'menu/delete_meal.html',)
+def delete_menu_item(request, meal_id):
+
+
+    return render(request, 'menu/delete_menu_item.html',)
 
