@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'customer',
     'phonenumber_field',
     'reservation',
+    'menu',
 ]
 
 SITE_ID = 1
