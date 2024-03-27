@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.instagram',
     'crispy_forms',
     'crispy_bootstrap5',
+    'djmoney',
     'home',
     'about',
     'customer',
