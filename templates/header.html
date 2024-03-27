@@ -6,6 +6,7 @@
 {% url 'account' as account_url %}
 {% url 'reservation_page' as reservation_page_url %}
 {% url 'home' as home_url %}
+{% url 'menu_page' as menu_url %}
 
 <header class="sticky-top">
   <!-- Header sticks to top of screen at all times -->
@@ -59,8 +60,14 @@
             </a>
           </li>
           {% endif %}
-          <li class="nav-item ms-auto me-3 mx-dm-1">
-            <a class="nav-link px-0 px-lg-2" href="#">Menu</a>
+          <li
+            class="nav-item ms-auto me-3 mx-dm-1{% if request.path == menu_url %}active"
+            aria-current="page{% endif %}">
+            <a
+              class="nav-link px-0 px-lg-2"
+              href="{% url 'menu_page' %}">
+              Menu
+            </a>
           </li>
           <li class="nav-item ms-auto me-3 mx-dm-1">
             <a

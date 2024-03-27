@@ -1,10 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
+from home.models import Restaurant
 
 # Create your views here.
 class MenuPage(generic.ListView):
 
-    template_name = 'menu/index.html'
+    queryset = Restaurant.objects.all()
+    template_name = 'menu/menu.html'
 
 
 def add_meal(request):
