@@ -20,11 +20,11 @@
 {% if user.is_staff %}
 
     <div class="container text-center account-management mb-3">
-        <form method="POST">
+        <form method="POST" enctype="multipart/form-data">
             {{ menu_item_form | crispy }}
             {% csrf_token %}
             <button type="submit" class="btn-iconic">
-                Add menu item
+                Add item
                 <i class="fa-solid fa-plus"></i>
             </button>
         </form>

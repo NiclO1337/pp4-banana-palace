@@ -12,7 +12,7 @@ class MenuItemForm(forms.ModelForm):
     price = MoneyField()
     category = forms.ChoiceField(choices=Menu.CATEGORY_CHOICES)
     image = forms.ImageField()
-    is_current = forms.BooleanField
+    is_current = forms.BooleanField()
 
 
     class Meta:

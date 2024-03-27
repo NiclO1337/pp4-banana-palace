@@ -16,14 +16,15 @@ def add_menu_item(request):
 
     if request.method == 'POST':
 
-        menu_item_form = MenuItemForm(request.POST, instance=request.user)
+        menu_item_form = MenuItemForm(request.POST, request.FILES,
+                                      instance=request.user)
 
         if menu_item_form.is_valid() and request.user.is_staff:
             menu_item_form.save()
-            messages.SUCCESS(request, 'Woohoo')
-            redirect('menu_page')
+            messages.success(request, 'Woohoo')
+            return redirect('menu_page')
         else:
-            messages.ERROR(request, 'Naehae')
+            messages.error(request, 'Naehae')
 
     else:
         menu_item_form = MenuItemForm(instance=request.user)
