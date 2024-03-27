@@ -6,7 +6,6 @@ from datetime import date
 from .forms import PickDateForm, ReserveTableForm
 from customer.forms import EditUserFormReservation, EditCustomerForm
 import random
-from django.contrib.auth.models import User
 
 
 def reservation_page(request):
