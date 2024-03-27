@@ -11,17 +11,17 @@ class MenuPage(generic.ListView):
 
 def add_menu_item(request):
 
-    return render(request, 'menu/add_menu_item.html')
+    return render(request, 'menu/add-menu-item.html')
 
 
 def edit_menu_item(request, meal_id):
 
 
-    return render(request, 'menu/edit_menu_item.html',)
+    return render(request, 'menu/edit-menu-item.html',)
 
 
 def delete_menu_item(request, meal_id):
 
 
-    return render(request, 'menu/delete_menu_item.html',)
+    return render(request, 'menu/delete-menu-item.html',)
 

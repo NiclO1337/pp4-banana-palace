@@ -1,0 +1,35 @@
+<!-- prettier-ignore -->
+{% extends 'base.html' %}
+{% load static %}
+{% block head_title %}
+- Add menu item
+{% endblock %}
+
+{% block page-specific-css %}
+<!-- <link rel="stylesheet" href="{% static './css/' %}" /> -->
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html head -->
+{% block extra_head %}{% endblock extra_head %}
+
+<!-- prettier-ignore -->
+{% block page-content %}
+
+
+{% if user.is_staff %}
+
+    <div class="container text-center">
+        Form
+    </div>
+
+{% endif %}
+
+<!-- prettier-ignore -->
+{% endblock %}
+
+{% block page-specific-js %}
+<!-- <script src="{% static './js/.js' %}"></script> -->
+{% endblock %}
+
+<!-- If anything extra is needed for specific page in html body -->
+{% block extra_body %}{% endblock extra_body %}

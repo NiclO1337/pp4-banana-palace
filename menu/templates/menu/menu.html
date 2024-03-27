@@ -16,14 +16,23 @@
 {% block page-content %}
 
 <section class="container text-center">
-    <h1>
-        Menu
-    </h1>
-
+  <h1>Menu</h1>
+  <p>Current menu items</p>
 </section>
 
-<a href="{% url 'add_' %}"><button></button></a>
+{% if user.is_staff %}
 
+    <div class="container text-center mt-5">
+        <a href="{% url 'add_menu_item' %}">
+            <button class="btn-iconic">
+                Add menu item
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </a>
+        <p>Old menu items</p>
+    </div>
+
+{% endif %}
 
 <!-- prettier-ignore -->
 {% endblock %}
