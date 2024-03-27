@@ -17,5 +17,11 @@ def add_meal(request):
 def edit_meal(request, meal_id):
 
 
-
     return render(request, 'menu/edit_meal.html',)
+
+
+def delete_meal(request, meal_id):
+
+
+    return render(request, 'menu/delete_meal.html',)
+
