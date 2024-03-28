@@ -54,13 +54,13 @@ def add_menu_item(request):
     })
 
 
-def edit_menu_item(request, meal_id):
+def edit_menu_item(request, menu_item_id):
 
 
     return render(request, 'menu/edit-menu-item.html',)
 
 
-def delete_menu_item(request, meal_id):
+def delete_menu_item(request, menu_item_id):
 
 
     return render(request, 'menu/delete-menu-item.html',)
