@@ -6,13 +6,26 @@ from django.contrib import messages
 
 
 # Create your views here.
-class MenuPage(generic.ListView):
+def menu_page(request):
 
-    queryset = MenuItem.objects.all()
-    template_name = 'menu/menu.html'
+    starters = MenuItem.objects.filter(category='Starters')
+    mains = MenuItem.objects.filter(category='Mains')
+    desserts = MenuItem.objects.filter(category='Desserts')
+    drinks = MenuItem.objects.filter(category='Drinks')
+    kids = MenuItem.objects.filter(category='Kids')
+
+    return render(request, 'menu/menu.html', {
+        'starters': starters,
+        'mains': mains,
+        'desserts': desserts,
+        'drinks': drinks,
+        'kids': kids,
+    })
 
 
 def add_menu_item(request):
+
+
 
     if request.method == 'POST':
 
