@@ -19,3 +19,12 @@ class MenuItemForm(forms.ModelForm):
         model = MenuItem
         fields = ['title', 'content', 'price', 'category', 'image',
                   'is_current']
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.image.name = f"{instance.title.lower(
+            ).replace(' ', '-')}.{instance.image.name.split('.')[-1]}"
+        if commit:
+            instance.save()
+        return instance
+
