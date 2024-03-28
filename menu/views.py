@@ -8,11 +8,15 @@ from django.contrib import messages
 # Create your views here.
 def menu_page(request):
 
-    starters = MenuItem.objects.filter(category='Starters')
-    mains = MenuItem.objects.filter(category='Mains')
-    desserts = MenuItem.objects.filter(category='Desserts')
-    drinks = MenuItem.objects.filter(category='Drinks')
-    kids = MenuItem.objects.filter(category='Kids')
+    starters = MenuItem.objects.filter(category='Starters').filter(
+        is_current=True)
+    mains = MenuItem.objects.filter(category='Mains').filter(is_current=True)
+    desserts = MenuItem.objects.filter(category='Desserts').filter(
+        is_current=True)
+    drinks = MenuItem.objects.filter(category='Drinks').filter(is_current=True)
+    kids = MenuItem.objects.filter(category='Kids').filter(is_current=True)
+
+    inactives = MenuItem.objects.filter(is_current=False)
 
     return render(request, 'menu/menu.html', {
         'starters': starters,
@@ -20,6 +24,7 @@ def menu_page(request):
         'desserts': desserts,
         'drinks': drinks,
         'kids': kids,
+        'inactives': inactives,
     })
 
 

@@ -101,12 +101,18 @@
 
     <div class="container text-center mt-5">
         <a href="{% url 'add_menu_item' %}">
-            <button class="btn-iconic">
+            <button class="btn-iconic mb-3">
                 Add menu item
                 <i class="fa-solid fa-plus"></i>
             </button>
         </a>
-        <p>Old menu items</p>
+
+        {% for menuitem in inactives %}
+
+            <p class="special-font fw-bold fs-4">{{ menuitem.title }}</p>
+
+        {% endfor %}
+
     </div>
 
 {% endif %}
