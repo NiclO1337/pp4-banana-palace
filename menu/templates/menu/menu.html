@@ -29,10 +29,17 @@
             <h3 class="fs-4">{{ starter.title }}
 
                 {% if user.is_staff %}
-                <a class="text-decoration-none"
-                    href="{% url 'edit_menu_item' starter.id %}">
-                    <button class="btn-iconic fs-6 align-top">Edit</button>
-                </a>
+                    <a class="text-decoration-none"
+                        href="{% url 'edit_menu_item' starter.id %}">
+                        <button class="btn-iconic fs-6 align-top">Edit</button>
+                    </a>
+                {% endif %}
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' starter.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
                 {% endif %}
 
             </h3>
@@ -53,10 +60,17 @@
             <h3 class="fs-4">{{ main.title }}
 
                 {% if user.is_staff %}
-                <a class="text-decoration-none"
-                    href="{% url 'edit_menu_item' main.id %}">
-                    <button class="btn-iconic fs-6 align-top">Edit</button>
-                </a>
+                    <a class="text-decoration-none"
+                        href="{% url 'edit_menu_item' main.id %}">
+                        <button class="btn-iconic fs-6 align-top">Edit</button>
+                    </a>
+                {% endif %}
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' main.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
                 {% endif %}
 
             </h3>
@@ -77,10 +91,17 @@
             <h3 class="fs-4">{{ dessert.title }}
 
                 {% if user.is_staff %}
-                <a class="text-decoration-none"
-                    href="{% url 'edit_menu_item' dessert.id %}">
-                    <button class="btn-iconic fs-6 align-top">Edit</button>
-                </a>
+                    <a class="text-decoration-none"
+                        href="{% url 'edit_menu_item' dessert.id %}">
+                        <button class="btn-iconic fs-6 align-top">Edit</button>
+                    </a>
+                {% endif %}
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' dessert.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
                 {% endif %}
 
             </h3>
@@ -101,10 +122,17 @@
             <h3 class="fs-4">{{ drink.title }}
 
                 {% if user.is_staff %}
-                <a class="text-decoration-none"
-                    href="{% url 'edit_menu_item' drink.id %}">
-                    <button class="btn-iconic fs-6 align-top">Edit</button>
-                </a>
+                    <a class="text-decoration-none"
+                        href="{% url 'edit_menu_item' drink.id %}">
+                        <button class="btn-iconic fs-6 align-top">Edit</button>
+                    </a>
+                {% endif %}
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' drink.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
                 {% endif %}
 
             </h3>
@@ -125,10 +153,17 @@
             <h3 class="fs-4">{{ kid.title }}
 
                 {% if user.is_staff %}
-                <a class="text-decoration-none"
-                    href="{% url 'edit_menu_item' kid.id %}">
-                    <button class="btn-iconic fs-6 align-top">Edit</button>
-                </a>
+                    <a class="text-decoration-none"
+                        href="{% url 'edit_menu_item' kid.id %}">
+                        <button class="btn-iconic fs-6 align-top">Edit</button>
+                    </a>
+                {% endif %}
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' kid.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
                 {% endif %}
 
             </h3>
@@ -161,6 +196,14 @@
                     href="{% url 'edit_menu_item' menuitem.id %}">
                     <button class="btn-iconic fs-6 align-top">Edit</button>
                 </a>
+
+                {% if user.customer.is_owner %}
+                    <a class="text-decoration-none"
+                        href="{% url 'delete_menu_item' menuitem.id %}">
+                        <button class="btn-warning fs-6 align-top">Delete</button>
+                    </a>
+                {% endif %}
+
             </h3>
 
         {% endfor %}
