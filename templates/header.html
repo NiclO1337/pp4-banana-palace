@@ -53,7 +53,7 @@
         >
         <ul class="navbar-nav">
           <!-- Admin quick login button dev -->
-          {% if user.is_superuser or user.customer.is_owner %}
+          {% if user.is_superuser %}
           <li class="nav-item ms-auto me-3 mx-dm-1">
             <a class="nav-link px-0 px-lg-2" href="{% url 'admin:index' %}">
               Admin <i class="fa-solid fa-key d-none d-lg-inline"></i>
@@ -75,7 +75,7 @@
               aria-current="page{% endif %}"
               href="{% url 'about' %}">
               <!-- prettier-ignore -->
-              {% if user.is_superuser or user.customer.is_owner %}
+              {% if user.is_superuser %}
               About
               {% else %}
               Hours & location
