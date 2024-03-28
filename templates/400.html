@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+- Error 400 - Bad Request
+{% endblock %}
+
+{% block page-content %}
+
+<section class="container text-center">
+
+    <h1>Error 400 - Bad Request</h1>
+    <p>Oops! It seems that the request you made was invalid or could not be understood by the server.</p>
+    <p>Please check your request and try again.</p>
+
+    <a href="{% url 'home' %}">
+        <button class="mt-5 btn-iconic">Return to the home page</button>
+    </a>
+
+</section>
+
+{% endblock %}

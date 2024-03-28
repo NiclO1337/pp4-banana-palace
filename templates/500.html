@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block head_title %}
+- Error 500 - Internal Server Error
+{% endblock %}
+
+{% block page-content %}
+
+<section class="container text-center">
+
+    <h1>Error 500 - Internal Server Error</h1>
+    <p>Oops! Something went wrong on the server.</p>
+    <p>Please try again later.</p>
+
+    <a href="{% url 'home' %}">
+        <button class="mt-5 btn-iconic">Return to the home page</button>
+    </a>
+
+</section>
+
+{% endblock %}
