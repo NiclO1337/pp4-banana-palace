@@ -84,7 +84,7 @@ def delete_menu_item(request, menu_item_id):
 
         menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
 
-        if request.user.is_owner:
+        if request.user.customer.is_owner:
             menu_item.delete()
             messages.success(request, 'Menu item deleted successfully!')
             return redirect('menu_page')
