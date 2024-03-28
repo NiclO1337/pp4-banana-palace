@@ -1,5 +1,4 @@
-from django.shortcuts import render, redirect
-from django.views import generic
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import MenuItem
 from .forms import MenuItemForm
 from django.contrib import messages
@@ -33,18 +32,16 @@ def menu_page(request):
 
 def add_menu_item(request):
 
-
-
     if request.method == 'POST':
 
         menu_item_form = MenuItemForm(request.POST, request.FILES)
 
         if menu_item_form.is_valid() and request.user.is_staff:
             menu_item_form.save()
-            messages.success(request, 'Woohoo')
+            messages.success(request, 'Menu item added successfully!')
             return redirect('menu_page')
         else:
-            messages.error(request, 'Naehae')
+            messages.error(request, 'Something went wrong!')
 
     else:
         menu_item_form = MenuItemForm(initial={'is_current': True})
@@ -56,8 +53,26 @@ def add_menu_item(request):
 
 def edit_menu_item(request, menu_item_id):
 
+    menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
 
-    return render(request, 'menu/edit-menu-item.html',)
+    if request.method == 'POST':
+
+        menu_item_form = MenuItemForm(
+            request.POST, request.FILES, instance=menu_item)
+
+        if menu_item_form.is_valid() and request.user.is_staff:
+            menu_item_form.save()
+            messages.success(request, 'Menu item updated successfully!')
+            return redirect('menu_page')
+        else:
+            messages.error(request, 'Something went wrong!')
+
+    else:
+        menu_item_form = MenuItemForm(instance=menu_item)
+
+    return render(request, 'menu/edit-menu-item.html', {
+        'menu_item_form': menu_item_form,
+    })
 
 
 def delete_menu_item(request, menu_item_id):

@@ -12,8 +12,7 @@ class MenuItemForm(forms.ModelForm):
     price = MoneyField()
     category = forms.ChoiceField(choices=MenuItem.CATEGORY_CHOICES)
     image = forms.ImageField()
-    is_current = forms.BooleanField()
-
+    is_current = forms.BooleanField(required=False)
 
     class Meta:
         model = MenuItem
@@ -27,4 +26,3 @@ class MenuItemForm(forms.ModelForm):
         if commit:
             instance.save()
         return instance
-
