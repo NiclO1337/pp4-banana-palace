@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import generic
-from .models import Menu
+from .models import MenuItem
 from .forms import MenuItemForm
 from django.contrib import messages
 
@@ -8,7 +8,7 @@ from django.contrib import messages
 # Create your views here.
 class MenuPage(generic.ListView):
 
-    queryset = Menu.objects.all()
+    queryset = MenuItem.objects.all()
     template_name = 'menu/menu.html'
 
 

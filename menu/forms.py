@@ -1,5 +1,5 @@
 from django import forms
-from .models import Menu
+from .models import MenuItem
 from djmoney.models.fields import MoneyField
 
 
@@ -10,12 +10,12 @@ class MenuItemForm(forms.ModelForm):
         'maxlength': '150',
     }))
     price = MoneyField()
-    category = forms.ChoiceField(choices=Menu.CATEGORY_CHOICES)
+    category = forms.ChoiceField(choices=MenuItem.CATEGORY_CHOICES)
     image = forms.ImageField()
     is_current = forms.BooleanField()
 
 
     class Meta:
-        model = Menu
+        model = MenuItem
         fields = ['title', 'content', 'price', 'category', 'image',
                   'is_current']
