@@ -15,10 +15,87 @@
 <!-- prettier-ignore -->
 {% block page-content %}
 
-<section class="container text-center">
-  <h1>Menu</h1>
-  <p>Current menu items</p>
+<section id="menu-page" class="container text-center">
+    <h1 class="mb-3">Menu</h1>
+
+
+    {% if starters %}
+
+        <hr>
+        <h2 class="mt-4 mb-3">Starters</h2>
+
+        {% for starter in starters %}
+
+            <h3>{{ starter.title }}</h3>
+            <p class="mb-1">{{ starter.content }}</p>
+            <p class="mt-0">{{ starter.price }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if mains %}
+
+        <hr>
+        <h2 class="mt-4 mb-3">Main courses</h2>
+
+        {% for main in mains %}
+
+            <h3>{{ main.title }}</h3>
+            <p class="mb-1">{{ main.content }}</p>
+            <p class="mt-0">{{ main.price }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if desserts %}
+
+        <hr>
+        <h2 class="mt-4 mb-3">Desserts</h2>
+
+        {% for dessert in desserts %}
+
+            <h3>{{ dessert.title }}</h3>
+            <p class="mb-1">{{ dessert.content }}</p>
+            <p class="mt-0">{{ dessert.price }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if drinks %}
+
+        <hr>
+        <h2 class="mt-4 mb-3">Drinks</h2>
+
+        {% for drink in drinks %}
+
+            <h3>{{ drink.title }}</h3>
+            <p class="mb-1">{{ drink.content }}</p>
+            <p class="mt-0">{{ drink.price }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if kids %}
+
+        <hr>
+        <h2 class="mt-4 mb-3">Kids</h2>
+
+        {% for kid in kids %}
+
+            <h3>{{ kid.title }}</h3>
+            <p class="mb-1">{{ kid.content }}</p>
+            <p class="mt-0">{{ kid.price }}</p>
+
+        {% endfor %}
+
+    {% endif %}
+
 </section>
+
 
 {% if user.is_staff %}
 
