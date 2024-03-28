@@ -16,8 +16,7 @@ def add_menu_item(request):
 
     if request.method == 'POST':
 
-        menu_item_form = MenuItemForm(request.POST, request.FILES,
-                                      instance=request.user)
+        menu_item_form = MenuItemForm(request.POST, request.FILES)
 
         if menu_item_form.is_valid() and request.user.is_staff:
             menu_item_form.save()
@@ -27,7 +26,7 @@ def add_menu_item(request):
             messages.error(request, 'Naehae')
 
     else:
-        menu_item_form = MenuItemForm(instance=request.user)
+        menu_item_form = MenuItemForm(initial={'is_current': True})
 
     return render(request, 'menu/add-menu-item.html', {
         'menu_item_form': menu_item_form,
