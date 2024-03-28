@@ -9,12 +9,15 @@ from django.contrib import messages
 def menu_page(request):
 
     starters = MenuItem.objects.filter(category='Starters').filter(
-        is_current=True)
-    mains = MenuItem.objects.filter(category='Mains').filter(is_current=True)
+        is_current=True).order_by('price')
+    mains = MenuItem.objects.filter(category='Mains').filter(
+        is_current=True).order_by('price')
     desserts = MenuItem.objects.filter(category='Desserts').filter(
-        is_current=True)
-    drinks = MenuItem.objects.filter(category='Drinks').filter(is_current=True)
-    kids = MenuItem.objects.filter(category='Kids').filter(is_current=True)
+        is_current=True).order_by('price')
+    drinks = MenuItem.objects.filter(category='Drinks').filter(
+        is_current=True).order_by('price')
+    kids = MenuItem.objects.filter(category='Kids').filter(
+        is_current=True).order_by('price')
 
     inactives = MenuItem.objects.filter(is_current=False)
 

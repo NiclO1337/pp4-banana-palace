@@ -16,6 +16,7 @@ Account page
 Account management
 Reservation page
 Information pages
+Menu page
 Footer
 Media queries
 
@@ -605,6 +606,23 @@ hr:has(+ h2) {
 
 #back-one-page {
   font-size: 100%;
+}
+
+/* --------------------------
+--------- Menu Page ---------
+-------------------------- */
+
+#menu-page h1 {
+  font-size: 2.5rem;
+}
+
+#menu-page {
+  max-width: 40rem;
+}
+
+#menu-page p {
+  max-width: 30rem;
+  margin: 1rem auto;
 }
 
 /* --------------------------
