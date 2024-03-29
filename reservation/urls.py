@@ -11,5 +11,8 @@ urlpatterns = [
          views.edit_reserve_table, name='edit_reserve_table'),
 
     path('delete-reservation/<int:reservation_id>',
-         views.delete_reservation, name='delete_reservation' )
+         views.delete_reservation, name='delete_reservation'),
+
+    path('delete_old_tables', views.delete_old_tables,
+         name='delete_old_tables'),
 ]

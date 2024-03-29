@@ -6,6 +6,7 @@ from datetime import date
 from .forms import PickDateForm, ReserveTableForm
 from customer.forms import EditUserFormReservation, EditCustomerForm
 import random
+from datetime import datetime
 
 
 def reservation_page(request):
@@ -279,3 +280,16 @@ try again or contact our support.')
 
     else:
         return render(request, 'reservation/delete_reservation.html')
+
+
+@login_required
+def delete_old_tables(request):
+    current_date = datetime.now().date()
+
+    tables = Table.objects.filter(date__lt=current_date)
+
+    if request.user.customer.is_owner:
+        for table in tables:
+            table.delete()
+
+    return redirect('account')

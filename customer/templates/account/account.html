@@ -41,7 +41,7 @@
               Delete old tables regularly to speed<br>up the website.
               Current old tables in database: {{ tables.count }}
             </p>
-            <a class="my-3" href="">
+            <a href="{% url 'delete_old_tables' %}">
               <button class="btn-warning">Delete old tables</button>
             </a>
 
