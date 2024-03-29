@@ -4,102 +4,33 @@
   <div class="row mx-auto my-auto justify-content-center">
     <div id="carouselMenuItem" class="carousel slide px-md-4 px-lg-5">
       <div class="carousel-inner" role="listbox" aria-label="Menu item images">
-        <div class="carousel-item active">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/1.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/2.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
+
+
+
+        {% for menu_item in menu_items %}
+
+          <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <div class="col-10 col-md-3 mx-auto">
+              <div class="card">
+                <div class="card-img">
+                  <img
+                    src="{{ menu_item.image.url }}"
+                    role="option"
+                    alt="img"
+                    class="img-fluid px-md-3" />
+                </div>
+                <div class="card-body">
+                  <p class="card-text special-font">{{ menu_item.title }}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/3.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/4.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/5.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="col-10 col-md-3 mx-auto">
-            <div class="card">
-              <div class="card-img">
-                <img
-                  src="{% static './images/6.png' %}"
-                  role="option"
-                  alt="img"
-                  class="img-fluid px-md-3" />
-              </div>
-              <div class="card-body">
-                <p class="card-text headings">text</p>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        {% endfor %}
+
+
+
+
       </div>
       <button
         class="carousel-control-prev justify-content-start ms-lg-2"
