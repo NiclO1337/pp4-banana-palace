@@ -142,9 +142,8 @@
     {% if request.path == home_url %}
     <script src="{% static './js/index-page.js' %}"></script>
     {% else %}
-    <script src="{% static './js/other-pages.js' %}"></script>
-    {% endif %}
     <script src="{% static './js/script.js' %}"></script>
+    {% endif %}
 
     <!-- Page specific JS file -->
     {% block page-specific-js %}{% endblock %}
