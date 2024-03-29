@@ -1,0 +1,42 @@
+<div class="container">
+    <h2 class="text-center">All users</h2>
+
+    <p class="d-lg-none text-center">
+        Increase screen size to view all users.
+    </p>
+    <div class="d-none d-lg-block">
+        <div class="row">
+
+            <div class="col-2">
+                First name:
+            </div>
+            <div class="col-2">
+                Last name:
+            </div>
+            <div class="col-3">
+                Date joined:
+            </div>
+            <div class="col-3">
+                Last login:
+            </div>
+            <div class="col-2 text-center">
+                Has discount:
+            </div>
+        </div>
+        <hr>
+
+        {% for user in all_users %}
+
+            <div class="row">
+                <p class="col-2">{{ user.first_name }}</p>
+                <p class="col-2">{{ user.last_name }}</p>
+                <p class="col-3">{{ user.date_joined }}</p>
+                <p class="col-3">{{ user.last_login }}</p>
+                <p class="col-2 text-center">{{ user.customer.has_discount }}
+                    <a href="" class="text-reset"> - change</a>
+                </p>
+            </div>
+
+        {% endfor %}
+    </div>
+</div>

@@ -12,13 +12,15 @@ def account(request):
     """
     Display users account page
     """
+    all_users = User.objects.all()
 
     today = timezone.now().date()
     reservations = Reservation.objects.filter(
         user=request.user, table__date__gte=today)
 
     return render(request, 'account/account.html',
-                  {'reservations': reservations})
+                  {'reservations': reservations,
+                   'all_users': all_users})
 
 
 @login_required

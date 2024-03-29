@@ -173,10 +173,13 @@
             </p>
           {% endif %}
         </div>
-
     </section>
   </div>
 </div>
+
+{% if user.customer.is_owner %}
+  {% include 'account/all_users.html' %}
+{% endif %}
 
 <!-- prettier-ignore -->
 {% endblock %}
