@@ -414,6 +414,8 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 
 - Favicon created from logo with help of [paint.net](https://www.getpaint.net/)
 
+- Banana gif from GIF by [Triter on Pixabay](https://pixabay.com/gifs/beach-camera-banana-3d-7183/)
+
 #### Index page
 - Photo by [Pierre Blaché](https://www.pexels.com/sv-se/foto/restaurang-solnedgang-hus-manniskor-2901215/)
 
