@@ -1,5 +1,5 @@
 <div class="container">
-    <h2 class="text-center">All users</h2>
+    <h2 class="text-center mb-3">All users</h2>
 
     <p class="d-lg-none text-center">
         Increase screen size to view all users.
@@ -7,11 +7,8 @@
     <div class="d-none d-lg-block">
         <div class="row">
 
-            <div class="col-2">
-                First name:
-            </div>
-            <div class="col-2">
-                Last name:
+            <div class="col-3">
+                Name:
             </div>
             <div class="col-3">
                 Date joined:
@@ -28,12 +25,11 @@
         {% for user in all_users %}
 
             <div class="row">
-                <p class="col-2">{{ user.first_name }}</p>
-                <p class="col-2">{{ user.last_name }}</p>
+                <p class="col-3">{{ user.first_name }} {{ user.last_name }}</p>
                 <p class="col-3">{{ user.date_joined }}</p>
                 <p class="col-3">{{ user.last_login }}</p>
-                <p class="col-2 text-center">{{ user.customer.has_discount }}
-                    <a href="" class="text-reset"> - change</a>
+                <p class="col-2 text-center">{{ user.customer.has_discount }} -
+                    <a href="{% url 'change_discount' user.id %}" class="text-reset">change</a>
                 </p>
             </div>
 

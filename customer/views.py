@@ -76,3 +76,26 @@ def fireworks_page(request):
 
     return render(request, 'account/fireworks.html')
 
+
+@login_required
+def change_discount(request, user_id):
+
+    user = User.objects.get(id=user_id)
+
+    if request.user.customer.is_owner:
+        if user.customer.has_discount:
+            user.customer.has_discount = False
+            user.save()
+        else:
+            user.customer.has_discount = True
+            user.save()
+
+        messages.success(request, f'Discount status changed on <br>\
+{user.first_name} {user.last_name}')
+
+    else:
+        messages.error(request, f'You do not have permission to change this \
+{request.user.first_name} {request.user.last_name}.')
+
+    return redirect(to='account')
+
