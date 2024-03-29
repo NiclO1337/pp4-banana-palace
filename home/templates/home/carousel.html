@@ -5,33 +5,157 @@
     <div id="carouselMenuItem" class="carousel slide px-md-4 px-lg-5">
       <div class="carousel-inner" role="listbox" aria-label="Menu item images">
 
-
-
-        {% for menu_item in menu_items %}
-
-          <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <div class="col-10 col-md-3 mx-auto">
-              <div class="card">
-                <div class="card-img">
-                  <img
-                    src="{{ menu_item.image.url }}"
-                    role="option"
-                    alt="{{ menu_item.title }}"
-                    class="img-fluid px-md-3" />
-                </div>
-                <div class="card-body">
-                  <p class="card-text special-font">{{ menu_item.title }}
-                    <br>{{ menu_item.image.url }}
-                  </p>
-                </div>
+        <div class="carousel-item active">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/tropical-pork-kabobs.webp' %}"
+                  role="option"
+                  alt="{{ menu_item.title }}"
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Tropical Pork Kabobs
+                </p>
               </div>
             </div>
           </div>
+        </div>
 
-        {% endfor %}
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/stir-fried-tofu-with-vegetables.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Stir-fried Tofu with Vegetables
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/grilled-banana.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Grilled banana
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/banana-apricot-dessert-crepes.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Banana-Apricot Dessert Crepes
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/chicken-pochero.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Chicken Pochero
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/jamaican-pork.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Jamaican pork
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/banana-cream-delight.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Banana Cream Delight
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="col-10 col-md-3 mx-auto">
+            <div class="card">
+              <div class="card-img">
+                <img
+                  src="{% static './images/seafood-stew-with-spicy-sausage.webp' %}"
+                  role="option"
+                  alt=""
+                  class="img-fluid px-md-3" />
+              </div>
+              <div class="card-body">
+                <p class="card-text special-font">
+                  Seafood Stew With Spicy Sausage
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
       <button
