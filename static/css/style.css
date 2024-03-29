@@ -167,9 +167,9 @@ footer {
   color: var(--color-primary);
 }
 
-.nav-link {
+.navbar-nav {
   color: var(--color-primary);
-  text-shadow: 0 0 0.4rem var(--color-primary-bg);
+  background-color: var(--color-primary-bg);
 }
 
 .nav-link.btn-iconic {
