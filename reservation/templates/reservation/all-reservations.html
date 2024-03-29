@@ -1,37 +1,45 @@
-<div class="container justify-content-center text-center d-none d-lg-block">
-    <h2>All reservations</h2>
+<div class="container justify-content-center text-center">
+    <h2 class="mb-3">All reservations</h2>
 
-    <div class="row">
+    <p class="d-lg-none text-center">
+        Increase screen size to view all users.
+    </p>
 
-        <div class="col-1">
-            Table:
-        </div>
-        <div class="col-1">
-            Party size:
-        </div>
-        <div class="col-1">
-            Time:
-        </div>
-        <div class="col-2 text-start">
-            Last name:
-        </div>
-        <div class="col text-start">
-            Notes:
-        </div>
-    </div>
+    <div class="d-none d-lg-block">
 
-    {% for table in tables %}
-        {% if table.reserved %}
+        <div class="row">
 
-            <div class="row">
-                <div class="col-1">{{ forloop.counter }}</div>
-                <div class="col-1">{{ table.reservation.party_size }}</div>
-                <div class="col-1">{{ table.reservation.time }}</div>
-                <div class="col-2 text-start">{{ table.reservation.user.last_name }}</div>
-                <div class="col text-start">{{ table.reservation.notes }}</div>
+            <div class="col-1">
+                Table:
             </div>
+            <div class="col-2 col-xxl-1">
+                Party size:
+            </div>
+            <div class="col-1">
+                Time:
+            </div>
+            <div class="col-2">
+                Last name:
+            </div>
+            <div class="col text-start">
+                Notes:
+            </div>
+        </div>
+        <hr>
 
-        {% endif %}
-    {% endfor %}
+        {% for table in tables %}
+            {% if table.reserved %}
+
+                <div class="row">
+                    <p class="col-1">{{ forloop.counter }}</p>
+                    <p class="col-2 col-xxl-1">{{ table.reservation.party_size }}</p>
+                    <p class="col-1">{{ table.reservation.time }}</p>
+                    <p class="col-2">{{ table.reservation.user.last_name }}</p>
+                    <p class="col text-start">{{ table.reservation.notes }}</p>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    </div>
 
 </div>
