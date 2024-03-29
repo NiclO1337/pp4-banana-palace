@@ -30,15 +30,32 @@
       <h1 class="d-none d-md-block mb-3">Welcome {{ user.first_name }}</h1>
       <hr class="my-2 d-none d-md-block" />
       <div class="row">
+
         <div id="account-info-text" class="col-12 col-md-6">
-          <p>
-            This is your personal account page. <br />Here you can add and edit
-            your <br />personal information as well as <br />manage your
-            reservations.
-          </p>
-          <p class="mb-md-0">
-            Don't hesitate to contact us if <br />you have any questions!
-          </p>
+          {% if user.customer.is_owner %}
+
+            <p>
+              This is your business account page.
+            </p>
+            <p>
+              Delete old tables regularly to speed<br>up the website.
+              Current old tables in database: {{ tables.count }}
+            </p>
+            <a class="my-3" href="">
+              <button class="btn-warning">Delete old tables</button>
+            </a>
+
+          {% else %}
+
+            <p>
+              This is your personal account page. <br />Here you can add and edit
+              your <br />personal information as well as <br />manage your
+              reservations.
+            </p>
+            <p class="mb-md-0">
+              Don't hesitate to contact us if <br />you have any questions!
+            </p>
+          {% endif %}
         </div>
         <div class="col-12 col-md-6 p-md-0">
           <ul class="p-0" id="user-details">
