@@ -10,4 +10,8 @@ urlpatterns = [
     path('add/', views.add_menu_item, name='add_menu_item'),
     path('delete/<int:menu_item_id>',
          views.delete_menu_item, name='delete_menu_item'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
