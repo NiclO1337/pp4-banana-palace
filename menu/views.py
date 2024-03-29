@@ -3,6 +3,7 @@ from .models import MenuItem
 from .forms import MenuItemForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import os
 
 # Create your views here.
 def menu_page(request):
@@ -85,6 +86,8 @@ def delete_menu_item(request, menu_item_id):
         menu_item = get_object_or_404(MenuItem, pk=menu_item_id)
 
         if request.user.customer.is_owner:
+            if menu_item.image:
+                os.remove(menu_item.image.path)
             menu_item.delete()
             messages.success(request, 'Menu item deleted successfully!')
             return redirect('menu_page')
@@ -93,4 +96,3 @@ def delete_menu_item(request, menu_item_id):
 
 
     return render(request, 'menu/delete-menu-item.html',)
-

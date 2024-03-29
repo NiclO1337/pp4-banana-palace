@@ -490,6 +490,8 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Include another html file and style input fields: [Phind search 11](https://www.phind.com/search?cache=vae5ls1yns8ddcmrvtzz1bef)
 
+- Fix image breaking after menu item edit: [Phind search 12](https://www.phind.com/search?cache=rr3ypkh3rmkx354n45tu7n9m)
+
 
 *Message from the developer:*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.

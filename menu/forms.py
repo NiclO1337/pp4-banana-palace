@@ -21,8 +21,12 @@ class MenuItemForm(forms.ModelForm):
 
     def save(self, commit=True):
         instance = super().save(commit=False)
-        instance.image.name = f"{instance.title.lower(
-            ).replace(' ', '-')}.{instance.image.name.split('.')[-1]}"
+        if self.cleaned_data.get('image'):
+            instance.image.name = f'{instance.title.lower().replace(
+                ' ', '-').replace('&', 'and')}.{instance.image.name.split(
+                    '.')[-1]}'
+        else:
+            instance.image = self.instance.image
         if commit:
             instance.save()
         return instance

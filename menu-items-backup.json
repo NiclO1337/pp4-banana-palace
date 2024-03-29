@@ -1,0 +1,242 @@
+[
+    {
+        "model": "menu.menuitem",
+        "pk": 8,
+        "fields": {
+            "title": "Creole Chicken Salad with Pearl couscous",
+            "content": "banana, garlic, coriander, couscous, chicken meat, turmeric, chilli paste",
+            "price_currency": "EUR",
+            "price": "18",
+            "category": "Mains",
+            "image": "menu/creole-chicken-salad-with-pearl-couscous.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:08:18.472Z",
+            "updated_on": "2024-03-28T16:08:18.473Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 10,
+        "fields": {
+            "title": "Arroz ala Cubana",
+            "content": "bananas, eggs, ground beef, onion, garlic, steamed white rice",
+            "price_currency": "EUR",
+            "price": "19",
+            "category": "Mains",
+            "image": "arroz-ala-cubana.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:12:15.119Z",
+            "updated_on": "2024-03-28T22:05:34.705Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 11,
+        "fields": {
+            "title": "Tropical Pork Kabobs",
+            "content": "bananas, boneless pork loin, pineapple chunks, mandarin, oranges, strawberries",
+            "price_currency": "EUR",
+            "price": "15",
+            "category": "Mains",
+            "image": "tropical-pork-kabobs.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:16:02.365Z",
+            "updated_on": "2024-03-28T22:24:37.461Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 12,
+        "fields": {
+            "title": "Cuban Rice Bowl with Fried Bananas",
+            "content": "bananas, chicken, garlic, jalape�o, black beans, red onion, brown rice",
+            "price_currency": "EUR",
+            "price": "18",
+            "category": "Mains",
+            "image": "menu/cuban-rice-bowl-with-fried-bananas.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:17:57.605Z",
+            "updated_on": "2024-03-28T16:17:57.605Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 13,
+        "fields": {
+            "title": "Chicken Pochero",
+            "content": "bananas, chicken, chorizo, potatoes, garbanzo beans, onion, garlic, fish sauce (optional)",
+            "price_currency": "EUR",
+            "price": "19",
+            "category": "Mains",
+            "image": "menu/chicken-pochero.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:20:26.485Z",
+            "updated_on": "2024-03-28T16:20:26.485Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 14,
+        "fields": {
+            "title": "Seafood Stew With Spicy Sausage",
+            "content": "banana, prawn, crayfish, spicy sausage, onions, garlic, ginger, chile pepper, green bell pepper, red pepper, celery, coriander",
+            "price_currency": "EUR",
+            "price": "24",
+            "category": "Mains",
+            "image": "seafood-stew-with-spicy-sausage.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:22:59.541Z",
+            "updated_on": "2024-03-28T22:04:28.234Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 16,
+        "fields": {
+            "title": "Banana Cream Delight",
+            "content": "bananas, pound cake, vanilla pudding, whipped cream",
+            "price_currency": "EUR",
+            "price": "8",
+            "category": "Desserts",
+            "image": "banana-cream-delight.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:41:32.341Z",
+            "updated_on": "2024-03-28T22:04:36.704Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 17,
+        "fields": {
+            "title": "Banana-Apricot Dessert Crepes",
+            "content": "bananas, crepes, apricot preserves, sliced almonds",
+            "price_currency": "EUR",
+            "price": "9",
+            "category": "Desserts",
+            "image": "menu/banana-apricot-dessert-crepes.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:44:04.626Z",
+            "updated_on": "2024-03-28T16:44:04.626Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 18,
+        "fields": {
+            "title": "Banana Split Cake Dessert",
+            "content": "bananas, graham cracker crumbs, cream cheese, pineapple, strawberries, walnuts, whipped cream",
+            "price_currency": "EUR",
+            "price": "9",
+            "category": "Desserts",
+            "image": "menu/banana-split-cake-dessert.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:45:25.821Z",
+            "updated_on": "2024-03-28T16:45:25.821Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 19,
+        "fields": {
+            "title": "Cocoa-Banana Frozen Dessert",
+            "content": "bananas, cocoa, vanilla, maple syrup, oats",
+            "price_currency": "EUR",
+            "price": "6",
+            "category": "Desserts",
+            "image": "menu/cocoa-banana-frozen-dessert.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:47:11.907Z",
+            "updated_on": "2024-03-28T16:47:11.907Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 20,
+        "fields": {
+            "title": "Grilled banana",
+            "content": "banana, chocolate, hazelnuts, \r\nvanilla ice cream",
+            "price_currency": "EUR",
+            "price": "8",
+            "category": "Desserts",
+            "image": "menu/grilled-banana.webp",
+            "is_current": true,
+            "created_on": "2024-03-28T16:48:06.699Z",
+            "updated_on": "2024-03-28T16:48:06.699Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 22,
+        "fields": {
+            "title": "Test2",
+            "content": "wetwet",
+            "price_currency": "EUR",
+            "price": "23",
+            "category": "Starters",
+            "image": "test2.png",
+            "is_current": false,
+            "created_on": "2024-03-28T22:31:35.070Z",
+            "updated_on": "2024-03-28T23:01:37.903Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 23,
+        "fields": {
+            "title": "Test3",
+            "content": "testing",
+            "price_currency": "EUR",
+            "price": "3",
+            "category": "Kids",
+            "image": "test3.png",
+            "is_current": false,
+            "created_on": "2024-03-28T22:40:37.508Z",
+            "updated_on": "2024-03-28T22:40:52.780Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 26,
+        "fields": {
+            "title": "Stir-fried Tofu with Vegetables",
+            "content": "banana, shallots, garlic ginger root, vegetables, oyster mushrooms, meat",
+            "price_currency": "EUR",
+            "price": "17",
+            "category": "Mains",
+            "image": "menu/stir-fried-tofu-with-vegetables.webp",
+            "is_current": true,
+            "created_on": "2024-03-29T12:54:23.317Z",
+            "updated_on": "2024-03-29T12:54:23.317Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 27,
+        "fields": {
+            "title": "Cuban Chicken & Fried Banana Burrito Bowls",
+            "content": "bananas, chicken breasts, mango, onion, garlic, red pepper flakes, jalape�o pepper, black beans, rice",
+            "price_currency": "EUR",
+            "price": "20",
+            "category": "Mains",
+            "image": "cuban-chicken-and-fried-banana-burrito-bowls.webp",
+            "is_current": true,
+            "created_on": "2024-03-29T12:55:14.183Z",
+            "updated_on": "2024-03-29T13:03:18.128Z"
+        }
+    },
+    {
+        "model": "menu.menuitem",
+        "pk": 28,
+        "fields": {
+            "title": "Jamaican pork",
+            "content": "bananas, pork tenderloin, curry, onion, pinapple juice, coconut flakes",
+            "price_currency": "EUR",
+            "price": "17",
+            "category": "Mains",
+            "image": "jamaican-pork.webp",
+            "is_current": true,
+            "created_on": "2024-03-29T12:58:54.130Z",
+            "updated_on": "2024-03-29T13:02:09.359Z"
+        }
+    }
+]
