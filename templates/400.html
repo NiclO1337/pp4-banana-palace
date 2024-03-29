@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block head_title %}
 - Error 400 - Bad Request
@@ -7,6 +8,8 @@
 {% block page-content %}
 
 <section class="container text-center">
+
+    <img src="{% static './images/spinning-banana.gif' %}" alt="Spinning banana GIF">
 
     <h1>Error 400 - Bad Request</h1>
     <p>Oops! It seems that the request you made was invalid or could not be understood by the server.</p>
