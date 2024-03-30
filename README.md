@@ -15,6 +15,9 @@ TODO
     * [Website goals](#website-goals)
     * [First time user goals](#first-time-user-goals)
     * [Returning user goals](#returning-user-goals)
+* [UX and UI](#ux-and-ui---user-experience-and-user-interface)
+    * [Mobile first development](#mobile-first-approach)
+    * [Accessibility](#accessibility)
 * [Design](#design)
     * [Colours](#colours)
     * [Typography](#typography)
@@ -86,19 +89,20 @@ Welcome to Banana Palace restaurant, where culinary excellence meets heartfelt h
 - Make another reservation to try more of the exciting dishes
 
 
-# UX and UI - (user experience and user interface)
+## UX and UI - (user experience and user interface)
 
 
 ### Mobile first approach
-All pages are designed to be responsive to different screen sizes to accommodate users with different preferred devices.
+All pages are designed to be responsive to different screen sizes to accommodate users with different preferred devices. Designing with a mobile-first approach involves considering the constraints and capabilities of mobile devices first, such as smaller screen sizes, touch interfaces, and slower internet connections. By starting with the mobile experience, designers can focus on delivering essential content and functionality in a concise and user-friendly manner.
 
-<details><summary>Screenshot examples of responsive behavior from mobile to tablet to computer</summary> <p align="left"><img src="TODO" alt="examples of responsive behavior" width="700"/></p> </details>
+<details><summary>Screenshot examples of responsive behavior from mobile to tablet to computer</summary> <p align="left"><img src="./documentation/images/responsive-behaviour.png" alt="Examples of responsive behavior" width="700"/></p> </details>
 
 
 ### Accessibility
 
-Semantic HTML is used to aid people with dissabilities such as visual impairment and alternative text is used for all images so it can be read by screen readers. Semantic HTML also helps with search engine optimization so the right users can find this site and find it useful.
+Semantic HTML plays a crucial role in web accessibility by providing meaningful structure and context to web content. By using semantic elements such as header, nav, main, section, article, aside, and footer in this project it is not only well-organized for search engines but also easily navigable for users, including those with disabilities.
 
+For individuals with visual impairments, screen readers are essential tools for accessing web content. Alternative text, often referred to as "alt text," is a concise description added to all images with semantic meaning. In addition to alt text, aria-labels (Accessible Rich Internet Applications Labels) are used to increase accessibility even further. Aria-labels are attributes that can be added to elements, particularly interactive elements like buttons, links, and form elements, to provide additional context or descriptive labels for screen reader users. Unlike alt text, which is specific to images, aria-labels are applied to a wide range of HTML elements to enhance accessibility.
 
 
 ## Design
