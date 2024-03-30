@@ -63,21 +63,27 @@ TODO
 
 <hr>
 
-
-
-
 ## Introduction
 
-This website is ... for ...
+Welcome to Banana Palace restaurant, where culinary excellence meets heartfelt hospitality. Our journey began with a simple passion – to create a dining experience that not only tantalizes the taste buds but also warms the soul.
 
 ### Website goals
-- Help
+- Get a stronger online presence to attract new customers
+- Make it easier for existing customers to make reservations
+- Enable regulars to be able to book their favorite table
 
 ### First time user goals
-- Think about
+- Learn about the restaurant, the history and the dining experience
+- Find where it is located and when it is open
+- Read the menu and see images of the signature dishes
+- Find contact details and social media accounts
+- Get information about the terms and conditions as well as company policies
+- Reserve a table
 
 ### Returning user goals
--
+- Get a reminder about restaurant information
+- See their existing reservations and perhaps edit them
+- Make another reservation to try more of the exciting dishes
 
 
 # UX and UI - (user experience and user interface)
