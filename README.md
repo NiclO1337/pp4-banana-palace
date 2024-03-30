@@ -1,9 +1,6 @@
-# Banana Palace ![Banana Palace restaurant logo](./static/images/banana-palace-horizontal.png)
-TODO: Add logo image
+# <p align="center"><img src="./static/images/banana-palace-symbol.png" alt="Banana Palace restaurant logo" width="23"/> Banana Palace restaurant</p>
 
-# <p align="left">Banana Palace restaurant<img src="./static/images/banana-palace-horizontal.png" alt="Banana Palace restaurant logo" width="200"/></p>
-
-![Amiresponsive image](TODO)
+![Amiresponsive image](./documentation/images/amiresponsive.png)
 
 
 Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
