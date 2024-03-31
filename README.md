@@ -156,7 +156,7 @@ The index page captivates visitors with an engaging carousel slider that elegant
 
 ### Menu
 
-The menu shows all current dishes that the restaurant currently is offering.
+The menu shows all dishes that the restaurant currently is offering. Two out of five categories are currently in use. The categories are starters, mains, desserts, drinks and kids. When a menu item is added with the category it is automatically displayed on the website. If there are no current menu items in a category, the category is hidden on the page.
 
 <details><summary>Screenshot of the menu</summary> <p align="left"><img src="./documentation/images/feature-menu.png" alt="Screenshot of the menu" width="700"/></p> </details>
 <br>
@@ -176,12 +176,11 @@ The user account page provides a comprehensive overview of personal information 
 
 Moreover, for actions with irreversible consequences, such as deleting the account, an additional layer of verification is implemented on a separate page. This precautionary measure helps prevent accidental account deletions or other irreversible actions, safeguarding users from unintended consequences.
 
-TODO: Design email that is sent on account creation
-TODO: EMAIL VERIFICATION SCREENSHOT WITH MESSAGE AND EMAIL!
-<details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="TODO" alt="Email verification and confirmation message" width="700"/></p> </details>
+<details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="./documentation/images/feature-email-verification.png" alt="Email verification and confirmation message" width="700"/></p> </details>
 <details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="700"/></p> </details>
 <details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="700"/></p> </details>
-<details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete " width="700"/></p> </details>
+<details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete account" width="700"/></p> </details>
+<details><summary>Screenshot of the confirmation message</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message.png" alt="user delete account confirmation" width="700"/></p> </details>
 
 ### Feature 2
 
