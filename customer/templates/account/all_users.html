@@ -25,7 +25,13 @@
         {% for user in all_users %}
 
             <div class="row">
-                <p class="col-3">{{ user.first_name }} {{ user.last_name }}</p>
+
+                {% if user.first_name and user.last_name %}
+                    <p class="col-3">{{ user.first_name }} {{ user.last_name }}</p>
+                {% else %}
+                    <p class="col-3">{{ user.username }}</p>
+                {% endif %}
+
                 <p class="col-3">{{ user.date_joined }}</p>
                 <p class="col-3">{{ user.last_login }}</p>
                 <p class="col-2 text-center">{{ user.customer.has_discount }} -
