@@ -176,17 +176,24 @@ The user account page provides a comprehensive overview of personal information 
 
 Moreover, for actions with irreversible consequences, such as deleting the account, an additional layer of verification is implemented on a separate page. This precautionary measure helps prevent accidental account deletions or other irreversible actions, safeguarding users from unintended consequences.
 
+The owner has a custom account page where he can perform actions. He can delete old items from the database, and he can see all current users and can choose to grant discount to select a few users.
+
 <details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="./documentation/images/feature-email-verification.png" alt="Email verification and confirmation message" width="700"/></p> </details>
 <details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="700"/></p> </details>
 <details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="700"/></p> </details>
 <details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete account" width="700"/></p> </details>
 <details><summary>Screenshot of the confirmation message</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message.png" alt="user delete account confirmation" width="700"/></p> </details>
+<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-account-owner.png" alt="owners account page" width="700"/></p> </details>
 
-### Feature 2
+### Discount
 
-The ...
+The owner can choose to grant a special friends and family discount to user accounts from his account page. After being granted the discount, the next time the user logs in they will see a new icon on their profile. When they click the button they are taken to a surprice page and then granted the discount.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-grant-discount.png" alt="owners account page" width="700"/></p> </details>
+<details><summary>Screenshot of message confirming that discount has changed</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message2.png" alt="user account page after granted discount" width="700"/></p> </details>
+<details><summary>Screenshot of icon on user account</summary> <p align="left"><img src="./documentation/images/feature-account-surprice-icon.png" alt="user account page after granted discount" width="700"/></p> </details>
+<details><summary>Screenshot of surprise page</summary> <p align="left"><img src="./documentation/images/feature-surprise-animation.gif" alt="surprice page" width="700"/></p> </details>
+<details><summary>Screenshot of account page after clicking the icon</summary> <p align="left"><img src="./documentation/images/feature-account-icon-after-click.png" alt="user account page after clicking the icon" width="700"/></p> </details>
 
 ### Feature 2
 
