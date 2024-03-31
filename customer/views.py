@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from .forms import EditUserForm, EditCustomerForm
 from reservation.models import Reservation
 from django.utils import timezone
+from reservation.models import Table
 
 
 @login_required()
@@ -15,12 +16,16 @@ def account(request):
     all_users = User.objects.all()
 
     today = timezone.now().date()
+
+    tables = Table.objects.filter(date__lt=today)
+
     reservations = Reservation.objects.filter(
         user=request.user, table__date__gte=today)
 
     return render(request, 'account/account.html',
                   {'reservations': reservations,
-                   'all_users': all_users})
+                   'all_users': all_users,
+                   'tables': tables})
 
 
 @login_required
