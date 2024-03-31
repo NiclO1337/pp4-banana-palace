@@ -111,14 +111,23 @@ For individuals with visual impairments, screen readers are essential tools for 
 
 
  <p align="left"><img src="./documentation/images/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
+The choice of colors for this project draws direct inspiration from the vibrant and natural hues found in a banana tree. By channeling the natural beauty and diversity of the banana tree, our color palette not only reflects the essence of the project but also infuses it with a touch of organic elegance and timeless charm.
 
 
 ### Typography
-Headings - Merienda
-Button-font - M PLUS Rounded 1c
-Main-font - Noto Sans
-Google fonts
 
+#### Headings and special texts - Merienda (Google font)
+
+The font Merienda was chosen to add a personal, aesthetic, and emotional dimension to the user experience. It reflects a deliberate design decision aimed at creating a welcoming atmosphere, fostering a sense of connection, and reinforcing the brand's identity.
+
+#### Buttons and links - M PLUS Rounded 1c (Google font)
+
+The rounded curves of this font complement the overall project seamlessly. The soft curves evoke a sense of friendliness and approachability. The uniformity in design achieved through this font choice creates a cohesive visual identity, ensuring consistency across various elements of the project.
+
+
+#### Main font for texts - Noto Sans (Google font)
+
+This font features a contemporary design with subtle geometric elements and graceful curves, giving it a modern appearance. Noto Sans is a superior choice for this project due to its versatility, clarity, accessibility, modern aesthetics, consistency, open-source nature, and optimization for digital displays.
 
 ### Images
 
