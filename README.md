@@ -135,37 +135,29 @@ Derived from the logo symbol, the favicon, a condensed representation of the bra
 
 ## Features
 
-### Initial page
+### First page
 
 The initial page is meticulously crafted to provide users with comprehensive information about the site's purpose. A prominent logo ensures instant brand recognition, while contact details and the address are readily visible for easy access. The navigation bar succinctly displays all available sections, while tantalizing teaser images aim to pique the user's interest.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-initial-page.png" alt="The initial screen" width="700"/></p> </details>
+<details><summary>Screenshot of the initial page</summary> <p align="left"><img src="./documentation/images/feature-initial-page.png" alt="The initial screen" width="700"/></p> </details><br>
+Header and footer are present on all pages for consistant
+<details><summary>The header features links to the most relevant pages of the website for easy navigation.</summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="700"/></p> </details>
 
-
-### Carousel
-
-The index page captivates visitors with an engaging carousel slider that elegantly showcases the restaurant's signature dishes. With each slide, users are treated to tantalizing glimpses of the culinary delights awaiting them. From succulent main courses to delectable desserts, the carousel invites exploration and ignites the senses, offering a preview of the gastronomic journey that lies ahead. Through vibrant imagery and enticing descriptions, the carousel slider serves as a tempting invitation to indulge in an unforgettable dining experience.
-
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="700"/></p> </details>
-
-
-### Welcome
-
+<details><summary>The footer contains useful links as per the standard convention of restaurant websites.</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="700"/></p> </details>
+<br>
 The welcome section features a captivating image that encapsulates the restaurant's ambiance, inviting users to experience its unique atmosphere. Paired with a heartfelt invitation, it sets the stage for an enticing journey, urging visitors to explore the culinary delights within.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="the welcome image and text" width="700"/></p> </details>
+<details><summary>Screenshot of the welcome section</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="the welcome image and text" width="700"/></p> </details>
+<br>
+The index page captivates visitors with an engaging carousel slider that elegantly showcases the restaurant's signature dishes. With each slide, users are treated to tantalizing glimpses of the culinary delights awaiting them. From succulent main courses to delectable desserts, the carousel invites exploration and ignites the senses, offering a preview of the gastronomic journey that lies ahead. Through vibrant imagery and enticing descriptions, the carousel slider serves as a tempting invitation to indulge in an unforgettable dining experience.
 
-### The header
+<details><summary>Screenshot of the carousel</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="700"/></p> </details>
 
-The header features links to the most relevant pages of th website for easy navigation.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="700"/></p> </details>
 
-### The footer
 
-The footer contains useful links as per the standard convention of restaurant websites.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="700"/></p> </details>
+
 
 
 ### Feature 2
