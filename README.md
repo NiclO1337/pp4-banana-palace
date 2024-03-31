@@ -131,11 +131,15 @@ This font features a contemporary design with subtle geometric elements and grac
 
 ### Images
 
-
+In selecting images for this establishment, careful consideration was given to the atmosphere and experience we aim to cultivate for our diners. Each image was chosen thoughtfully, with the intention of creating a warm and inviting ambiance that encourages guests to feel comfortable and at ease from the moment they step through our doors. Additionally, these images were curated to evoke a sense of excitement and anticipation surrounding the dining experience.
 
 ### Logo and Favicon
 
+<img src="./documentation/images/banana-palace-logo.png" alt="Banana Palace restaurant logo" width="350"/>
 
+The Banana Palace restaurant logo serves as the focal point around which all design decisions were crafted. Designed to embody a perfect blend of sophistication and enjoyment, it features elegant and playful curves that capture the essence of the establishment. At its core lies the symbol of a banana tree, symbolizing the restaurant's core offering and identity.
+
+Derived from the logo symbol, the favicon, a condensed representation of the brand, was meticulously crafted. It draws upon the color palette of the brand, carefully selecting hues that offer the highest contrast for maximum visibility and recognition. Through this strategic choice of colors, the favicon stands out prominently, ensuring its presence is unmistakable across digital platforms.
 
 [Back to top](#table-of-contents)
 
