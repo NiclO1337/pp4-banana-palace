@@ -170,11 +170,18 @@ Staff members can also make it items inactive with the "Is current" BooleanField
 Only the owner has full CRUD permission and can delete menu items.
 <details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="700"/></p> </details>
 
-### Feature 2
+### Account
 
-The ...
+The user account page provides a comprehensive overview of personal information and current reservations. Users have complete control over their accounts with the ability to modify account details, update password, and even delete their account if desired. To maintain the integrity of user registrations, email verification is enforced, ensuring that only committed individuals access the website. Throughout all account-related actions and CRUD operations, users receive confirmation messages to keep them informed on performed actions.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+Moreover, for actions with irreversible consequences, such as deleting the account, an additional layer of verification is implemented on a separate page. This precautionary measure helps prevent accidental account deletions or other irreversible actions, safeguarding users from unintended consequences.
+
+TODO: Design email that is sent on account creation
+TODO: EMAIL VERIFICATION SCREENSHOT WITH MESSAGE AND EMAIL!
+<details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="TODO" alt="Email verification and confirmation message" width="700"/></p> </details>
+<details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="700"/></p> </details>
+<details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="700"/></p> </details>
+<details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete " width="700"/></p> </details>
 
 ### Feature 2
 
