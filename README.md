@@ -137,16 +137,16 @@ Derived from the logo symbol, the favicon, a condensed representation of the bra
 
 ### Welcome screen
 
-The ...
+The welcome page is meticulously crafted to provide users with comprehensive information about the site's purpose. A prominent logo ensures instant brand recognition, while contact details and the address are readily visible for easy access. The navigation bar succinctly displays all available sections, while tantalizing teaser images aim to pique the user's interest.
 
 <details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="The welcome screen" width="700"/></p> </details>
 
 
-### Feature 2
+### Carousel
 
-The ...
+The index page captivates visitors with an engaging carousel slider that elegantly showcases the restaurant's signature dishes. With each slide, users are treated to tantalizing glimpses of the culinary delights awaiting them. From succulent main courses to delectable desserts, the carousel invites exploration and ignites the senses, offering a preview of the gastronomic journey that lies ahead. Through vibrant imagery and enticing descriptions, the carousel slider serves as a tempting invitation to indulge in an unforgettable dining experience.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="700"/></p> </details>
 
 
 ### Feature 2
