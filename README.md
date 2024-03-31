@@ -173,11 +173,11 @@ However, full CRUD (Create, Read, Update, Delete) permissions are exclusively gr
 
 <details><summary>Screenshot of the inactive menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-inactive-items.png" alt="show inactive items" width="900"/></p> </details>
 
-<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="900"/></p> </details>
+<details><summary>Screenshot of owners delete option</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="900"/></p> </details>
 
 ### Account
 
-The user account page provides a comprehensive overview of personal information and current reservations. Users have complete control over their accounts with the ability to modify account details, update password, and even delete their account if desired. To maintain the integrity of user registrations, email verification is enforced, ensuring that only committed individuals access the website. Throughout all account-related actions and CRUD operations, users receive confirmation messages to keep them informed on performed actions.
+The user account page provides a comprehensive overview of personal information and current reservations. Users have complete control over their accounts with the ability to modify account details, update password, and even delete their account if desired. When editing account details, current user information is automatically added to the form. To maintain the integrity of user registrations, email verification is enforced, ensuring that only committed individuals access the website. Throughout all account-related actions and CRUD operations, users receive confirmation messages to keep them informed on performed actions.
 
 Moreover, for actions with irreversible consequences, such as deleting the account, an additional layer of verification is implemented on a separate page. This precautionary measure helps prevent accidental account deletions or other irreversible actions, safeguarding users from unintended consequences.
 
@@ -192,7 +192,7 @@ The owner has a custom account page where he can perform actions. He can delete 
 
 ### Discount
 
-The owner can choose to grant a special friends and family discount to user accounts from his account page. After being granted the discount, the next time the user logs in they will see a new icon on their profile. When they click the button they are taken to a surprice page and then granted the discount.
+The owner can choose to grant a special friends and family discount to user accounts from their account page. After being granted the discount, the next time the user logs in they will see a new icon on their profile. When they click the button they are taken to a surprice page and then granted the discount.
 
 <details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-grant-discount.png" alt="owners account page" width="900"/></p> </details>
 <details><summary>Screenshot of message confirming that discount has changed</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message2.png" alt="user account page after granted discount" width="900"/></p> </details>
@@ -255,8 +255,8 @@ Screenshots of individual wireframes for the:
 <details><summary>about page</summary> <p align="left"><img src="./documentation/images/wireframes-about.png" alt="wireframes for the about page" width="600"/></p> </details>
 <details><summary>users profile page</summary> <p align="left"><img src="./documentation/images/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
 <details><summary>owners profile page</summary> <p align="left"><img src="./documentation/images/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
-<details><summary>fun booking page with date and time</summary> <p align="left"><img src="./documentation/images/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
-<details><summary>booking page with date and time</summary> <p align="left"><img src="./documentation/images/wireframes-booking-date-time.png" alt="wireframes for the booking page with date and time" width="600"/></p> </details>
+<details><summary>booking page with date and tables</summary> <p align="left"><img src="./documentation/images/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
+
 <details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/images/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
 <details><summary>menu page</summary> <p align="left"><img src="./documentation/images/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
 <details><summary>feedback section</summary> <p align="left"><img src="./documentation/images/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
