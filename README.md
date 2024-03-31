@@ -143,7 +143,7 @@ The initial page is meticulously crafted to provide users with comprehensive inf
 Header and footer elements, complete with navigation links, are incorporated across all pages to ensure consistency and foster a sense of familiarity for users.
 <details><summary>The header features links to the most relevant pages of the website.</summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="700"/></p> </details>
 
-<details><summary>The footer contains useful links as per the standard convention of restaurant websites.</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="700"/></p> </details>
+<details><summary>The footer contains useful information and links as per the standard convention of restaurant websites.</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="700"/></p> </details>
 <br>
 The welcome section features a captivating image that encapsulates the restaurant's ambiance, inviting users to experience its unique atmosphere. Paired with a heartfelt invitation, it sets the stage for an enticing journey, urging visitors to explore the culinary delights within.
 
@@ -178,7 +178,7 @@ Moreover, for actions with irreversible consequences, such as deleting the accou
 
 The owner has a custom account page where he can perform actions. He can delete old items from the database, and he can see all current users and can choose to grant discount to select a few users.
 
-<details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="./documentation/images/feature-email-verification.png" alt="Email verification and confirmation message" width="700"/></p> </details>
+<details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="./documentation/images/feature-email-verification.png" alt="Email verification and confirmation message" width="900"/></p> </details>
 <details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="700"/></p> </details>
 <details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="700"/></p> </details>
 <details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete account" width="700"/></p> </details>
@@ -195,29 +195,26 @@ The owner can choose to grant a special friends and family discount to user acco
 <details><summary>Screenshot of surprise page</summary> <p align="left"><img src="./documentation/images/feature-surprise-animation.gif" alt="surprice page" width="700"/></p> </details>
 <details><summary>Screenshot of account page after clicking the icon</summary> <p align="left"><img src="./documentation/images/feature-account-icon-after-click.png" alt="user account page after clicking the icon" width="700"/></p> </details>
 
-### Feature 2
+### Reservation
 
-The ...
+When making a reservation, guests have the opportunity to select their preferred table. The restaurant has distinct themes in various sections, providing each diner with a unique and immersive dining experience.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+Users have the convenience of checking availability for any date within the next 12 months starting from today, allowing them to select their desired table for specific days. Once they've made their decision, a simple click on the chosen table initiates the reservation process. If users have previously provided personal and contact details in their account, these details are automatically filled into the reservation form. Any changes made to this information during the reservation process are seamlessly updated in their account.
 
-### Feature 2
+In order to confirm the booking, users are required to accept the terms and conditions, with a convenient link provided for easy access to the relevant information. The terms and conditions page is designed with user-friendliness in mind, featuring a prominent button enabling users to return to the previous page, allowing them to seamlessly resume their reservation process after reviewing the terms.
 
-The ...
+Once a reservation is confirmed, it becomes accessible within their account dashboard, offering the flexibility to edit or cancel existing bookings at their convenience.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the table reservation page</summary> <p align="left"><img src="./documentation/images/feature-reservation-table.png" alt="table reservation page" width="700"/></p> </details>
 
-### Feature 2
+<details><summary>Screenshot of the reservation details page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details.png" alt="reservation details page" width="700"/></p> </details>
 
-The ...
+<details><summary>Screenshot of the terms and conditions page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details-terms-and-conditions.png" alt="terms and conditions page" width="700"/></p> </details>
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the account page with reservation made</summary> <p align="left"><img src="./documentation/images/feature-reservation-account.png" alt="account page with reservation made" width="700"/></p> </details>
 
-### Feature 2
+<details><summary>Screenshot of the account page with edited reservation</summary> <p align="left"><img src="./documentation/images/feature-reservation-account-edited.png" alt="account page with edited reservation" width="700"/></p> </details>
 
-The ...
-
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
 
 
 
