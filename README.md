@@ -139,7 +139,7 @@ Derived from the logo symbol, the favicon, a condensed representation of the bra
 
 The ...
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="The welcome screen" width="700"/></p> </details>
 
 
 ### Feature 2
