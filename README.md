@@ -90,7 +90,7 @@ Welcome to Banana Palace restaurant, where culinary excellence meets heartfelt h
 ### Mobile first approach
 All pages are designed to be responsive to different screen sizes to accommodate users with different preferred devices. Designing with a mobile-first approach involves considering the constraints and capabilities of mobile devices first, such as smaller screen sizes, touch interfaces, and slower internet connections. By starting with the mobile experience, we focus on delivering essential content and functionality in a concise and user-friendly manner.
 
-<details><summary>Screenshot examples of responsive behavior from mobile to tablet to computer</summary> <p align="left"><img src="./documentation/images/responsive-behaviour.png" alt="Examples of responsive behavior" width="700"/></p> </details>
+<details><summary>Screenshot examples of responsive behavior from mobile to tablet to computer</summary> <p align="left"><img src="./documentation/images/responsive-behaviour.png" alt="Examples of responsive behavior" width="900"/></p> </details>
 
 ### Accessibility
 
@@ -102,7 +102,7 @@ For individuals with visual impairments, screen readers are essential tools for 
 
 ### Colours
 
- <p align="left"><img src="./documentation/images/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
+ <p align="left"><img src="./documentation/images/color-pallet.png" alt="Color pallet for Banana Palace" width="900"/></p>
 The choice of colors for this project draws direct inspiration from the vibrant and natural hues found in a banana tree. By channeling the natural beauty and diversity of the banana tree, our color palette not only reflects the essence of the project but also infuses it with a touch of organic elegance and timeless charm.
 
 ### Typography
@@ -139,36 +139,41 @@ Derived from the logo symbol, the favicon, a condensed representation of the bra
 
 The initial page is meticulously crafted to provide users with comprehensive information about the site's purpose. A prominent logo ensures instant brand recognition, while contact details and the address are readily visible for easy access. The navigation bar succinctly displays all available sections, while tantalizing teaser images aim to pique the user's interest.
 
-<details><summary>Screenshot of the initial page</summary> <p align="left"><img src="./documentation/images/feature-initial-page.png" alt="The initial screen" width="700"/></p> </details><br>
-Header and footer elements, complete with navigation links, are incorporated across all pages to ensure consistency and foster a sense of familiarity for users.
-<details><summary>The header features links to the most relevant pages of the website.</summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="700"/></p> </details>
+Header and footer elements, complete with navigation links, are incorporated across all pages to ensure consistency and foster a sense of familiarity for users. The header features links to the most relevant pages for visitors of the website. The footer contains useful information and links as per the standard convention of restaurant websites.
 
-<details><summary>The footer contains useful information and links as per the standard convention of restaurant websites.</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="700"/></p> </details>
-<br>
 The welcome section features a captivating image that encapsulates the restaurant's ambiance, inviting users to experience its unique atmosphere. Paired with a heartfelt invitation, it sets the stage for an enticing journey, urging visitors to explore the culinary delights within.
 
-<details><summary>Screenshot of the welcome section</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="the welcome image and text" width="700"/></p> </details>
-<br>
+
 The index page captivates visitors with an engaging carousel slider that elegantly showcases the restaurant's signature dishes. With each slide, users are treated to tantalizing glimpses of the culinary delights awaiting them. From succulent main courses to delectable desserts, the carousel invites exploration and ignites the senses, offering a preview of the gastronomic journey that lies ahead. Through vibrant imagery and enticing descriptions, the carousel slider serves as a tempting invitation to indulge in an unforgettable dining experience.
 
-<details><summary>Screenshot of the carousel</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="700"/></p> </details>
+<details><summary>Screenshot of the initial page</summary> <p align="left"><img src="./documentation/images/feature-initial-page.png" alt="The initial screen" width="900"/></p> </details>
+
+<details><summary>Screenshot of the header </summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="900"/></p> </details>
+
+<details><summary>Screenshot of the footer</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="900"/></p> </details>
+
+<details><summary>Screenshot of the welcome section</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="the welcome image and text" width="900"/></p> </details>
+
+<details><summary>Screenshot of the carousel</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="900"/></p> </details>
 
 
 ### Menu
 
 The menu shows all dishes that the restaurant currently is offering. Two out of five categories are currently in use. The categories are starters, mains, desserts, drinks and kids. When a menu item is added with the category it is automatically displayed on the website. If there are no current menu items in a category, the category is hidden on the page.
 
-<details><summary>Screenshot of the menu</summary> <p align="left"><img src="./documentation/images/feature-menu.png" alt="Screenshot of the menu" width="700"/></p> </details>
-<br>
-Additionally, staff member are able to add menu items and edit items when logged in.
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-menu-add-edit.png" alt="shows edit and add buttons on menu" width="700"/></p> </details>
-<br>
-Staff members can also make it items inactive with the "Is current" BooleanField.
-<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-edit-form.png" alt="edit menu form" width="700"/></p> </details>
-<details><summary>Screenshot of the inactive menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-inactive-items.png" alt="show inactive items" width="700"/></p> </details>
-<br>
-Only the owner has full CRUD permission and can delete menu items.
-<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="700"/></p> </details>
+Furthermore, staff members possess the capability to add and edit menu items while logged into the system. They also have the ability to mark items as inactive using the 'Is current' BooleanField option.
+
+However, full CRUD (Create, Read, Update, Delete) permissions are exclusively granted to the owner, enabling them to delete menu items as needed.
+
+<details><summary>Screenshot of the menu</summary> <p align="left"><img src="./documentation/images/feature-menu.png" alt="Screenshot of the menu" width="900"/></p> </details>
+
+<details><summary>Screenshot of the add menu item and edit feature</summary> <p align="left"><img src="./documentation/images/feature-menu-add-edit.png" alt="shows edit and add buttons on menu" width="900"/></p> </details>
+
+<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-edit-form.png" alt="edit menu form" width="900"/></p> </details>
+
+<details><summary>Screenshot of the inactive menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-inactive-items.png" alt="show inactive items" width="900"/></p> </details>
+
+<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="900"/></p> </details>
 
 ### Account
 
@@ -179,21 +184,21 @@ Moreover, for actions with irreversible consequences, such as deleting the accou
 The owner has a custom account page where he can perform actions. He can delete old items from the database, and he can see all current users and can choose to grant discount to select a few users.
 
 <details><summary>Screenshot of the email verification.</summary> <p align="left"><img src="./documentation/images/feature-email-verification.png" alt="Email verification and confirmation message" width="900"/></p> </details>
-<details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="700"/></p> </details>
-<details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="700"/></p> </details>
-<details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete account" width="700"/></p> </details>
-<details><summary>Screenshot of the confirmation message</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message.png" alt="user delete account confirmation" width="700"/></p> </details>
-<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-account-owner.png" alt="owners account page" width="700"/></p> </details>
+<details><summary>Screenshot of the account page</summary> <p align="left"><img src="./documentation/images/feature-account.png" alt="user account page" width="900"/></p> </details>
+<details><summary>Screenshot of the edit form</summary> <p align="left"><img src="./documentation/images/feature-account-edit.png" alt="user edit form" width="900"/></p> </details>
+<details><summary>Screenshot of the delete</summary> <p align="left"><img src="./documentation/images/feature-account-delete.png" alt="user delete account" width="900"/></p> </details>
+<details><summary>Screenshot of the confirmation message</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message.png" alt="user delete account confirmation" width="900"/></p> </details>
+<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-account-owner.png" alt="owners account page" width="900"/></p> </details>
 
 ### Discount
 
 The owner can choose to grant a special friends and family discount to user accounts from his account page. After being granted the discount, the next time the user logs in they will see a new icon on their profile. When they click the button they are taken to a surprice page and then granted the discount.
 
-<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-grant-discount.png" alt="owners account page" width="700"/></p> </details>
-<details><summary>Screenshot of message confirming that discount has changed</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message2.png" alt="user account page after granted discount" width="700"/></p> </details>
-<details><summary>Screenshot of icon on user account</summary> <p align="left"><img src="./documentation/images/feature-account-surprice-icon.png" alt="user account page after granted discount" width="700"/></p> </details>
-<details><summary>Screenshot of surprise page</summary> <p align="left"><img src="./documentation/images/feature-surprise-animation.gif" alt="surprice page" width="700"/></p> </details>
-<details><summary>Screenshot of account page after clicking the icon</summary> <p align="left"><img src="./documentation/images/feature-account-icon-after-click.png" alt="user account page after clicking the icon" width="700"/></p> </details>
+<details><summary>Screenshot of the owners account page</summary> <p align="left"><img src="./documentation/images/feature-grant-discount.png" alt="owners account page" width="900"/></p> </details>
+<details><summary>Screenshot of message confirming that discount has changed</summary> <p align="left"><img src="./documentation/images/feature-confirmation-message2.png" alt="user account page after granted discount" width="900"/></p> </details>
+<details><summary>Screenshot of icon on user account</summary> <p align="left"><img src="./documentation/images/feature-account-surprice-icon.png" alt="user account page after granted discount" width="900"/></p> </details>
+<details><summary>Screenshot of surprise page</summary> <p align="left"><img src="./documentation/images/feature-surprise-animation.gif" alt="surprice page" width="900"/></p> </details>
+<details><summary>Screenshot of account page after clicking the icon</summary> <p align="left"><img src="./documentation/images/feature-account-icon-after-click.png" alt="user account page after clicking the icon" width="900"/></p> </details>
 
 ### Reservation
 
@@ -205,17 +210,15 @@ In order to confirm the booking, users are required to accept the terms and cond
 
 Once a reservation is confirmed, it becomes accessible within their account dashboard, offering the flexibility to edit or cancel existing bookings at their convenience.
 
-<details><summary>Screenshot of the table reservation page</summary> <p align="left"><img src="./documentation/images/feature-reservation-table.png" alt="table reservation page" width="700"/></p> </details>
+<details><summary>Screenshot of the table reservation page</summary> <p align="left"><img src="./documentation/images/feature-reservation-table.png" alt="table reservation page" width="900"/></p> </details>
 
-<details><summary>Screenshot of the reservation details page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details.png" alt="reservation details page" width="700"/></p> </details>
+<details><summary>Screenshot of the reservation details page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details.png" alt="reservation details page" width="900"/></p> </details>
 
-<details><summary>Screenshot of the terms and conditions page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details-terms-and-conditions.png" alt="terms and conditions page" width="700"/></p> </details>
+<details><summary>Screenshot of the terms and conditions page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details-terms-and-conditions.png" alt="terms and conditions page" width="900"/></p> </details>
 
-<details><summary>Screenshot of the account page with reservation made</summary> <p align="left"><img src="./documentation/images/feature-reservation-account.png" alt="account page with reservation made" width="700"/></p> </details>
+<details><summary>Screenshot of the account page with reservation made</summary> <p align="left"><img src="./documentation/images/feature-reservation-account.png" alt="account page with reservation made" width="900"/></p> </details>
 
-<details><summary>Screenshot of the account page with edited reservation</summary> <p align="left"><img src="./documentation/images/feature-reservation-account-edited.png" alt="account page with edited reservation" width="700"/></p> </details>
-
-
+<details><summary>Screenshot of the account page with edited reservation</summary> <p align="left"><img src="./documentation/images/feature-reservation-account-edited.png" alt="account page with edited reservation" width="900"/></p> </details>
 
 
 ### Security Features and Defensive Design
@@ -226,7 +229,7 @@ Validating every user input creates a defensive design that runs correctly and k
 
 
 ### Future features
--
+All remaining user stories at the project deadline are stored in the product backlog, awaiting the next development cycle for implementation. [GitHub milestone](https://github.com/NiclO1337/pp4-banana-palace/milestone/1) is used as the backlog for this project.
 
 
 [Back to top](#table-of-contents)
