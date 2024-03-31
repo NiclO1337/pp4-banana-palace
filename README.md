@@ -154,11 +154,21 @@ The index page captivates visitors with an engaging carousel slider that elegant
 <details><summary>Screenshot of the carousel</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="700"/></p> </details>
 
 
-### Feature 2
+### Menu
 
-The ...
+The menu shows all current dishes that the restaurant currently is offering.
 
-<details><summary>Screenshot of the feature</summary> <p align="left"><img src="TODO" alt="TODO" width="700"/></p> </details>
+<details><summary>Screenshot of the menu</summary> <p align="left"><img src="./documentation/images/feature-menu.png" alt="Screenshot of the menu" width="700"/></p> </details>
+<br>
+Additionally, staff member are able to add menu items and edit items when logged in.
+<details><summary>Screenshot of the feature</summary> <p align="left"><img src="./documentation/images/feature-menu-add-edit.png" alt="shows edit and add buttons on menu" width="700"/></p> </details>
+<br>
+Staff members can also make it items inactive with the "Is current" BooleanField.
+<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-edit-form.png" alt="edit menu form" width="700"/></p> </details>
+<details><summary>Screenshot of the inactive menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-inactive-items.png" alt="show inactive items" width="700"/></p> </details>
+<br>
+Only the owner has full CRUD permission and can delete menu items.
+<details><summary>Screenshot of edit form for menu items</summary> <p align="left"><img src="./documentation/images/feature-menu-full-crud.png" alt="show owners delete option" width="700"/></p> </details>
 
 ### Feature 2
 
