@@ -299,15 +299,19 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Bootstrap v5.3.2** as framefork for styling and positioning
 - **jQuery** for more efficient DOM manipulation
 
-
 ### Libraries
 - **Os**, provides functions for interacting with the operating system
+- **datetime**, supplies classes to work with date and time
 - **psycopg2**, PostgreSQL database adapter for the Python programming language
 - **dj-database-url**, enables the ability to represent their database settings via a string
 - **gunicorn**, handles HTML rendering, authentication, administration, and backend logic
 - **whitenoise**, allows web app to serve its own static files
 - **Allauth**, dealing with account authentication, registration, management, and third-party (social) account authentication
-
+- **django-crispy-forms**, controls the rendering behavior of Django forms
+- **crispy-bootstrap**, enables crispy forms to use bootstrap for styling
+- **django-phonenumber-field**, validates, pretty print and convert phone numbers
+- **django-money**, add support for Money fields in models and forms
+- **pillow**, image resizing, rotation and transformation
 
 ### Tools
 - **Git** for source control
@@ -329,7 +333,6 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **paint.net** to edit logo, images and favicon
 - **phind.com** to search for specific solutions
 - **ChatGPT** to generate text content for website
-
 
 ## Testing
 
