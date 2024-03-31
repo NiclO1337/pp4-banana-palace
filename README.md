@@ -1,11 +1,9 @@
-# <p align="center"><img src="./static/images/banana-palace-symbol.png" alt="Banana Palace restaurant logo" width="23"/> Banana Palace restaurant</p>
+# <img src="./static/images/banana-palace-symbol.png" alt="Banana Palace restaurant logo" width="25"/> Banana Palace restaurant
 
 ![Amiresponsive image](./documentation/images/amiresponsive.png)
 
-
 Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
-<hr>
 
 ## Table of contents
 
@@ -64,7 +62,6 @@ TODO
     * [Media](#media)
     * [Code](#code)
 
-<hr>
 
 ## Introduction
 
@@ -88,15 +85,12 @@ Welcome to Banana Palace restaurant, where culinary excellence meets heartfelt h
 - See their existing reservations and perhaps edit them
 - Make another reservation to try more of the exciting dishes
 
-
 ## UX and UI - (user experience and user interface)
 
-
 ### Mobile first approach
-All pages are designed to be responsive to different screen sizes to accommodate users with different preferred devices. Designing with a mobile-first approach involves considering the constraints and capabilities of mobile devices first, such as smaller screen sizes, touch interfaces, and slower internet connections. By starting with the mobile experience, designers can focus on delivering essential content and functionality in a concise and user-friendly manner.
+All pages are designed to be responsive to different screen sizes to accommodate users with different preferred devices. Designing with a mobile-first approach involves considering the constraints and capabilities of mobile devices first, such as smaller screen sizes, touch interfaces, and slower internet connections. By starting with the mobile experience, we focus on delivering essential content and functionality in a concise and user-friendly manner.
 
 <details><summary>Screenshot examples of responsive behavior from mobile to tablet to computer</summary> <p align="left"><img src="./documentation/images/responsive-behaviour.png" alt="Examples of responsive behavior" width="700"/></p> </details>
-
 
 ### Accessibility
 
@@ -104,15 +98,12 @@ Semantic HTML plays a crucial role in web accessibility by providing meaningful 
 
 For individuals with visual impairments, screen readers are essential tools for accessing web content. Alternative text, often referred to as "alt text," is a concise description added to all images with semantic meaning. In addition to alt text, aria-labels (Accessible Rich Internet Applications Labels) are used to increase accessibility even further. Aria-labels are attributes that can be added to elements, particularly interactive elements like buttons, links, and form elements, to provide additional context or descriptive labels for screen reader users. Unlike alt text, which is specific to images, aria-labels are applied to a wide range of HTML elements to enhance accessibility.
 
-
 ## Design
 
 ### Colours
 
-
  <p align="left"><img src="./documentation/images/color-pallet.png" alt="Color pallet for Banana Palace" width="700"/></p>
 The choice of colors for this project draws direct inspiration from the vibrant and natural hues found in a banana tree. By channeling the natural beauty and diversity of the banana tree, our color palette not only reflects the essence of the project but also infuses it with a touch of organic elegance and timeless charm.
-
 
 ### Typography
 
@@ -123,7 +114,6 @@ The font Merienda was chosen to add a personal, aesthetic, and emotional dimensi
 #### Buttons and links - M PLUS Rounded 1c (Google font)
 
 The rounded curves of this font complement the overall project seamlessly. The soft curves evoke a sense of friendliness and approachability. The uniformity in design achieved through this font choice creates a cohesive visual identity, ensuring consistency across various elements of the project.
-
 
 #### Main font for texts - Noto Sans (Google font)
 
@@ -167,14 +157,10 @@ The ...
 
 
 
-
 ### Security Features and Defensive Design
 
 TODO
 Validating every user input creates a defensive design that runs correctly and keeps running no matter what action the user takes.
-
-
-
 
 
 
@@ -212,8 +198,6 @@ Screenshots of individual wireframes for the:
 <details><summary>feedback section</summary> <p align="left"><img src="./documentation/images/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
 
 
-
-
 ### Database Schema
 
 A relational database is used for this project, it is a PostgreSQL provided by Code Institute. <br>Entity relationship diagrams (ERD) are used to plan the SQL tables and relationships, i.e. how tables interact with eachother.
@@ -246,15 +230,11 @@ Lastly the development team elaborates upon the logical model with data specific
 
 <p align="left"><img src="./documentation/images/entity-relationship-diagram-physical.png" alt="Entity relationship diagram" width="700"/></p>
 
-
 ## Agile software development
-
 
 Scrum, using both incremental and iterative development, was chosen as the main Agile methodology to use in this project. Planning workload into iterations, also known as sprints, with a mindset of "continuous improvement". For each iteration, a kanban board was used to visualize the current workload. Between iterations, remaining workload in the product backlog was reviewed and next iteration was planned.
 
 All features that could possibly be implemented were added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
-
-
 
 ### Epics
 
@@ -262,22 +242,17 @@ Project was broken down into different epics, large bodies of work, with feature
 
 <details><summary>Screenshot of one of the Epics</summary> <p align="left"><img src="./documentation/images/epic.png" alt="Example of a project Epic" width="600"/></p> </details>
 
-
 ### User stories
 
 All user stories are added as [issues on GitHub.](https://github.com/NiclO1337/pp4-banana-palace/issues) They consist of what value they brings, which acceptence criteria is required for it to be marked as complete and tasks to complete. Some commits were linked to the user story they completed a task for.
-
 
 <details><summary>Screenshot of example of a user story</summary> <p align="left"><img src="./documentation/images/user-story.png" alt="Example of a project User story" width="600"/></p> </details>
 
 <details><summary>Screenshot of example of user story commits</summary> <p align="left"><img src="./documentation/images/user-story-commits.png" alt="Example of a project User story commit" width="400"/></p> </details>
 
-
-
 ### Product backlog
 
-All deliverable user stories are added to the product backlog. [GitHub milestone](https://github.com/NiclO1337/pp4-banana-palace/milestone/1) is used as the backlog for this project. They are prioritized, top to bottom, based on what needs their readiness to be completed and what needs to be delivered first. PBI's (product backlog items) are reviewed and re-prioritized between development iterations, also known as backlog refinement.
-
+All deliverable user stories are added to the product backlog. [GitHub milestone](https://github.com/NiclO1337/pp4-banana-palace/milestone/1) is used as the backlog for this project. They are prioritized, top to bottom, based on their readiness to be completed and what needs to be delivered first. PBI's (product backlog items) are reviewed and re-prioritized between development iterations, also known as backlog refinement.
 
 ### MoSCoW prioritization
 
@@ -303,12 +278,11 @@ Iteration process were tracked as [GitHub milestones](https://github.com/NiclO13
 
 ### Kanban board
 
-Github projects was used as a kanban board during development. In each iteration, relevant user stories are moved onto the board and development began. Features were developed to fulfil the acceptence critera's of the user stories.
+Github projects was used as a kanban board during development. In each iteration, relevant user stories are moved onto the board and development began. Features were developed to fulfil the acceptence critera's of the user stories. When the acceptence criteria has been tested in development and production environment, it is marked as completed and moved to "Done" column.
 
 Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) used on GitHub.<br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
 <p align="left"><img src="./documentation/images/kanban-board.png" alt="Banana palace project board" width="auto"/></p>
-
 
 [Back to top](#table-of-contents)
 
