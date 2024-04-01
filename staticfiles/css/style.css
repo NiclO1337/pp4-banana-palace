@@ -134,6 +134,7 @@ input:focus,
 #id_content:hover,
 #id_price_1:hover {
   border: var(--border-width-solid-iconic) var(--color-secondary);
+  outline: none;
 }
 
 hr {
@@ -144,6 +145,17 @@ hr {
 footer {
   background-color: var(--color-tertiary);
   color: var(--color-primary-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary-bg);
+  outline-offset: 2px;
+}
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-secondary-bg);
+  outline-offset: 2px;
+  box-shadow: none;
+  color: var(--color-primary);
 }
 
 ::placeholder {
@@ -166,7 +178,8 @@ footer {
 /* Buttons */
 .nav-link,
 .btn-iconic,
-#override-bootstrap .account-management button {
+#override-bootstrap .account-management button,
+#override-bootstrap .account-management a {
   color: var(--color-primary);
 }
 
@@ -183,6 +196,8 @@ footer {
 .btn-iconic-reverse,
 .btn-warning,
 #override-bootstrap .account-management button,
+#override-bootstrap .account-management a.btn-iconic,
+#override-bootstrap .account-management a.btn-iconic-reverse,
 #back-one-page {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
@@ -196,6 +211,8 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button:hover,
+#override-bootstrap .account-management a.btn-iconic:hover,
+#override-bootstrap .account-management a:hover,
 #override-bootstrap header a:hover,
 .btn-iconic:hover,
 .btn-iconic-reverse:hover,
@@ -214,6 +231,7 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button.btn-iconic-reverse,
+#override-bootstrap .account-management a.btn-iconic-reverse,
 .btn-iconic-reverse {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
@@ -438,6 +456,10 @@ a.btn-iconic-reverse {
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
+}
+
+a.mt-2.mt-lg-3.btn-iconic.text-decoration-none {
+  padding-right: 10px;
 }
 
 /* --------------------------
