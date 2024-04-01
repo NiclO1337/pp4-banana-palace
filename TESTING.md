@@ -134,8 +134,18 @@ TODO
 | Feature tested | Expected outcome | Testing Performed | Result | Pass / fail |
 | --- | --- | --- | --- | --- |
 | **Header / navigation bar** |
-| Feature |  |  |  |  |
-| Feature |  |  |  |  |
+| Logo | Clicking takes the user to the Home page | Clicked logo |  |  |
+| Menu | Clicking takes the user to the Menu page | Clicked on link |  |  |
+| Hours & Location | Clicking takes the user to the about page | Clicked on link |  |  |
+| Out story | Clicking takes the user to the story page | Clicked on link |  |  |
+| Login/register | Clicking takes the user to the sign in page | Clicked on link |  |  |
+| Account/logout | Clicking takes the user to the account page | Clicked on link |  |  |
+| Book a table | Clicking takes the user to the reservation page | Clicked on button |  |  |
+| **Index page** |
+| Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down |  |  |
+| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll down |  |  |
+| Carousel right | Clicking on right button shows the next menu item that is to the right of the current view | Click on right button |  |  |
+| Carousel left | Clicking on left button shows the next menu item that is to the left of the current view | Click on left button |  |  |
 | **Footer / Social media icons** |
 | Feature |  |  |  |  |
 | Feature |  |  |  |  |
