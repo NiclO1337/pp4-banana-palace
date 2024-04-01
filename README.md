@@ -420,26 +420,6 @@ Testing made in separate file [TESTING.md](TESTING.md)
 
 ## Deployment
 
-#### Deployment to Heroku
-
-TODO
-
-1. Log in (or sign up) to Heroku. ( https://www.heroku.com/ )
-2. From the dashboard, create a "new app" and follow the instructions.
-3. When created go to the settings tab.
-    - Add a Config Var with PORT as the key and 8000 as value.
-    - TODO
-4. Go to the deployment tab.
-    - Select GitHub as deployment method.
-    - Connect app to the correct repository.
-5. Choose to deploy either manully or enable automatic deploys.
-
-
-#### Changes to the code
-If changes has been made in local development, the requirements.txt might need to be updated.
-- It is done by entering the following command in the terminal: 'pip3 freeze > requirements.txt'
-- Updated file must then be commited and pushed to GitHub.
-
 ### Local development
 
 #### Forking the project
@@ -447,21 +427,45 @@ If changes has been made in local development, the requirements.txt might need t
 1. Log in (or sign up) to Github.
 2. Go to the repository for this project, [Banana Palace](https://github.com/NiclO1337/pp4-banana-palace).
 <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+
 3. Click the Fork button in the top right corner.
 
 #### Cloning the project
 
 1. Log in (or sign up) to Github.
-2. Go to the repository for this project, [Banana Palace](https://github.com/NiclO1337/pp4-banana-palace).
+2. Go to the repository for this project, [Banana Palace](https://github.com/NiclO1337/pp4-banana-palace) or your forked copy.
 <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
+
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH, or GitHub CLI, and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 Type 'git clone' into the terminal and then paste the link you copied in step 3.
 5. Press enter.
 
-TODO: create env.py
-TODO: Optional, create viritual environment.
-TODO: install requirements with correct versions
+#### Running a development server
+
+1. First create an env.py file and input variables for DATABASE_URL, SECRET_KEY, EMAIL_HOST_USER and EMAIL_HOST_PASSWORD.
+2. Create a virtual environment in your workspace.
+3. Install all the required dependencies in your workspace with 'pip install -r requirements.txt' command in the terminal
+4. Run the server with the command 'python manage.py runserver'
+
+
+#### Changes to the code
+If changes has been made in local development that requires new dependencies, these needs to be added to the requirements.txt file. It is done by entering the following command in the terminal: 'pip3 freeze > requirements.txt'. Updated requirements file must then be added, commited, and pushed to GitHub.
+
+
+#### Deployment to Heroku
+
+1. Log in (or sign up) to Heroku. ( https://www.heroku.com/ )
+2. From the dashboard, create a "new app" and follow the instructions.
+3. When created go to the settings tab and add a Config Var for:
+    - DATABASE_URL
+    - SECRET_KEY
+    - EMAIL_HOST_USER
+    - EMAIL_HOST_PASSWORD
+4. Go to the deployment tab.
+    - Select GitHub as deployment method.
+    - Connect app to the correct repository.
+5. Choose to deploy either manully or enable automatic deploys.
 
 
 [Back to top](#table-of-contents)
