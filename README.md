@@ -481,6 +481,8 @@ If changes has been made in local development that requires new dependencies, th
 ### Honorable mentions
 
 - Thanks [Erik](https://github.com/Tossan99) for inspiring me to have fun and take risks to create the best possible project!
+- To all lovely people in our #community-sweden slack channel: Thank you for endless support and great laughs!
+- Thanks to my mentor Jubril Akolade for guidance and great advice.
 
 
 ### Content
