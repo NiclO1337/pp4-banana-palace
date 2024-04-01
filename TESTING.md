@@ -141,9 +141,8 @@ TODO
 | Twitter | Clicking opens Twitter in a separate tab | Clicked link |  |  |
 | Instagram | Clicking opens Instagram in a separate tab | Clicked link |  |  |
 | YouTube | Clicking opens YouTube in a separate tab | Clicked link |  |  |
-| Feature |  |  |  |  |
 | **Footer / company information links** |
-| Home | Clicking takes the user to the home page  | Clicked link |  |  |
+| Home | Clicking takes the user to the home page | Clicked link |  |  |
 | Allergens | Clicking takes the user to the allergens page | Clicked link |  |  |
 | Careers | Clicking takes the user to the careers page | Clicked link |  |  |
 | Contact | Clicking takes the user to the about page | Clicked link |  |  |
@@ -173,24 +172,24 @@ TODO
 | Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | Previous page | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | **Hover effects** |
-| Header links |  |  |  |  |
-| Header logo |  |  |  |  |
-| Buttons |  |  |  |  |
-| Input fields |  |  |  |  |
-| Tables |  |  |  |  |
-| Footer |  |  |  |  |
+| Header links | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Header logo | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Buttons | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Input fields | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Tables on reservation page | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Footer links and icons | Hover effect shows as intented on mouseover | Mouseover element |  |  |
 | **Form validation** |
-| Enter valid information |  |  |  |  |
-| Enter invalid information |  |  |  |  |
-| Leave fields empty |  |  |  |  |
-| Enter blank spaces |  |  |  |  |
+| Enter valid information | Form submits without problems and redirects to next page | Enter valid information and submit |  |  |
+| Enter invalid information | It is not possible to submit form and error messages show informing about what is wrong | Enter invalid information and submit |  |  |
+| Leave fields empty | Error message displays about missing information | Submit form without information |  |  |
+| Enter blank spaces | Error message displays that field is require | Submit form with blank spaces |  |  |
 | **Security** |
-| Change another users account details |  |  |  |  |
-| Delete another users account |  |  |  |  |
-| Change another users reservation details |  |  |  |  |
-| Delete another users reservation |  |  |  |  |
-| Change a menu item without permission |  |  |  |  |
-| Delete a menu item without permission |  |  |  |  |
+| Change another users account details | Should not be possible to attempt because pages do not use custom urls |  |  |  |
+| Delete another users account | Should not be possible to attempt because pages do not use custom urls |  |  |  |
+| Change another users reservation details | Error message displaying that user does not have permission to edit this reservation |  |  |  |
+| Delete another users reservation | Error message displaying that user does not have permission to delete this reservation |  |  |  |
+| Change a menu item without permission | Error message displaying that user does not have permission to edit this menu item |  |  |  |
+| Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item |  |  |  |
 
 
 
