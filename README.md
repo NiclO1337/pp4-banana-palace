@@ -7,8 +7,6 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
 
 ## Table of contents
 
-TODO
-
 * [Introduction](#introduction)
     * [Website goals](#website-goals)
     * [First time user goals](#first-time-user-goals)
@@ -22,11 +20,18 @@ TODO
     * [Images](#images)
     * [Logo and Favicon](#logo-and-favicon)
 * [Features](#features)
-    * [Welcome screen](#welcome-screen)
-    * [Welcome screen]()
-    * [Welcome screen]()
-    * [Welcome screen]()
+    * [First page](#first-page)
+    * [Menu](#menu)
+    * [Account](#account)
+    * [Discount](#discount)
+    * [Reservation](#reservation)
     * [Security Features and Defensive Design](#security-features-and-defensive-design)
+        * [User Authentication](#user-authentication)
+        * [User Authorization](#user-authorization)
+        * [Form Validation](#form-validation)
+        * [Error Handling](#error-handling)
+        * [Security Measures for Sensitive Information](#security-measures-for-sensitive-information)
+        * [CSRF Protection](#csrf-protection)
     * [Future features](#future-features)
 * [Project planning and execution](#project-planning-and-execution)
     * [Design thinking](#design-thinking)
@@ -51,11 +56,12 @@ TODO
         * [Tools](#tools)
 * [Testing](#testing)
 * [Deployment](#deployment)
-    * [Heroku](#deployment-to-heroku)
-    * [Changes](#changes-to-the-code)
     * [Local development](#local-development)
         * [Forking](#forking-the-project)
         * [Cloning](#cloning-the-project)
+        * [Development server](#running-a-development-server)
+        * [Changes](#changes-to-the-code)
+    * [Heroku](#deployment-to-heroku)
 * [Credits](#credits)
     * [Honorable mentions](#honorable-mentions)
     * [Content](#content)
@@ -453,7 +459,7 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 If changes has been made in local development that requires new dependencies, these needs to be added to the requirements.txt file. It is done by entering the following command in the terminal: 'pip3 freeze > requirements.txt'. Updated requirements file must then be added, commited, and pushed to GitHub.
 
 
-#### Deployment to Heroku
+### Deployment to Heroku
 
 1. Log in (or sign up) to Heroku. ( https://www.heroku.com/ )
 2. From the dashboard, create a "new app" and follow the instructions.
