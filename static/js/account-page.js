@@ -7,6 +7,6 @@ $(document).ready(function() {
         $('#click-me').parent('a').parent('p').addClass("fa-beat-fade");
         $('#click-me').siblings('i').removeClass("fa-shake");
 
-    }, 10000)
-})
+    }, 10000);
+});
 

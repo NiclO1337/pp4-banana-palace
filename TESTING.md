@@ -30,26 +30,22 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
 
 ### Code validators
 
-- **HTML**
-Validated through [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Some errors related to automatically created Django forms has been found but all custom written code passes the tests.
+**HTML** validated through [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Some errors related to automatically created Django forms has been found but all custom written code passes the tests.
 <br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693510294/html-validator-pass_lwfaja.jpg)
 
-- **CSS**
-Validated through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator) and returns 1 error and 22 warnings.
+**CSS** validated through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator) and returns 1 error and 22 warnings.
 <br>![Passed without errors](./documentation/images/css-error.jpg)
 
-#### Error
-Validator is not able to parse this CSS because it checks for CSS level 3 and this selector uses modern CSS level 4 which has not yet been implemented. The error is ignored because this CSS targetting works as intended in all browser testing.
+Validator is not able to parse this CSS selector because it checks for CSS level 3 and this selector uses modern CSS level 4 which has not yet been implemented. The warnings are due to the use of CSS variables, also ignored as it works as intended.
 
-TODO: Update after browser testing
+These are ignored because this CSS targetting works as intended in all browser testing.
 
-#### Warnings are due to the use of CSS variables, also ignored as it works as intended.
+TODO: Update after browser testing if problems occur
 
 
-- **JavaScript**
-checked with [JSHint](https://jshint.com/) to test for errors and potential problems.<br>
-Code has TODO
-<br>(*Uses ES6 features which needs to be enabled in the configuration*).
+**JavaScript** checked with [JSHint](https://jshint.com/) to test for errors and potential problems.<br>
+Script files has no warnings or errors.
+<br>(*Uses ES6 features and jQuery which needs to be enabled in the configuration*).
 
 - **Python**
 All code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) and TODO

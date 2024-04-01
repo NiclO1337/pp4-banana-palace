@@ -24,10 +24,10 @@ function scrollFunction() {
         $('#navbarNav')[0].classList.add('justify-content-end');
         $('#navbarNav')[0].classList.remove('mt-3');
 
-        $('#header-address-nav')[0].classList.remove('d-sm-block')
-        $('#header-phone-nav')[0].classList.remove('d-sm-block')
-        $('#header-address')[0].classList.remove('d-block')
-        $('#header-phone')[0].classList.remove('d-block')
+        $('#header-address-nav')[0].classList.remove('d-sm-block');
+        $('#header-phone-nav')[0].classList.remove('d-sm-block');
+        $('#header-address')[0].classList.remove('d-block');
+        $('#header-phone')[0].classList.remove('d-block');
 
         $('.alert').hide();
 
@@ -47,36 +47,35 @@ function scrollFunction() {
         $('#navbarNav')[0].classList.add('justify-content-center');
         $('#navbarNav')[0].classList.add('mt-3');
 
-
-        $('#header-address-nav')[0].classList.add('d-sm-block')
-        $('#header-phone-nav')[0].classList.add('d-sm-block')
-        $('#header-address')[0].classList.add('d-block')
-        $('#header-phone')[0].classList.add('d-block')
+        $('#header-address-nav')[0].classList.add('d-sm-block');
+        $('#header-phone-nav')[0].classList.add('d-sm-block');
+        $('#header-address')[0].classList.add('d-block');
+        $('#header-phone')[0].classList.add('d-block');
     }
 }
 
 $(document).ready(function() {
-    $('#header-address-nav')[0].classList.add('d-sm-block')
-    $('#header-phone-nav')[0].classList.add('d-sm-block')
-    $('#header-address')[0].classList.add('d-block')
-    $('#header-phone')[0].classList.add('d-block')
-})
+    $('#header-address-nav')[0].classList.add('d-sm-block');
+    $('#header-phone-nav')[0].classList.add('d-sm-block');
+    $('#header-address')[0].classList.add('d-block');
+    $('#header-phone')[0].classList.add('d-block');
+});
 
 // Code snippet let carouselItems from https://codepen.io/hellomev/pen/LYORMQW
 
-let carouselItems = document.querySelectorAll('.carousel .carousel-item')
+let carouselItems = document.querySelectorAll('.carousel .carousel-item');
 
 carouselItems.forEach((el) => {
-    const minPerSlide = 4
-    let next = el.nextElementSibling
+    const minPerSlide = 4;
+    let next = el.nextElementSibling;
     for (var i = 1; i < minPerSlide; i++) {
         if (!next) {
             // wrap carousel by using first child
-            next = carouselItems[0]
+            next = carouselItems[0];
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
+        let cloneChild = next.cloneNode(true);
+        el.appendChild(cloneChild.children[0]);
+        next = next.nextElementSibling;
     }
-})
+});
 
