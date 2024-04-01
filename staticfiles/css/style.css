@@ -101,6 +101,9 @@ span {
 
 li,
 button,
+.btn-iconic,
+.btn-iconic-reverse,
+.btn-warning,
 #back-one-page {
   font-family: var(--button-font);
   text-transform: uppercase;
@@ -185,6 +188,11 @@ footer {
   border-radius: var(--border-radius-iconic);
   padding: 6px 10px;
   background-color: transparent;
+}
+
+a.btn-iconic,
+a.btn-iconic-reverse {
+  padding: 6px 6px 6px 10px;
 }
 
 #override-bootstrap .account-management button:hover,
@@ -276,7 +284,7 @@ footer {
 }
 
 .soft-cushion {
-  height: 8vh;
+  height: 6vh;
   transition: all 1s ease-out;
 }
 
@@ -513,6 +521,10 @@ a:has(> i.fa-star) {
 a:has(i.fa-heart) #click-me,
 a:has(> i.fa-heart) {
   color: #d641c2;
+}
+
+a.text-decoration-none.btn-warning.me-1 {
+  padding-right: 6px;
 }
 
 /* Uses same image as about page #main-about-img */

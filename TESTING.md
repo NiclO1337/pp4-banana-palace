@@ -31,7 +31,7 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
 ### Code validators
 
 - **HTML**
-Validated through [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) and TODO
+Validated through [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input). Some errors related to automatically created Django forms has been found but all custom written code passes the tests.
 <br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693510294/html-validator-pass_lwfaja.jpg)
 
 - **CSS**

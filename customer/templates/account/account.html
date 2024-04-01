@@ -19,7 +19,7 @@
 <div class="container-fluid container-lg">
   <div class="row">
     <div class="col-12 d-md-none">
-      <h1 class="text-center" aria-hidden="true">
+      <h1 class="text-center">
         Welcome {{ user.first_name }}
       </h1>
     </div>
@@ -27,7 +27,9 @@
       <div id="account-img" class="mt-2 mb-3 mt-md-1 mb-3"></div>
     </div>
     <section class="col-12 col-md-8 col-xxl-5 offset-xxl-2 ps-lg-0">
-      <h1 class="d-none d-md-block mb-3">Welcome {{ user.first_name }}</h1>
+      <h1 class="d-none d-md-block mb-3" aria-hidden="true">
+        Welcome {{ user.first_name }}
+      </h1>
       <hr class="my-2 d-none d-md-block" />
       <div class="row">
 
@@ -84,7 +86,6 @@
             </li>
           </ul>
         </div>
-      </div>
       <div class="row align-items-center">
         <div class="col-12 col-md-6 p-0">
 
@@ -120,20 +121,23 @@
           {% endif %}
         </div>
         <div class="col-12 col-md-6 p-md-0 my-4 my-md-0">
-          <a href="{% url 'edit_account' %}" class="text-decoration-none">
-            <button class="btn-iconic-reverse me-1">Edit</button>
+          <a href="{% url 'edit_account' %}"
+            class="text-decoration-none btn-iconic-reverse me-1">
+            Edit
           </a>
-          <a href="{% url 'delete_account' %}" class="text-decoration-none">
-            <button class="btn-warning me-1">Delete</button>
+          <a href="{% url 'delete_account' %}"
+            class="text-decoration-none btn-warning me-1">
+            Delete
           </a>
-          <a href="{% url 'account_logout' %}">
-            <button class="btn-warning">Logout</button>
+          <a href="{% url 'account_logout' %}"
+            class="text-decoration-none btn-warning">
+            Logout
           </a>
         </div>
       </div>
         <h2 class="col-12 mx-auto p-0 mt-2">Reservations</h2>
         <hr>
-        <!-- if no reservations -->
+        <!-- if user has reservations -->
         {% if reservations %}
           {% for reservation in reservations %}
             <div class="card">
@@ -154,24 +158,26 @@
                   <div class="col-11 col-md-5 p-0 pt-1 pt-md-0 mx-auto">
                     <a
                       href="{% url 'edit_reservation' reservation.id %}"
-                      class="text-decoration-none">
-                      <button class="btn-iconic-reverse me-2">Edit</button>
+                      class="text-decoration-none btn-iconic-reverse me-2">
+                      Edit
                     </a>
                     <a
                       href="{% url 'delete_reservation' reservation.id %}"
-                      class="text-decoration-none">
-                      <button class="btn-warning">Delete</button>
+                      class="text-decoration-none btn-warning">
+                      Delete
                     </a>
                   </div>
                 </div>
               </div>
-              <hr>
-            {% endfor %}
-          {% else %}
-            <p class="small">
-              You currently do not have any upcoming reservations.
-            </p>
-          {% endif %}
+            </div>
+          <hr>
+          {% endfor %}
+        {% else %}
+        <!-- if user does not have any reservations -->
+          <p class="small">
+            You currently do not have any upcoming reservations.
+          </p>
+        {% endif %}
         </div>
     </section>
   </div>

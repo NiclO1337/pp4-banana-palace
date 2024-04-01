@@ -37,8 +37,8 @@ function scrollFunction() {
         $('#header-container')[0].style.height = "8rem";
 
         $('main.flex-grow-1')[0].style.marginTop = "0";
-        $('.soft-cushion')[0].style.height = "8vh";
-        $('.soft-cushion')[1].style.height = "8vh";
+        $('.soft-cushion')[0].style.height = "6vh";
+        $('.soft-cushion')[1].style.height = "6vh";
 
         $('.navbar-brand')[0].style.display = "none";
         $('#main-logo')[0].style.display = "block";
