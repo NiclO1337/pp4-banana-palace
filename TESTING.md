@@ -133,7 +133,7 @@ TODO
 | Book a table | Clicking takes the user to the reservation page | Clicked button |  |  |
 | **Index page** |
 | Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down |  |  |
-| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll down |  |  |
+| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll up to top |  |  |
 | Carousel right | Clicking on right button shows the next menu item that is to the right of the current view | Click on right button |  |  |
 | Carousel left | Clicking on left button shows the next menu item that is to the left of the current view | Click on left button |  |  |
 | **Footer / Social media icons** |
@@ -149,28 +149,36 @@ TODO
 | Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | Privacy Policy | Clicking takes the user to the privacy policy page | Clicked link |  |  |
 | Cookie Policy | Clicking takes the user to the cookie policy page | Clicked link |  |  |
-| Modern Slavery Statement | Clicking takes the user to the modern mlavery mtatement page | Clicked link |  |  |
+| Modern Slavery Statement | Clicking takes the user to the modern slavery s4tatement page | Clicked link |  |  |
 | Gender Pay Gap | Clicking takes the user to the gender pay gap page | Clicked link |  |  |
 | Animal Welfare | Clicking takes the user to the animal welfare page | Clicked link |  |  |
 | Investor Relations | Clicking takes the user to the investor relations page | Clicked link |  |  |
 | **Menu** |
-| View menu | When navigating the the menu page, the menu is displayed |  |  |  |
-| Add menu item | If logged in user has permission (staff), they are able to add new menu items |  |  |  |
-| Edit menu item | If logged in user has permission (staff), they are able to edit current menu items |  |  |  |
-| Delete menu item | If logged in user has permission (owner), they are able to delete current menu items |  |  |  |
+| View menu | When navigating the the menu page, the menu is displayed | Navigate to menu and wait |  |  |
+| Add menu item | If logged in user has permission (staff), they are able to add new menu items | Log in with correct permissions and add new item |  |  |
+| Edit menu item | If logged in user has permission (staff), they are able to edit current menu items | Log in with correct permissions and edit an item |  |  |
+| Delete menu item | If logged in user has permission (owner), they are able to delete current menu items | Log in with correct permissions and delete new item |  |  |
 | **Account management** |
-| Sign up  | Able to sign up to website | Enter required information |  |  |
-| Verify email address  | When clicking on verification link in email, should be directed to page and email verified | Click on email link |  |  |
-| Reset password | Able to reset password if needed |  |  |  |
-| Sign in | Able to log in and redirected to account page |  |  |  |
-| Edit account | Can change personal details on the account |  |  |  |
-| Change password | Able to change the password on the account |  |  |  |
-| Delete account | Can delete account and personal information |  |  |  |
-| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended |  |
-| CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works |  |
+| Sign up  | New visitors are able to sign up to website | Click on login/register and then on sign up and enter required information |  |  |
+| Verify email address  | When clicking on verification link in email, should be directed to TODO page and email verified | Click on email link |  |  |
+| Sign in | Able to log in and redirected to account page | Sign in with valid log in credentials |  |  |
+| Sign out | Can log out form the account | Navigate to account page and click logout |  |  |
+| Reset password | Able to reset password if needed | Try clicking reset password TODO |  |  |
+| Edit account | Can change personal details on the account | Edit personal details |  |  |
+| Change password | Able to change the password on the account | Try changing password on edit account page |  |  |
+| Delete account | Can delete account and personal information | Click on delete account on account page |  |  |
 | **Make reservation** |
-| Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
-| Previous page | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
+| Choose date | Choosing a date shows available tables on that date | Choose a date in the datepicker |  |  |
+| Choose table | Clicking on an available table takes user to the next page where reservation can be completed | Click a table that is available |  |  |
+| Prepopulated form | When creating a reservation, the form should be prepopulated with users information | Select a table to get to reserve table screen |  |  |
+| Terms & Conditions | Clicking takes the user to the terms & conditions page so they can read it before accepting | Click on Terms & Conditions link |  |  |
+| Previous page | Clicking takes the user back to previous page and can continue with reservation | Click on previous page button |  |  |
+| Make reservation | Filling out all fields and clicking reserve table confirms the reservation | Fill out information and click reserve table |  |  |
+| Reserved table | After a table is reserved it should not be possible to select that table anymore | Make a reservation and remember which table was chosen, then go back to reservation page and look |  |  |
+| Edit information | When editing user details on a reservation, the new details are saved on the account | Edit user information on reservation and confirm changes |  |  |
+| Prepopulated form | When editing a reservation, the form should be prepopulated with reservation information | Edit a reservation, select a table to get to reserve table screen |  |  |
+| Edit reservation | When editing the reservation, the chosen table becomes available again and user can change all details | Remember which table was reserved and click on edit reservation and look |  |  |
+| Delete reservation | When deleting the reservation, the reservation is removed from users account page and the table becomes available again | Remember which table was reserved, delete reservation and go back to reservation page and look |  |  |
 | **Hover effects** |
 | Header links | Hover effect shows as intented on mouseover | Mouseover element |  |  |
 | Header logo | Hover effect shows as intented on mouseover | Mouseover element |  |  |
@@ -182,14 +190,17 @@ TODO
 | Enter valid information | Form submits without problems and redirects to next page | Enter valid information and submit |  |  |
 | Enter invalid information | It is not possible to submit form and error messages show informing about what is wrong | Enter invalid information and submit |  |  |
 | Leave fields empty | Error message displays about missing information | Submit form without information |  |  |
-| Enter blank spaces | Error message displays that field is require | Submit form with blank spaces |  |  |
+| Enter blank spaces | Error message displays that field is required | Submit form with blank spaces |  |  |
 | **Security** |
-| Change another users account details | Should not be possible to attempt because pages do not use custom urls |  |  |  |
-| Delete another users account | Should not be possible to attempt because pages do not use custom urls |  |  |  |
-| Change another users reservation details | Error message displaying that user does not have permission to edit this reservation |  |  |  |
-| Delete another users reservation | Error message displaying that user does not have permission to delete this reservation |  |  |  |
-| Change a menu item without permission | Error message displaying that user does not have permission to edit this menu item |  |  |  |
-| Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item |  |  |  |
+| Change another users account details | Should not be possible to attempt | Try accessing with URLs |  |  |
+| Delete another users account | Should not be possible to attempt | Try accessing with URLs |  |  |
+| Change another users reservation details | Error message displaying that user does not have permission to edit this reservation | Try accessing with URLs |  |  |
+| Delete another users reservation | Error message displaying that user does not have permission to delete this reservation | Try accessing with URLs |  |  |
+| Change a menu item without permission | Error message displaying that user does not have permission to edit this menu item | Try accessing with URLs |  |  |
+| Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item | Try accessing with URLs |  |  |
+| **CSS Error / warning** |
+| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended |  |
+| CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works |  |
 
 
 
@@ -227,9 +238,10 @@ Note: Datepicker on reservation does not look good on Galaxy fold (unfolded) 280
 A large number of bugs was accidentally created during development and had to be fixed.
 Fixes included:
 - looking through code line by line
-- using print() and console.log() statements to see what was acctually going on
+- using print() and console.log() statements to see what was going on
+- put python variables into the HTML pages and show the content on the page to see what variable contains
 - review commit history
-- search google for possible solutions
+- search google and phind for possible solutions
 - a lot of trial and error
 
 Noteworthy bugs are added as [issues](https://github.com/NiclO1337/pp4-banana-palace/issues?q=is%3Aopen+is%3Aissue+label%3Abug) on GitHub and placed on the Kanban board as high priority.
