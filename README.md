@@ -4,7 +4,6 @@
 
 Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
-
 ## Table of contents
 
 * [Introduction](#introduction)
@@ -67,7 +66,6 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
     * [Content](#content)
     * [Media](#media)
     * [Code](#code)
-
 
 ## Introduction
 
@@ -149,19 +147,13 @@ Header and footer elements, complete with navigation links, are incorporated acr
 
 The welcome section features a captivating image that encapsulates the restaurant's ambiance, inviting users to experience its unique atmosphere. Paired with a heartfelt invitation, it sets the stage for an enticing journey, urging visitors to explore the culinary delights within.
 
-
 The index page captivates visitors with an engaging carousel slider that elegantly showcases the restaurant's signature dishes. With each slide, users are treated to tantalizing glimpses of the culinary delights awaiting them. From succulent main courses to delectable desserts, the carousel invites exploration and ignites the senses, offering a preview of the gastronomic journey that lies ahead. Through vibrant imagery and enticing descriptions, the carousel slider serves as a tempting invitation to indulge in an unforgettable dining experience.
 
 <details><summary>Screenshot of the initial page</summary> <p align="left"><img src="./documentation/images/feature-initial-page.png" alt="The initial screen" width="900"/></p> </details>
-
 <details><summary>Screenshot of the header </summary> <p align="left"><img src="./documentation/images/feature-header.png" alt="the header" width="900"/></p> </details>
-
 <details><summary>Screenshot of the footer</summary> <p align="left"><img src="./documentation/images/feature-footer.png" alt="the footer" width="900"/></p> </details>
-
 <details><summary>Screenshot of the welcome section</summary> <p align="left"><img src="./documentation/images/feature-welcome.png" alt="the welcome image and text" width="900"/></p> </details>
-
 <details><summary>Screenshot of the carousel</summary> <p align="left"><img src="./documentation/images/feature-carousel.png" alt="slider with images of the signature dishes" width="900"/></p> </details>
-
 
 ### Menu
 
@@ -217,15 +209,10 @@ In order to confirm the booking, users are required to accept the terms and cond
 Once a reservation is confirmed, it becomes accessible within their account dashboard, offering the flexibility to edit or cancel existing bookings at their convenience.
 
 <details><summary>Screenshot of the table reservation page</summary> <p align="left"><img src="./documentation/images/feature-reservation-table.png" alt="table reservation page" width="900"/></p> </details>
-
 <details><summary>Screenshot of the reservation details page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details.png" alt="reservation details page" width="900"/></p> </details>
-
 <details><summary>Screenshot of the terms and conditions page</summary> <p align="left"><img src="./documentation/images/feature-reservation-details-terms-and-conditions.png" alt="terms and conditions page" width="900"/></p> </details>
-
 <details><summary>Screenshot of the account page with reservation made</summary> <p align="left"><img src="./documentation/images/feature-reservation-account.png" alt="account page with reservation made" width="900"/></p> </details>
-
 <details><summary>Screenshot of the account page with edited reservation</summary> <p align="left"><img src="./documentation/images/feature-reservation-account-edited.png" alt="account page with edited reservation" width="900"/></p> </details>
-
 
 ### Security Features and Defensive Design
 
@@ -249,10 +236,8 @@ Sensitive environment variables are stored locally in env.py during development 
 #### CSRF Protection
 To mitigate the risk of Cross-Site Request Forgery (CSRF) attacks, CSRF tokens are embedded in every form, providing an additional layer of authentication when requests are submitted. This safeguard helps prevent unauthorized data access or manipulation by malicious third parties.
 
-
 ### Future features
 All remaining user stories at the project deadline are stored in the product backlog, awaiting the next development cycle for implementation. [GitHub milestone](https://github.com/NiclO1337/pp4-banana-palace/milestone/1) is used as the backlog for this project.
-
 
 [Back to top](#table-of-contents)
 
@@ -278,11 +263,9 @@ Screenshots of individual wireframes for the:
 <details><summary>users profile page</summary> <p align="left"><img src="./documentation/images/wireframes-user-profile.png" alt="wireframes for the users profile page" width="600"/></p> </details>
 <details><summary>owners profile page</summary> <p align="left"><img src="./documentation/images/wireframes-owner-profile.png" alt="wireframes for the owners profile page" width="600"/></p> </details>
 <details><summary>booking page with date and tables</summary> <p align="left"><img src="./documentation/images/wireframes-fun-booking-date-time.png" alt="wireframes for the fun booking page with date and time" width="600"/></p> </details>
-
 <details><summary>booking page with personal info</summary> <p align="left"><img src="./documentation/images/wireframes-booking-info.png" alt="wireframes for the booking page with personal info" width="600"/></p> </details>
 <details><summary>menu page</summary> <p align="left"><img src="./documentation/images/wireframes-menu.png" alt="wireframes for the menu page" width="600"/></p> </details>
 <details><summary>feedback section</summary> <p align="left"><img src="./documentation/images/wireframes-feedback.png" alt="wireframes for the feedback section" width="600"/></p> </details>
-
 
 ### Database Schema
 
@@ -360,7 +343,6 @@ Iteration process were tracked as [GitHub milestones](https://github.com/NiclO13
 <details><summary>Screenshot of the end of iteration 4</summary> <p align="left"><img src="TODO" alt="end of iteration 4" width="800"/></p> </details>
 <details><summary>Screenshot of the start of iteration 5</summary> <p align="left"><img src="TODO" alt="Beginning of iteration 5" width="800"/></p> </details>
 <details><summary>Screenshot of the end of iteration 5</summary> <p align="left"><img src="TODO" alt="end of iteration 5" width="800"/></p> </details>
-
 
 ### Kanban board
 
@@ -454,10 +436,8 @@ Type 'git clone' into the terminal and then paste the link you copied in step 3.
 3. Install all the required dependencies in your workspace with 'pip install -r requirements.txt' command in the terminal
 4. Run the server with the command 'python manage.py runserver'
 
-
 #### Changes to the code
 If changes has been made in local development that requires new dependencies, these needs to be added to the requirements.txt file. It is done by entering the following command in the terminal: 'pip3 freeze > requirements.txt'. Updated requirements file must then be added, commited, and pushed to GitHub.
-
 
 ### Deployment to Heroku
 
@@ -473,7 +453,6 @@ If changes has been made in local development that requires new dependencies, th
     - Connect app to the correct repository.
 5. Choose to deploy either manully or enable automatic deploys.
 
-
 [Back to top](#table-of-contents)
 
 ## Credits
@@ -483,7 +462,6 @@ If changes has been made in local development that requires new dependencies, th
 - Thanks [Erik](https://github.com/Tossan99) for inspiring me to have fun and take risks to create the best possible project!
 - To all lovely people in our #community-sweden slack channel: Thank you for endless support and great laughs!
 - Thanks to my mentor Jubril Akolade for guidance and great advice.
-
 
 ### Content
 
@@ -495,7 +473,6 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 - Hours & location text from [Colletta Atlanta](https://www.collettarestaurant.com/location/colletta-atlanta/)
 
 - Menu recipe and images from Yummly, [Main courses](https://www.yummly.com/recipes?q=banana+dinner&allowedIngredient=meat&allowedIngredient=bananas&qgs=with+meat&taste-pref-appended=true) and [Desserts](https://www.yummly.com/recipes?q=desserts&taste-pref-appended=true&allowedIngredient=bananas)
-
 
 ### Media
 
@@ -515,7 +492,6 @@ and [Limely](https://www.limely.co.uk/blog/top-restaurant-website-designs)
 - Photo by [Pablo Merchán Montes](https://unsplash.com/photos/woman-holding-fork-in-front-table-Orz90t6o0e4)
 - Photo by [Lisa Fotios](https://www.pexels.com/sv-se/foto/restaurang-lampor-foretag-interior-776538/)
 - Photo by [Rachel Claire](https://www.pexels.com/sv-se/foto/tallrik-restaurang-semester-konst-4577179/)
-
 
 ### Code
 
@@ -552,7 +528,6 @@ How to extend user model and update account information.
 
 - Loading screen animation by [Tobias Ahlin](https://tobiasahlin.com/spinkit/)
 
-
 #### Phind.com
 
 After spending too many hours on google trying various outdated or incorrect or incapatible solutions I changed tactic and tested phind.com because of multiple recommendations. Immediatly amazed at the speed and accuracy of search results.
@@ -581,7 +556,6 @@ After spending too many hours on google trying various outdated or incorrect or 
 
 - Fix image breaking after menu item edit: [Phind search 12](https://www.phind.com/search?cache=rr3ypkh3rmkx354n45tu7n9m)
 
-
 *Message from the developer:*:<br>
 Phind makes me feel stupid but project deadline is coming fast and I need workable solutions faster so that I can create the best possible project for the product owner and their users.
 
@@ -589,6 +563,5 @@ Phind makes me feel stupid but project deadline is coming fast and I need workab
 I no longer feel stupid, using this tool takes skill, patience and a lot of thinking.
 
 If online links stops working, results are saved in .txt format [here](https://github.com/NiclO1337/pp4-banana-palace/tree/main/documentation/phind-searches/)
-
 
 [Back to top](#table-of-contents)
