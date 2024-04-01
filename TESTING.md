@@ -124,12 +124,12 @@ TODO
 | --- | --- | --- | --- | --- |
 | **Header / navigation bar** |
 | Logo | Clicking takes the user to the home page | Clicked logo |  |  |
-| Menu | Clicking takes the user to the menu page | Clicked  link |  |  |
-| Hours & Location | Clicking takes the user to the about page | Clicked  link |  |  |
-| Out story | Clicking takes the user to the story page | Clicked  link |  |  |
+| Menu | Clicking takes the user to the menu page | Clicked link |  |  |
+| Hours & Location | Clicking takes the user to the about page | Clicked link |  |  |
+| Out story | Clicking takes the user to the story page | Clicked link |  |  |
 | Login/register | Clicking takes the user to the sign in page | Clicked link |  |  |
-| Account/logout | Clicking takes the user to the account page | Clicked  link |  |  |
-| Book a table | Clicking takes the user to the reservation page | Clicked  button |  |  |
+| Account/logout | Clicking takes the user to the account page | Clicked link |  |  |
+| Book a table | Clicking takes the user to the reservation page | Clicked button |  |  |
 | **Index page** |
 | Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down |  |  |
 | Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll down |  |  |
@@ -147,15 +147,17 @@ TODO
 | Careers | Clicking takes the user to the careers page | Clicked link |  |  |
 | Contact | Clicking takes the user to the about page | Clicked link |  |  |
 | Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
-| Privacy Policy | Clicking takes the user to the Privacy Policy page | Clicked link |  |  |
-| Cookie Policy | Clicking takes the user to the Cookie Policy page | Clicked link |  |  |
-| Modern Slavery Statement | Clicking takes the user to the Modern Slavery Statement page | Clicked link |  |  |
-| Gender Pay Gap | Clicking takes the user to the Gender Pay Gap page | Clicked link |  |  |
-| Animal Welfare | Clicking takes the user to the Animal Welfare page | Clicked link |  |  |
-| Investor Relations | Clicking takes the user to the Investor Relations page | Clicked link |  |  |
+| Privacy Policy | Clicking takes the user to the privacy policy page | Clicked link |  |  |
+| Cookie Policy | Clicking takes the user to the cookie policy page | Clicked link |  |  |
+| Modern Slavery Statement | Clicking takes the user to the modern mlavery mtatement page | Clicked link |  |  |
+| Gender Pay Gap | Clicking takes the user to the gender pay gap page | Clicked link |  |  |
+| Animal Welfare | Clicking takes the user to the animal welfare page | Clicked link |  |  |
+| Investor Relations | Clicking takes the user to the investor relations page | Clicked link |  |  |
 | **Menu** |
-| Feature |  |  |  |  |
-| Feature |  |  |  |  |
+| View menu | When navigating the the menu page, the menu is displayed |  |  |  |
+| Add menu item | If logged in user has permission (staff), they are able to add new menu items |  |  |  |
+| Edit menu item | If logged in user has permission (staff), they are able to edit current menu items |  |  |  |
+| Delete menu item | If logged in user has permission (owner), they are able to delete current menu items |  |  |  |
 | **Account management** |
 | Sign up  | Able to sign up to website | Enter required information |  |  |
 | Verify email address  | When clicking on verification link in email, should be directed to page and email verified | Click on email link |  |  |
@@ -164,12 +166,9 @@ TODO
 | Edit account | Can change personal details on the account |  |  |  |
 | Change password | Able to change the password on the account |  |  |  |
 | Delete account | Can delete account and personal information |  |  |  |
-| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas |  |  |
-| CSS validation warnings | All styles with CSS variables looks as intended |  |  |  |
+| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended |  |
+| CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works |  |
 | **Make reservation** |
-| View menu |  |  |  |  |
-| Edit menu item |  |  |  |  |
-| Delete menu item |  |  |  |  |
 | Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | Previous page | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | **Hover effects** |
