@@ -23,10 +23,10 @@ Edit Account
                 {{ user_form | crispy }}
                 {{ customer_form | crispy }}
                 {% csrf_token %}
-                <button type="submit" class="btn-iconic">Save changes</button>
+                <button type="submit" class="btn-iconic mb-4">Save changes</button>
             </form>
             <a href="{% url 'account_change_password' %}"
-                class="btn-iconic-reverse mt-4">
+                class="btn-iconic-reverse text-decoration-none">
                 Change password
             </a>
         </div>

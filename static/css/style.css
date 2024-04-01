@@ -146,6 +146,17 @@ footer {
   color: var(--color-primary-bg);
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-secondary-bg);
+  outline-offset: 2px;
+}
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-secondary-bg);
+  outline-offset: 2px;
+  box-shadow: none;
+  color: var(--color-primary);
+}
+
 ::placeholder {
   color: var(--color-tertiary);
 }
@@ -166,7 +177,8 @@ footer {
 /* Buttons */
 .nav-link,
 .btn-iconic,
-#override-bootstrap .account-management button {
+#override-bootstrap .account-management button,
+#override-bootstrap .account-management a {
   color: var(--color-primary);
 }
 
@@ -183,6 +195,7 @@ footer {
 .btn-iconic-reverse,
 .btn-warning,
 #override-bootstrap .account-management button,
+#override-bootstrap .account-management a,
 #back-one-page {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
@@ -196,6 +209,7 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button:hover,
+#override-bootstrap .account-management a:hover,
 #override-bootstrap header a:hover,
 .btn-iconic:hover,
 .btn-iconic-reverse:hover,
@@ -214,6 +228,7 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button.btn-iconic-reverse,
+#override-bootstrap .account-management a.btn-iconic-reverse,
 .btn-iconic-reverse {
   background-color: var(--color-primary);
   color: var(--color-primary-bg);
