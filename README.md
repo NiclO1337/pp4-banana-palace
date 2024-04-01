@@ -397,6 +397,7 @@ Link to [Kanban board](https://github.com/users/NiclO1337/projects/3/views/1) us
 - **Bootstrap GitHub page** to check properties of classes [Link to v5.3.2](https://github.com/twbs/bootstrap/blob/v5.3.0/dist/css/bootstrap.css)
 - **Django Docs** to build project and apps
 - **Grammarly** for spellchecking
+- **Microsoft Word** for spellchecking
 - **cdnjs.com** to find relevant CDN fast
 - **paint.net** to edit logo, images and favicon
 - **phind.com** to search for specific solutions
