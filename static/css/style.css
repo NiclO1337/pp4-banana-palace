@@ -440,6 +440,10 @@ a.btn-iconic-reverse {
   background-size: cover;
 }
 
+a.mt-2.mt-lg-3.btn-iconic.text-decoration-none {
+  padding-right: 10px;
+}
+
 /* --------------------------
 --------- About page --------
 -------------------------- */
