@@ -223,9 +223,25 @@ Once a reservation is confirmed, it becomes accessible within their account dash
 
 ### Security Features and Defensive Design
 
-TODO
-Validating every user input creates a defensive design that runs correctly and keeps running no matter what action the user takes.
+Security features are integrated measures designed to safeguard the website, ensuring protection against various threats and vulnerabilities while maintaining a seamless user experience. Different sections of the website are fortified in unique ways to deter unauthorized tampering and maintain data integrity. Designed with security in mind by limiting access, handling errors properly, using secure coding practices, and testing for vulnerabilities.
 
+#### User Authentication
+Authentication of users is handled through Django-AllAuth. Certain sections of the application are accessible only to logged-in users, and access to these pages is secured using Django's login required decorator, which grants role-based access to the central dataset. If a user attempts to access these restricted pages without being logged in, they are automatically redirected to the login page.
+
+#### User Authorization
+Users are authorized to perform CRUD operations only on their own accounts and reservations. Backend operations always verify the user's identity to prevent unauthorized tampering. Successful operations are contingent on the user being both the requester of the change and the owner of the affected account.
+
+#### Form Validation
+Django's native form validation is employed to ensure accuracy and completeness of data entry throughout the application. Forms are configured not to submit unless all required fields are correctly filled. Additionally, form data undergoes thorough validation checks in the backend to maintain data integrity and security. In cases of errors, informative messages are displayed to guide users in correcting their entries.
+
+#### Error Handling
+Error pages for common HTTP errors (400, 403, 404, and 500) include 'Return to the home page' buttons, aiding users in navigating back to the application's main interface.
+
+#### Security Measures for Sensitive Information
+Sensitive environment variables are stored locally in env.py during development to prevent inadvertent exposure on GitHub. In production, these variables are securely managed as Config Vars within the Heroku application environment. Furthermore, passwords are stored securely within Django AllAuth, utilizing industry-standard encryption methods. This ensures that sensitive user information, including passwords, remains inaccessible to unauthorized individuals.
+
+#### CSRF Protection
+To mitigate the risk of Cross-Site Request Forgery (CSRF) attacks, CSRF tokens are embedded in every form, providing an additional layer of authentication when requests are submitted. This safeguard helps prevent unauthorized data access or manipulation by malicious third parties.
 
 
 ### Future features
