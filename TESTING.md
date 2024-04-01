@@ -142,22 +142,22 @@ TODO
 | Instagram | Clicking opens Instagram in a separate tab | Clicked link |  Instagram opens in a separate tab | Pass |
 | YouTube | Clicking opens YouTube in a separate tab | Clicked link | YouTube opens in a separate tab | Pass |
 | **Footer / company information links** |
-| Home | Clicking takes the user to the home page | Clicked link |  |  |
-| Allergens | Clicking takes the user to the allergens page | Clicked link |  |  |
-| Careers | Clicking takes the user to the careers page | Clicked link |  |  |
-| Contact | Clicking takes the user to the about page | Clicked link |  |  |
-| Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
-| Privacy Policy | Clicking takes the user to the privacy policy page | Clicked link |  |  |
-| Cookie Policy | Clicking takes the user to the cookie policy page | Clicked link |  |  |
-| Modern Slavery Statement | Clicking takes the user to the modern slavery s4tatement page | Clicked link |  |  |
-| Gender Pay Gap | Clicking takes the user to the gender pay gap page | Clicked link |  |  |
-| Animal Welfare | Clicking takes the user to the animal welfare page | Clicked link |  |  |
-| Investor Relations | Clicking takes the user to the investor relations page | Clicked link |  |  |
+| Home | Clicking takes the user to the home page | Clicked link "Home" | Takes the user to the home page | Pass |
+| Allergens | Clicking takes the user to the allergens page | Clicked link "Allergens" | Takes the user to the allergens page | Pass |
+| Careers | Clicking takes the user to the careers page | Clicked link "Careers" | Takes the user to the careers page | Pass |
+| Contact | Clicking takes the user to the Hours & Location page | Clicked link "Contact" | Takes the user to the Hours & Location page | Pass |
+| Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link "Terms & Conditions" | Takes the user to the terms & conditions page | Pass |
+| Privacy Policy | Clicking takes the user to the privacy policy page | Clicked link "Privacy Policy" | Takes the user to the privacy policy page | Pass |
+| Cookie Policy | Clicking takes the user to the cookie policy page | Clicked link "Cookie Policy" | Takes the user to the cookie policy page | Pass |
+| Modern Slavery Statement | Clicking takes the user to the modern slavery statement page | Clicked link "Modern Slavery Statement" | Takes the user to the modern slavery statement page | Pass |
+| Gender Pay Gap | Clicking takes the user to the gender pay gap page | Clicked link "Gender Pay Gap" | Takes the user to the gender pay gap page | Pass |
+| Animal Welfare | Clicking takes the user to the animal welfare page | Clicked link "Animal Welfare" | Takes the user to the animal welfare page | Pass |
+| Investor Relations | Clicking takes the user to the investor relations page | Clicked link "Investor Relations" | Takes the user to the investor relations page | Pass |
 | **Menu** |
-| View menu | When navigating the the menu page, the menu is displayed | Navigate to menu and wait |  |  |
-| Add menu item | If logged in user has permission (staff), they are able to add new menu items | Log in with correct permissions and add new item |  |  |
-| Edit menu item | If logged in user has permission (staff), they are able to edit current menu items | Log in with correct permissions and edit an item |  |  |
-| Delete menu item | If logged in user has permission (owner), they are able to delete current menu items | Log in with correct permissions and delete new item |  |  |
+| View menu | When navigating the the menu page, the menu is displayed | Navigate to menu and wait | Menu page is loaded and menu is visible | Pass |
+| Add menu item | If logged in user has permission (staff), they are able to add new menu items | Log in with correct permissions and add new item | Add menu page opens and able to add new item | Pass |
+| Edit menu item | If logged in user has permission (staff), they are able to edit current menu items | Log in with correct permissions and edit an item | Edit item page opens and can edit the item | Pass |
+| Delete menu item | If logged in user has permission (owner), they are able to delete current menu items | Log in with correct permissions and delete item | Delete confirmation page with warning opens and deletion must be confirmed | Pass |
 | **Account management** |
 | Sign up  | New visitors are able to sign up to website | Click on login/register and then on sign up and enter required information |  |  |
 | Verify email address  | When clicking on verification link in email, should be directed to TODO page and email verified | Click on email link |  |  |
