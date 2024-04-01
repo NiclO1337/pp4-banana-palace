@@ -165,8 +165,9 @@ TODO
 | Change password | Able to change the password on the account |  |  |  |
 | Delete account | Can delete account and personal information |  |  |  |
 | **Make reservation** |
-| Feature |  |  |  |  |
-| Feature |  |  |  |  |
+| View menu |  |  |  |  |
+| Edit menu item |  |  |  |  |
+| Delete menu item |  |  |  |  |
 | Terms & Conditions | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | Previous page | Clicking takes the user to the terms & conditions page | Clicked link |  |  |
 | **Hover effects** |
@@ -177,8 +178,17 @@ TODO
 | Tables |  |  |  |  |
 | Footer |  |  |  |  |
 | **Form validation** |
-| Required fields |  |  |  |  |
-| Enter wrong data |  |  |  |  |
+| Enter valid information |  |  |  |  |
+| Enter invalid information |  |  |  |  |
+| Leave fields empty |  |  |  |  |
+| Enter blank spaces |  |  |  |  |
+| **Security** |
+| Change another users account details |  |  |  |  |
+| Delete another users account |  |  |  |  |
+| Change another users reservation details |  |  |  |  |
+| Delete another users reservation |  |  |  |  |
+| Change a menu item without permission |  |  |  |  |
+| Delete a menu item without permission |  |  |  |  |
 
 
 
@@ -188,6 +198,8 @@ Each website [feature](#features) has been tested on Google Chrome, Microsoft Ed
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
 | Works as intended |  |  |  |  |
+
+Note: Hover effects were not tested on Samsung internet because a tablet was used.
 
 
 ### Devices
@@ -204,7 +216,7 @@ Notes:
 All testing was made on up-to-date browsers.
 The desktop computer also tested with Chrome developer tools from 280px wide screen up to 2560px.
 
-Note: Datepicker on reservation does not look good on Galaxy fold (unfolded) 280px width. Problem ignored since it is functional on Galaxy fold with a sideways scrollbar and that model can be opened to view bigger. Problem does not exist on screenwidth 300px and above.
+Note: Datepicker on reservation does not look good on Galaxy fold (unfolded) 280px width. Problem ignored since it is functional on Galaxy fold with a sideways scrollbar and that model can be opened to be viewed larger. Problem does not exist on screenwidth 300px and above.
 
 
 ## Bugs
