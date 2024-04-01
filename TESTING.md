@@ -1,32 +1,34 @@
-# Banana Palace
-TODO: Add logo image
+# <img src="./static/images/banana-palace-symbol.png" alt="Banana Palace restaurant logo" width="25"/> Banana Palace restaurant
 
-![Amiresponsive image](TODO)
+![Amiresponsive image](./documentation/images/amiresponsive.png)
 
+Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokuapp.com/) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
 
-Link to live website: [Banana Palace](TODO) <br>(*Hold Ctrl (or Cmd) and click to open in a new window.*)
-
-<hr>
 
 ## Table of contents
 
-TODO: Update table of content
+* [Automatic testing](#automatic-testing)
+    * [Code validators](#code-validators)
+    * [Lighthouse testing](#lighthouse-testing)
+        * [Improvements](#improvements)
+        * [Left to improve](#left-to-improve)
+    * [Wave](#wave-testing)
+        * [Improvements](#improvements-1)
+        * [Left to improve](#left-to-improve-1)
+* [Manual testing](#manual-testing)
+    * [Website goals](#website-goals)
+    * [User goals](#user-goals)
+    * [Features](#features)
+    * [Browser](#browser)
+    * [Devices](#devices)
+* [Bugs](#bugs)
+    * [Solved bugs](#solved-bugs)
+    * [Unfixed bugs](#unfixed-bugs)
 
-* [Testing](#testing)
-    * [Automatic testing](#automatic-testing)
-    * [Manual testing](#manual-testing)
-        * [User goals](#user-goals)
-        * [Features](#features)
-        * [Browser](#browser)
-        * [Devices](#devices)
-    * [Bugs](#bugs)
-        * [Solved bugs](#solved-bugs)
-        * [Unfixed bugs](#unfixed-bugs)
 
+## Automatic testing
 
-## Testing
-
-### Automatic testing
+### Code validators
 
 - **HTML**
 Validated through [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) and TODO
@@ -72,6 +74,9 @@ TODO
 #### Left to improve
 -
 -
+
+
+[Back to top](#table-of-contents)
 
 ## Manual testing
 
@@ -142,12 +147,12 @@ Each website [feature](#features) has been tested on Google Chrome, Microsoft Ed
 ### Devices
 Manually tested on mobile device (Xiaomi 12), tablet (Samsung Galaxy tab S4) laptop, and desktop computer.
 
-| Devices | Expected outcome / responsive | Testing Performed | Result | Pass / fail |
+| Devices | Expected outcome / responsive | Pass / fail |
 | --- | --- | --- |
-| Mobile (Xiaomi 12) | Looks as intended on this small screen size |  |  |  |
-| Tablet (Galaxy tab S4) | Looks as intended on this screen size |  |  |  |
-| Laptop (1366x768px) | Looks as intended on medium size screen |  |  |  |
-| Desktop (1920x1080px) | Looks as intended on big size screen |  |  |  |
+| Mobile (Xiaomi 12) | Looks as intended on this small screen size |  |
+| Tablet (Galaxy tab S4) | Looks as intended on this screen size |  |
+| Laptop (1366x768px) | Looks as intended on medium size screen |  |
+| Desktop (1920x1080px) | Looks as intended on big size screen |  |
 
 Notes:
 All testing was made on up-to-date browsers.
