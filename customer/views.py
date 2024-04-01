@@ -13,7 +13,7 @@ def account(request):
     """
     Display users account page
     """
-    all_users = User.objects.all()
+    all_users = User.objects.all().order_by('-last_login')
 
     today = timezone.now().date()
 
