@@ -121,7 +121,7 @@ TODO
 
 ### Features
 
-| Feature tested | Expected outcome | Testing Performed | Result | Pass / fail |
+| Feature tested | Expected outcome | Testing Performed | Result | Pass / Fail |
 | --- | --- | --- | --- | --- |
 | **Header / navigation bar** |
 | Logo | Clicking takes the user to the home page | Clicked Banana Palace logo | If on index page, page is reloaded, else redirected to index page | Pass |
@@ -159,14 +159,14 @@ TODO
 | Edit menu item | If logged in user has permission (staff), they are able to edit current menu items | Log in with correct permissions and edit an item | Edit item page opens and can edit the item | Pass |
 | Delete menu item | If logged in user has permission (owner), they are able to delete current menu items | Log in with correct permissions and delete item | Delete confirmation page with warning opens and deletion must be confirmed | Pass |
 | **Account management** |
-| Sign up  | New visitors are able to sign up to website | Click on login/register and then on sign up and enter required information |  |  |
-| Verify email address  | When clicking on verification link in email, should be directed to TODO page and email verified | Click on email link |  |  |
-| Sign in | Able to log in and redirected to account page | Sign in with valid log in credentials |  |  |
-| Sign out | Can log out form the account | Navigate to account page and click logout |  |  |
-| Reset password | Able to reset password if needed | Try clicking reset password TODO |  |  |
-| Edit account | Can change personal details on the account | Edit personal details |  |  |
-| Change password | Able to change the password on the account | Try changing password on edit account page |  |  |
-| Delete account | Can delete account and personal information | Click on delete account on account page |  |  |
+| Sign up  | New visitors are able to sign up to website | Click on login/register and then on sign up and enter required information | Able to sign up and it sais confirmation email is sent | Pass |
+| Verify email address  | When clicking on verification link in email, should be directed to confirm email page and get verified | Click on email link | Got directed to confirm email page and clicked confirm | Pass |
+| Sign in | Able to log in and redirected to account page | Sign in with valid log in credentials | Newly created and confirmed account worked and was redirected to account page | Pass |
+| Sign out | Can log out form the account | Navigate to account page and click logout | Redirected to logout confirmation page where logout needs to be confirmed | Pass |
+| Reset password | Able to reset password if needed | Clicking on "Forgot your password?" link | Redirected to password reset page, enter email address, got email, click link and got directed to change password page, enter new password, password successfully changed | Pass |
+| Edit account | Can change personal details on the account | Edit personal details | New information is saved and displayed on account page | Pass |
+| Change password | Able to change the password on the account | Change password on edit account page | Password successfully changed | Pass |
+| Delete account | Can delete account and personal information | Click on delete account on account page | TODO |  |
 | **Make reservation** |
 | Choose date | Choosing a date shows available tables on that date | Choose a date in the datepicker |  |  |
 | Choose table | Clicking on an available table takes user to the next page where reservation can be completed | Click a table that is available |  |  |
@@ -180,17 +180,17 @@ TODO
 | Edit reservation | When editing the reservation, the chosen table becomes available again and user can change all details | Remember which table was reserved and click on edit reservation and look |  |  |
 | Delete reservation | When deleting the reservation, the reservation is removed from users account page and the table becomes available again | Remember which table was reserved, delete reservation and go back to reservation page and look |  |  |
 | **Hover effects** |
-| Header links | Hover effect shows as intented on mouseover | Mouseover element |  |  |
-| Header logo | Hover effect shows as intented on mouseover | Mouseover element |  |  |
-| Buttons | Hover effect shows as intented on mouseover | Mouseover element |  |  |
-| Input fields | Hover effect shows as intented on mouseover | Mouseover element |  |  |
-| Tables on reservation page | Hover effect shows as intented on mouseover | Mouseover element |  |  |
-| Footer links and icons | Hover effect shows as intented on mouseover | Mouseover element |  |  |
+| Header links | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
+| Header logo | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
+| Buttons | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
+| Input fields | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
+| Tables on reservation page | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
+| Footer links and icons | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
 | **Form validation** |
-| Enter valid information | Form submits without problems and redirects to next page | Enter valid information and submit |  |  |
-| Enter invalid information | It is not possible to submit form and error messages show informing about what is wrong | Enter invalid information and submit |  |  |
-| Leave fields empty | Error message displays about missing information | Submit form without information |  |  |
-| Enter blank spaces | Error message displays that field is required | Submit form with blank spaces |  |  |
+| Enter valid information | Form submits without problems and redirects to next page | Enter valid information and submit | Entered information is accepted and shown | Pass |
+| Enter invalid information | It is not possible to submit form and error messages show informing about what is wrong | Enter invalid information and submit | Field with invalid information became red and information about needs to be entered is displayed | Pass |
+| Leave fields empty | Error message displays about missing information | Submit form without information | Error message with exclamation mark shows and says "Please fill out this field." | Pass |
+| Enter blank spaces | Error message displays that field is required | Submit form with blank spaces | Field with blanks became red and information about that field is required is showing | Pass |
 | **Security** |
 | Change another users account details | Should not be possible to attempt | Try accessing with URLs |  |  |
 | Delete another users account | Should not be possible to attempt | Try accessing with URLs |  |  |

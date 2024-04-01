@@ -238,6 +238,7 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button.btn-iconic-reverse:hover,
+#override-bootstrap .account-management a.btn-iconic-reverse:hover,
 .btn-iconic-reverse:hover {
   color: var(--color-primary-light);
 }
