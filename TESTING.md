@@ -35,8 +35,16 @@ Validated through [W3C Markup Validation Service](https://validator.w3.org/#vali
 <br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693510294/html-validator-pass_lwfaja.jpg)
 
 - **CSS**
-Validated through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator) and TODO
-<br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693422108/css-validator-pass_xthpbi.jpg)
+Validated through [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator) and returns 1 error and 22 warnings.
+<br>![Passed without errors](./documentation/images/css-error.jpg)
+
+#### Error
+Validator is not able to parse this CSS because it checks for CSS level 3 and this selector uses modern CSS level 4 which has not yet been implemented. The error is ignored because this CSS targetting works as intended in all browser testing.
+
+TODO: Update after browser testing
+
+#### Warnings are due to the use of CSS variables, also ignored as it works as intended.
+
 
 - **JavaScript**
 checked with [JSHint](https://jshint.com/) to test for errors and potential problems.<br>
