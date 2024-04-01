@@ -124,23 +124,23 @@ TODO
 | Feature tested | Expected outcome | Testing Performed | Result | Pass / fail |
 | --- | --- | --- | --- | --- |
 | **Header / navigation bar** |
-| Logo | Clicking takes the user to the home page | Clicked logo |  |  |
-| Menu | Clicking takes the user to the menu page | Clicked link |  |  |
-| Hours & Location | Clicking takes the user to the about page | Clicked link |  |  |
-| Out story | Clicking takes the user to the story page | Clicked link |  |  |
-| Login/register | Clicking takes the user to the sign in page | Clicked link |  |  |
-| Account/logout | Clicking takes the user to the account page | Clicked link |  |  |
-| Book a table | Clicking takes the user to the reservation page | Clicked button |  |  |
+| Logo | Clicking takes the user to the home page | Clicked Banana Palace logo | If on index page, page is reloaded, else redirected to index page | Pass |
+| Menu | Clicking takes the user to the menu page | Clicked link "Menu" | Takes user to menu page | Pass |
+| Hours & Location | Clicking takes the user to the Hours & Location page | Clicked link "Hours & Location" | Takes user to Hours & Location page | Pass |
+| Our story | Clicking takes the user to the story page | Clicked link "Our story" | Takes the user to the story page | Pass |
+| Login/register | Clicking takes the user to the sign in page | Clicked link "Login/register" | Takes the user to the sign in page | Pass |
+| Account/logout | Clicking takes the user to the account page | Clicked link "Account/logout" | Takes the user to the account page  | Pass |
+| Book a table | Clicking takes the user to the reservation page | Clicked button | Takes the user to the reservation page | Pass |
 | **Index page** |
-| Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down |  |  |
-| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll up to top |  |  |
-| Carousel right | Clicking on right button shows the next menu item that is to the right of the current view | Click on right button |  |  |
-| Carousel left | Clicking on left button shows the next menu item that is to the left of the current view | Click on left button |  |  |
+| Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down | Smooth animation and elements changes positions as expexted | Pass |
+| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll up to top | Smooth animation and elements changes positions as expexted | Pass |
+| Carousel right | Clicking on right button shows the next menu item that is to the right of the current view | Click on right button | All images are shifted left and the next image to the right is visible | Pass |
+| Carousel left | Clicking on left button shows the next menu item that is to the left of the current view | Click on left button | All images are shifted right and the next image to the left is visible | Pass |
 | **Footer / Social media icons** |
-| Facebook | Clicking opens Facebook in a separate tab | Clicked link |  |  |
-| Twitter | Clicking opens Twitter in a separate tab | Clicked link |  |  |
-| Instagram | Clicking opens Instagram in a separate tab | Clicked link |  |  |
-| YouTube | Clicking opens YouTube in a separate tab | Clicked link |  |  |
+| Facebook | Clicking opens Facebook in a separate tab | Clicked link |  Facebook opens in a separate tab | Pass |
+| Twitter | Clicking opens Twitter in a separate tab | Clicked link |  Twitter opens in a separate tab | Pass |
+| Instagram | Clicking opens Instagram in a separate tab | Clicked link |  Instagram opens in a separate tab | Pass |
+| YouTube | Clicking opens YouTube in a separate tab | Clicked link | YouTube opens in a separate tab | Pass |
 | **Footer / company information links** |
 | Home | Clicking takes the user to the home page | Clicked link |  |  |
 | Allergens | Clicking takes the user to the allergens page | Clicked link |  |  |
