@@ -134,6 +134,7 @@ input:focus,
 #id_content:hover,
 #id_price_1:hover {
   border: var(--border-width-solid-iconic) var(--color-secondary);
+  outline: none;
 }
 
 hr {
@@ -195,7 +196,8 @@ footer {
 .btn-iconic-reverse,
 .btn-warning,
 #override-bootstrap .account-management button,
-#override-bootstrap .account-management a,
+#override-bootstrap .account-management a.btn-iconic,
+#override-bootstrap .account-management a.btn-iconic-reverse,
 #back-one-page {
   border: var(--border-width-solid-iconic) var(--color-primary);
   border-radius: var(--border-radius-iconic);
@@ -209,6 +211,7 @@ a.btn-iconic-reverse {
 }
 
 #override-bootstrap .account-management button:hover,
+#override-bootstrap .account-management a.btn-iconic:hover,
 #override-bootstrap .account-management a:hover,
 #override-bootstrap header a:hover,
 .btn-iconic:hover,
