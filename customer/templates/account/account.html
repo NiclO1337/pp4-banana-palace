@@ -86,6 +86,7 @@
             </li>
           </ul>
         </div>
+      </div>
       <div class="row align-items-center">
         <div class="col-12 col-md-6 p-0">
 
@@ -136,13 +137,12 @@
         </div>
       </div>
         <h2 class="col-12 mx-auto p-0 mt-2">Reservations</h2>
-        <hr>
+        <hr class="my-2">
         <!-- if user has reservations -->
         {% if reservations %}
           {% for reservation in reservations %}
             <div class="card">
               <div class="card-body p-0 py-2">
-
                 <div class="row align-items-center">
                   <div class="col-12 col-md-7 col-lg-6 col-xl-5 col-xxl-7">
                     <h5 class="card-title">
@@ -169,16 +169,14 @@
                   </div>
                 </div>
               </div>
+              <hr class="my-2">
             </div>
-          <hr>
           {% endfor %}
         {% else %}
-        <!-- if user does not have any reservations -->
           <p class="small">
             You currently do not have any upcoming reservations.
           </p>
         {% endif %}
-        </div>
     </section>
   </div>
 </div>
