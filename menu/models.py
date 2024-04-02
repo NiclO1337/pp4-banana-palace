@@ -3,7 +3,9 @@ from djmoney.models.fields import MoneyField
 
 
 class MenuItem(models.Model):
-
+    """
+    Model representing a menu item in a restaurant.
+    """
     CATEGORY_CHOICES = [
         ('Starters', 'Starters'),
         ('Mains', 'Mains'),

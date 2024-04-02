@@ -1,11 +1,13 @@
+from datetime import date, datetime, timedelta
 from django.db import models
 from django.contrib.auth.models import User
 from home.models import Restaurant
-from datetime import date, datetime, timedelta
 
 
 class Table(models.Model):
-
+    """
+    Model representing a table in a restaurant.
+    """
     date = models.DateField(default=date.today)
     reserved = models.BooleanField(default=False)
 
@@ -18,9 +20,27 @@ class Table(models.Model):
 
 class Reservation(models.Model):
     """
-    Creates a reservation related to user, customer, table
-    """
+    Model representing a reservation for a table.
 
+    **Fields:**
+    - ``user``: A ForeignKey to the User model,
+    representing the user making the reservation.
+
+    - ``table``: A OneToOneField to the Table model,
+    representing the table reserved.
+
+    - ``restaurant``: A ForeignKey to the Restaurant model,
+    representing the restaurant where the reservation is made.
+
+    **Methods:**
+    - ``__str__``: Returns a string representation of the reservation,
+    including the date, party size, and customer's name.
+
+    - ``save``: Overrides the save method to update the associated
+    table's reserved status.
+
+    - ``update``: A custom method for updating the reservation with new values.
+    """
     TIME_CHOISES = []
     start_time = datetime.strptime('17:00', '%H:%M')
     end_time = datetime.strptime('21:15', '%H:%M')

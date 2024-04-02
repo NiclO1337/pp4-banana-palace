@@ -4,6 +4,13 @@ from djmoney.models.fields import MoneyField
 
 
 class MenuItemForm(forms.ModelForm):
+    """
+    Form for creating and updating MenuItem instances.
+
+    **save method:**
+    - Customizes the save method to handle image
+    naming based on the menu item's title.
+    """
     title = forms.CharField(max_length=50)
     content = forms.CharField(widget=forms.Textarea(attrs={
         'rows': '3',

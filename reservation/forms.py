@@ -5,6 +5,9 @@ from phonenumber_field.formfields import PhoneNumberField
 
 
 class PickDateForm(forms.ModelForm):
+    """
+    Form for selecting a date for a table reservation.
+    """
     date = forms.DateField(widget=forms.DateInput(attrs={
         'placeholder': date.today()}), label="Select date:")
 
@@ -14,6 +17,16 @@ class PickDateForm(forms.ModelForm):
 
 
 class ReserveTableForm(forms.ModelForm):
+    """
+    Form for reserving a table.
+
+    **Custom Methods:**
+    - ``__init__``: Customizes the form initialization to include request
+    and table context.
+
+    - ``save``: Customizes the save method to handle reservation logic,
+    including updating table status.
+    """
     time = forms.ChoiceField(choices=Reservation.TIME_CHOISES,
                              label="Time of arrival:")
     party_size = forms.ChoiceField(choices=Reservation.PARTY_SIZE,
