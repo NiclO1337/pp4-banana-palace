@@ -211,7 +211,7 @@ Each website [feature](#features) has been tested on Google Chrome, Microsoft Ed
 
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
-| Works as intended | Yes |  |  | Yes |
+| Works as intended | Yes | Yes | Yes | Yes |
 
 Note: Hover effects were not tested on Samsung internet because a tablet was used.
 
