@@ -2,16 +2,33 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from .forms import EditUserForm, EditCustomerForm
-from reservation.models import Reservation
 from django.utils import timezone
+from reservation.models import Reservation
 from reservation.models import Table
+from .forms import EditUserForm, EditCustomerForm
 
 
 @login_required()
 def account(request):
     """
-    Display users account page
+    Display users account page.
+
+    **Context:**
+
+    ``reservations``
+        A queryset of :model:`reservation.Reservation` instances
+        for the current user that are for tables with a date greater
+        than or equal to today.
+    ``all_users``
+        A queryset of all :model:`auth.User` instances, ordered by
+        their last login date in descending order.
+    ``tables``
+        A queryset of :model:`reservation.Table` instances with a date
+        less than today, indicating they are in the past.
+
+    **Template:**
+
+    :template:`account/account.html`
     """
     all_users = User.objects.all().order_by('-last_login')
 
@@ -30,6 +47,21 @@ def account(request):
 
 @login_required
 def account_edit_view(request):
+    """
+    View for editing user account information.
+
+    **Context:**
+
+    ``user_form``
+        An instance of :form:`EditUserForm` for the current user.
+    ``customer_form``
+        An instance of :form:`EditCustomerForm` for the
+        current user's customer profile.
+
+    **Template:**
+
+    :template:`account/edit_account.html`
+    """
     if request.method == 'POST':
         user_form = EditUserForm(request.POST, instance=request.user)
         customer_form = EditCustomerForm(request.POST,
@@ -56,6 +88,13 @@ be submitted. See message next to relevant field.')
 
 @login_required
 def delete_account(request):
+    """
+    View for deleting a user account.
+
+    **Template:**
+
+    :template:`account/delete_account.html`
+    """
 
     if request.method == 'POST':
 
@@ -73,7 +112,14 @@ personal information removed from the database. Welcome back anytime!')
 
 @login_required
 def fireworks_page(request):
+    """
+    View for updating a user's customer profile to indicate
+    they have clicked on the discount button.
 
+    **Template:**
+
+    :template:`account/fireworks.html`
+    """
     user = request.user
 
     user.customer.has_clicked = "True"
@@ -84,7 +130,11 @@ def fireworks_page(request):
 
 @login_required
 def change_discount(request, user_id):
+    """
 
+    View for toggling a user's discount status.
+
+    """
     user = User.objects.get(id=user_id)
 
     if request.user.customer.is_owner:
