@@ -92,7 +92,8 @@ def delete_menu_item(request, menu_item_id):
             messages.success(request, 'Menu item deleted successfully!')
             return redirect('menu_page')
         else:
-            messages.error(request, 'Something went wrong!')
+            messages.error(
+                request, 'You do not have permission to perform this action!')
 
 
     return render(request, 'menu/delete-menu-item.html',)

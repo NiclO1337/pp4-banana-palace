@@ -192,12 +192,13 @@ TODO
 | Leave fields empty | Error message displays about missing information | Submit form without information | Error message with exclamation mark shows and says "Please fill out this field." | Pass |
 | Enter blank spaces | Error message displays that field is required | Submit form with blank spaces | Field with blanks became red and information about that field is required is showing | Pass |
 | **Security** |
-| Change another users account details | Should not be possible to attempt | Try accessing with URLs |  |  |
-| Delete another users account | Should not be possible to attempt | Try accessing with URLs |  |  |
+| Change another users account details | Should not be possible to attempt | Try accessing with URLs | Not possible, url is always same for every account | Pass |
+| Delete another users account | Should not be possible to attempt | Try accessing with URLs | Not possible, url is always same for every account  | Pass |
+| Double book a table | When trying to make a reservation on reserved table, error is shown | Look with dev tools to see ID of tables, click on table and change URL to one that is reserved | Error message is shown when trying to confirm reservation | Pass |
 | Change another users reservation details | Error message displaying that user does not have permission to edit this reservation | Try accessing with URLs |  |  |
 | Delete another users reservation | Error message displaying that user does not have permission to delete this reservation | Try accessing with URLs |  |  |
-| Change a menu item without permission | Error message displaying that user does not have permission to edit this menu item | Try accessing with URLs |  |  |
-| Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item | Try accessing with URLs |  |  |
+| Change a menu item without permission | User is not able to change menu items without correct permission | Try accessing with URLs | Try and access /menu/add/ but it is a blank page | Pass |
+| Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item | Try accessing with URLs | Accessing /menu/delete/10 successfully but when clicking delete an error is shown | Pass |
 | **CSS Error / warning** |
 | CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended |  |
 | CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works |  |
