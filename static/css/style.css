@@ -264,6 +264,7 @@ a.btn-iconic-reverse {
 #override-bootstrap .nav-link.show {
   color: var(--color-secondary);
   border-bottom: var(--border-width-solid-iconic) var(--color-secondary);
+  border-radius: var(--border-radius-images-all);
 }
 
 #header-container {
