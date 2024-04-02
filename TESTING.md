@@ -201,8 +201,8 @@ TODO
 | Change a menu item without permission | User is not able to change menu items without correct permission | Try accessing with URLs | Try and access /menu/add/ but it is a blank page | Pass |
 | Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item | Try accessing with URLs | Accessing /menu/delete/10 successfully but when clicking delete an error is shown | Pass |
 | **CSS Error / warning** |
-| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended |  |
-| CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works |  |
+| CSS validation error | Can see the CSS as intended even though validator flags it as error | Look at affected areas | See that CSS works as intended | Pass |
+| CSS validation warnings | All styles with CSS variables looks as intended | Look at affected areas | See that the CSS variables works | Pass |
 
 
 
@@ -211,7 +211,7 @@ Each website [feature](#features) has been tested on Google Chrome, Microsoft Ed
 
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
-| Works as intended |  |  |  |  |
+| Works as intended | Yes |  |  |  |
 
 Note: Hover effects were not tested on Samsung internet because a tablet was used.
 
