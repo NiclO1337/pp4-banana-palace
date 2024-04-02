@@ -132,15 +132,15 @@ TODO
 | Account/logout | Clicking takes the user to the account page | Clicked link "Account/logout" | Takes the user to the account page  | Pass |
 | Book a table | Clicking takes the user to the reservation page | Clicked button | Takes the user to the reservation page | Pass |
 | **Index page** |
-| Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down | Smooth animation and elements changes positions as expexted | Pass |
-| Scrolltop up | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll up to top | Smooth animation and elements changes positions as expexted | Pass |
+| Scrolltop down | Scrolling down from top of index page shows smooth animation and change positions of navbar, logo and removes address and phone number | Scroll down from the top of index page | Smooth animation and elements changes positions as expexted | Pass |
+| Scrolltop up to the top of index page | Scrolling up to top of index page shows smooth animation and reverts back to initial view | Scroll up to top | Smooth animation and elements changes positions as expexted | Pass |
 | Carousel right | Clicking on right button shows the next menu item that is to the right of the current view | Click on right button | All images are shifted left and the next image to the right is visible | Pass |
 | Carousel left | Clicking on left button shows the next menu item that is to the left of the current view | Click on left button | All images are shifted right and the next image to the left is visible | Pass |
 | **Footer / Social media icons** |
-| Facebook | Clicking opens Facebook in a separate tab | Clicked link |  Facebook opens in a separate tab | Pass |
-| Twitter | Clicking opens Twitter in a separate tab | Clicked link |  Twitter opens in a separate tab | Pass |
-| Instagram | Clicking opens Instagram in a separate tab | Clicked link |  Instagram opens in a separate tab | Pass |
-| YouTube | Clicking opens YouTube in a separate tab | Clicked link | YouTube opens in a separate tab | Pass |
+| Facebook | Clicking opens Facebook in a separate tab | Clicked link "Facebook icon" |  Facebook opens in a separate tab | Pass |
+| Twitter | Clicking opens Twitter in a separate tab | Clicked link "X icon" |  Twitter opens in a separate tab | Pass |
+| Instagram | Clicking opens Instagram in a separate tab | Clicked link "Instagram icon" |  Instagram opens in a separate tab | Pass |
+| YouTube | Clicking opens YouTube in a separate tab | Clicked link "YouTube icon" | YouTube opens in a separate tab | Pass |
 | **Footer / company information links** |
 | Home | Clicking takes the user to the home page | Clicked link "Home" | Takes the user to the home page | Pass |
 | Allergens | Clicking takes the user to the allergens page | Clicked link "Allergens" | Takes the user to the allergens page | Pass |
@@ -211,7 +211,7 @@ Each website [feature](#features) has been tested on Google Chrome, Microsoft Ed
 
 | Feature tested \  On browser | Google Chrome | Microsoft Edge | Firefox | Samsung Internet  |
 | --- | --- | --- | --- | --- |
-| Works as intended | Yes |  |  |  |
+| Works as intended | Yes |  |  | Yes |
 
 Note: Hover effects were not tested on Samsung internet because a tablet was used.
 
@@ -221,10 +221,10 @@ Manually tested on mobile device (Xiaomi 12), tablet (Samsung Galaxy tab S4) lap
 
 | Devices | Expected outcome / responsive | Pass / fail |
 | --- | --- | --- |
-| Mobile (Xiaomi 12) | Looks as intended on this small screen size |  |
-| Tablet (Galaxy tab S4) | Looks as intended on this screen size |  |
-| Laptop (1366x768px) | Looks as intended on medium size screen |  |
-| Desktop (1920x1080px) | Looks as intended on big size screen |  |
+| Mobile (Xiaomi 12) | Looks as intended on this small screen size | Pass |
+| Tablet (Galaxy tab S4) | Looks as intended on this screen size | Pass |
+| Laptop (1366x768px) | Looks as intended on medium size screen | Pass |
+| Desktop (1920x1080px) | Looks as intended on big size screen | Pass |
 
 Notes:
 All testing was made on up-to-date browsers.
