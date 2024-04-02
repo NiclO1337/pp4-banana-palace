@@ -166,19 +166,20 @@ TODO
 | Reset password | Able to reset password if needed | Clicking on "Forgot your password?" link | Redirected to password reset page, enter email address, got email, click link and got directed to change password page, enter new password, password successfully changed | Pass |
 | Edit account | Can change personal details on the account | Edit personal details | New information is saved and displayed on account page | Pass |
 | Change password | Able to change the password on the account | Change password on edit account page | Password successfully changed | Pass |
-| Delete account | Can delete account and personal information | Click on delete account on account page | TODO |  |
+| Delete account | Can delete account and personal information | Click on delete account on account page | Delete confirmation page with warning opens and deletion must be confirmed, once confirmed directed to home page | Pass |
 | **Make reservation** |
-| Choose date | Choosing a date shows available tables on that date | Choose a date in the datepicker |  |  |
-| Choose table | Clicking on an available table takes user to the next page where reservation can be completed | Click a table that is available |  |  |
-| Prepopulated form | When creating a reservation, the form should be prepopulated with users information | Select a table to get to reserve table screen |  |  |
-| Terms & Conditions | Clicking takes the user to the terms & conditions page so they can read it before accepting | Click on Terms & Conditions link |  |  |
-| Previous page | Clicking takes the user back to previous page and can continue with reservation | Click on previous page button |  |  |
-| Make reservation | Filling out all fields and clicking reserve table confirms the reservation | Fill out information and click reserve table |  |  |
-| Reserved table | After a table is reserved it should not be possible to select that table anymore | Make a reservation and remember which table was chosen, then go back to reservation page and look |  |  |
-| Edit information | When editing user details on a reservation, the new details are saved on the account | Edit user information on reservation and confirm changes |  |  |
-| Prepopulated form | When editing a reservation, the form should be prepopulated with reservation information | Edit a reservation, select a table to get to reserve table screen |  |  |
-| Edit reservation | When editing the reservation, the chosen table becomes available again and user can change all details | Remember which table was reserved and click on edit reservation and look |  |  |
-| Delete reservation | When deleting the reservation, the reservation is removed from users account page and the table becomes available again | Remember which table was reserved, delete reservation and go back to reservation page and look |  |  |
+| Choose date | Choosing a date shows available tables on that date | Choose a date in the datepicker | Animated loading icon is shown and then new date is displayed and same tables are not reserved on this day | Pass |
+| Choose table | Clicking on an available table takes user to the next page where reservation can be completed | Click a table that is available | Directed to the reserve table page where details are entered | Pass |
+| Prepopulated form | When creating a reservation, the form should be prepopulated with users information | Select a table to get to reserve table screen | Form is prepopulated with users personal information | Pass |
+| Terms & Conditions | Clicking takes the user to the terms & conditions page so they can read it before accepting | Click on Terms & Conditions link | Directed to terms & condition page | Pass |
+| Previous page | Clicking takes the user back to previous page and can continue with reservation | Click on previous page button | Returned to reserve table page and can continue with current booking | Pass |
+| Make reservation | Filling out all fields and clicking reserve table confirms the reservation | Fill out information and click reserve table | Reservation completed successfully and reservation is displayed on account page | Pass |
+| Reserved table | After a table is reserved it should not be possible to select that table anymore | Make a reservation and remember which table was chosen, then go back to reservation page and look | Table is no longer available | Pass |
+| Edit information | When editing user details on a reservation, the new details are saved on the account | Edit user information on reservation and confirm changes | New updated information is shown on the account page | Pass |
+| Prepopulated form | When editing a reservation, the form should be prepopulated with reservation information | Edit a reservation, select a table to get to reserve table screen | Reservation details are automatically added to the edit form | Pass |
+| Edit reservation | When editing the reservation, the chosen table becomes available again and user can change all details | Remember which table was reserved and click on edit reservation and look | Same table is available when clicking edit reservation | Pass |
+| Delete reservation | When deleting the reservation, the reservation is removed from users account page and the table becomes available again | Remember which table was reserved, delete reservation and go back to reservation page and look | Directs to a delete confirmation page where deletion must be confirmed, once confirmed directed back to account page and reservation is not shown anymore, table is available again | Pass |
+| Delete account | When deleting user account the table becomes available again | Remember which table was reserved, delete account and go back to reservation page and look | Table is still marked as reserved | Fail |
 | **Hover effects** |
 | Header links | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
 | Header logo | Hover effect shows as intented on mouseover | Mouseover element | Hover effect is shown | Pass |
@@ -195,8 +196,8 @@ TODO
 | Change another users account details | Should not be possible to attempt | Try accessing with URLs | Not possible, url is always same for every account | Pass |
 | Delete another users account | Should not be possible to attempt | Try accessing with URLs | Not possible, url is always same for every account  | Pass |
 | Double book a table | When trying to make a reservation on reserved table, error is shown | Look with dev tools to see ID of tables, click on table and change URL to one that is reserved | Error message is shown when trying to confirm reservation | Pass |
-| Change another users reservation details | Error message displaying that user does not have permission to edit this reservation | Try accessing with URLs |  |  |
-| Delete another users reservation | Error message displaying that user does not have permission to delete this reservation | Try accessing with URLs |  |  |
+| Change another users reservation details | Error message displaying that user does not have permission to edit this reservation | Try accessing with URLs | Error message is displayed and it is not possible to change reservation | Pass |
+| Delete another users reservation | Error message displaying that user does not have permission to delete this reservation | Try accessing with URLs | Error message is displayed and it is not possible to delete reservation | Pass |
 | Change a menu item without permission | User is not able to change menu items without correct permission | Try accessing with URLs | Try and access /menu/add/ but it is a blank page | Pass |
 | Delete a menu item without permission | Error message displaying that user does not have permission to delete this menu item | Try accessing with URLs | Accessing /menu/delete/10 successfully but when clicking delete an error is shown | Pass |
 | **CSS Error / warning** |
