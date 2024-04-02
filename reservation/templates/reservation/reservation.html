@@ -70,6 +70,7 @@
       {% else %}
         <a href="{% url 'reserve_table' table.id %}"
           class="table text-decoration-none" id="table-{{ forloop.counter }}">
+          <span class="sr-only">table available for reservation</span>
 
           {% if user.is_staff %}
             {{ forloop.counter }}

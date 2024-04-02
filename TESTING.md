@@ -55,29 +55,28 @@ All code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) and T
 
 Used lighthouse to test performance, accessibility, best practices, and search engine optimization of the website.
 
-Result after optimization
-<p align="left"><img src="TODO" alt="Result after optimization" width="250"/></p>
+<p align="left"><img src="./documentation/images/lighthouse-results.png" alt="Results of lighthouse testing" width="850"/></p>
 
 #### Improvements
--
--
-
-#### Left to improve
--
--
+- Add meta tags and semantic HTML
+- Use smaller WEBP images only
 
 ### Wave testing
 
-TODO
+WAVE is a free web accessibility evaluation tool that identifies ways to make a webpage more accessible to people with disabilities. No errors found on any pages.
+
+<p align="left"><img src="./documentation/images/wave-testing-result.png" alt="Results of wave testing" width="350"/></p>
 
 
 #### Improvements
--
--
+- Add text for screen reader only to tables on reservation page
+- Use aria labels and follow standard guidelines
 
-#### Left to improve
--
--
+Notes:
+Wave alert because it is redundant to have 2 "Book a table" buttons on index page, I disagree.<br>
+Wave warns that the decorative "watermark" background images have too low contrast.
+I disagree that it is a problem as their only purpose is to be discreet low contrast styling.
+
 
 
 [Back to top](#table-of-contents)

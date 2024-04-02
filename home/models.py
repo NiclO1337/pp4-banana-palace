@@ -14,28 +14,3 @@ class Restaurant(models.Model):
     def __str__(self):
         return f'Restaurant name: *{self.name}*'
 
-
-
-
-
-
-# Query the database
-
-
-# print('\n'
-#     f'{'Name:':<14}',
-#     f'{'Email address:':<25}',
-#     'Is superuser:',
-#     sep=" | "
-# )
-
-# print(
-#     '----------------------------------------------------------'
-# )
-# for user in User.objects.raw("SELECT * FROM auth_user"):
-#     print(
-#         f'{user.username:<14}',
-#         f'{user.email:<25}',
-#         user.is_superuser,
-#         sep=" | "
-#     )
