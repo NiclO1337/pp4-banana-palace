@@ -35,8 +35,6 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
 
 Validator is not able to parse this CSS selector because it checks for CSS level 3 and this selector uses modern CSS level 4 which has not yet been implemented. The warnings are due to the use of CSS variables. These are ignored because this CSS targetting works as intended in all browser testing.
 
-TODO: Update after browser testing if problems occur
-
 All other CSS styles passed without errors
 <br>![Passed without errors](https://res.cloudinary.com/dmntcacug/image/upload/v1693422108/css-validator-pass_xthpbi.jpg)
 
@@ -75,6 +73,21 @@ Wave alert because it is redundant to have 2 "Book a table" buttons on index pag
 Wave warns that the decorative "watermark" background images have too low contrast.
 I disagree that it is a problem as their only purpose is to be discreet low contrast styling.
 
+### Django Testing
+Extensive automated testing planned using Django TestCase but not enough time in this development cycle. <br>
+Will be implemented next iteration.
+
+Testing planned for:
+- All user stories acceptance criterias:
+    - Test that everything works as intended to mitigate risks related to quality, security and performance.
+- All models in all apps:
+    - Test behaviours of models, such as creating, querying, and updating instances. This includes testing custom model methods and ensuring that model fields are correctly validated.
+- All views in all apps:
+    - Test behavior of views, including checking that views return the correct HTTP status codes, render the correct templates, and pass the correct context data to templates. This will involve simulating GET and POST requests to views and asserting the responses.
+- All forms in all apps:
+    - Test behavior of forms, including validation, cleaning, and saving. This can involve creating form instances, submitting data, and asserting that the form behaves as expected.
+- All templates in all apps:
+    - Test that templates render correctly with the provided context data. This can involve rendering templates with specific context data and asserting that the rendered HTML matches the expected output.
 
 
 [Back to top](#table-of-contents)
