@@ -11,10 +11,8 @@ Link to live website: [Banana Palace](https://banana-palace-9ad263ab8cf3.herokua
     * [Code validators](#code-validators)
     * [Lighthouse testing](#lighthouse-testing)
         * [Improvements](#improvements)
-        * [Left to improve](#left-to-improve)
     * [Wave](#wave-testing)
         * [Improvements](#improvements-1)
-        * [Left to improve](#left-to-improve-1)
 * [Manual testing](#manual-testing)
     * [User story testing](#user-story-testing)
     * [Features](#features)
@@ -48,7 +46,7 @@ Script files has no warnings or errors.
 <br>(*Uses ES6 features and jQuery which needs to be enabled in the configuration*).
 
 - **Python**
-All code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) and TODO
+All code validated through [PEP8 validator](https://pep8ci.herokuapp.com/) and all clear, no errors found.
 
 
 ### Lighthouse testing
@@ -250,4 +248,4 @@ Noteworthy bugs are added as [issues](https://github.com/NiclO1337/pp4-banana-pa
 
 ### Unfixed bugs
 
-Bugs that remain after project deadline for release are currently labelled as [wont-fix-yet](https://github.com/NiclO1337/pp4-banana-palace/issues?q=is%3Aopen+is%3Aissue+label%3A%22wont+fix+yet%22) on GitHub issues page.
+Bugs that remain after project deadline for release are currently in the bug column on [kanban board](https://github.com/users/NiclO1337/projects/3/views/1) and will be top priority in the next round of development.

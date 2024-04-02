@@ -1,7 +1,7 @@
 from django.db import models
 from djmoney.models.fields import MoneyField
 
-# Create your models here.
+
 class MenuItem(models.Model):
 
     CATEGORY_CHOICES = [
@@ -20,7 +20,6 @@ class MenuItem(models.Model):
     is_current = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-
 
     def __str__(self):
         return f'{self.title} ----- {self.category} ----- {self.is_current}'

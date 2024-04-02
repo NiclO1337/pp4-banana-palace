@@ -37,7 +37,7 @@ def reservation_page(request):
         # Pre-populate reservations to make it look realistic
         reservations = []
 
-        random_number = random.randint(20,40)
+        random_number = random.randint(20, 40)
         list_of_nums = list(range(1, nr_of_tables))
         random.shuffle(list_of_nums)
         list_of_random_nums = []
@@ -66,7 +66,7 @@ def reservation_page(request):
 
                 reservations = []
 
-                random_number = random.randint(20,40)
+                random_number = random.randint(20, 40)
                 list_of_nums = list(range(1, nr_of_tables))
                 random.shuffle(list_of_nums)
                 list_of_random_nums = []
@@ -78,7 +78,6 @@ def reservation_page(request):
                     new_reservation = Reservation(table=tables[table])
                     new_reservation.save()
                     reservations.append(new_reservation)
-
 
             return render(request, 'reservation/reservation.html',
                           {'tables': tables,
@@ -104,7 +103,7 @@ def reserve_table(request, table_id):
         user_form = EditUserFormReservation(request.POST,
                                             instance=request.user)
         customer_form = EditCustomerForm(request.POST,
-                                        instance=request.user.customer)
+                                         instance=request.user.customer)
         reserve_table_form = ReserveTableForm(request.POST,
                                               request=request, table=table)
         if table.reserved:
@@ -115,7 +114,7 @@ choose another table')
             return redirect('reservation_page')
 
         elif user_form.is_valid() and customer_form.is_valid() and \
-            reserve_table_form.is_valid():
+                reserve_table_form.is_valid():
             reservation = reserve_table_form.save(commit=False)
             reservation.user = request.user
             user_form.save()
@@ -143,8 +142,6 @@ necessairy information below')
                    'user_form': user_form,
                    'customer_form': customer_form,
                    })
-
-
 
 
 # edit reservation page, get ID, check customer edit.
@@ -176,7 +173,7 @@ def edit_reservation(request, reservation_id):
 
                 reservations = []
 
-                random_number = random.randint(20,40)
+                random_number = random.randint(20, 40)
                 list_of_nums = list(range(1, nr_of_tables))
                 random.shuffle(list_of_nums)
                 list_of_random_nums = []
@@ -197,7 +194,7 @@ def edit_reservation(request, reservation_id):
                            })
 
     date_form = PickDateForm(initial={
-            'date': reservation.table.date,})
+            'date': reservation.table.date, })
 
     return render(request, 'reservation/edit-reservation.html',
                   {'tables': tables,
@@ -217,7 +214,7 @@ def edit_reserve_table(request, table_id, reservation_id):
         user_form = EditUserFormReservation(request.POST,
                                             instance=reservation.user)
         customer_form = EditCustomerForm(request.POST,
-                                        instance=reservation.user.customer)
+                                         instance=reservation.user.customer)
         reserve_table_form = ReserveTableForm(request.POST, table=table,
                                               instance=reservation)
         if table.reserved:
@@ -228,7 +225,8 @@ choose another table')
             return redirect('account')
 
         elif user_form.is_valid() and customer_form.is_valid() and \
-            reserve_table_form.is_valid() and reservation.user == request.user:
+                reserve_table_form.is_valid() and \
+                reservation.user == request.user:
             user_form.save()
             customer_form.save()
             reserve_table_form.save()
@@ -241,13 +239,11 @@ choose another table')
             messages.error(request, 'Form is not valid, please enter all \
 necessairy information below')
 
-
     else:
         user_form = EditUserFormReservation(instance=reservation.user)
         customer_form = EditCustomerForm(instance=reservation.user.customer)
         reserve_table_form = ReserveTableForm(
             instance=reservation, initial={'time': reservation.time})
-
 
     return render(request, 'reservation/edit-reserve-table.html',
                   {'table': table,
@@ -259,7 +255,6 @@ necessairy information below')
 
 
 # Delete reservation page, get ID, check request.user vs user
-
 def delete_reservation(request, reservation_id):
     if request.method == 'POST':
 
@@ -276,7 +271,6 @@ deleted. We hope to see you soon!')
 try again or contact our support.')
 
         return redirect(to='account')
-
 
     else:
         return render(request, 'reservation/delete_reservation.html')

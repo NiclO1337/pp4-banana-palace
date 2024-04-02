@@ -33,7 +33,7 @@ def account_edit_view(request):
     if request.method == 'POST':
         user_form = EditUserForm(request.POST, instance=request.user)
         customer_form = EditCustomerForm(request.POST,
-                                        instance=request.user.customer)
+                                         instance=request.user.customer)
 
         if user_form.is_valid() and customer_form.is_valid():
             user_form.save()
@@ -103,4 +103,3 @@ def change_discount(request, user_id):
 {request.user.first_name} {request.user.last_name}.')
 
     return redirect(to='account')
-

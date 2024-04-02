@@ -3,6 +3,7 @@ from django import forms
 from phonenumber_field.formfields import PhoneNumberField
 from .models import Customer
 
+
 class EditUserForm(forms.ModelForm):
     username = forms.CharField(max_length=20, widget=forms.TextInput(
         attrs={'class': 'form-control'}))
@@ -15,7 +16,7 @@ class EditUserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email',]
+        fields = ['username', 'first_name', 'last_name', 'email', ]
 
 
 class EditUserFormReservation(forms.ModelForm):
@@ -26,7 +27,7 @@ class EditUserFormReservation(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name',]
+        fields = ['first_name', 'last_name', ]
 
 
 class EditCustomerForm(forms.ModelForm):
@@ -34,4 +35,4 @@ class EditCustomerForm(forms.ModelForm):
 
     class Meta:
         model = Customer
-        fields = ['phone',]
+        fields = ['phone', ]

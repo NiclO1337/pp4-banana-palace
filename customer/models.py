@@ -3,7 +3,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.auth.models import User
 from home.models import Restaurant
 
-# Create your models here.
+
 class Customer(models.Model):
     """
     Creates a customer related to :model:`auth.User`
@@ -20,7 +20,6 @@ class Customer(models.Model):
         Restaurant, on_delete=models.CASCADE, related_name="customers",
         null=True, blank=True, default=2
     )
-
 
     def __str__(self):
         return str(self.user)

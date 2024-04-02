@@ -33,7 +33,6 @@ class Reservation(models.Model):
 
         start_time += timedelta(minutes=15)
 
-
     PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
                   (6, '6'), (7, '7'), (8, '8'))
 
@@ -56,7 +55,6 @@ class Reservation(models.Model):
 ---- Customer: {self.user.first_name} {self.user.last_name}. ---- \
 Has discount: {self.user.customer.has_discount}'
 
-
     def save(self, *args, **kwargs):
 
         # Call original reservation save
@@ -65,7 +63,6 @@ Has discount: {self.user.customer.has_discount}'
         # Update associated table to be reserved
         self.table.reserved = True
         self.table.save(update_fields=['reserved'])
-
 
     def update(self, **kwargs):
 

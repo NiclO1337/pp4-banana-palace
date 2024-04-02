@@ -10,7 +10,7 @@ class PickDateForm(forms.ModelForm):
 
     class Meta:
         model = Table
-        fields = ['date',]
+        fields = ['date', ]
 
 
 class ReserveTableForm(forms.ModelForm):
@@ -68,4 +68,4 @@ class ReserveTableForm(forms.ModelForm):
 
     class Meta:
         model = Reservation
-        fields = ['time', 'party_size', 'notes',]
+        fields = ['time', 'party_size', 'notes', ]

@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 import os
 
-# Create your views here.
+
 def menu_page(request):
 
     starters = MenuItem.objects.filter(category='Starters').filter(
@@ -94,6 +94,5 @@ def delete_menu_item(request, menu_item_id):
         else:
             messages.error(
                 request, 'You do not have permission to perform this action!')
-
 
     return render(request, 'menu/delete-menu-item.html',)
