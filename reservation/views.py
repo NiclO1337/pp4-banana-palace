@@ -43,7 +43,8 @@ def reservation_page(request):
         nr_of_tables = request.user.customer.restaurant.avalible_tables
 
     else:
-        nr_of_tables = Restaurant.objects.all().first()
+        restaurant = Restaurant.objects.all().first()
+        nr_of_tables = restaurant.avalible_tables
 
     tables = Table.objects.filter(date=date.today()).order_by('id')
     reservations = Reservation.objects.filter(table__date=date.today())
