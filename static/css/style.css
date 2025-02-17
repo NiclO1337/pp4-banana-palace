@@ -207,7 +207,8 @@ footer {
 
 a.btn-iconic,
 a.btn-iconic-reverse {
-  padding: 6px 6px 6px 10px;
+  padding: 6px 10px 6px 10px;
+  display: inline-block;
 }
 
 #override-bootstrap .account-management button:hover,
