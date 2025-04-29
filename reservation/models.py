@@ -56,7 +56,7 @@ class Reservation(models.Model):
     PARTY_SIZE = ((2, '2'), (3, '3'), (4, '4'), (5, '5'),
                   (6, '6'), (7, '7'), (8, '8'))
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=5)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=3)
     time = models.CharField(max_length=15, choices=TIME_CHOISES,
                             default=TIME_CHOISES[0][0])
     party_size = models.IntegerField(choices=PARTY_SIZE, default=4)
